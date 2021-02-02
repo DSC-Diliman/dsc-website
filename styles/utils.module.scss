@@ -1,0 +1,70 @@
+@import "colors";
+
+.frosted {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+.box_shadow {
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+  border-radius: 20px;
+}
+
+.rounded_full {
+  border-radius: 9999px;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+button {
+  &.style1 {
+    border-style: none;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
+    &_blue {
+      @extend .style1;
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+    &_red {
+      @extend .style1;
+      &:hover {
+        background-color: $red;
+        color: $white;
+      }
+    }
+    &_green {
+      @extend .style1;
+      &:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+    &_yellow {
+      @extend .style1;
+      &:hover {
+        background-color: $yellow;
+        color: $white;
+      }
+    }
+  }
+}
+
+.test {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+.test2 {
+  height: 1500px;
+}
