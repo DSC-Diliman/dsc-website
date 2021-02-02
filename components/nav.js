@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Nav() {
   return (
-    <nav className="fixed inset-x-0 top-0 mx-8 mt-6 h-14 px-8 flex rounded-2xl items-center frosted shadow-lg">
+    <nav className="fixed inset-x-0 top-0 mx-8 mt-6 h-14 px-8 flex rounded-2xl items-center frosted shadow-lg z-10">
       <Link href="/">
         <Image
           src="/images/dsc-upd-logo.png"
@@ -16,14 +16,14 @@ export default function Nav() {
 
       <div className="flex-grow" />
 
-      <div className="flex w-80 flex-nowrap items-baseline justify-between">
+      <div className="flex w-96 flex-nowrap items-baseline justify-between">
         {[
           { page: "About", style: "btn-style1-blue" },
           { page: "Team", style: "btn-style1-red" },
           { page: "Events", style: "btn-style1-green" },
-          { page: "Projects", style: "btn-style1-yellow" }].map(e => (
-            <Link key={e.page.toLowerCase()} href={e.page.toLowerCase()}>
-              <button className={"rounded-lg px-2 " + e.style}>{e.page}</button>
+          { page: "Projects", style: "btn-style1-yellow" }].map(({ page, style }) => (
+            <Link key={page.toLowerCase()} href={'/' + page.toLowerCase()}>
+              <button className={"rounded-lg px-3 py-0.5 " + style}>{page}</button>
             </Link>
           ))}
       </div>
