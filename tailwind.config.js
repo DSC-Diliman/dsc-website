@@ -10,6 +10,7 @@ module.exports = {
         yellow: '#FBBC04',
       },
       fontSize: {
+        '10xl': '14rem',
         'xxl': '18rem'
       }
     },
