@@ -1,17 +1,17 @@
 import Image from "next/image"
-import utilStyles from "../styles/utils.module.scss"
 
 export default function Footer() {
   return (
-    <footer>
-      <Image
-        className={utilStyles.hover}
-        src="/images/dsc-upd-logo.png"
-        alt="Developer Student Clubs UP Diliman Logo"
-        width={183}
-        height={30}
-      />
-      <p className={utilStyles.my_sm}><small>2020 Developer Student Clubs UP Diliman. All Rights Reserved.</small></p>
+    <footer className="flex flex-col content-center space-y-2 py-10">
+      <div className="flex-initial flex flex-col items-center">
+        <Image
+          src="/images/dsc-upd-logo.png"
+          alt="Developer Student Clubs UP Diliman Logo"
+          width={183}
+          height={30}
+        />
+      </div>
+      <p className="text-sm text-center">2020 Developer Student Clubs UP Diliman. All Rights Reserved.</p>
     </footer>
   )
 }

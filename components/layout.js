@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/layout.module.scss'
 import Footer from './footer'
 import Nav from './nav'
 
@@ -11,9 +10,9 @@ export default function Layout({ children, title }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
-        <Nav />
-        <main>
+      <Nav />
+      <div className="flex flex-col flex-nowrap min-h-screen px-10 pt-32">
+        <main className="flex-1">
           {children}
         </main>
         <Footer />
