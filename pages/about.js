@@ -8,7 +8,7 @@ export default function About() {
     <Layout title="About">
       <div className={utilStyles.test}>
         <Image
-          src="/dsc-logo.png"
+          src="/images/dsc-logo.png"
           width={439}
           height={214}
         />

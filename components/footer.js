@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <Image
         className={utilStyles.hover}
-        src="/dsc-upd-logo.png"
+        src="/images/dsc-upd-logo.png"
         alt="Developer Student Clubs UP Diliman Logo"
         width={183}
         height={30}
