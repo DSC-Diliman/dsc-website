@@ -7,6 +7,10 @@
     @apply bg-gray-100;
   }
 
+  h1 {
+    @apply text-xl md:text-3xl font-semibold;
+  }
+
   @font-face {
     font-family: "Noto Sans";
     src: url("/fonts/NotoSans/NotoSans-Regular.ttf");
@@ -50,6 +54,32 @@
         @extend .btn-style1;
         @apply hover:text-gray-100 hover:bg-yellow;
       }
+    }
+
+    &.btn-style2 {
+      @apply transition-colors border-2 rounded-full py-2 px-10;
+      &-blue {
+        @extend .btn-style2;
+        @apply text-blue border-blue hover:text-gray-100 hover:bg-blue;
+      }
+      &-red {
+        @extend .btn-style2;
+        @apply text-red border-red hover:text-gray-100 hover:bg-red;
+      }
+      &-green {
+        @extend .btn-style2;
+        @apply text-green border-green hover:text-gray-100 hover:bg-green;
+      }
+      &-yellow {
+        @extend .btn-style2;
+        @apply text-yellow border-yellow hover:text-gray-100 hover:bg-yellow;
+      }
+    }
+  }
+
+  div {
+    &.div-style1 {
+      @apply rounded-2xl md:rounded-4xl shadow-3xl bg-white;
     }
   }
 }

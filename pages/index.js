@@ -21,14 +21,14 @@ export default function Home() {
 
           <p className="my-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 
-          <button className="btn-style1-red py-1.5 px-10 text-red border-2 border-red rounded-full">Learn More</button>
+          <button className="btn-style2-red">Learn More</button>
         </div>
       </div>
 
       <div className="h-screen flex flex-col items-center justify-center">
-        <h1 className="text-xl md:text-3xl font-semibold mb-4 md:mb-8">What do we do in DSC UP Diliman?</h1>
+        <h1 className="mb-4 md:mb-8">What do we do in DSC UP Diliman?</h1>
 
-        <button className="btn-style1-red py-2 px-10 text-red border-2 border-red rounded-full mb-4 md:mb-8">Check out our teams!</button>
+        <button className="btn-style2-red mb-4 md:mb-8">Check out our teams!</button>
 
         <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-4 md:gap-16 mb-8">
           {[
@@ -36,12 +36,24 @@ export default function Home() {
             { heading: "Study Jams", text: "Learning never stops! Watch events online by Developer Student Clubs and by Google" },
             { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
             { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
-          ].map(({ heading, text }, index) => (
-            <div className="w-64 md:w-88 rounded-2xl md:rounded-4xl shadow-3xl bg-white p-4 md:p-11">
+          ].map(({ heading, text }) => (
+            <div key={heading} className="relative w-64 div-style1 md:w-88 md:even:top-1/2 p-4 md:p-11">
               <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">{heading}</h1>
               <p className="text-sm md:text-base">{text}</p>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="h-screen flex flex-row justify-center items-center">
+        <div className="div-style1 p-4">
+          calendar here
+        </div>
+        <div>
+          <h1>Upcoming Events</h1>
+          <button className="btn-style2-red">Check out our events!</button>
+          <div className="div-style1 p-4">
+            events here
+          </div>
         </div>
       </div>
     </Layout>
