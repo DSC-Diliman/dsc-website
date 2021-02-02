@@ -13,6 +13,7 @@ export default function Nav() {
           alt="Developer Student Clubs UP Diliman Logo"
           width={183}
           height={30}
+          quality={100}
         />
       </Link>
 
