@@ -25,6 +25,56 @@
   margin: 8px auto;
 }
 
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.font_bold {
+  font-weight: 700;
+}
+
+.font_black {
+  font-weight: 900;
+}
+
+.text_sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text_base {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text_2xl {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.text_10xl {
+  font-size: 240px;
+  line-height: 320px;
+}
+
+.text_white {
+  color: $white;
+}
+
+.text_truewhite {
+  color: #fff;
+}
+
+.text_shadow_xl {
+  text-shadow: 0px 20px 39px rgba(0, 0, 0, 0.15);
+}
+
 button {
   &.style1 {
     border-style: none;
