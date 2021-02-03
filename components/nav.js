@@ -5,13 +5,17 @@ export default function Nav() {
   return (
     <nav className="fixed inset-x-0 top-0 mx-8 mt-6 h-14 px-8 flex rounded-2xl items-center frosted shadow-lg z-10">
       <Link href="/">
-        <Image
-          src="/images/dsc-upd-logo.png"
-          alt="Developer Student Clubs UP Diliman Logo"
-          width={183}
-          height={30}
-          quality={100}
-        />
+        <button className="flex flex-none">
+          <Image
+            src="/images/dsc-logo.png"
+            alt="Developer Student Clubs Logo"
+            width={32.8}
+            height={16}
+            quality={100}
+            layout="fixed"
+          />
+          <p className="ml-2 text-left leading-none">Developer Student Clubs<br />UP Diliman</p>
+        </button>
       </Link>
 
       <div className="flex-grow" />
