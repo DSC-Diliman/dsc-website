@@ -14,7 +14,7 @@ export default function Home() {
       </div>
 
       <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 content-center">
-        <div className="justify-self-end max-w-lg">
+        <div className="justify-self-center md:justify-self-end max-w-lg">
           <h1 className="text-3xl md:text-5xl">
             Lorem ipsum dolor sit amet, consectetur
           </h1>
