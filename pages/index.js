@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-end max-w-xl">
-          <h1 className="text-3xl md:text-5xl font-semibold">
+          <h1 className="text-3xl md:text-5xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </h1>
 
