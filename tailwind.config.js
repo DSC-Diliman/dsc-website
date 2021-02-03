@@ -28,7 +28,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Noto Sans', 'sans-serif']
+      sans: ['Google Sans', 'sans-serif']
     }
   },
   variants: {

@@ -4,30 +4,37 @@
 
 @layer base {
   body {
-    @apply bg-gray-100;
+    @apply bg-gray-50;
   }
 
   h1 {
-    @apply text-xl md:text-3xl font-semibold;
+    @apply text-xl md:text-3xl font-medium;
   }
 
   @font-face {
-    font-family: "Noto Sans";
-    src: url("/fonts/NotoSans/NotoSans-Regular.ttf");
+    font-family: "Google Sans";
+    src: url("/fonts/GoogleSans/GoogleSans-Regular.woff");
     font-weight: 400;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Noto Sans";
-    src: url("/fonts/NotoSans/NotoSans-Bold.ttf");
+    font-family: "Google Sans";
+    src: url("/fonts/GoogleSans/GoogleSans-Medium.woff");
+    font-weight: 500;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Google Sans";
+    src: url("/fonts/GoogleSans/GoogleSans-Bold.woff");
     font-weight: 700;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Noto Sans";
-    src: url("/fonts/NotoSans/NotoSans-Italic.ttf");
+    font-family: "Google Sans";
+    src: url("/fonts/GoogleSans/GoogleSans-Italic.woff");
     font-style: italic;
     font-weight: 400;
     font-display: swap;

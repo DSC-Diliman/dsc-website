@@ -7,19 +7,25 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <link
           rel="preload"
-          href="/fonts/NotoSans/NotoSans-Regular.ttf"
+          href="/fonts/GoogleSans/GoogleSans-Regular.woff"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/NotoSans/NotoSans-Bold.ttf"
+          href="/fonts/GoogleSans/GoogleSans-Medium.woff"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/NotoSans/NotoSans-Italic.ttf"
+          href="/fonts/GoogleSans/GoogleSans-Bold.woff"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/GoogleSans/GoogleSans-Italic.woff"
           as="font"
           crossOrigin=""
         />
