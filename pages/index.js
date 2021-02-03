@@ -14,9 +14,9 @@ export default function Home() {
       </div>
 
       <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 content-center">
-        <div className="justify-self-end max-w-xl">
+        <div className="justify-self-end max-w-lg">
           <h1 className="text-3xl md:text-5xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Lorem ipsum dolor sit amet, consectetur
           </h1>
 
           <p className="my-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -28,7 +28,7 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="mb-8 text-center">What do we do in DSC UP Diliman?</h1>
 
-        <button className="btn-style2-red mb-8 md:mb-8">Check out our teams!</button>
+        <button className="btn-style2-red mb-8">Check out our teams!</button>
 
         <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
           {[
@@ -44,6 +44,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+
       <div className="min-h-screen flex flex-row justify-center items-center">
         <div className="div-style1 p-4">
           calendar here
