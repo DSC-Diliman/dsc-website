@@ -13,7 +13,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="h-screen grid grid-cols-1 md:grid-cols-2 content-center">
+      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-end max-w-xl">
           <h1 className="text-3xl md:text-5xl font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -25,12 +25,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-screen flex flex-col items-center justify-center">
-        <h1 className="mb-4 md:mb-8">What do we do in DSC UP Diliman?</h1>
+      <div className="min-h-screen flex flex-col items-center justify-center">
+        <h1 className="mb-8 text-center">What do we do in DSC UP Diliman?</h1>
 
-        <button className="btn-style2-red mb-4 md:mb-8">Check out our teams!</button>
+        <button className="btn-style2-red mb-8 md:mb-8">Check out our teams!</button>
 
-        <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-4 md:gap-16 mb-8">
+        <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
           {[
             { heading: "Speaker Sessions", text: "Listen from esteemed speakers as they share their insights, experience and wisdom" },
             { heading: "Study Jams", text: "Learning never stops! Watch events online by Developer Student Clubs and by Google" },
@@ -44,7 +44,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="h-screen flex flex-row justify-center items-center">
+      <div className="min-h-screen flex flex-row justify-center items-center">
         <div className="div-style1 p-4">
           calendar here
         </div>
