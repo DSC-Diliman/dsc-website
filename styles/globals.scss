@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-gray-50;
+    @apply bg-gray-50 text-gray-700;
   }
 
   h1 {
@@ -47,19 +47,19 @@
       @apply transition-colors;
       &-blue {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-blue;
+        @apply hover:text-gray-100 hover:bg-blue-pr;
       }
       &-red {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-red;
+        @apply hover:text-gray-100 hover:bg-red-pr;
       }
       &-green {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-green;
+        @apply hover:text-gray-100 hover:bg-green-pr;
       }
       &-yellow {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-yellow;
+        @apply hover:text-gray-100 hover:bg-yellow-pr;
       }
     }
 
@@ -67,19 +67,19 @@
       @apply transition-colors border-2 rounded-full py-2 px-10;
       &-blue {
         @extend .btn-style2;
-        @apply text-blue border-blue hover:text-gray-100 hover:bg-blue;
+        @apply text-blue-pr border-blue-pr hover:text-gray-100 hover:bg-blue-pr;
       }
       &-red {
         @extend .btn-style2;
-        @apply text-red border-red hover:text-gray-100 hover:bg-red;
+        @apply text-red-pr border-red-pr hover:text-gray-100 hover:bg-red-pr;
       }
       &-green {
         @extend .btn-style2;
-        @apply text-green border-green hover:text-gray-100 hover:bg-green;
+        @apply text-green-pr border-green-pr hover:text-gray-100 hover:bg-green-pr;
       }
       &-yellow {
         @extend .btn-style2;
-        @apply text-yellow border-yellow hover:text-gray-100 hover:bg-yellow;
+        @apply text-yellow-pr border-yellow-pr hover:text-gray-100 hover:bg-yellow-pr;
       }
     }
   }
@@ -99,6 +99,10 @@
 
   .text-shadow-xl {
     text-shadow: 0px 20px 39px rgba(0, 0, 0, 0.15);
+  }
+
+  .em {
+    @apply h-3 absolute -mt-3 inset-auto -z-10;
   }
 }
 

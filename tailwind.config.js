@@ -6,10 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: colors.blue[700],
-        red: colors.red[700],
-        green: colors.green[700],
-        yellow: colors.yellow[600],
+        blue: { pr: colors.blue[700] },
+        red: { pr: colors.red[700] },
+        green: { pr: colors.green[700] },
+        yellow: { pr: colors.yellow[600] },
       },
       fontSize: {
         '10xl': '14rem',
@@ -25,6 +25,9 @@ module.exports = {
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)'
+      },
+      zIndex: {
+        '-10': '-10',
       }
     },
     fontFamily: {
