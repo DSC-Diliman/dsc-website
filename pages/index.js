@@ -1,4 +1,5 @@
 import Link from "next/link"
+import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout"
 
 export default function Home() {
@@ -56,17 +57,8 @@ export default function Home() {
         ])}
       </div>
 
-      <div className="min-h-screen flex flex-row justify-center items-center">
-        <div className="div-style1 p-4">
-          calendar here
-        </div>
-        <div>
-          <h1>Upcoming Events</h1>
-          <button className="btn-style2-red">Check out our events!</button>
-          <div className="div-style1 p-4">
-            events here
-          </div>
-        </div>
+      <div className="min-h-screen flex justify-center items-center">
+        <EventViewer />
       </div>
     </Layout>
   )
