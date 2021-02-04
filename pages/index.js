@@ -1,6 +1,7 @@
 import Link from "next/link"
 import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout"
+import { getSortedPosts } from "../lib/posts"
 
 export default function Home({ eventData }) {
   function* getNextPrimaryColor() {
@@ -40,14 +41,18 @@ export default function Home({ eventData }) {
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <span className="em em-green em-right em-text-base">ipsum dolor sit amet, consectetur</span> adipiscing elit</p>
 
-          <button className="btn-style2-red">Learn More</button>
+          <Link href="/about">
+            <button className="btn-style2-red">Learn More</button>
+          </Link>
         </div>
       </div>
 
       <div className="min-h-screen flex flex-col items-center justify-center space-y-10">
         <h1 className="text-center">What do we do in DSC UP Diliman?</h1>
 
-        <button className="btn-style2-red">Check out our teams!</button>
+        <Link href="/team">
+          <button className="btn-style2-red">Check out our teams!</button>
+        </Link>
 
         {renderOffsetGrid([
           { heading: "Speaker Sessions", text: "Listen from esteemed speakers as they share their insights, experience and wisdom" },
