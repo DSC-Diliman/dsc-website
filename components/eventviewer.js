@@ -17,8 +17,8 @@ export default function EventViewer({ eventData }) {
   }
 
   return (
-    <div className="w-full flex flex-row space-x-10 items-center justify-center">
-      <div className="div-style1 p-6 flex-none">
+    <div className="w-full flex flex-col md:flex-row items-center justify-center">
+      <div className="hidden md:block div-style1 p-6 flex-none md:mr-8">
         <Calendar
           value={activeDay}
           // tileClassName={({ date, view }) => {
@@ -28,12 +28,12 @@ export default function EventViewer({ eventData }) {
           onClickDay={handleDateChange}
         />
       </div>
-      <div className="space-y-6 flex-1 max-w-lg">
+      <div className="space-y-6 flex-1 max-w-2xl">
         <h1>Upcoming Events</h1>
         <Link href="/events">
           <button className="btn-style2-red">Check out our events!</button>
         </Link>
-        <div className="div-style1">
+        <div className="div-style1 overflow-hidden">
           <EventListView
             eventData={
               ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a"]
