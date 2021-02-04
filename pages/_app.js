@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import '../styles/globals.scss'
+import Head from "next/head"
+import "../styles/globals.scss"
+import "../styles/calendar.scss"
 
 export default function MyApp({ Component, pageProps }) {
   return (

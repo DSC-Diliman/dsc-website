@@ -18,7 +18,7 @@ export default function Home({ eventData }) {
     return (
       <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
         {elements.map(({ heading, text }) => (
-          <div key={heading} className="relative w-64 div-style1 md:w-88 md:even:top-1/2 p-4 md:p-11">
+          <div key={heading} className="relative w-64 div-style1 md:w-md md:even:top-1/2 p-4 md:p-11">
             <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
               <span className={"em em-left em-text-md " + color_gen.next().value}>
                 {heading}
