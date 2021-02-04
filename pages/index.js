@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 import { getSortedPosts } from "../lib/posts"
 
 export default function Home({ eventData }) {
-  function* getNextPrimaryColor() {
-    let color_names = ["red", "blue", "green", "yellow"]
+  function* getNextEmPrimaryColor() {
+    let color_names = ["em-red", "em-blue", "em-green", "em-yellow"]
     let index = 0
     while (true) {
       yield color_names[index++]
@@ -14,13 +14,13 @@ export default function Home({ eventData }) {
   }
 
   function renderOffsetGrid(elements) {
-    const color_gen = getNextPrimaryColor()
+    const color_gen = getNextEmPrimaryColor()
     return (
       <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
         {elements.map(({ heading, text }) => (
           <div key={heading} className="relative w-64 div-style1 md:w-88 md:even:top-1/2 p-4 md:p-11">
             <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
-              <span className={"em em-left em-text-md em-" + color_gen.next().value}>
+              <span className={"em em-left em-text-md " + color_gen.next().value}>
                 {heading}
               </span>
             </h1>
