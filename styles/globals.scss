@@ -108,6 +108,22 @@
     text-shadow: 0px 20px 39px rgba(0, 0, 0, 0.15);
   }
 
+  .scroll-y {
+    scroll-snap-type: y;
+    &-man {
+      scroll-snap-type: y mandatory;
+    }
+  }
+
+  .scroll {
+    &-start {
+      scroll-snap-align: start;
+    }
+    &-end {
+      scroll-snap-align: end;
+    }
+  }
+
   .em {
     position: relative;
     white-space: nowrap;

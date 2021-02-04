@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Calendar from "react-calendar"
 import Link from "next/link"
+import EventListView from "./eventlistview";
 
 export default function EventViewer({ eventData }) {
   const [activeDay, setActiveDay] = useState(new Date())
@@ -16,8 +17,8 @@ export default function EventViewer({ eventData }) {
   }
 
   return (
-    <div className="flex flex-row space-x-10">
-      <div className="div-style1 p-6">
+    <div className="w-full flex flex-row space-x-10 items-center justify-center">
+      <div className="div-style1 p-6 flex-none">
         <Calendar
           value={activeDay}
           // tileClassName={({ date, view }) => {
@@ -27,13 +28,17 @@ export default function EventViewer({ eventData }) {
           onClickDay={handleDateChange}
         />
       </div>
-      <div className="space-y-6">
+      <div className="space-y-6 flex-1 max-w-lg">
         <h1>Upcoming Events</h1>
         <Link href="/events">
           <button className="btn-style2-red">Check out our events!</button>
         </Link>
-        <div className="div-style1 p-4">
-          events here
+        <div className="div-style1">
+          <EventListView
+            eventData={
+              ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a"]
+            }
+          />
         </div>
       </div>
     </div>
