@@ -1,5 +1,3 @@
-import { getSortedPosts } from "../lib/posts"
-
 export default function EventViewer({ eventData }) {
   return (
     <div className="flex flex-row space-x-10">
@@ -15,12 +13,4 @@ export default function EventViewer({ eventData }) {
       </div>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      eventData: getSortedPosts("event")
-    }
-  }
 }

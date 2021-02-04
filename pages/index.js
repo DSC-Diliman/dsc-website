@@ -2,7 +2,7 @@ import Link from "next/link"
 import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout"
 
-export default function Home() {
+export default function Home({ eventData }) {
   function* getNextPrimaryColor() {
     let color_names = ["red", "blue", "green", "yellow"]
     let index = 0
@@ -58,8 +58,16 @@ export default function Home() {
       </div>
 
       <div className="min-h-screen flex justify-center items-center">
-        <EventViewer />
+        <EventViewer eventData={null} />
       </div>
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      eventData: getSortedPosts('events')
+    }
+  }
 }
