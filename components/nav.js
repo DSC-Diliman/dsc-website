@@ -1,20 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Nav() {
   return (
     <nav className="fixed inset-x-0 top-0 mx-8 mt-6 h-14 px-8 flex rounded-2xl items-center frosted shadow-lg z-10">
       <Link href="/">
-        <button className="flex flex-none">
-          <Image
-            src="/images/dsc-logo.png"
+        <button>
+          <img
+            src="/images/dsc-upd-logo-small.png"
             alt="Developer Student Clubs Logo"
-            width={32.8}
-            height={16}
-            quality={100}
-            layout="fixed"
           />
-          <p className="ml-2 text-left leading-none">Developer Student Clubs<br />UP Diliman</p>
         </button>
       </Link>
 

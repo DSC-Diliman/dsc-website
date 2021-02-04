@@ -1,18 +1,36 @@
-import Image from "next/image"
 import Link from "next/link"
 import Layout from "../components/layout"
 
 export default function Home() {
+  function* getNextPrimaryColor() {
+    let color_names = ["red", "blue", "green", "yellow"]
+    let index = 0
+    while (true) {
+      yield color_names[index++]
+      index = index < color_names.length ? index : 0
+    }
+  }
+
+  function renderOffsetGrid(elements) {
+    const color_gen = getNextPrimaryColor()
+    return (
+      <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
+        {elements.map(({ heading, text }) => (
+          <div key={heading} className="relative w-64 div-style1 md:w-88 md:even:top-1/2 p-4 md:p-11">
+            <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
+              <span className={"em em-left em-text-md em-" + color_gen.next().value}>
+                {heading}
+              </span>
+            </h1>
+            <p className="text-sm md:text-base">{text}</p>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <Layout>
-      <div className="test">
-        <Image
-          src="/images/dsc-logo.png"
-          width={439}
-          height={214}
-        />
-      </div>
-
       <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
           <h1 className="text-3xl md:text-5xl">
@@ -51,32 +69,5 @@ export default function Home() {
         </div>
       </div>
     </Layout>
-  )
-}
-
-function* getNextPrimaryColor() {
-  let color_names = ["red", "blue", "green", "yellow"]
-  let index = 0
-  while (true) {
-    yield color_names[index++]
-    index = index < color_names.length ? index : 0
-  }
-}
-
-function renderOffsetGrid(elements) {
-  const color_gen = getNextPrimaryColor()
-  return (
-    <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
-      {elements.map(({ heading, text }) => (
-        <div key={heading} className="relative w-64 div-style1 md:w-88 md:even:top-1/2 p-4 md:p-11">
-          <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
-            <span className={"em em-left em-text-md em-" + color_gen.next().value}>
-              {heading}
-            </span>
-          </h1>
-          <p className="text-sm md:text-base">{text}</p>
-        </div>
-      ))}
-    </div>
   )
 }
