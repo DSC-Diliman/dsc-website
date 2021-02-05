@@ -1,8 +1,8 @@
 export default function EventListView({ eventData }) {
   return (
     <div className="px-8 max-h-xl w-auto overflow-y-auto overscroll-contain scroll-y">
-      {eventData.map(currEvent => (
-        <div className="py-2 scroll-start border-b-2 border-gray-100">
+      {eventData.map((currEvent, index) => (
+        <div key={index} className="py-2 scroll-start border-b-2 border-gray-100">
           <p className="mb-2 text-sm">mmmm dd, yyyy</p>
           <div className="flex items-stretch">
             <div>

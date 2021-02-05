@@ -8,8 +8,8 @@ export default function Events({ allEventsData }) {
         Events
       </h1>
       <ul>
-        {allEventsData.map(eventData => (
-          <li key={eventData.id}>
+        {allEventsData.map((eventData, index) => (
+          <li key={index}>
             {eventData.title}
             <br />
             {eventData.date}
