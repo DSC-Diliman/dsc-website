@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className="fixed inset-x-0 top-0 mx-8 mt-6 h-14 px-8 flex rounded-2xl items-center frosted shadow-lg z-10">
+    <nav className="fixed inset-x-0 top-0 mx-10 mt-6 h-14 px-8 flex rounded-2xl items-center frosted shadow-lg z-10">
       <Link href="/">
         <button>
           <img

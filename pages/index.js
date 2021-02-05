@@ -33,7 +33,7 @@ export default function Home({ eventData }) {
 
   return (
     <Layout>
-      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 content-center">
+      <div className="min-h-screen px-10 grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
           <h1 className="text-3xl md:text-5xl">
             <span className="em em-red em-left em-text-lg">Lorem ipsum</span> dolor sit amet, consectetur
@@ -47,11 +47,11 @@ export default function Home({ eventData }) {
         </div>
       </div>
 
-      <div className="min-h-screen flex flex-col items-center justify-center space-y-10">
-        <h1 className="text-center">What do we do in DSC UP Diliman?</h1>
+      <div className="min-h-screen px-10 flex flex-col items-center justify-center">
+        <h1 className="text-center mb-4">What do we do in DSC UP Diliman?</h1>
 
         <Link href="/team">
-          <button className="btn-style2-red">Check out our teams!</button>
+          <button className="btn-style2-red mb-10">Check out our teams!</button>
         </Link>
 
         {renderOffsetGrid([
@@ -62,11 +62,12 @@ export default function Home({ eventData }) {
         ])}
       </div>
 
-      <div className="min-h-screen flex justify-center items-center">
+      <div className="min-h-screen px-10 flex justify-center items-center">
         <EventViewer eventData={null} />
       </div>
 
-      <div className="w-full py-4 mb-12 flex overflow-x-auto justify-items-center space-x-14 flex-nowrap items-center">
+      <div className="self-center max-w-full py-4 my-12 flex overflow-x-auto flex-nowrap space-x-24">
+        <div />
         {[
           { school: "Ateneo de Manila University Loyola", location: "Manila" },
           { school: "Ateneo de Manila University Loyola", location: "Manila" },
@@ -75,7 +76,7 @@ export default function Home({ eventData }) {
           { school: "Ateneo de Manila University Loyola", location: "Manila" },
           { school: "Ateneo de Manila University Loyola", location: "Manila" },
         ].map(({ school, location, imgsrc }, index) => (
-          <div key={index} className="text-center">
+          <div key={index} className="max-w-min text-center flex-grow-0">
             <div className="rounded-full bg-white shadow-md w-36 h-36 mb-4">
               <img
                 className="object-cover"
@@ -86,6 +87,7 @@ export default function Home({ eventData }) {
             <p className="text-sm">{location}</p>
           </div>
         ))}
+        <div>&nbsp;</div>
       </div>
     </Layout>
   )

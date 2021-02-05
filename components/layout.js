@@ -11,12 +11,11 @@ export default function Layout({ children, title }) {
       </Head>
 
       <Nav />
-      <div className="flex flex-col flex-nowrap min-h-screen px-10">
-        <main className="flex-1 flex flex-col justify-center">
-          {children}
-        </main>
+
+      <main className="flex flex-col flex-nowrap min-h-screen justify-center">
+        {children}
         <Footer />
-      </div>
+      </main>
     </>
   )
 }

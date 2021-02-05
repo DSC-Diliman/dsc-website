@@ -28,10 +28,10 @@ export default function EventViewer({ eventData }) {
           onClickDay={handleDateChange}
         />
       </div>
-      <div className="space-y-6 flex-1 max-w-2xl">
-        <h1>Upcoming Events</h1>
+      <div className="flex-1 max-w-2xl">
+        <h1 className="mb-4">Upcoming Events</h1>
         <Link href="/events">
-          <button className="btn-style2-red">Check out our events!</button>
+          <button className="btn-style2-red mb-6">Check out our events!</button>
         </Link>
         <div className="div-style1 overflow-hidden">
           <EventListView
