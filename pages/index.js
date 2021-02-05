@@ -17,8 +17,8 @@ export default function Home({ eventData }) {
     const color_gen = getNextEmPrimaryColor()
     return (
       <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
-        {elements.map(({ heading, text }) => (
-          <div key={heading} className="relative w-64 div-style1 md:w-md md:even:top-1/2 p-4 md:p-11">
+        {elements.map(({ heading, text }, index) => (
+          <div key={index} className="relative w-64 div-style1 md:w-md md:even:top-1/2 p-4 md:p-11">
             <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
               <span className={"em em-left em-text-md " + color_gen.next().value}>
                 {heading}
@@ -64,6 +64,28 @@ export default function Home({ eventData }) {
 
       <div className="min-h-screen flex justify-center items-center">
         <EventViewer eventData={null} />
+      </div>
+
+      <div className="w-full py-4 mb-12 flex overflow-x-auto justify-items-center space-x-14 flex-nowrap items-center">
+        {[
+          { school: "Ateneo de Manila University Loyola", location: "Manila" },
+          { school: "Ateneo de Manila University Loyola", location: "Manila" },
+          { school: "Ateneo de Manila University Loyola", location: "Manila" },
+          { school: "Ateneo de Manila University Loyola", location: "Manila" },
+          { school: "Ateneo de Manila University Loyola", location: "Manila" },
+          { school: "Ateneo de Manila University Loyola", location: "Manila" },
+        ].map(({ school, location, imgsrc }, index) => (
+          <div key={index} className="text-center">
+            <div className="rounded-full bg-white shadow-md w-36 h-36 mb-4">
+              <img
+                className="object-cover"
+                src={imgsrc ? imgsrc : ""}
+              />
+            </div>
+            <p className="font-medium">{school}</p>
+            <p className="text-sm">{location}</p>
+          </div>
+        ))}
       </div>
     </Layout>
   )
