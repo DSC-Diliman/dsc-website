@@ -33,7 +33,7 @@ export default function Home({ eventsArray }) {
 
   return (
     <>
-      <div className="min-h-screen px-10 grid grid-cols-1 md:grid-cols-2 content-center">
+      <section className="min-h-screen px-10 pt-24 grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
           <h1 className="text-3xl md:text-5xl">
             <span className="em em-red em-left em-text-lg">Lorem ipsum</span> dolor sit amet, consectetur
@@ -45,9 +45,9 @@ export default function Home({ eventsArray }) {
             <button className="btn-style2-red">Learn More</button>
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div className="min-h-screen px-10 flex flex-col items-center justify-center">
+      <section className="min-h-screen px-10 flex flex-col items-center justify-center">
         <h1 className="text-center mb-4">What do we do in DSC UP Diliman?</h1>
 
         <Link href="/team">
@@ -60,13 +60,13 @@ export default function Home({ eventsArray }) {
           { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
           { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
         ])}
-      </div>
+      </section>
 
-      <div className="min-h-screen px-10 flex justify-center items-center">
+      <section className="min-h-screen px-10 pt-24">
         <EventViewer eventsArray={eventsArray} />
-      </div>
+      </section>
 
-      <div className="self-center max-w-full py-4 my-12 flex overflow-x-auto flex-nowrap space-x-24">
+      <section className="self-center max-w-full py-4 my-12 flex overflow-x-auto flex-nowrap space-x-24">
         <div />
         {[
           { school: "Ateneo de Manila University Loyola", location: "Manila" },
@@ -88,7 +88,7 @@ export default function Home({ eventsArray }) {
           </div>
         ))}
         <div>&nbsp;</div>
-      </div>
+      </section>
     </>
   )
 }

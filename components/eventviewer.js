@@ -19,8 +19,8 @@ export default function EventViewer({ eventsArray }) {
   }
 
   return (
-    <div className="w-full flex flex-col md:flex-row items-center justify-center">
-      <div className="hidden md:block div-style1 p-6 flex-none md:mr-8">
+    <div className="w-full flex flex-col md:flex-row items-start justify-center">
+      <div className="hidden md:block div-style1 p-6 mr-8 flex-none">
         <Calendar
           value={activeDay}
           // tileClassName={({ date, view }) => {
