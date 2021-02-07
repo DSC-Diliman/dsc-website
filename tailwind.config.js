@@ -36,8 +36,10 @@ module.exports = {
   },
   variants: {
     extend: {
-      inset: ['even']
-    },
+      inset: ['even'],
+      ringColor: ['focus-visible'],
+      ringWidth: ['focus-visible'],
+    } 
   },
   plugins: [],
 }

@@ -11,7 +11,7 @@ $calendar-width: 24rem;
   @apply h-10 text-xl;
 }
 .react-calendar__navigation button {
-  @apply w-10 focus:bg-gray-200 hover:bg-gray-200;
+  @apply w-10 hover:bg-gray-200;
 }
 .react-calendar__navigation__arrow {
   @apply text-red-pr font-semibold;
@@ -54,28 +54,24 @@ $calendar-width: 24rem;
 // .react-calendar__tile:disabled {
 //   background-color: #f0f0f0;
 // }
-.react-calendar__tile:enabled:hover,
-.react-calendar__tile:enabled:focus {
-  @apply bg-gray-200;
+.react-calendar__tile:enabled {
+  @apply hover:bg-gray-200;
 }
 .react-calendar__tile--now {
-  @apply bg-blue-100;
+  @apply bg-gray-300;
 }
-// .react-calendar__tile--now:enabled:hover,
-// .react-calendar__tile--now:enabled:focus {
+// .react-calendar__tile--now:enabled:hover {
 //   background: #ffffa9;
 // }
 .react-calendar__tile--hasActive {
   @apply bg-red-700 text-white;
 }
-.react-calendar__tile--hasActive:enabled:hover,
-.react-calendar__tile--hasActive:enabled:focus {
-  @apply bg-red-500;
+.react-calendar__tile--hasActive:enabled {
+  @apply hover:bg-red-500;
 }
-.react-calendar__tile--active:enabled:focus,
 .react-calendar__tile--active {
   @apply bg-red-700 text-white;
 }
-.react-calendar__tile--active:enabled:hover {
-  @apply bg-red-500;
+.react-calendar__tile--active:enabled {
+  @apply hover:bg-red-500;
 }
