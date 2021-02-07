@@ -13,7 +13,14 @@ export default function EventViewer({ eventData }) {
   }
 
   function handleDateChange(date) {
+    console.log("active date changed to:", date)
     setActiveDay(date)
+  }
+
+  function handeStartDateChange({ activeStartDate, view }) {
+    if (view === "month") {
+      console.log("start date change:", activeStartDate.getMonth(), activeStartDate.getFullYear())
+    }
   }
 
   return (
@@ -25,6 +32,7 @@ export default function EventViewer({ eventData }) {
           //   if (view === "month") {
           //   }
           // }}
+          onActiveStartDateChange={handeStartDateChange}
           onClickDay={handleDateChange}
         />
       </div>
@@ -35,9 +43,7 @@ export default function EventViewer({ eventData }) {
         </Link>
         <div className="div-style1 overflow-hidden">
           <EventListView
-            eventData={
-              ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a"]
-            }
+            eventData={eventData}
           />
         </div>
       </div>

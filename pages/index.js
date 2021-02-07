@@ -63,7 +63,7 @@ export default function Home({ eventData }) {
       </div>
 
       <div className="min-h-screen px-10 flex justify-center items-center">
-        <EventViewer eventData={null} />
+        <EventViewer eventData={eventData} />
       </div>
 
       <div className="self-center max-w-full py-4 my-12 flex overflow-x-auto flex-nowrap space-x-24">
