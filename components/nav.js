@@ -29,7 +29,7 @@ export default function Nav() {
                 key={page.toLowerCase()}
                 href={href}
               >
-                <button className={"rounded-lg px-3 py-0.5 " + style}>{page}</button>
+                <button className={`rounded-lg px-3 py-0.5 ${style}`}>{page}</button>
               </Link>
             )
           })}
