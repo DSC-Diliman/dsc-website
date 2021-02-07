@@ -1,9 +1,9 @@
-import Layout from '../components/layout'
+import Layout from '../components/layout-default'
 import { getSortedPosts } from '../lib/posts'
 
 export default function Events({ allEventsData }) {
   return (
-    <Layout title="Events">
+    <>
       <h1>
         Events
       </h1>
@@ -18,9 +18,15 @@ export default function Events({ allEventsData }) {
           </li>
         ))}
       </ul>
-    </Layout>
+    </>
   )
 }
+
+Events.getLayout = page => (
+  <Layout title="Events">
+    {page}
+  </Layout>
+)
 
 export async function getStaticProps() {
   return {

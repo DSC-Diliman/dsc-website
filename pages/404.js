@@ -1,8 +1,8 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout-default";
 
-export default function error404() {
+export default function Error404() {
   return (
-    <Layout title="404">
+    <>
       <div className="mx-10 flex flex-col md:flex-row justify-center items-center pt-24">
         <div>
           <p className="text-9xl md:text-10xl lg:text-xxl font-bold text-white text-shadow-xl">404</p>
@@ -18,6 +18,12 @@ export default function error404() {
           />
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
+
+Error404.getLayout = page => (
+  <Layout title="404">
+    {page}
+  </Layout>
+)

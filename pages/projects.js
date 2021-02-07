@@ -1,9 +1,9 @@
-import Layout from '../components/layout'
+import Layout from '../components/layout-default'
 import { getSortedPosts } from '../lib/posts'
 
 export default function Projects({ allProjectsData }) {
   return (
-    <Layout title="Projects">
+    <>
       <h1>
         Projects
       </h1>
@@ -18,9 +18,15 @@ export default function Projects({ allProjectsData }) {
           </li>
         ))}
       </ul>
-    </Layout>
+    </>
   )
 }
+
+Projects.getLayout = page => (
+  <Layout title="Projects">
+    {page}
+  </Layout>
+)
 
 export async function getStaticProps() {
   return {

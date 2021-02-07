@@ -1,6 +1,6 @@
 import Link from "next/link"
 import EventViewer from "../components/eventviewer"
-import Layout from "../components/layout"
+import Layout from "../components/layout-default"
 import { getSortedPosts } from "../lib/posts"
 
 export default function Home({ eventData }) {
@@ -32,7 +32,7 @@ export default function Home({ eventData }) {
   }
 
   return (
-    <Layout>
+    <>
       <div className="min-h-screen px-10 grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
           <h1 className="text-3xl md:text-5xl">
@@ -89,9 +89,15 @@ export default function Home({ eventData }) {
         ))}
         <div>&nbsp;</div>
       </div>
-    </Layout>
+    </>
   )
 }
+
+Home.getLayout = page => (
+  <Layout>
+    {page}
+  </Layout>
+)
 
 export async function getStaticProps() {
   return {

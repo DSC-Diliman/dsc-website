@@ -3,6 +3,8 @@ import "../styles/globals.scss"
 import "../styles/calendar.scss"
 
 export default function MyApp({ Component, pageProps }) {
+  const getLayout = Component.getLayout || (page => page)
+
   return (
     <>
       <Head>
@@ -31,8 +33,7 @@ export default function MyApp({ Component, pageProps }) {
           crossOrigin=""
         />
       </Head>
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps}></Component>)}
     </>
   )
-
 }
