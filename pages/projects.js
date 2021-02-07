@@ -1,5 +1,5 @@
 import Layout from '../components/layout-default'
-import { getSortedPosts } from '../lib/posts'
+import { getProjects } from '../lib/posts'
 
 export default function Projects({ allProjectsData }) {
   return (
@@ -31,12 +31,7 @@ Projects.getLayout = page => (
 export async function getStaticProps() {
   return {
     props: {
-      allProjectsData: getSortedPosts('projects', [
-        "title",
-        "date",
-        "summary",
-        "content"
-      ])
+      allProjectsData: getProjects()
     }
   }
 }
