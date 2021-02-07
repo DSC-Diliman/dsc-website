@@ -3,14 +3,9 @@ import Calendar from "react-calendar"
 import Link from "next/link"
 import EventListView from "./eventlistview";
 
-export default function EventViewer({ eventData }) {
+export default function EventViewer({ eventsArray }) {
   const [activeDay, setActiveDay] = useState(new Date())
-
-  function isSameDay(d1, d2) {
-    return d1.getFullYear() === d2.getFullYear() &&
-      d1.getDate() === d2.getDate() &&
-      d1.getMonth() === d2.getMonth();
-  }
+  const [displayedEvents, setEventsArray] = useState(eventsArray)
 
   function handleDateChange(date) {
     console.log("active date changed to:", date)
@@ -19,7 +14,7 @@ export default function EventViewer({ eventData }) {
 
   function handeStartDateChange({ activeStartDate, view }) {
     if (view === "month") {
-      console.log("start date change:", activeStartDate.getMonth(), activeStartDate.getFullYear())
+      console.log(activeStartDate.getFullYear(), activeStartDate.getMonth())
     }
   }
 
@@ -43,7 +38,7 @@ export default function EventViewer({ eventData }) {
         </Link>
         <div className="div-style1 overflow-hidden">
           <EventListView
-            eventData={eventData}
+            eventsArray={eventsArray}
           />
         </div>
       </div>

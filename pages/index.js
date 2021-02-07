@@ -1,9 +1,9 @@
 import Link from "next/link"
 import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout-default"
-import { getSortedPosts } from "../lib/posts"
+import { getEvents } from "../lib/posts"
 
-export default function Home({ eventData }) {
+export default function Home({ eventsArray }) {
   function* getNextEmPrimaryColor() {
     let color_names = ["em-red", "em-blue", "em-green", "em-yellow"]
     let index = 0
@@ -63,7 +63,7 @@ export default function Home({ eventData }) {
       </div>
 
       <div className="min-h-screen px-10 flex justify-center items-center">
-        <EventViewer eventData={eventData} />
+        <EventViewer eventsArray={eventsArray} />
       </div>
 
       <div className="self-center max-w-full py-4 my-12 flex overflow-x-auto flex-nowrap space-x-24">
@@ -102,7 +102,13 @@ Home.getLayout = page => (
 export async function getStaticProps() {
   return {
     props: {
-      eventData: getSortedPosts('events')
+      eventsArray: getEvents([
+        "title",
+        "dateStartISO",
+        "dateEndISO",
+        "eventType",
+        "location"
+      ])
     }
   }
 }
