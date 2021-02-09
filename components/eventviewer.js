@@ -31,7 +31,7 @@ export default function EventViewer({ eventsArray }) {
           onClickDay={handleDateChange}
         />
       </div>
-      <div className="flex-1 max-w-2xl">
+      <div className="flex-1 w-full md:max-w-2xl">
         <h1 className="mb-4">Upcoming Events</h1>
         <Link href="/events">
           <button className="btn-style2-red mb-6">Check out our events!</button>

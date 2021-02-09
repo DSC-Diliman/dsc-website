@@ -33,7 +33,7 @@ export default function Home({ eventsArray }) {
 
   return (
     <>
-      <section className="min-h-screen px-10 pt-24 grid grid-cols-1 md:grid-cols-2 content-center">
+      <section className="min-h-screen px-10 py-24 grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
           <h1 className="text-3xl md:text-5xl">
             <span className="em em-red em-left em-text-lg">Lorem ipsum</span> dolor sit amet, consectetur
@@ -47,7 +47,7 @@ export default function Home({ eventsArray }) {
         </div>
       </section>
 
-      <section className="min-h-screen px-10 flex flex-col items-center justify-center">
+      <section className="px-10 pt-12 pb-6 md:pb-32 bg-gray-200 flex flex-col items-center justify-center">
         <h1 className="text-center mb-4">What do we do in DSC UP Diliman?</h1>
 
         <Link href="/team">
@@ -62,32 +62,34 @@ export default function Home({ eventsArray }) {
         ])}
       </section>
 
-      <section className="min-h-screen px-10 pt-24">
+      <section className="px-10 py-20">
         <EventViewer eventsArray={eventsArray} />
       </section>
 
-      <section className="self-center max-w-full py-4 my-12 flex overflow-x-auto flex-nowrap space-x-24">
-        <div />
-        {[
-          { school: "Ateneo de Manila University Loyola", location: "Manila" },
-          { school: "Ateneo de Manila University Loyola", location: "Manila" },
-          { school: "Ateneo de Manila University Loyola", location: "Manila" },
-          { school: "Ateneo de Manila University Loyola", location: "Manila" },
-          { school: "Ateneo de Manila University Loyola", location: "Manila" },
-          { school: "Ateneo de Manila University Loyola", location: "Manila" },
-        ].map(({ school, location, imgsrc }, index) => (
-          <div key={index} className="max-w-min text-center flex-grow-0">
-            <div className="rounded-full bg-white shadow-md w-36 h-36 mb-4">
-              <img
-                className="object-cover"
-                src={imgsrc ? imgsrc : ""}
-              />
+      <section className="bg-gray-200 w-full">
+        <div className="max-w-min mx-auto py-10 flex overflow-x-auto flex-nowrap space-x-24">
+          <div />
+          {[
+            { school: "Ateneo de Manila University Loyola", location: "Manila" },
+            { school: "Ateneo de Manila University Loyola", location: "Manila" },
+            { school: "Ateneo de Manila University Loyola", location: "Manila" },
+            { school: "Ateneo de Manila University Loyola", location: "Manila" },
+            { school: "Ateneo de Manila University Loyola", location: "Manila" },
+            { school: "Ateneo de Manila University Loyola", location: "Manila" },
+          ].map(({ school, location, imgsrc }, index) => (
+            <div key={index} className="max-w-min text-center flex-grow-0">
+              <div className="rounded-full bg-white shadow-md w-36 h-36 mb-4">
+                <img
+                  className="object-cover"
+                  src={imgsrc ? imgsrc : ""}
+                />
+              </div>
+              <p className="font-medium">{school}</p>
+              <p className="text-sm">{location}</p>
             </div>
-            <p className="font-medium">{school}</p>
-            <p className="text-sm">{location}</p>
-          </div>
-        ))}
-        <div>&nbsp;</div>
+          ))}
+          <div>&nbsp;</div>
+        </div>
       </section>
     </>
   )
