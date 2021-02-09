@@ -19,20 +19,37 @@ export default function Nav() {
 
       <div className="flex w-96 flex-nowrap items-baseline justify-between">
         {[
-          { page: "About", style: "btn-style1-blue" },
-          { page: "Team", style: "btn-style1-red" },
-          { page: "Events", style: "btn-style1-green" },
-          { page: "Projects", style: "btn-style1-yellow" }].map(({ page, style }) => {
-            const href = '/' + page.toLowerCase()
-            return (
-              <Link
-                key={page.toLowerCase()}
-                href={href}
-              >
-                <button className={`rounded-lg px-3 py-0.5 ${style}`}>{page}</button>
-              </Link>
-            )
-          })}
+          {
+            page: "About",
+            style: "btn-style1-blue",
+            selected: "btn-style1-blue-selected"
+          },
+          {
+            page: "Team",
+            style: "btn-style1-red",
+            selected: "btn-style1-red-selected"
+          },
+          {
+            page: "Events",
+            style: "btn-style1-green",
+            selected: "btn-style1-green-selected"
+          },
+          {
+            page: "Projects",
+            style: "btn-style1-yellow",
+            selected: "btn-style1-yellow-selected"
+          }
+        ].map(({ page, style, selected }) => {
+          const href = '/' + page.toLowerCase()
+          return (
+            <Link
+              key={page.toLowerCase()}
+              href={href}
+            >
+              <button className={`rounded-lg px-3 py-0.5 ${style} ${router.pathname == href ? selected : null}`}>{page}</button>
+            </Link>
+          )
+        })}
       </div>
     </nav>
   )

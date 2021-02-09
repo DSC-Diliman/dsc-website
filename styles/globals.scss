@@ -52,18 +52,34 @@
       &-blue {
         @extend .btn-style1;
         @apply hover:text-gray-100 hover:bg-blue-pr;
+        &-selected {
+          @extend .btn-style1;
+          @apply text-gray-100 bg-blue-pr;
+        }
       }
       &-red {
         @extend .btn-style1;
         @apply hover:text-gray-100 hover:bg-red-pr;
+        &-selected {
+          @extend .btn-style1;
+          @apply text-gray-100 bg-red-pr;
+        }
       }
       &-green {
         @extend .btn-style1;
         @apply hover:text-gray-100 hover:bg-green-pr;
+        &-selected {
+          @extend .btn-style1;
+          @apply text-gray-100 bg-green-pr;
+        }
       }
       &-yellow {
         @extend .btn-style1;
         @apply hover:text-gray-100 hover:bg-yellow-pr;
+        &-selected {
+          @extend .btn-style1;
+          @apply text-gray-100 bg-yellow-pr;
+        }
       }
     }
 
@@ -103,6 +119,13 @@
 
   .text-shadow-xl {
     text-shadow: 0px 20px 39px rgba(0, 0, 0, 0.15);
+  }
+
+  .img-frame {
+    @apply overflow-hidden;
+    > img {
+      @apply w-full h-full object-cover;
+    }
   }
 
   .scroll-y {
@@ -161,7 +184,6 @@
     }
   }
 }
-
 
 .test {
   position: absolute;
