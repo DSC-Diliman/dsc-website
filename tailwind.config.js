@@ -29,6 +29,12 @@ module.exports = {
       },
       zIndex: {
         '-10': '-10',
+      },
+      backgroundSize: {
+        '125%': 'auto 125%',
+        '150%': 'auto 150%',
+        '175%': 'auto 175%',
+        '200%': 'auto 200%'
       }
     },
     fontFamily: {
@@ -40,7 +46,7 @@ module.exports = {
       inset: ['even'],
       ringColor: ['focus-visible'],
       ringWidth: ['focus-visible'],
-    } 
+    }
   },
   plugins: [],
 }
