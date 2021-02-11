@@ -2,14 +2,14 @@ import Link from "next/link"
 import Layout from "../components/layout-default"
 import AnimatedText from "../components/animated-text"
 import ParallaxImage from "../components/parallax-image"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+// import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import AnimatedObject from "../components/animated-object"
-import EmAnimated from "../components/animated-em"
+import AnimatedEm from "../components/animated-em"
 
 export default function About() {
-  ScrollTrigger.defaults({
+  /* ScrollTrigger.defaults({
     markers: true
-  })
+  }) */
 
   return (
     <>
@@ -58,21 +58,9 @@ export default function About() {
             </div>
           </div>
           <div>
-            <AnimatedObject
-              fromVars={{
-                x: 100,
-                opacity: 0
-              }}
-              toVars={{
-                x: 0,
-                opacity: 1
-              }}
-              scrub={2}
-            >
-              <h1 className="mt-28 text-lg text-red-700 font-normal mb-4">VISION</h1>
-              <p className="text-3xl font-medium mb-6">Uplifting communities through <EmAnimated emClassName="bg-yellow-300 bottom-0 left-4">technology</EmAnimated></p>
-              <p className="mb-12">This organization envisions itself as a community of tech enthusiasts who are passionate about uplifting communities through technology and innovation.</p>
-            </AnimatedObject>
+            <h1 className="mt-28 text-lg text-red-700 font-normal mb-4">VISION</h1>
+            <p className="text-3xl font-medium mb-6">Uplifting communities through <AnimatedEm emClassName="bg-yellow-300 bottom-0 left-4">technology</AnimatedEm></p>
+            <p className="mb-12">This organization envisions itself as a community of tech enthusiasts who are passionate about uplifting communities through technology and innovation.</p>
             <div className="img-frame div-style1 h-96 w-72">
               <img src="/images/vision-3.png" />
             </div>

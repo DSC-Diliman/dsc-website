@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Em from "../components/em"
-import EmAnimated from "../components/animated-em"
+import AnimatedEm from "../components/animated-em"
 import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout-default"
 import { getEvents } from "../lib/posts"
@@ -22,7 +22,7 @@ export default function Home({ eventsArray }) {
         {elements.map(({ heading, text }, index) => (
           <div key={index} className="relative w-64 div-style1 md:w-80 md:even:top-1/2 p-4 md:p-11">
             <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
-              <EmAnimated emClassName={`right-4 bottom-0 ${color_gen.next().value}`} >{heading}</EmAnimated>
+              <AnimatedEm emClassName={`right-4 bottom-0 ${color_gen.next().value}`} >{heading}</AnimatedEm>
             </h1>
             <p className="text-sm md:text-base">{text}</p>
           </div>
