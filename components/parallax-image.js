@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function ParallaxImage({ children, src, className }) {
-  let ref = useRef(null)
+  const ref = useRef(null)
 
   useEffect(() => {
     ref.current.style.backgroundImage = `url(${src})`

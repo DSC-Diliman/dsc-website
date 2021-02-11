@@ -1,11 +1,13 @@
 import Link from "next/link"
+import Em from "../components/em"
+import EmAnimated from "../components/animated-em"
 import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout-default"
 import { getEvents } from "../lib/posts"
 
 export default function Home({ eventsArray }) {
-  function* getNextEmPrimaryColor() {
-    let color_names = ["em-red", "em-blue", "em-green", "em-yellow"]
+  function* getNextPrimaryColor() {
+    let color_names = ["bg-red-300", "bg-blue-300", "bg-green-300", "bg-yellow-300"]
     let index = 0
     while (true) {
       yield color_names[index++]
@@ -14,15 +16,13 @@ export default function Home({ eventsArray }) {
   }
 
   function renderOffsetGrid(elements) {
-    const color_gen = getNextEmPrimaryColor()
+    const color_gen = getNextPrimaryColor()
     return (
       <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
         {elements.map(({ heading, text }, index) => (
           <div key={index} className="relative w-64 div-style1 md:w-80 md:even:top-1/2 p-4 md:p-11">
             <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
-              <span className={"em em-left em-text-md " + color_gen.next().value}>
-                {heading}
-              </span>
+              <EmAnimated emClassName={`right-4 bottom-0 ${color_gen.next().value}`} >{heading}</EmAnimated>
             </h1>
             <p className="text-sm md:text-base">{text}</p>
           </div>
@@ -36,10 +36,10 @@ export default function Home({ eventsArray }) {
       <section className="min-h-screen px-10 py-24 grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
           <h1 className="text-3xl md:text-5xl">
-            <span className="em em-red em-left em-text-lg">Lorem ipsum</span> dolor sit amet, consectetur
+            <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
           </h1>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <span className="em em-green em-right em-text-base">ipsum dolor sit amet, consectetur</span> adipiscing elit</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
 
           <Link href="/about">
             <button className="btn-style2-red">Learn More</button>

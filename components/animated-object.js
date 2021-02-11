@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function AnimatedObject({ children, className, fromVars, toVars, scrub = true }) {
-  let ref = useRef(null)
+  const ref = useRef(null)
 
   useEffect(() => {
     gsap.fromTo(ref.current, fromVars, {
