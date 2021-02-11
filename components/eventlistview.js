@@ -3,7 +3,7 @@ import TimeFormatter from './timeformatter'
 
 export default function EventListView({ eventsArray }) {
   return (
-    <div className="px-8 max-h-md w-auto overflow-y-auto overscroll-contain scroll-y">
+    <div className="px-8 max-h-80 w-auto overflow-y-auto overscroll-contain scroll-y">
       {
         eventsArray ?
           eventsArray.map((currEvent, index) => (

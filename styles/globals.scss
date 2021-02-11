@@ -123,7 +123,7 @@
 
   .img-frame {
     @apply overflow-hidden;
-    > img {
+    img {
       @apply w-full h-full object-cover;
     }
   }

@@ -16,9 +16,10 @@ module.exports = {
         'xxl': '18rem'
       },
       spacing: {
-        'md': '20rem',
-        'xl': '36rem',
-        '2xl': '42rem'
+        '88': '22rem',
+        '104': '26rem',
+        '112': '28rem',
+        '120': '30rem',
       },
       borderRadius: {
         '4xl': '2rem'
