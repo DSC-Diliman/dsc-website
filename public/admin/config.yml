@@ -3,8 +3,8 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 # publish_mode: editorial_workflow
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "event" # Used in routes, e.g., /admin/collections/blog
@@ -29,7 +29,7 @@ collections:
           label: "Images",
           name: "images",
           widget: "list",
-          summary: '{{fields.image}}',
+          summary: "{{fields.image}}",
           field: { label: "Image", name: "image", widget: "image" },
         }
       - { label: "Body", name: "body", widget: "markdown" }
