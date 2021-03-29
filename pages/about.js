@@ -113,20 +113,23 @@ export default function About() {
           {[
             { name: "Facebook", icon: "/images/facebook-icon.svg" },
             { name: "Youtube", icon: "/images/youtube-icon.svg" },
-            {},
+            null,
             { name: "Gmail", icon: "/images/gmail-icon.svg" },
             { name: "LinkedIn", icon: "/images/linkedin-icon.svg" },
-          ].map((e, index) =>
-            <a key={index}>
-              <div className={`px-10 py-7 text-center transition-shadow hover:shadow-none cursor-pointer ${e.name ? "div-style1" : null}`}>
-                <img
-                  src={e.icon}
-                  className="w-8 mx-auto mb-3"
-                />
-                <p className="text-sm">{e.name}</p>
-              </div>
-            </a>
-          )}
+          ].map((e, index) => (
+            e ?
+              <a key={index}>
+                <button className={"w-full px-10 py-7 text-center transition-shadow hover:shadow-none div-style1"}>
+                  <img
+                    src={e.icon}
+                    className="w-8 mx-auto mb-3"
+                  />
+                  <p className="text-sm">{e.name}</p>
+                </button>
+              </a>
+              :
+              <div key={index} />
+          ))}
         </div>
       </section>
     </>
