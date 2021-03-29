@@ -106,8 +106,8 @@ export async function getStaticProps() {
     props: {
       eventsArray: getEvents([
         "title",
-        "dateStartISO",
-        "dateEndISO",
+        "date",
+        "dateEnd",
         "eventType",
         "location"
       ])

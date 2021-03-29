@@ -9,15 +9,15 @@ export default function EventListView({ eventsArray }) {
           eventsArray.map((currEvent, index) => (
             <div key={index} className="py-4 scroll-start border-b-2 border-gray-100">
               <p className="mb-2 text-sm">
-                <DateFormatter dateTime={currEvent.dateStartISO} />
+                <DateFormatter dateTime={currEvent.date} />
               </p>
               <div className="flex items-stretch">
                 <div>
                   <p className="text-lg">
-                    <TimeFormatter dateTime={currEvent.dateStartISO} />
+                    <TimeFormatter dateTime={currEvent.date} />
                   </p>
                   <p className="text-sm">
-                    <TimeFormatter dateTime={currEvent.dateEndISO} />
+                    <TimeFormatter dateTime={currEvent.dateEnd} />
                   </p>
                 </div>
                 <div className="w-1 bg-blue-pr mx-4 rounded-full" />
