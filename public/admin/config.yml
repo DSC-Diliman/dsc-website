@@ -23,7 +23,15 @@ collections:
           options:
             ["Speaker Sessions", "Study Jams", "Workshops", "Tech Solutions"],
         }
-      - { label: "Location", name: "location", widget: "map" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Location URL", name: "locationURL", widget: "string" }
+      - {
+          label: "Images",
+          name: "images",
+          widget: "list",
+          summary: '{{fields.image}}',
+          field: { label: "Image", name: "image", widget: "image" },
+        }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "project" # Used in routes, e.g., /admin/collections/blog
     label: "Project" # Used in the UI
