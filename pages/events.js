@@ -55,7 +55,7 @@ export default function Events({ allEventsData }) {
                     <p>
                       <BiTimeFive /> <TimeFormatter dateTime={e.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={e.dateEnd} timeFormat="h:mm aaa" />
                     </p>
-                    <a className="ml-auto" href={e.locationURL}><BiLocationPlus /> {e.location}</a>
+                    <a className="ml-auto" href={e.locationURL} target="_blank"><BiLocationPlus /> {e.location}</a>
                   </div>
                   <p>
                     {e.summary}
