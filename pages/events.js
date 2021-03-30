@@ -36,11 +36,11 @@ export default function Events({ allEventsData }) {
         </div>
         <div className="grid auto-grid-base gap-x-8 gap-y-12 auto-rows-fr max-w-6xl mx-auto">
           {allEventsData ? allEventsData.map((e, index) =>
-            <div className="shadow-2xl rounded-2xl bg-white overflow-hidden" key={index}>
+            <div className="flex flex-col shadow-2xl rounded-2xl bg-white overflow-hidden" key={index}>
               <div className="img-frame h-32">
                 <img src={e.images[0]} />
               </div>
-              <div className="flex p-5 text-sm">
+              <div className="flex p-5 text-sm flex-grow">
                 <div className="text-center self-center">
                   <DateFormatter dateTime={e.date} dateFormat="MMM" func={string => string.toUpperCase()} /><br />
                   <span className="font-bold text-3xl"><DateFormatter dateTime={e.date} dateFormat="dd" /></span><br />
@@ -57,7 +57,7 @@ export default function Events({ allEventsData }) {
                     </p>
                     <a className="ml-auto" href={e.locationURL} target="_blank"><BiLocationPlus /> {e.location}</a>
                   </div>
-                  <p>
+                  <p className="mt-2">
                     {e.summary}
                   </p>
                 </div>

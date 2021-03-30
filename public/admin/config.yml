@@ -32,7 +32,12 @@ collections:
           summary: "{{fields.image}}",
           field: { label: "Image", name: "image", widget: "image" },
         }
-      - { label: "Summary", name: "summary", widget: "text" }
+      - {
+          label: "Summary",
+          name: "summary",
+          widget: "text",
+          hint: "Recommended to use a maximum of 115 characters",
+        }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "project" # Used in routes, e.g., /admin/collections/blog
     label: "Project" # Used in the UI

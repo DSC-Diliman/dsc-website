@@ -7,10 +7,7 @@ location: Some location
 locationURL: https://www.instagram.com/
 images:
   - /uploads/oops.png
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
-  amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-  et dolore magna aliqua.
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 ---
 # Heading 1
 
