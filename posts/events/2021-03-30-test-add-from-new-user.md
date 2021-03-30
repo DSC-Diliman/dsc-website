@@ -8,8 +8,7 @@ locationURL: https://www.youtube.com/
 images:
   - /uploads/oops.png
   - /uploads/dsc-logo.png
-summary: A summary. Recommended to use a maximum of 115 charactersRecommended to
-  use a maximum of 115 charactersRecommended
+summary: A summary. Recommended to use a maximum of 115 characters Recommended to use a maximum of 115 characters Recommended
 ---
 # Heading 1
 
