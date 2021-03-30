@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      flex: {
+        '1': '1 1 0'
+      },
       colors: {
         blue: { pr: colors.blue[700] },
         red: { pr: colors.red[700] },
