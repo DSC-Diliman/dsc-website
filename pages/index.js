@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Head from 'next/head'
 import Em from "../components/em"
 import AnimatedEm from "../components/animated-em"
 import EventViewer from "../components/eventviewer"
