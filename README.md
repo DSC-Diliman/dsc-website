@@ -42,6 +42,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ## Styling
 This project uses [Tailwind](https://tailwindcss.com/). Checkout the [docs](https://tailwindcss.com/docs).
 
+For icons, use [React Icons](https://react-icons.github.io/react-icons/).
+
 ## Animation
 Use [GSAP 3](https://greensock.com/) for animation. 
 - [cheat sheet](https://greensock.com/cheatsheet/)

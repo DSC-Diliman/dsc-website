@@ -1,3 +1,4 @@
+import getEventColor from '../lib/eventColor'
 import DateFormatter from './dateformatter'
 import TimeFormatter from './timeformatter'
 
@@ -20,7 +21,7 @@ export default function EventListView({ eventsArray }) {
                     <TimeFormatter dateTime={currEvent.dateEnd} />
                   </p>
                 </div>
-                <div className="w-1 bg-blue-pr mx-4 rounded-full" />
+                <div className={"w-1 mx-4 rounded-full " + getEventColor(currEvent.eventType)} />
                 <div className="flex-1">
                   <p className="text-sm">{currEvent.eventType}</p>
                   <p className="text-lg">{currEvent.title}</p>

@@ -15,6 +15,10 @@
     @apply text-xl md:text-3xl font-medium;
   }
 
+  svg {
+    @apply inline;
+  }
+
   @font-face {
     font-family: "Google Sans";
     src: url("/fonts/GoogleSans/GoogleSans-Regular.woff");
@@ -139,6 +143,12 @@
     }
     &-end {
       scroll-snap-align: end;
+    }
+  }
+
+  .auto-grid {
+    &-base {
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     }
   }
 }

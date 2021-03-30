@@ -14,14 +14,14 @@ export default function About() {
 
   return (
     <>
-      <section className="flex flex-col min-h-screen md:h-screen px-10 pt-32 pb-24 text-center justify-center">
+      <section className="flex flex-col min-h-screen px-10 pt-32 pb-24 text-center justify-center">
         <h1 className="mb-4 text-4xl">What is DSC-UPD?</h1>
         <p className="mb-8 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <ParallaxImage src="images/about-hero.png" className="div-style1 mb-12 max-w-7xl w-full mx-auto h-96 bg-cover" />
         <p className="max-w-3xl text-sm mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       </section>
 
-      <section id="vision" className="p-10 bg-gray-200">
+      <section id="vision" className="p-10 bg-gray-200 overflow-hidden">
         <div className="grid grid-cols-2 max-w-3xl mx-auto gap-12">
           <div>
             <AnimatedObject
