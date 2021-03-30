@@ -3,7 +3,7 @@ title: Test add from new user
 date: 2021-03-29T13:24:33.022Z
 dateEnd: 2021-03-30T14:24:33.062Z
 eventType: Workshops
-location: Some new location
+location: Youtube
 locationURL: https://www.youtube.com/
 images:
   - /uploads/oops.png
