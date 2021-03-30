@@ -33,6 +33,9 @@ export default function Home({ eventsArray }) {
 
   return (
     <>
+      <Head>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+      </Head>
       <section className="min-h-screen px-10 py-24 grid grid-cols-1 md:grid-cols-2 content-center">
         <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
           <h1 className="text-3xl md:text-5xl">
