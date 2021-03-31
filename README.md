@@ -1,6 +1,20 @@
 # (WIP!) Developer Student Clubs - UPD website
 
-## Getting Started
+Temporarily deployed at [https://dcsupd.netlify.app/](https://dcsupd.netlify.app/)
+
+Add an event or project post at [https://dcsupd.netlify.app/admin/](https://dcsupd.netlify.app/admin/), read more about contributing at the [contributors section](#for-contributors).
+
+# For contributors
+
+If you have an account, login [here](https://dcsupd.netlify.app/admin/).
+
+If you don't have one, ask for an invite from one of the developers or admins.
+
+# For developers
+
+1. Do all commits on the dev branch
+2. After completing a feature, create a pull request to the master branch. This will create a deploy preview on netlify.
+3. Check the deploy preview on netlify. If it is working as intended, merge the pull request.
 
 Install packages:
 
