@@ -1,12 +1,12 @@
 # (WIP!) Developer Student Clubs - UPD website
 
-Temporarily deployed at [https://dcsupd.netlify.app/](https://dcsupd.netlify.app/)
+Temporarily deployed at [https://dscupd.netlify.app/](https://dscupd.netlify.app/)
 
-Add an event or project post at [https://dcsupd.netlify.app/admin/](https://dcsupd.netlify.app/admin/), read more about contributing at the [contributors section](#for-contributors).
+Add an event or project post at [https://dscupd.netlify.app/admin/](https://dscupd.netlify.app/admin/), read more about contributing at the [contributors section](#for-contributors).
 
 # For contributors
 
-If you have an account, login [here](https://dcsupd.netlify.app/admin/).
+If you have an account, login [here](https://dscupd.netlify.app/admin/).
 
 If you don't have one, ask for an invite from one of the developers or admins.
 
