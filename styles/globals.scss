@@ -21,28 +21,28 @@
 
   @font-face {
     font-family: "Google Sans";
-    src: url("/fonts/GoogleSans/GoogleSans-Regular.woff");
+    src: url("/fonts/GoogleSans/GoogleSans-Regular.woff") format("woff");
     font-weight: 400;
     font-display: swap;
   }
 
   @font-face {
     font-family: "Google Sans";
-    src: url("/fonts/GoogleSans/GoogleSans-Medium.woff");
+    src: url("/fonts/GoogleSans/GoogleSans-Medium.woff") format("woff");
     font-weight: 500;
     font-display: swap;
   }
 
   @font-face {
     font-family: "Google Sans";
-    src: url("/fonts/GoogleSans/GoogleSans-Bold.woff");
+    src: url("/fonts/GoogleSans/GoogleSans-Bold.woff") format("woff");
     font-weight: 700;
     font-display: swap;
   }
 
   @font-face {
     font-family: "Google Sans";
-    src: url("/fonts/GoogleSans/GoogleSans-Italic.woff");
+    src: url("/fonts/GoogleSans/GoogleSans-Italic.woff") format("woff");
     font-style: italic;
     font-weight: 400;
     font-display: swap;
@@ -151,15 +151,4 @@
       grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     }
   }
-}
-
-.test {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: -1;
-}
-
-.test2 {
-  height: 1500px;
 }
