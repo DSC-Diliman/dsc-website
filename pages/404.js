@@ -1,4 +1,5 @@
-import Layout from "../components/layout-default";
+import Layout from '../components/layout-default';
+import Image from 'next/image'
 
 export default function Error404() {
   return (
@@ -10,7 +11,7 @@ export default function Error404() {
           <p className="">The page cannot be found</p>
         </div>
         <div>
-          <img
+          <Image
             src="/images/oops.png"
             alt="Oops!"
             width={509}

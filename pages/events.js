@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import DateFormatter from '../components/dateformatter'
 import Layout from '../components/layout-default'
 import { getEvents } from '../lib/posts'
@@ -26,10 +27,12 @@ export default function Events({ allEventsData }) {
               <button className="btn-style2-red">Learn More</button>
             </div>
           </div>
-          <div className="flex flex-col m-5 img-frame rounded-3xl">
-            <div className="overflow-y-hidden flex-1">
-              <img src={allEventsData[0].images[0]} />
-            </div>
+          <div className="relative flex-1 m-5 rounded-3xl">
+            <Image
+              src={allEventsData[0].images[0]}
+              layout='fill'
+              objectFit='cover'
+            />
           </div>
         </div>
       </section>
@@ -57,8 +60,12 @@ export default function Events({ allEventsData }) {
         <div className="grid auto-grid-base gap-x-8 gap-y-12 auto-rows-fr max-w-6xl mx-auto">
           {allEventsData ? allEventsData.map((e, index) =>
             <div className="flex flex-col shadow-2xl rounded-2xl bg-white overflow-hidden" key={index}>
-              <div className="img-frame h-32">
-                <img src={e.images[0]} />
+              <div className="relative h-32">
+                <Image
+                  src={e.images[0]}
+                  layout='fill'
+                  objectFit='cover'
+                />
               </div>
               <div className="flex p-5 text-sm flex-grow">
                 <div className="text-center self-center">

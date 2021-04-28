@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image'
 import Layout from "../components/layout-default"
 import AnimatedText from "../components/animated-text"
 import ParallaxImage from "../components/parallax-image"
@@ -36,10 +37,18 @@ export default function About() {
               }}
               scrub={2}
             >
-              <img src="/images/vision-1.png" />
+              <Image
+                src="/images/vision-1.png"
+                width={224}
+                height={256}
+              />
             </AnimatedObject>
             <div className="div-style1 img-frame w-64 h-52">
-              <img src="/images/vision-2.png" />
+              <Image
+                src="/images/vision-2.png"
+                width={256}
+                height={208}
+              />
             </div>
             <div className="mt-20 mr-20 ml-auto max-w-min text-5xl font-medium space-y-6">
               <AnimatedText className="text-red-400">Empower.</AnimatedText>
@@ -63,7 +72,11 @@ export default function About() {
               }}
               scrub={2}
             >
-              <img src="/images/vision-3.png" />
+              <Image
+                src="/images/vision-3.png"
+                width={288}
+                height={384}
+              />
             </AnimatedObject>
           </div>
         </div>
@@ -91,8 +104,12 @@ export default function About() {
             },
           ].map(e =>
             <div key={e.title} className="px-4 py-4 max-w-sm">
-              <div className="mx-auto img-frame rounded-full mb-10 w-32 h-32">
-                <img src={e.image} />
+              <div className="mx-auto rounded-full mb-10 w-32 h-32 overflow-hidden">
+                <Image
+                  src={e.image}
+                  width={128}
+                  height={128}
+                />
               </div>
               <p className="text-2xl font-medium mb-2">{e.title}</p>
               <p>{e.desc}</p>
