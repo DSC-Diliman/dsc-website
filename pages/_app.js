@@ -8,6 +8,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <link rel="shortcut icon" href="/favicon.png" />
         {/* <link
           rel="preload"
           href="/fonts/GoogleSans/GoogleSans-Regular.woff"
