@@ -1,8 +1,8 @@
 ---
 title: Lorem ipsum
-thumbnail: /images/mission-1.png
+thumbnail: /images/mission-2.png
 images:
-  - /images/mission-1.png
+  - /images/mission-2.png
 ---
 # Heading 1
 

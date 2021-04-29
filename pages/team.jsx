@@ -64,14 +64,14 @@ export default function Team() {
               <ParallaxObject className="absolute bottom-0 right-24 -z-10 w-6 h-6 bg-green-500 rounded-full" y={[0, 50]} end="bottom+=200 top" />
               <Portrait
                 src="/images/portrait.png"
-                className="transform translate-y-6"
+                className="transform -translate-y-6"
                 name="Gianna Burgos"
                 position="Position"
                 desc='"Something short and fun like a yearbook quote or life motto haha"'
               />
               <Portrait
                 src="/images/portrait.png"
-                className="transform -translate-y-6"
+                className="transform translate-y-6"
                 name="Gianna Burgos"
                 position="Position"
                 desc='"Something short and fun like a yearbook quote or life motto haha"'
