@@ -15,6 +15,10 @@
     @apply text-xl md:text-3xl font-medium;
   }
 
+  h2 {
+    @apply text-lg md:text-2xl font-medium;
+  }
+
   svg {
     @apply inline;
   }
