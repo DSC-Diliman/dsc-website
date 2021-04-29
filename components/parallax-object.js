@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function ParallaxObject({ children, className, y = [0, 0], x = [0, 0] }) {
+export default function ParallaxObject({ children, className, y = [0, 0], x = [0, 0], start = "top bottom", end = "bottom top" }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -17,7 +17,10 @@ export default function ParallaxObject({ children, className, y = [0, 0], x = [0
       ease: "none",
       scrollTrigger: {
         trigger: ref.current,
-        scrub: true
+        scrub: true,
+        start: start,
+        end: end,
+        // markers: true,
       }
     })
   })

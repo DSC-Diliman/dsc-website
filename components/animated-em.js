@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function AnimatedEm({ children, className, emClassName }) {
+export default function AnimatedEm({ children, className, emClassName, trigger = "60%" }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function AnimatedEm({ children, className, emClassName }) {
       width: "0%",
       scrollTrigger: {
         trigger: ref.current,
-        start: "top 60%",
+        start: `top ${trigger}`,
         end: "+=100",
         scrub: 1
       }
