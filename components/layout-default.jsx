@@ -12,7 +12,7 @@ export default function Layout({ children, title }) {
 
       <Nav />
 
-      <main className="flex flex-col flex-nowrap min-h-screen justify-center">
+      <main className="flex flex-col flex-nowrap min-h-screen">
         {children}
         <Footer />
       </main>
