@@ -5,8 +5,8 @@ import Masonry from 'react-masonry-css'
 export default function Projects({ allProjectsData }) {
   return (
     <>
-      <div className="px-10 pt-32 pb-10 w-full text-center">
-        <h1>
+      <div className="px-10 pt-32 pb-6 w-full text-center">
+        <h1 className="my-4">
           Projects
         </h1>
         <p>Click on the images to view our completed projects!</p>
