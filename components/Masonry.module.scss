@@ -1,0 +1,9 @@
+.projects-masonry {
+  @apply flex;
+  > div {
+    @apply mx-3;
+    > div {
+      @apply relative my-6 rounded-3xl transition-all shadow-3xl hover:shadow-none hover:ring-4 ring-red-700 overflow-hidden;
+    }
+  }
+}

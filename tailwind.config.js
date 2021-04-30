@@ -53,7 +53,7 @@ module.exports = {
       inset: ['even'],
       ringColor: ['focus-visible'],
       ringWidth: ['focus-visible', 'hover'],
-      margin: ['group-hover'],
+      margin: ['group-hover']
     }
   },
   plugins: [],
