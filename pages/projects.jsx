@@ -1,6 +1,8 @@
-import Layout from '../components/layout-default'
-import { getProjects } from '../lib/posts'
-import Masonry from 'react-masonry-css'
+import Layout from "/components/layout-default"
+import { getProjects } from "/lib/posts"
+import Masonry from "react-masonry-css"
+import Link from "next/link";
+import masonryStyle from "/components/Masonry.module.scss"
 
 export default function Projects({ allProjectsData }) {
   return (
@@ -14,17 +16,27 @@ export default function Projects({ allProjectsData }) {
       <div className="flex-1 px-10 mx-auto w-full max-w-6xl">
         {allProjectsData ?
           <Masonry
-            className="projects-masonry"
+            className={masonryStyle["projects-masonry"]}
             breakpointCols={{ default: 4, 768: 3, 640: 2 }}
           >
             {allProjectsData.map((projectData, index) =>
-              <div key={index}>
-                <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">{projectData.title}</p>
-                <img src={projectData.thumbnail} className="-z-10" />
+              <div>
+                <Link
+                  href={{
+                    pathname: "/projects/[id]",
+                    query: { id: projectData.id },
+                  }}
+                  key={index}
+                >
+                  <a>
+                    <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">{projectData.title}</p>
+                    <img src={projectData.thumbnail} className="-z-10" />
+                  </a>
+                </Link>
               </div>
             )}
           </Masonry>
-          : <p className="text-3xl">No Projects Available</p>}
+          : <p className="text-3xl text-center">No Projects Available</p>}
       </div>
     </>
   )
