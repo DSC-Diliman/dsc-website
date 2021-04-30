@@ -4,7 +4,7 @@ import TimeFormatter from "./timeformatter";
 import { BiTimeFive, BiLocationPlus } from 'react-icons/bi'
 
 export default function EventsGrid({ eventsData }) {
-  return <>
+  return (<>
     <h2 className="text-center mb-6 text-2xl font-medium">All Events</h2>
     <div className="flex flex-wrap place-content-center mb-10 space-x-8">
       <div className="flex items-center">
@@ -55,5 +55,5 @@ export default function EventsGrid({ eventsData }) {
         </div>
       ) : null}
     </div>
-  </>
+  </>)
 }

@@ -3,7 +3,7 @@ import DateFormatter from '../components/dateformatter'
 import TimeFormatter from '../components/timeformatter'
 
 export default function EventFeatured({ event }) {
-  return <>
+  return (<>
     <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto div-style1">
       <div className="flex flex-col my-10 ml-12 mr-4 md:flex-shrink-0 max-w-sm">
         <div>
@@ -24,5 +24,5 @@ export default function EventFeatured({ event }) {
         </div>
       </div>
     </div>
-  </>
+  </>)
 }
