@@ -17,7 +17,6 @@ Lorem ipsum `code` dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
 ## Heading 2
 
 Lorem ipsum:
-
 - Lorem ipsum
 - Lorem **bold**
 - *italic* ipsum

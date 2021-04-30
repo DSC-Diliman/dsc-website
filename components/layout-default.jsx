@@ -7,15 +7,14 @@ export default function Layout({ children, title }) {
     <>
       <Head>
         <title>{title ? title + " | DSC UPD" : "DSC UP Diliman"}</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Nav />
 
       <main className="flex flex-col flex-nowrap min-h-screen">
         {children}
         <Footer />
       </main>
+
+      <Nav />
     </>
   )
 }
