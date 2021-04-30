@@ -1,0 +1,41 @@
+@mixin headings {
+  h1, h2, h3, h4, h5, h6 {
+    @content;
+  }
+}
+
+.markdown {
+  @include headings {
+    @apply mt-2;
+  }
+  h1 {
+    @apply font-bold text-xl;
+  }
+  h2 {
+    @apply font-medium text-lg;
+  }
+  h3 {
+    @apply font-medium;
+  }
+  a {
+    @apply text-blue-pr underline;
+  }
+  code {
+    @apply bg-black text-white;
+  }
+  ul, ol {
+    @apply list-inside;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  hr {
+    @apply my-2;
+  }
+  blockquote {
+    @apply p-2 text-gray-600 bg-gray-200;
+  }
+}

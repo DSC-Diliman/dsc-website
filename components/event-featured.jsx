@@ -1,6 +1,7 @@
-import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from 'react-icons/bi'
-import DateFormatter from '../components/dateformatter'
-import TimeFormatter from '../components/timeformatter'
+import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi"
+import Link from "next/link";
+import DateFormatter from "/components/dateformatter"
+import TimeFormatter from "/components/timeformatter"
 
 export default function EventFeatured({ event }) {
   return (<>
@@ -15,7 +16,14 @@ export default function EventFeatured({ event }) {
             <div><BiTimeFive /> <TimeFormatter dateTime={event.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={event.dateEnd} timeFormat="h:mm aaa" /></div>
           </div>
           <p className="mb-8">{event.summary}</p>
-          <button className="btn-style2-red">Learn More</button>
+          <Link
+            href={{
+              pathname: "/events/[id]",
+              query: { id: event.id },
+            }}
+          >
+            <button className="btn-style2-red">Learn More</button>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col m-5 img-frame rounded-3xl">

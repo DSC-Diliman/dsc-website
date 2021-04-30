@@ -38,6 +38,10 @@ module.exports = {
         '150%': 'auto 150%',
         '175%': 'auto 175%',
         '200%': 'auto 200%'
+      },
+      maxHeight: {
+        'min': 'min-content',
+        'max': 'max-content'
       }
     },
     fontFamily: {
@@ -48,8 +52,8 @@ module.exports = {
     extend: {
       inset: ['even'],
       ringColor: ['focus-visible'],
-      ringWidth: ['focus-visible'],
-      margin: ['group-hover']
+      ringWidth: ['focus-visible', 'hover'],
+      margin: ['group-hover'],
     }
   },
   plugins: [],
