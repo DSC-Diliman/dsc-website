@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import DateFormatter from "./dateformatter";
 import getEventColor from '../lib/eventColor'
 import TimeFormatter from "./timeformatter";
@@ -5,6 +6,8 @@ import { BiTimeFive, BiLocationPlus } from 'react-icons/bi'
 import Link from "next/link";
 
 export default function EventsGrid({ eventsData }) {
+  const router = useRouter()
+
   return (<>
     <h2 className="text-center mb-6 text-2xl font-medium">All Events</h2>
     <div className="flex flex-wrap place-content-center mb-10 space-x-8">
@@ -28,10 +31,10 @@ export default function EventsGrid({ eventsData }) {
     <div className="grid auto-grid-base gap-x-8 gap-y-12 auto-rows-fr max-w-6xl mx-auto">
       {eventsData ? eventsData.map((e, index) =>
         <Link
-          href={{
-            pathname: "/events/[id]",
-            query: { id: e.id },
-          }}
+          href={`/events?id=${e.id}`}
+          as={`/events/${e.id}`}
+          scroll={router.pathname != "/events"}
+          shallow={true}
           key={index}
         >
           <a>
@@ -52,9 +55,7 @@ export default function EventsGrid({ eventsData }) {
                     <p>
                       <BiTimeFive /> <TimeFormatter dateTime={e.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={e.dateEnd} timeFormat="h:mm aaa" />
                     </p>
-                    {/* <a className="ml-auto" href={e.locationURL} target="_blank"> */}
                     <BiLocationPlus className="ml-auto" /> {e.location}
-                    {/* </a> */}
                   </div>
                   <p className="mt-2 max-h-24 overflow-y-auto">
                     {e.summary}

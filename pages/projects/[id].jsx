@@ -13,7 +13,7 @@ export default function EventPage({ project }) {
 
   useEffect(() => {
     router.prefetch("/projects")
-  })
+  }, [])
 
   return (<>
     <Modal

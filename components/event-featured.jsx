@@ -17,10 +17,9 @@ export default function EventFeatured({ event }) {
           </div>
           <p className="mb-8">{event.summary}</p>
           <Link
-            href={{
-              pathname: "/events/[id]",
-              query: { id: event.id },
-            }}
+            href={`/events?id=${event.id}`}
+            as={`/events/${event.id}`}
+            scroll={false}
           >
             <button className="btn-style2-red">Learn More</button>
           </Link>
