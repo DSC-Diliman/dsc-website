@@ -8,12 +8,17 @@ import Masonry from "react-masonry-css"
 import Link from "next/link";
 import masonryStyle from "/components/Masonry.module.scss"
 import markdownStyle from "/components/Markdown.module.scss"
+import ButtonClose from "../components/button-close"
 
 Modal.setAppElement("#__next")
 
 export default function Projects({ allProjectsData }) {
   const router = useRouter()
   const [selectedProject, setSelectedProject] = useState(null)
+
+  function closeModal() {
+    router.push(router.pathname, undefined, { scroll: false })
+  }
 
   useEffect(() => {
     if (router.query.id) {
@@ -29,12 +34,13 @@ export default function Projects({ allProjectsData }) {
     <>
       <Modal
         isOpen={!!selectedProject}
-        onRequestClose={() => router.push(router.pathname, undefined, { scroll: false })}
+        onRequestClose={closeModal}
         contentLabel="Project modal"
         className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
         style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
         overlayClassName="fixed bg-black bg-opacity-50 inset-0"
       >
+        <ButtonClose onClick={closeModal} />
         {selectedProject ?
           <>
             <div className="md:mx-6 md:mt-6 img-frame h-80 md:rounded-3xl"><img src={selectedProject.images[0]} /></div>

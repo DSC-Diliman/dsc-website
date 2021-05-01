@@ -5,11 +5,16 @@ import Layout from "/components/layout-default"
 import { getEventIds, getEventById } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
 import EventShowcase from "../../components/event-showcase"
+import ButtonClose from "../../components/button-close"
 
 Modal.setAppElement("#__next")
 
 export default function EventPage({ event }) {
   const router = useRouter()
+
+  function closeModal() {
+    router.push("/events")
+  }
 
   useEffect(() => {
     router.prefetch("/events")
@@ -18,12 +23,13 @@ export default function EventPage({ event }) {
   return (
     <Modal
       isOpen={true}
-      onRequestClose={() => router.push("/events")}
+      onRequestClose={closeModal}
       contentLabel="Event modal"
       className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
       style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
       overlayClassName="fixed bg-black bg-opacity-50 inset-0"
     >
+      <ButtonClose onClick={closeModal} />
       <EventShowcase event={event} />
     </Modal>
   )

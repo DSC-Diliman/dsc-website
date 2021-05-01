@@ -1,18 +1,24 @@
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Modal from "react-modal"
+import { IoClose } from "react-icons/io5"
 import { getEvents } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
 import Layout from "/components/layout-default"
 import EventsGrid from "/components/events-grid"
 import EventFeatured from "/components/event-featured"
 import EventShowcase from "/components/event-showcase"
+import ButtonClose from "../components/button-close"
 
 Modal.setAppElement("#__next")
 
 export default function Events({ allEventsData }) {
   const router = useRouter()
   const [selectedEvent, setSelectedEvent] = useState(null)
+
+  function closeModal() {
+    router.push(router.pathname, undefined, { scroll: false })
+  }
 
   useEffect(() => {
     if (router.query.id) {
@@ -27,12 +33,13 @@ export default function Events({ allEventsData }) {
   return (<>
     <Modal
       isOpen={!!selectedEvent}
-      onRequestClose={() => router.push(router.pathname, undefined, { scroll: false })}
+      onRequestClose={closeModal}
       contentLabel="Event modal"
       className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
       style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
       overlayClassName="fixed bg-black bg-opacity-50 inset-0"
     >
+      <ButtonClose onClick={closeModal} />
       {selectedEvent ? <EventShowcase event={selectedEvent} /> : null}
     </Modal>
     <h1 className="text-center my-4 pt-24">Events</h1>
