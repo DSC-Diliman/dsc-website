@@ -1,38 +1,32 @@
 import { useRouter } from "next/router"
 import { useEffect } from "react"
-import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from 'react-icons/bi'
+import Modal from "react-modal"
 import Layout from "/components/layout-default"
-import DateFormatter from "/components/dateformatter"
-import TimeFormatter from "/components/timeformatter"
-import { getEventIds, getEvents } from "/lib/posts"
+import { getEventIds, getEventById } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
-import markdownStyle from "/components/Markdown.module.scss"
-import EventsGrid from "/components/events-grid"
 import EventShowcase from "../../components/event-showcase"
 
-export default function EventPage({ allEventsData, selectedEvent }) {
+Modal.setAppElement("#__next")
+
+export default function EventPage({ event }) {
   const router = useRouter()
 
   useEffect(() => {
     router.prefetch("/events")
   }, [])
 
-  return (<>
-    <h1 className="text-center my-4 pt-24">Events</h1>
-    {allEventsData ?
-      <div>
-        <section className="pb-2 px-10">
-          <div className="mx-auto my-4 max-w-3xl bg-white div-style1">
-            <EventShowcase event={selectedEvent} />
-          </div>
-        </section>
-
-        <section id="allEvents" className="py-2 px-10">
-          <EventsGrid eventsData={allEventsData} />
-        </section>
-      </div>
-      : <p className="flex-1 text-center text-3xl p-10">No events at the moment...</p>}
-  </>)
+  return (
+    <Modal
+      isOpen={true}
+      onRequestClose={() => router.push("/events")}
+      contentLabel="Event modal"
+      className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
+      style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
+      overlayClassName="fixed bg-black bg-opacity-50 inset-0"
+    >
+      <EventShowcase event={event} />
+    </Modal>
+  )
 }
 
 EventPage.getLayout = page => (
@@ -42,16 +36,11 @@ EventPage.getLayout = page => (
 )
 
 export async function getStaticProps({ params: { id } }) {
-  const allEventsData = getEvents()
-  allEventsData.forEach(async (event, index, events) => {
-    events[index].content = await markdownToHtml(event.content || '')
-  })
-  await Promise.all(allEventsData)
-
-  const selectedEvent = allEventsData.find(event => event.id == id)
+  const event = getEventById(id)
+  const content = await markdownToHtml(event.content || '')
 
   return {
-    props: { allEventsData, selectedEvent }
+    props: { event: { ...event, content } }
   }
 }
 
