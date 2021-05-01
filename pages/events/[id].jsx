@@ -21,7 +21,7 @@ export default function EventPage({ event }) {
   return (<>
     <Modal
       isOpen={true}
-      onRequestClose={() => router.push("/events")}
+      onRequestClose={() => router.back()}
       contentLabel="Event modal"
       className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
       style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
