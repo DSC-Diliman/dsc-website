@@ -20,13 +20,12 @@ export default function Projects({ allProjectsData }) {
             breakpointCols={{ default: 4, 768: 3, 640: 2 }}
           >
             {allProjectsData.map((projectData, index) =>
-              <div>
+              <div key={index}>
                 <Link
                   href={{
                     pathname: "/projects/[id]",
                     query: { id: projectData.id },
                   }}
-                  key={index}
                 >
                   <a>
                     <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">{projectData.title}</p>
