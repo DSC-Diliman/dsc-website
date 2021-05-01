@@ -37,18 +37,21 @@ export default function Home({ eventsArray }) {
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
-      <section className="min-h-screen px-10 py-24 grid grid-cols-1 md:grid-cols-2 content-center">
-        <div className="justify-self-center md:justify-self-end max-w-lg space-y-10">
-          <h1 className="text-3xl md:text-5xl">
-            <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
+      <section className="relative flex items-center justify-center lg:justify-start min-h-screen py-24 overflow-hidden">
+        <div className="w-1/2 mx-10">
+          <div className="max-w-xl space-y-10 mx-auto p-10 bg-white bg-opacity-70 backdrop-filter backdrop-blur-xl rounded-4xl lg:backdrop-filter-none lg:bg-transparent">
+            <h1 className="text-3xl md:text-5xl">
+              <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
           </h1>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
 
-          <Link href="/about">
-            <button className="btn-style2-red">Learn More</button>
-          </Link>
+            <Link href="/about">
+              <button className="btn-style2-red">Learn More</button>
+            </Link>
+          </div>
         </div>
+        <img src="/images/index-hero.png" className="absolute right-0 -z-10 w-full lg:w-5/12" />
       </section>
 
       <section className="px-10 pt-12 pb-6 md:pb-32 bg-gray-200 flex flex-col items-center justify-center">
