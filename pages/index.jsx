@@ -38,7 +38,7 @@ export default function Home({ eventsArray }) {
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
       <section className="relative flex items-center justify-center lg:justify-start min-h-screen py-24 overflow-hidden">
-        <div className="w-1/2 mx-10">
+        <div className="lg:w-1/2 mx-10">
           <div className="max-w-xl space-y-10 mx-auto p-10 bg-white bg-opacity-70 backdrop-filter backdrop-blur-xl rounded-4xl lg:backdrop-filter-none lg:bg-transparent">
             <h1 className="text-3xl md:text-5xl">
               <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
