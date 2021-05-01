@@ -1,5 +1,6 @@
 import AnimatedEm from "../components/animated-em"
 import Layout from "../components/layout-default"
+import Em from "../components/em"
 import ParallaxObject from "../components/parallax-object"
 import Portrait from "../components/portrait"
 // import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
@@ -17,7 +18,7 @@ export default function Team() {
       </div>
       <div className="space-y-20 mb-20">
         <section id="executive" className="px-10">
-          <h2 className="text-center">Executive Board</h2>
+          <h2 className="text-center"><Em emClassName="bg-blue-400 bottom-0">&nbsp;&nbsp;&nbsp;Exec</Em><Em emClassName="bg-red-400 bottom-0">utiv</Em><Em emClassName="bg-yellow-400 bottom-0">e Boa</Em><Em emClassName="bg-green-400 bottom-0">rd&nbsp;&nbsp;&nbsp;</Em></h2>
           <div className="flex flex-wrap justify-evenly gap-x-7 gap-y-14 max-w-3xl mx-auto mt-8 mb-28">
             <Portrait
               src="/images/portrait.png"
