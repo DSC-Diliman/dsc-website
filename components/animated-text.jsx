@@ -22,7 +22,7 @@ export default function AnimatedText({ children, className }) {
       opacity: 1,
       y: 0
     })
-  })
+  }, [])
 
   return <p className={className} ref={ref}>{children}</p>
 }
