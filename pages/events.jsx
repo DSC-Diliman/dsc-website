@@ -1,15 +1,13 @@
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Modal from "react-modal"
-import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi"
-import DateFormatter from "/components/dateformatter"
-import TimeFormatter from "/components/timeformatter"
+
 import { getEvents } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
-import markdownStyle from "/components/Markdown.module.scss"
 import Layout from "/components/layout-default"
 import EventsGrid from "/components/events-grid"
 import EventFeatured from "/components/event-featured"
+import EventShowcase from "/components/event-showcase"
 
 Modal.setAppElement("#__next")
 
@@ -36,20 +34,7 @@ export default function Events({ allEventsData }) {
       style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
       overlayClassName="fixed bg-black bg-opacity-50 inset-0"
     >
-      {selectedEvent ? <>
-        <div className="md:mx-6 md:mt-6 img-frame h-80 md:rounded-3xl"><img src={selectedEvent.images[0]} /></div>
-        <div className="p-3 md:p-6">
-          <p className="text-red-pr text-lg">{selectedEvent.eventType}</p>
-          <h1>{selectedEvent.title}</h1>
-          <div className="my-4 grid grid-rows-3 md:grid-rows-2 md:grid-cols-2 gap-1">
-            <div><BiCalendarEvent /> <DateFormatter dateTime={selectedEvent.date} /></div>
-            <a href={selectedEvent.locationURL} target="_blank"><div><BiLocationPlus /> {selectedEvent.location}</div></a>
-            <div><BiTimeFive /> <TimeFormatter dateTime={selectedEvent.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={selectedEvent.dateEnd} timeFormat="h:mm aaa" /></div>
-          </div>
-          <div className={markdownStyle.markdown} dangerouslySetInnerHTML={{ __html: selectedEvent.content }} />
-        </div>
-      </> : null
-      }
+      {selectedEvent ? <EventShowcase event={selectedEvent} /> : null}
     </Modal>
     <h1 className="text-center my-4 pt-24">Events</h1>
     {allEventsData ?

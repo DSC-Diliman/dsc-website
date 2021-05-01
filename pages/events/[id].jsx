@@ -8,6 +8,7 @@ import { getEventIds, getEvents } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
 import markdownStyle from "/components/Markdown.module.scss"
 import EventsGrid from "/components/events-grid"
+import EventShowcase from "../../components/event-showcase"
 
 export default function EventPage({ allEventsData, selectedEvent }) {
   const router = useRouter()
@@ -21,20 +22,8 @@ export default function EventPage({ allEventsData, selectedEvent }) {
     {allEventsData ?
       <div>
         <section className="pb-2 px-10">
-          <div
-            className="mx-auto my-4 max-w-3xl bg-white div-style1"
-          >
-            <div className="md:mx-6 md:mt-6 img-frame h-80 md:rounded-3xl"><img src={selectedEvent.images[0]} /></div>
-            <div className="p-3 md:p-6">
-              <p className="text-red-pr text-lg">{selectedEvent.eventType}</p>
-              <h1>{selectedEvent.title}</h1>
-              <div className="my-4 grid grid-rows-3 md:grid-rows-2 md:grid-cols-2 gap-1">
-                <div><BiCalendarEvent /> <DateFormatter dateTime={selectedEvent.date} /></div>
-                <a href={selectedEvent.locationURL} target="_blank"><div><BiLocationPlus /> {selectedEvent.location}</div></a>
-                <div><BiTimeFive /> <TimeFormatter dateTime={selectedEvent.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={selectedEvent.dateEnd} timeFormat="h:mm aaa" /></div>
-              </div>
-              <div className={markdownStyle.markdown} dangerouslySetInnerHTML={{ __html: selectedEvent.content }} />
-            </div>
+          <div className="mx-auto my-4 max-w-3xl bg-white div-style1">
+            <EventShowcase event={selectedEvent} />
           </div>
         </section>
 
