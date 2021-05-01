@@ -33,7 +33,7 @@ export default function ProjectPage({ project }) {
   </>)
 }
 
-EventPage.getLayout = page => (
+ProjectPage.getLayout = page => (
   <Layout title="Project">
     {page}
   </Layout>
