@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Footer from './footer'
 import Nav from './nav'
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, footerChildren, title }) {
   return (
     <>
       <Head>
@@ -11,7 +11,7 @@ export default function Layout({ children, title }) {
 
       <main className="flex flex-col flex-nowrap min-h-screen">
         {children}
-        <Footer />
+        <Footer>{footerChildren}</Footer>
       </main>
 
       <Nav />

@@ -1,10 +1,12 @@
 import Link from "next/link"
 import Head from 'next/head'
+import { RiCopyrightLine } from "react-icons/ri"
 import Em from "../components/em"
 import AnimatedEm from "../components/animated-em"
 import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout-default"
 import { getEvents } from "../lib/posts"
+import indexHeroStyle from "/components/IndexHero.module.scss"
 
 export default function Home({ eventsArray }) {
   function* getNextPrimaryColor() {
@@ -37,12 +39,12 @@ export default function Home({ eventsArray }) {
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
-      <section className="relative flex items-center justify-center lg:justify-start min-h-screen py-24 overflow-hidden">
-        <div className="lg:w-1/2 mx-10">
-          <div className="max-w-xl space-y-10 mx-auto p-10 bg-white bg-opacity-70 backdrop-filter backdrop-blur-xl rounded-4xl lg:backdrop-filter-none lg:bg-transparent">
+      <section className="flex flex-col md:flex-row items-center min-h-screen">
+        <div className="px-10 pt-24 w-1/2">
+          <div className="max-w-xl space-y-10 mx-auto p-10">
             <h1 className="text-3xl md:text-5xl">
               <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
-          </h1>
+            </h1>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
 
@@ -51,10 +53,15 @@ export default function Home({ eventsArray }) {
             </Link>
           </div>
         </div>
-        <img src="/images/index-hero.png" className="absolute right-0 -z-10 w-full lg:w-5/12" />
+        <div className={indexHeroStyle.hero}>
+          <div>
+            <div />
+          </div>
+          <div />
+        </div>
       </section>
 
-      <section className="px-10 pt-12 pb-6 md:pb-32 bg-gray-200 flex flex-col items-center justify-center">
+      <section className="px-10 pt-12 pb-6 md:pb-32 bg-gray-200 flex flex-col items-center justify-center shadow-above">
         <h1 className="text-center mb-4">What do we do in DSC UP Diliman?</h1>
 
         <Link href="/team">
@@ -103,7 +110,9 @@ export default function Home({ eventsArray }) {
 }
 
 Home.getLayout = page => (
-  <Layout>
+  <Layout
+    footerChildren={<p><RiCopyrightLine /> Oblation photo by Mila D. Aguilar</p>}
+  >
     {page}
   </Layout>
 )

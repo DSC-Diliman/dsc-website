@@ -1,0 +1,26 @@
+.hero {
+  $image-position: top left;
+  $size: auto 100%;
+  clip-path: inset(0);
+  @apply w-1/2 self-stretch;
+  > div:nth-child(1) {
+    mask-image: url("/images/index-hero-mask.png");
+    mask-mode: alpha;
+    mask-repeat: no-repeat;
+    mask-position: $image-position;
+    mask-size: $size;
+    @apply w-full h-full;
+    > div {
+      background-image: url("/images/index-hero.png");
+      background-position: $image-position;
+      background-size: $size;
+      @apply fixed w-1/2 h-full bg-no-repeat;
+    }
+  }
+  > div:nth-child(2) {
+    background-image: url("/images/index-hero-main.png");
+    background-position: $image-position;
+    background-size: $size;
+    @apply top-0 fixed w-1/2 h-full bg-no-repeat;
+  }
+}

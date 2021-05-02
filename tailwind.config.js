@@ -28,7 +28,8 @@ module.exports = {
         '4xl': '2rem'
       },
       boxShadow: {
-        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)'
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+        'above': '0 -25px 50px 0 rgba(0, 0, 0, 0.1)'
       },
       zIndex: {
         '-10': '-10',
