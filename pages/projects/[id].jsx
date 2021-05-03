@@ -6,6 +6,7 @@ import { getProjectById, getProjectIds } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
 import markdownStyle from "/components/Markdown.module.scss"
 import ButtonClose from "../../components/button-close"
+import ProjectShowcase from "../../components/project-showcase"
 
 Modal.setAppElement("#__next")
 
@@ -28,13 +29,10 @@ export default function ProjectPage({ project }) {
       className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
       style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
       overlayClassName="fixed bg-black bg-opacity-50 inset-0"
+      parentSelector={() => document.querySelector("#__next")}
     >
       <ButtonClose onClick={closeModal} />
-      <div className="md:mx-6 md:mt-6 img-frame h-80 md:rounded-3xl"><img src={project.images[0]} /></div>
-      <div className="m-3 md:m-6">
-        <h1>{project.title}</h1>
-        <div className={markdownStyle.markdown} dangerouslySetInnerHTML={{ __html: project.content }} />
-      </div>
+      <ProjectShowcase project={project} />
     </Modal>
   </>)
 }

@@ -9,12 +9,12 @@ export default function Layout({ children, footerChildren, title }) {
         <title>{title ? title + " | DSC UPD" : "DSC UP Diliman"}</title>
       </Head>
 
+      <Nav className="z-10" />
+
       <main className="flex flex-col flex-nowrap min-h-screen">
         {children}
         <Footer>{footerChildren}</Footer>
       </main>
-
-      <Nav />
     </>
   )
 }
