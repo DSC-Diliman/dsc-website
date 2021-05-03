@@ -38,18 +38,19 @@ export default function Events({ allEventsData }) {
       className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
       style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
       overlayClassName="fixed bg-black bg-opacity-50 inset-0"
+      parentSelector={() => document.querySelector("#__next")}
     >
       <ButtonClose onClick={closeModal} />
       {selectedEvent ? <EventShowcase event={selectedEvent} /> : null}
     </Modal>
-    <h1 className="text-center my-4 pt-24">Events</h1>
+    <h1 className="text-center my-4 pt-12 md:pt-24">Events</h1>
     {allEventsData ?
       <div>
-        <section id="featured" className="pb-14 px-10">
+        <section id="featured" className="px-4 md:px-10">
           <EventFeatured event={allEventsData[0]} />
         </section>
 
-        <section id="allEvents" className="p-10">
+        <section id="allEvents" className="my-6 md:my-10 px-4 md:px-10">
           <EventsGrid eventsData={allEventsData} />
         </section>
       </div>

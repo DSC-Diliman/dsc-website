@@ -28,7 +28,7 @@ export default function EventsGrid({ eventsData }) {
         <p className="ml-4">Tech Solutions</p>
       </div>
     </div>
-    <div className="grid auto-grid-base gap-x-8 gap-y-12 auto-rows-fr max-w-6xl mx-auto">
+    <div className="grid auto-grid-base gap-x-8 gap-y-4 md:gap-y-12 auto-rows-fr max-w-6xl mx-auto">
       {eventsData ? eventsData.map((e, index) =>
         <Link
           href={`/events?id=${e.id}`}

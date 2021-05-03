@@ -2,14 +2,14 @@ import { TiSocialFacebookCircular, TiSocialTwitterCircular, TiSocialLinkedinCirc
 
 export default function Portrait({ className, src, name, position, desc, socials = {} }) {
   return (
-    <div className={`group relative overflow-hidden rounded-3xl w-48 h-60 shadow-2xl text-sm img-frame ${className}`}>
-      <img src={src} className="absolute -z-10" />
+    <div className={`group relative overflow-hidden rounded-xl md:rounded-3xl w-36 h-44 md:w-48 md:h-60 shadow-2xl text-sm img-frame ${className}`}>
+      <img src={src} className="absolute" />
       <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black" />
-      <div className="relative transition-all mt-40 group-hover:mt-0 h-full p-4 flex flex-col group-hover:bg-black group-hover:bg-opacity-70 text-white">
-        <p className="text-base font-medium">{name}</p>
-        <p>{position}</p>
-        <div className="flex flex-col flex-1"><p className="my-auto">{desc}</p></div>
-        <div className="text-4xl">
+      <div className="relative transition-all mt-28 md:mt-40 group-hover:mt-0 h-full p-2 md:p-4 flex flex-col group-hover:bg-black group-hover:bg-opacity-70 text-white">
+        <p className="md:text-base font-medium">{name}</p>
+        <p className="text-xs md:text-base">{position}</p>
+        <div className="text-xs pt-3 md:text-sm flex flex-col flex-1"><p className="my-auto">{desc}</p></div>
+        <div className="text-2xl md:text-4xl">
           {socials.facebook ? <a href={socials.facebook}><TiSocialFacebookCircular /></a> : null}
           {socials.twitter ? <a href={socials.twitter}><TiSocialTwitterCircular /></a> : null}
           {socials.linkedin ? <a href={socials.linkedin}><TiSocialLinkedinCircular /></a> : null}

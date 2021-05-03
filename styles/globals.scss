@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-gray-100 overflow-x-hidden;
+    @apply bg-gray-100 overflow-x-hidden text-sm md:text-base;
   }
 
   h1 {
@@ -59,34 +59,34 @@
       @apply transition-colors;
       &-blue {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-blue-pr;
+        @apply hover:text-white hover:bg-blue-pr;
         &-selected {
           @extend .btn-style1;
-          @apply text-gray-100 bg-blue-pr;
+          @apply text-white bg-blue-pr;
         }
       }
       &-red {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-red-pr;
+        @apply hover:text-white hover:bg-red-pr;
         &-selected {
           @extend .btn-style1;
-          @apply text-gray-100 bg-red-pr;
+          @apply text-white bg-red-pr;
         }
       }
       &-green {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-green-pr;
+        @apply hover:text-white hover:bg-green-pr;
         &-selected {
           @extend .btn-style1;
-          @apply text-gray-100 bg-green-pr;
+          @apply text-white bg-green-pr;
         }
       }
       &-yellow {
         @extend .btn-style1;
-        @apply hover:text-gray-100 hover:bg-yellow-pr;
+        @apply hover:text-white hover:bg-yellow-pr;
         &-selected {
           @extend .btn-style1;
-          @apply text-gray-100 bg-yellow-pr;
+          @apply text-white bg-yellow-pr;
         }
       }
     }
@@ -159,4 +159,8 @@
 .ReactModal__Body--open,
 .ReactModal__Html--open {
   overflow: hidden;
+}
+
+.ReactModalPortal {
+  @apply relative z-50;
 }

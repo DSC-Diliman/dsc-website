@@ -2,7 +2,7 @@
   $image-position: top left;
   $size: auto 100%;
   clip-path: inset(0);
-  @apply w-1/2 self-stretch;
+  @apply sm:w-1/2 self-stretch;
   > div:nth-child(1) {
     mask-image: url("/images/index-hero-mask.png");
     mask-mode: alpha;
@@ -21,6 +21,11 @@
     background-image: url("/images/index-hero-main.png");
     background-position: $image-position;
     background-size: $size;
-    @apply top-0 fixed w-1/2 h-full bg-no-repeat;
+    @apply top-0 fixed w-full sm:w-1/2 h-full bg-no-repeat;
   }
+}
+
+.mobile-hero {
+  @apply absolute block sm:hidden w-full h-full bg-cover bg-center bg-fixed;
+  background-image: url("/images/index-hero.png");
 }

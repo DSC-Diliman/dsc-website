@@ -9,6 +9,7 @@ import Link from "next/link";
 import masonryStyle from "/components/Masonry.module.scss"
 import markdownStyle from "/components/Markdown.module.scss"
 import ButtonClose from "../components/button-close"
+import ProjectShowcase from "../components/project-showcase"
 
 Modal.setAppElement("#__next")
 
@@ -39,25 +40,18 @@ export default function Projects({ allProjectsData }) {
         className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
         style={{ content: { maxHeight: 'calc(100% - 5rem)' } }}
         overlayClassName="fixed bg-black bg-opacity-50 inset-0"
+        parentSelector={() => document.querySelector("#__next")}
       >
         <ButtonClose onClick={closeModal} />
-        {selectedProject ?
-          <>
-            <div className="md:mx-6 md:mt-6 img-frame h-80 md:rounded-3xl"><img src={selectedProject.images[0]} /></div>
-            <div className="m-3 md:m-6">
-              <h1>{selectedProject.title}</h1>
-              <div className={markdownStyle.markdown} dangerouslySetInnerHTML={{ __html: selectedProject.content }} />
-            </div>
-          </>
-          : null}
+        {selectedProject ? <ProjectShowcase project={selectedProject} /> : null}
       </Modal>
-      <div className="px-10 pt-32 pb-6 w-full text-center">
+      <div className="px-4 md:px-10 pt-12 md:pt-24 pb-3 md:pb-6 w-full text-center">
         <h1 className="my-4">
           Projects
         </h1>
         <p>Click on the images to view our completed projects!</p>
       </div>
-      <div className="flex-1 px-10 mx-auto w-full max-w-6xl">
+      <div className="flex-1 px-4 md:px-10 mx-auto w-full max-w-6xl">
         {allProjectsData ?
           <Masonry
             className={masonryStyle["projects-masonry"]}
@@ -73,7 +67,7 @@ export default function Projects({ allProjectsData }) {
                 >
                   <a>
                     <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">{projectData.title}</p>
-                    <img src={projectData.thumbnail} className="-z-10" />
+                    <img src={projectData.thumbnail} />
                   </a>
                 </Link>
               </div>

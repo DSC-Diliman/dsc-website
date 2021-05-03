@@ -38,6 +38,7 @@ export default function EventViewer({ eventsArray }) {
         </Link>
         <div className="div-style1 overflow-hidden">
           <EventListView
+            className="px-8 max-h-80"
             eventsArray={eventsArray}
           />
         </div>

@@ -1,6 +1,6 @@
 export default function Footer({ children }) {
   return (
-    <footer className="flex flex-col content-center space-y-2 py-10 text-sm text-center">
+    <footer className="flex flex-col content-center space-y-2 py-6 md:py-10 text-xs md:text-sm text-center">
       <div className="flex-initial flex flex-col items-center">
         <img
           src="/images/dsc-upd-logo-small.png"

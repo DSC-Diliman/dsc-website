@@ -7,6 +7,7 @@ import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout-default"
 import { getEvents } from "../lib/posts"
 import indexHeroStyle from "/components/IndexHero.module.scss"
+import EventListView from "../components/eventlistview"
 
 export default function Home({ eventsArray }) {
   function* getNextPrimaryColor() {
@@ -21,13 +22,13 @@ export default function Home({ eventsArray }) {
   function renderOffsetGrid(elements) {
     const color_gen = getNextPrimaryColor()
     return (
-      <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-8 md:gap-16 mb-8">
+      <div className="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 gap-8 md:gap-16 mb-8">
         {elements.map(({ heading, text }, index) => (
-          <div key={index} className="relative w-64 div-style1 md:w-80 md:even:top-1/2 p-4 md:p-11">
-            <h1 className="mb-1 md:mb-4 font-semibold text-lg md:text-xl">
+          <div key={index} className="relative w-64 div-style1 md:w-80 sm:even:top-1/2 p-4 md:p-11">
+            <h1 className="mb-1 sm:mb-4 font-semibold text-lg sm:text-xl">
               <AnimatedEm emClassName={`right-4 bottom-0 ${color_gen.next().value}`} >{heading}</AnimatedEm>
             </h1>
-            <p className="text-sm md:text-base">{text}</p>
+            <p className="text-sm sm:text-base">{text}</p>
           </div>
         ))}
       </div>
@@ -39,21 +40,22 @@ export default function Home({ eventsArray }) {
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
-      <section className="flex flex-col md:flex-row items-center min-h-screen">
-        <div className="px-10 pt-24 w-1/2">
-          <div className="max-w-xl space-y-10 mx-auto p-10">
-            <h1 className="text-3xl md:text-5xl">
+      <section className="relative flex flex-row items-center min-h-screen pt-10 sm:pt-0">
+        <div className={indexHeroStyle["mobile-hero"]}/>
+        <div className="backdrop-filter backdrop-blur-md bg-white bg-opacity-60 sm:backdrop-filter-none sm:bg-transparent p-8 md:pl-20 md:pr-10 md:pt-24 md:pb-10 w-full sm:w-1/2">
+          <div className="max-w-xl mx-auto">
+            <h1 className="mb-2 md:mb-10 text-2xl md:text-5xl">
               <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
             </h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
+            <p className="mb-4 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
 
             <Link href="/about">
               <button className="btn-style2-red">Learn More</button>
             </Link>
           </div>
         </div>
-        <div className={indexHeroStyle.hero}>
+        <div className={`hidden sm:block ${indexHeroStyle.hero}`}>
           <div>
             <div />
           </div>
@@ -61,7 +63,7 @@ export default function Home({ eventsArray }) {
         </div>
       </section>
 
-      <section className="px-10 pt-12 pb-6 md:pb-32 bg-gray-200 flex flex-col items-center justify-center shadow-above">
+      <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-32 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
         <h1 className="text-center mb-4">What do we do in DSC UP Diliman?</h1>
 
         <Link href="/team">
@@ -76,12 +78,24 @@ export default function Home({ eventsArray }) {
         ])}
       </section>
 
-      <section className="px-10 py-20">
-        <EventViewer eventsArray={eventsArray} />
+      <section className="p-4 md:px-10 pt-10 pb-14 md:py-20">
+        <div className="mx-auto w-full md:max-w-2xl">
+          <h1 className="mb-4">Upcoming Events</h1>
+          <Link href="/events">
+            <button className="btn-style2-red mb-6">Check out our events!</button>
+          </Link>
+          <div className="div-style1 overflow-hidden">
+            <EventListView
+              className="px-2 sm:px-8 max-h-80"
+              eventsArray={eventsArray}
+            />
+          </div>
+        </div>
+        {/* <EventViewer eventsArray={eventsArray} /> */}
       </section>
 
       <section className="bg-gray-200 w-full">
-        <div className="max-w-min mx-auto py-10 flex overflow-x-auto flex-nowrap space-x-24">
+        <div className="max-w-min mx-auto py-6 md:py-10 flex overflow-x-auto flex-nowrap space-x-10 md:space-x-24">
           <div />
           {[
             { school: "Ateneo de Manila University Loyola", location: "Manila" },
@@ -92,7 +106,7 @@ export default function Home({ eventsArray }) {
             { school: "Ateneo de Manila University Loyola", location: "Manila" },
           ].map(({ school, location, imgsrc }, index) => (
             <div key={index} className="max-w-min text-center flex-grow-0">
-              <div className="rounded-full bg-white shadow-md w-36 h-36 mb-4">
+              <div className="rounded-full bg-white shadow-md w-28 h-28 md:w-36 md:h-36 mb-4">
                 <img
                   className="object-cover"
                   src={imgsrc ? imgsrc : ""}
