@@ -44,7 +44,7 @@ export default function Events({ allEventsData }) {
       {selectedEvent ? <EventShowcase event={selectedEvent} /> : null}
     </Modal>
     <h1 className="text-center my-4 pt-12 md:pt-24">Events</h1>
-    {allEventsData ?
+    {allEventsData.length ?
       <div>
         <section id="featured" className="px-4 md:px-10">
           <EventFeatured event={allEventsData[0]} />

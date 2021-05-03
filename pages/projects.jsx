@@ -52,7 +52,7 @@ export default function Projects({ allProjectsData }) {
         <p>Click on the images to view our completed projects!</p>
       </div>
       <div className="flex-1 px-4 md:px-10 mx-auto w-full max-w-6xl">
-        {allProjectsData ?
+        {allProjectsData.length ?
           <Masonry
             className={masonryStyle["projects-masonry"]}
             breakpointCols={{ default: 4, 768: 3, 640: 2 }}
