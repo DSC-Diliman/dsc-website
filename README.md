@@ -1,4 +1,5 @@
 # (WIP!) Developer Student Clubs - UPD website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c3bf9d2d-68f1-4bc7-99fa-20a46ac3d5cb/deploy-status)](https://app.netlify.com/sites/dscupd/deploys)
 
 Temporarily deployed at [https://dscupd.netlify.app/](https://dscupd.netlify.app/)
 
@@ -12,9 +13,13 @@ If you don't have one, ask for an invite from one of the developers or admins.
 
 # For developers
 
-1. Do all commits on the dev branch
-2. After completing a feature, create a pull request to the master branch. This will create a deploy preview on netlify.
+Dashboard: [https://app.netlify.com/sites/dscupd/](https://app.netlify.com/sites/dscupd/)
+
+1. Create a new branch
+2. After completing a feature or fix, create a pull request to the master branch. This will create a deploy preview on [netlify](https://app.netlify.com/sites/dscupd/deploys?filter=deploy+previews).
 3. Check the deploy preview on netlify. If it is working as intended, merge the pull request.
+
+> NOTE: contact [Geri Villarante](https://github.com/gerizim16) if you need to join the [netlify group](https://app.netlify.com/sites/dscupd/).
 
 Install packages:
 
@@ -36,7 +41,7 @@ You can start editing any page found at the `pages` folder. The page auto-update
 Export app to static HTML. This outputs to the `out` folder.
 
 ```bash
-npm run build
+npm run export
 ```
 
 ## Wireframe
