@@ -26,6 +26,6 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "sass": "^1.32.11",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.2.15"
   }
 }
