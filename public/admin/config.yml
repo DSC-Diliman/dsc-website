@@ -39,6 +39,8 @@ collections:
           hint: "Recommended to use a maximum of 115 characters",
         }
       - { label: "Body", name: "body", widget: "markdown" }
+
+
   - name: "project" # Used in routes, e.g., /admin/collections/blog
     label: "Project" # Used in the UI
     folder: "posts/projects" # The path to the folder where the documents are stored
@@ -55,3 +57,90 @@ collections:
           field: { label: "Image", name: "image", widget: "image" },
         }
       - { label: "Body", name: "body", widget: "markdown" }
+
+
+  - name: "exec"
+    label: "Executive Members"
+    folder: "posts/exec"
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
+      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
+      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
+
+
+  - name: "tech"
+    label: "Technology Members"
+    folder: "posts/tech"
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
+      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
+      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
+
+
+  - name: "ops"
+    label: "Operations Members"
+    folder: "posts/ops"
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
+      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
+      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
+
+
+  - name: "comms"
+    label: "Communications Members"
+    folder: "posts/comms"
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
+      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
+      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
+
+
+  - name: "extefin"
+    label: "Externals and Finance Members"
+    folder: "posts/extefin"
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
+      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
+      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
+
+      
