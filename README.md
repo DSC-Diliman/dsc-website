@@ -1,5 +1,5 @@
 # (WIP!) Developer Student Clubs - UPD website
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c3bf9d2d-68f1-4bc7-99fa-20a46ac3d5cb/deploy-status)](https://app.netlify.com/sites/dscupd/deploys)
+[![Netlify Status](https://app.netlify.com/sites/dscupd/deploys/614caa5e3dc1640008bad087)](https://app.netlify.com/sites/dscupd/deploys)
 
 Temporarily deployed at [https://dscupd.netlify.app/](https://dscupd.netlify.app/)
 
