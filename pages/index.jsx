@@ -45,10 +45,11 @@ export default function Home({ eventsArray }) {
         <div className="backdrop-filter backdrop-blur-md bg-white bg-opacity-60 sm:backdrop-filter-none sm:bg-transparent p-8 md:pl-20 md:pr-10 md:pt-24 md:pb-10 w-full sm:w-1/2">
           <div className="max-w-xl mx-auto">
             <h1 className="mb-2 md:mb-10 text-2xl md:text-5xl">
-              <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
+              <Em emClassName="bg-red-300 right-4 bottom-2">Grow, learn, connect</Em>
             </h1>
 
-            <p className="mb-4 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
+            <p className="mb-4 md:mb-10"> Ever since its fruition in India, Google Developer Student Club grew globally and currently has 162 chapters in the South East Asian region spread across 7 countries with the Philippines having 26 chapters of those chapters.</p>
+            <p className="mb-4 md:mb-10"> <b>GDSC UP Diliman Student Chapter</b> is part of a global community comprised of over 700+ universities.</p>
 
             <Link href="/about">
               <button className="btn-style2-red">Learn More</button>
@@ -64,7 +65,7 @@ export default function Home({ eventsArray }) {
       </section>
 
       <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-32 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
-        <h1 className="text-center mb-4">What do we do in DSC UP Diliman?</h1>
+        <h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
 
         <Link href="/team">
           <button className="btn-style2-red mb-10">Check out our teams!</button>
