@@ -15,10 +15,15 @@ export default function About() {
   return (
     <>
       <section className="flex flex-col min-h-screen px-4 md:px-10 py-12 md:py-24 text-center justify-center">
-        <h1 className="my-4 text-2xl sm:text-3xl md:text-4xl">What is DSC-UPD?</h1>
-        <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <h1 className="my-4 text-2xl sm:text-3xl md:text-4xl">What is GDSC-UPD?</h1>
+        <p className="text-sm"></p>
         <ParallaxImage src="images/about-hero.png" className="div-style1 max-w-5xl w-full mx-auto h-52 sm:h-64 md:h-96 my-4 md:my-8 bg-cover" />
-        <p className="max-w-3xl text-sm mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p className="max-w-3xl text-sm mx-auto">
+          Ever since its fruition in India the Developers student clubs grew globally and 
+          currently has 162 chapters in the South East Asian region spread across 7 countries with the Philippines 
+          having 26 chapters of those chapters. GDSC UP Diliman Student Chapter is part of a <b>global community</b> comprised 
+          of over 700+ universities.
+        </p>
       </section>
 
       <section id="vision" className="px-4 py-10 md:p-10 bg-gray-200 overflow-hidden">
@@ -109,10 +114,10 @@ export default function About() {
             <h1 className="relative">Reach Us</h1>
             <p className="relative text-sm">in our socials!</p>
           </div>
-          <div className="hidden sm:block" />
           {[
             { name: "Facebook", icon: "/images/facebook-icon.svg" },
             { name: "Youtube", icon: "/images/youtube-icon.svg" },
+            null,
             null,
             { name: "Gmail", icon: "/images/gmail-icon.svg" },
             { name: "LinkedIn", icon: "/images/linkedin-icon.svg" },
