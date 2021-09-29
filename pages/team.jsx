@@ -95,7 +95,9 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="technology" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
           <div className="md:order-2 pt-32">
             <h2><AnimatedEm emClassName="bg-green-500 bottom-0 left-4">Technology</AnimatedEm></h2>
-            <p className="mt-4">The Technology department is a group of passionate students that are responsible for the planning, design, and implementation of various activities such as Workshops and Client/Internal projects in different aspects of software and technology namely: Web Design, Mobile App Development, UX/UI, AI, ML, Data Science, and Cloud Engineering.</p>
+            <p className="mt-4">
+              The Technology Department handles most of the organizational functions that require specialized knowledge in programming and technology.
+            </p>
           </div>
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -left-24 w-20 h-20 bg-green-500 rounded-full" y={[0, 200]} end="bottom+=160 top" />
@@ -144,7 +146,9 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="operations" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
           <div className="pt-32">
             <h2><AnimatedEm emClassName="bg-red-400 bottom-0 -left-4">Operations</AnimatedEm></h2>
-            <p className="mt-4">The Operations is the internals manager of the organization. The department oversees and ensures that the events and initiatives are well delivered and successful. Moreover, the operations team is in-charge of project management, document organization and legal concerns.</p>
+            <p className="mt-4">
+              The Operations Department oversees the operations of the organization and manages event, ad hoc projects, recruitment, and member welfare.
+            </p>
           </div>
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -right-12 w-20 h-20 bg-red-400 rounded-full" y={[0, 200]} end="bottom+=160 top" />
@@ -192,7 +196,9 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="communications" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
           <div className="md:order-2">
             <h2><AnimatedEm emClassName="bg-blue-400 bottom-0 left-4">Communications</AnimatedEm></h2>
-            <p className="mt-4">The Communications Department is in charge of planning, developing, and implementing the marketing and communication strategies of the organization. The department makes sure that the organization’s messages are clearly distributed and communicated through channels towards the targeted audience.</p>
+            <p className="mt-4">
+              The Communications Department is in charge of crafting promotional plans and publicity materials for the organization’s projects and initiatives, and managing all of the organization’s social media pages.
+            </p>
           </div>
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -left-2 w-10 h-10 bg-blue-400 rounded-full" y={[-100, 200]} end="bottom+=160 top" />
@@ -227,7 +233,9 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="finance-and-externals" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
           <div>
             <h2><AnimatedEm emClassName="bg-yellow-300 bottom-0 -left-4" trigger="90%">Finance and Externals</AnimatedEm></h2>
-            <p className="mt-4">The Finance and Externals Department is the funding and partnerships arm of DSC Loyola. The department manages the organization's funds making sure there is always enough financial resources for its projects and activities. It also builds strong relationships with various institutions, such as businesses, schools, and organizations.</p>
+            <p className="mt-4">
+              The Finance Externals Department manages the finances of the organization and maintains communication with external entities such as other organizations, companies, and clients.   
+            </p>
           </div>
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -right-6 w-20 h-20 bg-yellow-300 rounded-full" y={[-100, 200]} />
