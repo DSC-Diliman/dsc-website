@@ -48,7 +48,6 @@ export default function Home({ eventsArray }) {
               <Em emClassName="bg-red-300 right-4 bottom-2">Grow, learn, connect</Em>
             </h1>
 
-            <p className="mb-4 md:mb-10"> Ever since its fruition in India, Google Developer Student Club grew globally and currently has 162 chapters in the South East Asian region spread across 7 countries with the Philippines having 26 chapters of those chapters.</p>
             <p className="mb-4 md:mb-10"> <b>GDSC UP Diliman Student Chapter</b> is part of a global community comprised of over 700+ universities.</p>
 
             <Link href="/about">
