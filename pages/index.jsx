@@ -73,7 +73,7 @@ export default function Home({ eventsArray }) {
 
         {renderOffsetGrid([
           { heading: "Speaker Sessions", text: "Listen from esteemed speakers as they share their insights, experience and wisdom" },
-          { heading: "Study Jams", text: "Learning never stops! Watch events online by Developer Student Clubs and by Google" },
+          { heading: "Study Jams", text: "Learning never stops! Watch events online by Google Developer Student Clubs and by Google" },
           { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
           { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
         ])}
@@ -95,7 +95,8 @@ export default function Home({ eventsArray }) {
         {/* <EventViewer eventsArray={eventsArray} /> */}
       </section>
 
-      <section className="bg-gray-200 w-full">
+      <section className="pt-12 bg-gray-200 w-full">
+        <h1 className="text-center mb-4">Other GDSC Chapters</h1>
         <div className="max-w-min mx-auto py-6 md:py-10 flex overflow-x-auto flex-nowrap space-x-10 md:space-x-24">
           <div />
           {[
