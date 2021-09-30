@@ -13,7 +13,7 @@ export default function ParallaxImage({ children, src, className }) {
     gsap.fromTo(ref.current, {
       backgroundPosition: "50% 100%"
     }, {
-      backgroundPosition: "50% 0",
+      backgroundPosition: "50% 50",
       ease: "none",
       scrollTrigger: {
         trigger: ref.current,

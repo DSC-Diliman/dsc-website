@@ -115,6 +115,10 @@
   .div-style1 {
     @apply rounded-2xl md:rounded-4xl shadow-3xl bg-white;
   }
+
+  .div-style2 {
+    @apply rounded-2xl md:rounded-4xl shadow-3xl;
+  }
 }
 
 @layer utilities {

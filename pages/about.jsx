@@ -16,8 +16,7 @@ export default function About() {
     <>
       <section className="flex flex-col min-h-screen px-4 md:px-10 py-12 md:py-24 text-center justify-center">
         <h1 className="my-4 text-2xl sm:text-3xl md:text-4xl">What is GDSC-UPD?</h1>
-        <p className="text-sm"></p>
-        <ParallaxImage src="images/about-hero.png" className="div-style1 max-w-5xl w-full mx-auto h-52 sm:h-64 md:h-96 my-4 md:my-8 bg-cover" />
+        <ParallaxImage src="images/about-hero.png" className="max-w-5xl w-full mx-auto h-52 sm:h-64 md:h-96 my-4 md:my-8 bg-cover"/>
         <p className="max-w-3xl text-sm mx-auto">
           Ever since its fruition in India the Developers student clubs grew globally and 
           currently has 162 chapters in the South East Asian region spread across 7 countries with the Philippines 
@@ -57,7 +56,7 @@ export default function About() {
             <p className="text-3xl font-medium mb-6">Uplifting communities through <AnimatedEm emClassName="bg-yellow-300 bottom-0 left-4">technology</AnimatedEm></p>
             <p className="sm:mb-12">This organization envisions itself as a community of tech enthusiasts who are passionate about uplifting communities through technology and innovation.</p>
             <AnimatedObject
-              className="hidden sm:block img-frame div-style1 h-96 w-72"
+              className="hidden sm:block img-frame div-style1 h-96 w-85"
               fromVars={{
                 x: 100,
                 opacity: 0
