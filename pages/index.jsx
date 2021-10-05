@@ -45,10 +45,10 @@ export default function Home({ eventsArray }) {
         <div className="backdrop-filter backdrop-blur-md bg-white bg-opacity-60 sm:backdrop-filter-none sm:bg-transparent p-8 md:pl-20 md:pr-10 md:pt-24 md:pb-10 w-full sm:w-1/2">
           <div className="max-w-xl mx-auto">
             <h1 className="mb-2 md:mb-10 text-2xl md:text-5xl">
-              <Em emClassName="bg-red-300 right-4 bottom-2">Lorem ipsum</Em> dolor sit amet, consectetur
+              <Em emClassName="bg-red-300 right-4 bottom-2">Grow, learn, connect</Em>
             </h1>
 
-            <p className="mb-4 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem <Em emClassName="bg-green-300 left-4 -bottom-0.5">ipsum dolor sit amet, consectetur</Em> adipiscing elit</p>
+            <p className="mb-4 md:mb-10"> <b>GDSC UP Diliman Student Chapter</b> is part of a global community comprised of over 700+ universities.</p>
 
             <Link href="/about">
               <button className="btn-style2-red">Learn More</button>
@@ -64,7 +64,7 @@ export default function Home({ eventsArray }) {
       </section>
 
       <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-32 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
-        <h1 className="text-center mb-4">What do we do in DSC UP Diliman?</h1>
+        <h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
 
         <Link href="/team">
           <button className="btn-style2-red mb-10">Check out our teams!</button>
@@ -72,7 +72,7 @@ export default function Home({ eventsArray }) {
 
         {renderOffsetGrid([
           { heading: "Speaker Sessions", text: "Listen from esteemed speakers as they share their insights, experience and wisdom" },
-          { heading: "Study Jams", text: "Learning never stops! Watch events online by Developer Student Clubs and by Google" },
+          { heading: "Study Jams", text: "Learning never stops! Watch events online by Google Developer Student Clubs and by Google" },
           { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
           { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
         ])}
@@ -94,7 +94,8 @@ export default function Home({ eventsArray }) {
         {/* <EventViewer eventsArray={eventsArray} /> */}
       </section>
 
-      <section className="bg-gray-200 w-full">
+      <section className="pt-12 bg-gray-200 w-full">
+        <h1 className="text-center mb-4">Other GDSC Chapters</h1>
         <div className="max-w-min mx-auto py-6 md:py-10 flex overflow-x-auto flex-nowrap space-x-10 md:space-x-24">
           <div />
           {[

@@ -6,7 +6,7 @@ export default function Layout({ children, footerChildren, title }) {
   return (
     <>
       <Head>
-        <title>{title ? title + " | DSC UPD" : "DSC UP Diliman"}</title>
+        <title>{title ? title + " | GDSC UPD" : "GDSC UP Diliman"}</title>
       </Head>
 
       <Nav className="z-10" />
