@@ -15,7 +15,6 @@ module.exports = {
         yellow: { pr: colors.yellow[600] },
       },
       fontSize: {
-        '5xl':'7rem',
         '10xl': '14rem',
         'xxl': '18rem'
       },
@@ -55,8 +54,7 @@ module.exports = {
       inset: ['even'],
       ringColor: ['focus-visible'],
       ringWidth: ['focus-visible', 'hover'],
-      margin: ['group-hover'],
-      translate: ['active']
+      margin: ['group-hover']
     }
   },
   plugins: [],
