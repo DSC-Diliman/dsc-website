@@ -13,7 +13,7 @@ export default function Portrait({ className, src, name, position, desc, socials
           {socials.facebook ? <a href={socials.facebook}><TiSocialFacebookCircular /></a> : null}
           {socials.twitter ? <a href={socials.twitter}><TiSocialTwitterCircular /></a> : null}
           {socials.linkedin ? <a href={socials.linkedin}><TiSocialLinkedinCircular /></a> : null}
-          {socials.twitter ? <a href={socials.twitter}><TiSocialGithubCircular /></a> : null}
+          {socials.github ? <a href={socials.github}><TiSocialGithubCircular /></a> : null}
         </div>
       </div>
     </div>
