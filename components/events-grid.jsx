@@ -17,7 +17,7 @@ export default function EventsGrid({ eventsData }) {
       </div>
       <div className="flex items-center">
         <div className="bg-blue-500 w-4 h-4 rounded-full" />
-        <p className="ml-4">Study Jams</p>
+        <p className="ml-4">Internal</p>
       </div>
       <div className="flex items-center">
         <div className="bg-green-500 w-4 h-4 rounded-full" />

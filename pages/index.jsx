@@ -72,7 +72,7 @@ export default function Home({ eventsArray }) {
 
         {renderOffsetGrid([
           { heading: "Speaker Sessions", text: "Listen from esteemed speakers as they share their insights, experience and wisdom" },
-          { heading: "Study Jams", text: "Learning never stops! Watch events online by Google Developer Student Clubs and by Google" },
+          { heading: "Internal", text: "" },
           { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
           { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
         ])}

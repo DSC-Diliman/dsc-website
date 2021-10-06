@@ -21,7 +21,7 @@ collections:
           name: "eventType",
           widget: "select",
           options:
-            ["Speaker Sessions", "Study Jams", "Workshops", "Tech Solutions"],
+            ["Speaker Sessions", "Internal", "Workshops", "Tech Solutions"],
         }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Location URL", name: "locationURL", widget: "string" }
