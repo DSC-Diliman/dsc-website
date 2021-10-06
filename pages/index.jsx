@@ -94,6 +94,7 @@ export default function Home({ eventsArray }) {
         {/* <EventViewer eventsArray={eventsArray} /> */}
       </section>
 
+      {/*
       <section className="pt-12 bg-gray-200 w-full">
         <h1 className="text-center mb-4">Other GDSC Chapters</h1>
         <div className="max-w-min mx-auto py-6 md:py-10 flex overflow-x-auto flex-nowrap space-x-10 md:space-x-24">
@@ -120,6 +121,7 @@ export default function Home({ eventsArray }) {
           <div>&nbsp;</div>
         </div>
       </section>
+      */}
     </>
   )
 }
