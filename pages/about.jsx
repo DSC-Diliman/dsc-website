@@ -99,6 +99,7 @@ export default function About() {
             </div>)}
         </div>
       </section>
+      
       <section>
       <div className='bg-gray-200 pb-4'>
       <div className="lg:w-8/12 lg:grid grid-cols-1 gap-1 2xl:w-1/2 2xl:grid-cols-2 m-auto"> 
