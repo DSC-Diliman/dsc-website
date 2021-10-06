@@ -103,45 +103,8 @@ export default function About() {
             </div>)}
         </div>
       </section>
-      <section>
-      <div className='bg-gray-200 pb-4'>
-      <div className="lg:w-8/12 lg:grid grid-cols-1 gap-1 2xl:w-1/2 2xl:grid-cols-2 m-auto"> 
-      {/* left div */}
-      <div className="gap-y-2 p-4">
-        <div className="flex flex-col w-11/12 m-auto">
-          <h1 className='text-sans text-4xl text-red'>Contact Us!</h1>
-          <div className="flex flex-col items-center gap-y-2 mt-2 m-auto">
-            <form action="https://formsubmit.co/dscdiliman@gmail.com" method="POST"> 
-            <input className="w-11/12 rounded-xl pl-2 transform hover:scale-105 hover:shadow-xl transition-all focus:outline-none border-2 focus:border-blue-700  focus:scale-105" type='text' placeholder="Email address" name='email'></input>
-            <input className="w-11/12 rounded-xl pl-2 transform hover:scale-105 hover:shadow-xl transition-all focus:outline-none border-2 focus:border-red-700  focus:scale-105" type='text' placeholder="Name" name='name'></input>
-            <input className="w-11/12 rounded-xl pl-2 transform hover:scale-105 hover:shadow-xl transition-all focus:outline-none border-2 focus:border-green-500  focus:scale-105" type='text' placeholder="Subject" name='_subject'></input>
-            <textarea className="w-11/12 rounded-xl pl-2 transform hover:scale-105 hover:shadow-xl transition-all focus:outline-none border-2 focus:border-yellow-500  focus:scale-105" rows="5" placeholder="Message" name='message'></textarea>
-            <div className="flex flex-col w-11/12">
-              <button className="bg-transparent rounded-xl w-20 self-end bg-red-500 text-white hover:scale-105 hover:bg-red-700 transform active:translate-y-0.5 transition-all" type='submit'>Send</button>
-            </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    {/* right div */}
-      <div className="flex">
-          <div className='flex w-full m-auto'>
-            <p className="m-auto text-center 2xl:text-left">
-              We would love to hear from you
-              <br></br>
-              <br></br>
-              If you would prefer to email us directly, you may reach us at <b>dscdiliman@gmail.com</b> or at <b>dsc.diliman.externals@gmail.com</b>
-              <br></br>
-              <br></br>
-              For inquiries, please feel free to contact us here and we will get back to you as soon as possible.
-            </p>
-          </div>
-      </div>
-      </div>
-      </div>          
-      </section>
 
-      <section id="reach" className="relative px-10 py-10 overflow-hidden">
+      <section id="reach" className="relative px-10 py-10 bg-gray-200 overflow-hidden">
         <div className="mx-auto max-w-max grid grid-cols-2 sm:grid-cols-4 gap-8">
           <div className="col-span-2 sm:col-span-1 relative flex flex-col justify-center">
             <ParallaxObject className="absolute -left-6 w-20 h-20 bg-yellow-300 rounded-full" y={[-200, 200]} />
@@ -173,12 +136,9 @@ export default function About() {
           ))}
         </div>
       </section>
-      
     </>
   )
 }
-
-
 
 About.getLayout = page => (
   <Layout title="About">
