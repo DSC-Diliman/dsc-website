@@ -15,7 +15,6 @@ module.exports = {
         yellow: { pr: colors.yellow[600] },
       },
       fontSize: {
-        '5xl':'7rem',
         '10xl': '14rem',
         'xxl': '18rem'
       },
