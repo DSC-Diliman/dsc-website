@@ -81,17 +81,17 @@ export default function About() {
             {
               title: "Empower",
               desc: "Empower people through technology and programming education",
-              image: "/images/mission-1.png"
+              image: "/images/dot_empower.png"
             },
             {
               title: "Enlighten",
               desc: "Equip members with the right tools to address local issues through data",
-              image: "/images/mission-2.png"
+              image: "/images/dot_enlighten.png"
             },
             {
               title: "Create",
               desc: "Create meaningful technological solutions for the community",
-              image: "/images/mission-3.png"
+              image: "/images/dot_create.png"
             },
           ].map(e =>
             <div key={e.title} className="px-1 md:px-4 py-4 max-w-sm">

@@ -73,7 +73,7 @@ export default function Projects({ allProjectsData }) {
               </div>
             )}
           </Masonry>
-          : <p className="text-3xl text-center">No Projects Available</p>}
+          : <p className="text-3xl text-center">Under construction</p>}
       </div>
     </>
   )
