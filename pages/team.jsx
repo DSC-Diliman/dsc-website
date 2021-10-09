@@ -276,8 +276,32 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="website">
           <div className="flex flex-wrap justify-evenly gap-4 md:gap-x-7 md:gap-y-14 max-w-3xl mx-auto mt-8 mb-28">
             <Portrait
+              src="images\gerizim.jpg"
+              name="Gerizim Villarante"
+              position=""
+              desc=""
+              socials={{
+                facebook: "https://www.facebook.com/gerizim16",
+                twitter: "https://twitter.com/gerizim316",
+                linkedin: "https://www.linkedin.com/in/gerizim16/",
+                github:  "https://github.com/gerizim16"
+              }}
+            />
+            <Portrait
+              src="images\allaine.jpg"
+              name="Allaine Tan"
+              position=""
+              desc="I am the one thing in life I can control. I am inimitable, I am an original. -Aaron Burr"
+              socials={{
+                facebook: "https://www.facebook.com/allaine.tan",
+                twitter: null,
+                linkedin: "https://www.linkedin.com/in/allaine-tan",
+                github:  null
+              }}
+            />
+            <Portrait
               src="images\about-hero.png"
-              name="Test 1"
+              name="Gene Tan"
               position=""
               desc=""
               socials={{
@@ -288,51 +312,27 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               }}
             />
             <Portrait
-              src="images\about-hero.png"
-              name="Test 1"
+              src="images\edrick.jpg"
+              name="Edrick Gador"
               position=""
-              desc=""
+              desc="A lion does not concern himself with the opinions of a sheep - Tywin Lannister"
               socials={{
-                facebook: null,
+                facebook: "https://www.facebook.com/edrick.gador",
                 twitter: null,
-                linkedin: null,
-                github:  null
+                linkedin: "https://www.linkedin.com/in/john-edrick-gador-199308221/",
+                github:  "https://github.com/JohnEdrickGador"
               }}
             />
             <Portrait
-              src="images\about-hero.png"
-              name="Test 1"
+              src="images\vitus.png"
+              name="Vitus Acabado"
               position=""
               desc=""
               socials={{
                 facebook: null,
                 twitter: null,
-                linkedin: null,
-                github:  null
-              }}
-            />
-            <Portrait
-              src="images\about-hero.png"
-              name="Test 1"
-              position=""
-              desc=""
-              socials={{
-                facebook: null,
-                twitter: null,
-                linkedin: null,
-                github:  null
-              }}
-            />
-            <Portrait
-              src="images\about-hero.png"
-              name="Test 1"
-              position=""
-              desc=""
-              socials={{
-                facebook: null,
-                twitter: null,
-                linkedin: null,
-                github:  null
+                linkedin: "https://www.linkedin.com/in/vitusmurdock16/",
+                github: "https://github.com/tusvi"
               }}
             />
           </div>
