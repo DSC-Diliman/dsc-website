@@ -109,7 +109,7 @@ export default function Home({ eventsArray }) {
           ].map(({ school, location, imgsrc }, index) => (
             <div key={index} className="max-w-min text-center flex-grow-0">
               <div className="rounded-full bg-white shadow-md w-28 h-28 md:w-36 md:h-36 mb-4">
-                <img
+                <Image
                   className="object-cover"
                   src={imgsrc ? imgsrc : ""}
                 />

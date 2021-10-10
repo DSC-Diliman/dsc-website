@@ -67,7 +67,7 @@ export default function Projects({ allProjectsData }) {
                 >
                   <a>
                     <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">{projectData.title}</p>
-                    <img src={projectData.thumbnail} />
+                    <Image src={projectData.thumbnail} />
                   </a>
                 </Link>
               </div>

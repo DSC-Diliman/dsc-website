@@ -6,6 +6,7 @@ import ParallaxImage from "../components/parallax-image"
 import AnimatedObject from "../components/animated-object"
 import AnimatedEm from "../components/animated-em"
 import ParallaxObject from "../components/parallax-object"
+import Image from "next/image"
 
 export default function About() {
   /* ScrollTrigger.defaults({
@@ -40,10 +41,10 @@ export default function About() {
               }}
               scrub={2}
             >
-              <img src="/images/vision-1.png" />
+              <Image src="/images/vision-1.png" />
             </AnimatedObject>
             <div className="div-style1 img-frame w-64 h-52">
-              <img src="/images/vision-2.png" />
+              <Image src="/images/vision-2.png" />
             </div>
             <div className="mt-20 mr-20 ml-auto max-w-min text-5xl font-medium space-y-6">
               <AnimatedText className="text-red-400">Empower.</AnimatedText>
@@ -67,7 +68,7 @@ export default function About() {
               }}
               scrub={2}
             >
-              <img src="/images/vision-3.png" />
+              <Image src="/images/vision-3.png" />
             </AnimatedObject>
           </div>
         </div>
@@ -96,7 +97,7 @@ export default function About() {
           ].map(e =>
             <div key={e.title} className="px-1 md:px-4 py-4 max-w-sm">
               <div className="mx-auto img-frame rounded-full mb-10 w-20 h-20 sm:w-32 sm:h-32">
-                <img src={e.image} />
+                <Image src={e.image} />
               </div>
               <p className="text-lg md:text-2xl font-medium mb-2">{e.title}</p>
               <p className="text-xs sm:text-base">{e.desc}</p>
@@ -124,7 +125,7 @@ export default function About() {
             e ?
               <a className="relative" key={index}>
                 <button className="w-full px-3 py-3 md:px-10 md:py-7 text-center transition-shadow hover:shadow-none div-style1">
-                  <img
+                  <Image
                     src={e.icon}
                     className="h-6 md:h-8 mx-auto mb-3"
                   />
