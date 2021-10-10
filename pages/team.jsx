@@ -305,7 +305,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               position=""
               desc=""
               socials={{
-                facebook: null,
+                facebook: "https://www.facebook.com/geneaudrey.tan",
                 twitter: null,
                 linkedin: null,
                 github:  null
