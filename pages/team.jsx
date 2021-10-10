@@ -300,7 +300,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               }}
             />
             <Portrait
-              src="images\about-hero.png"
+              src="images\gene.jpg"
               name="Gene Tan"
               position=""
               desc=""
@@ -333,6 +333,18 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
                 twitter: null,
                 linkedin: "https://www.linkedin.com/in/vitusmurdock16/",
                 github: "https://github.com/tusvi"
+              }}
+            />
+            <Portrait
+              src="images\lagos.jpg"
+              name="Ivan Lagos"
+              position=""
+              desc=""
+              socials={{
+                facebook: "https://www.facebook.com/ivan.lagos.583",
+                twitter: null,
+                linkedin: "https://www.linkedin.com/in/ivan-lagos-021b4a217/",
+                github: null
               }}
             />
           </div>
