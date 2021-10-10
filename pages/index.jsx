@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Head from 'next/head'
+import Image from 'next/image'
 import { RiCopyrightLine } from "react-icons/ri"
 import Em from "../components/em"
 import AnimatedEm from "../components/animated-em"

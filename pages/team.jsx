@@ -276,7 +276,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="website">
           <div className="flex flex-wrap justify-evenly gap-4 md:gap-x-7 md:gap-y-14 max-w-3xl mx-auto mt-8 mb-28">
             <Portrait
-              src="images\gerizim.jpg"
+              src="/images/gerizim.jpg"
               name="Gerizim Villarante"
               position=""
               desc=""
@@ -288,7 +288,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               }}
             />
             <Portrait
-              src="images\allaine.jpg"
+              src="/images/allaine.jpg"
               name="Allaine Tan"
               position=""
               desc="I am the one thing in life I can control. I am inimitable, I am an original. -Aaron Burr"
@@ -300,7 +300,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               }}
             />
             <Portrait
-              src="images\gene.jpg"
+              src="/images/gene.jpg"
               name="Gene Tan"
               position=""
               desc=""
@@ -312,7 +312,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               }}
             />
             <Portrait
-              src="images\edrick.jpg"
+              src="/images/edrick.jpg"
               name="Edrick Gador"
               position=""
               desc="A lion does not concern himself with the opinions of a sheep - Tywin Lannister"
@@ -324,7 +324,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               }}
             />
             <Portrait
-              src="images\vitus.png"
+              src="/images/vitus.png"
               name="Vitus Acabado"
               position=""
               desc=""
@@ -336,7 +336,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
               }}
             />
             <Portrait
-              src="images\lagos.jpg"
+              src="/images/lagos.jpg"
               name="Ivan Lagos"
               position=""
               desc=""
