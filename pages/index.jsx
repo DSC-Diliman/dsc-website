@@ -73,7 +73,7 @@ export default function Home({ eventsArray }) {
 
         {renderOffsetGrid([
           { heading: "Speaker Sessions", text: "Hear from esteemed speakers as they share their insights, experience, and wisdom" },
-          { heading: "Internal", text: "" },
+          { heading: "Internal", text: "Get a glimpse of how our organization operates" },
           { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
           { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
         ])}
