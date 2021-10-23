@@ -118,15 +118,15 @@ export default function About() {
             <p className="relative text-sm">in our socials!</p>
           </div>
           {[
-            { name: "Facebook", icon: "/images/facebook-icon.svg" },
+            { name: "Facebook", icon: "/images/facebook-icon.svg", link: "https://www.facebook.com/GDSCupdiliman" },
             { name: "Youtube", icon: "/images/youtube-icon.svg" },
             null,
             null,
             { name: "Gmail", icon: "/images/gmail-icon.svg" },
-            { name: "LinkedIn", icon: "/images/linkedin-icon.svg" },
+            { name: "LinkedIn", icon: "/images/linkedin-icon.svg", link: "https://www.linkedin.com/company/gdscupdiliman/mycompany/" },
           ].map((e, index) => (
             e ?
-              <a className="relative" key={index}>
+              <a className="relative" key={index} href={e.link} target="_blank" >
                 <button 
                   className="w-full px-3 py-3 md:px-10 md:py-7 text-center transition-shadow hover:shadow-none div-style1"
                 >
