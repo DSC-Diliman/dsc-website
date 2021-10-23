@@ -13,6 +13,7 @@ export default function Nav({ className }) {
             className="h-full hidden sm:block"
             src="/images/dsc-upd-logo-small.png"
             alt="Developer Student Clubs Logo"
+            style={{ width: "220px", height: "auto" }}
           />
           <img
             className="h-full block sm:hidden"
