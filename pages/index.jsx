@@ -20,7 +20,7 @@ export default function Home({ eventsArray }) {
   function renderOffsetGrid(elements) {
     const color_gen = getNextPrimaryColor()
     return (
-      <div className="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 gap-8 md:gap-16 mb-8">
+      <div className="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 gap-8 md:gap-16 mt-6 mb-40">
         {elements.map(({ heading, text }, index) => (
           <div key={index} className="relative w-64 div-style1 md:w-80 sm:even:top-1/2 p-4 md:p-11">
             <h1 className="mb-1 sm:mb-4 font-semibold text-lg sm:text-xl">
@@ -61,7 +61,7 @@ export default function Home({ eventsArray }) {
         </div>
       </section>
 
-      <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-32 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
+      <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-16 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
         <h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
         {renderOffsetGrid([
           { heading: "Speaker Sessions", text: "Hear from esteemed speakers as they share their insights, experience, and wisdom" },
@@ -70,7 +70,7 @@ export default function Home({ eventsArray }) {
           { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
         ])}
         <Link href="/team">
-          <button className="btn-style2-red mb-10">Check out our teams!</button>
+          <button className="btn-style2-red">Check out our teams!</button>
         </Link>
       </section>
 
