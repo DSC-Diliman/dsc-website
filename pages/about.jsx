@@ -46,7 +46,7 @@ export default function About() {
             </div>
           </div>
           <div>
-            <h1 className="mb-4 sm:mt-28 text-lg text-red-700 font-normal">VISION</h1>
+            <h1 className="mb-4 sm:mt-28 text-lg text-red-700 font-black">VISION</h1>
             <p className="text-3xl font-medium mb-6">Uplifting communities through <AnimatedEm emClassName="bg-yellow-300 bottom-0 left-4">technology</AnimatedEm></p>
             <p className="sm:mb-12">This organization envisions itself as a community of tech enthusiasts who are passionate about uplifting communities through technology and innovation.</p>
             <AnimatedObject
@@ -68,7 +68,7 @@ export default function About() {
       </section>
 
       <section id="mission" className="p-4 md:p-10 text-center">
-        <h1 className="text-lg text-red-700 font-normal">MISSION</h1>
+        <h1 className="text-lg text-red-700 font-black">MISSION</h1>
         <p className="mb-6">We, as an organization, aim to</p>
         <div className="flex justify-center">
           {[
