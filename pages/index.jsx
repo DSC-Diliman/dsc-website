@@ -46,7 +46,7 @@ export default function Home({ eventsArray }) {
               <Em emClassName="bg-red-300 right-4 bottom-2">Grow. Learn. Connect.</Em>
             </h1>
 
-            <p className="mb-4 md:mb-10"> <b>GDSC UP Diliman Student Chapter</b> is part of a global community comprised of over 1500 universities.</p>
+            <p className="mb-4 md:mb-10">The <b>GDSC UP Diliman Chapter</b> is part of a global community of over 1500 universities.</p>
 
             <Link href="/about">
               <button className="btn-style2-red">Learn More</button>
