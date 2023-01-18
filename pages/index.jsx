@@ -43,10 +43,10 @@ export default function Home({ eventsArray }) {
         <div className="backdrop-filter backdrop-blur-md bg-white bg-opacity-60 sm:backdrop-filter-none sm:bg-transparent p-8 md:pl-20 md:pr-10 md:pt-24 md:pb-10 w-full sm:w-1/2">
           <div className="max-w-xl mx-auto">
             <h1 className="mb-2 md:mb-10 text-2xl md:text-5xl">
-              <Em emClassName="bg-red-300 right-4 bottom-2">Grow, learn, connect</Em>
+              <Em emClassName="bg-red-300 right-4 bottom-2">Grow. Learn. Connect.</Em>
             </h1>
 
-            <p className="mb-4 md:mb-10"> <b>GDSC UP Diliman Student Chapter</b> is part of a global community comprised of over 700+ universities.</p>
+            <p className="mb-4 md:mb-10"> <b>GDSC UP Diliman Student Chapter</b> is part of a global community comprised of over 1500 universities.</p>
 
             <Link href="/about">
               <button className="btn-style2-red">Learn More</button>
