@@ -1,6 +1,5 @@
 import Link from "next/link"
 import Head from 'next/head'
-import { RiCopyrightLine } from "react-icons/ri"
 import Em from "../components/em"
 import AnimatedEm from "../components/animated-em"
 import Layout from "../components/layout-default"
@@ -127,7 +126,7 @@ export default function Home({ eventsArray }) {
 
 Home.getLayout = page => (
   <Layout
-    footerChildren={<p><RiCopyrightLine /> Oblation photo by Mila D. Aguilar</p>}
+    footerChildren={<p>Ⓒ Oblation photo by Mila D. Aguilar</p>}
   >
     {page}
   </Layout>
