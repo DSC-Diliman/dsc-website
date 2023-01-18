@@ -9,7 +9,7 @@ export default function Footer({ children }) {
           width="200px"
         />
       </div>
-      <p className="text-xs">2021 Google Developer Student Clubs UP Diliman.</p>
+      <p className="text-xs">2023 Google Developer Student Clubs UP Diliman.</p>
       <p className="text-xs"> All Rights Reserved.</p>
       {children}
     </footer>
