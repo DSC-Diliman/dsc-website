@@ -74,17 +74,17 @@ export default function About() {
           {[
             {
               title: "Empower",
-              desc: "Empower people through technology and programming education",
+              desc: "people through technology and programming education",
               image: "/images/dot_empower.png"
             },
             {
               title: "Enlighten",
-              desc: "Equip members with the right tools to address local issues through data",
+              desc: "members with the right tools to address local issues through data",
               image: "/images/dot_enlighten.png"
             },
             {
               title: "Create",
-              desc: "Create meaningful technological solutions for the community",
+              desc: "meaningful technological solutions for the community",
               image: "/images/dot_create.png"
             },
           ].map(e =>
@@ -93,7 +93,7 @@ export default function About() {
                 className="mx-auto img-frame rounded-full mb-10 w-20 h-20 sm:w-32 sm:h-32"
                 style={{ position: "relative" }}
               >
-                <Image src={e.image} layout="fill"/>
+                <Image src={e.image} height={480} width={480} />
               </div>
               <p className="text-lg md:text-2xl font-medium mb-2">{e.title}</p>
               <p className="text-xs sm:text-base">{e.desc}</p>
