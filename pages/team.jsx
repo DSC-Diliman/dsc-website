@@ -16,24 +16,24 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
     markers: false
   }) */
 	
-	const allExecPortraits = allExecData
-		.filter(data => data)
-		.map(({thumbnail, name, position, quote, facebookURL, twitterURL, linkedinURL, githubURL}) => (
-			<Portrait
-				src={thumbnail}
-				name={name}
-				position={position}
-				desc={quote}
-				socials={{
-					facebook: facebookURL && facebookURL,
-					twitter: twitterURL && twitterURL,
-					linkedin: linkedinURL && linkedinURL,
-					github: githubURL && githubURL,
-				}}
-			/>
-		))
-
-	console.log(allExecPortraits)
+	function extractPortraits(allData) {
+		return allData
+			.filter(data => data)
+			.map(({thumbnail, name, position, quote, facebookURL, twitterURL, linkedinURL, githubURL}) => (
+				<Portrait
+					src={thumbnail}
+					name={name}
+					position={position}
+					desc={quote}
+					socials={{
+						facebook: facebookURL && facebookURL,
+						twitter: twitterURL && twitterURL,
+						linkedin: linkedinURL && linkedinURL,
+						github: githubURL && githubURL,
+					}}
+				/>
+			))
+	}
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="executive">
           <h2 className="text-center"><Em emClassName="bg-blue-400 bottom-0">&nbsp;&nbsp;&nbsp;Exec</Em><Em emClassName="bg-red-400 bottom-0">utiv</Em><Em emClassName="bg-yellow-400 bottom-0">e Boa</Em><Em emClassName="bg-green-400 bottom-0">rd&nbsp;&nbsp;&nbsp;</Em></h2>
           <div className="flex flex-wrap justify-evenly gap-4 md:gap-x-7 md:gap-y-14 max-w-3xl mx-auto mt-8 mb-28">
-            {allExecPortraits}
+            {extractPortraits(allExecData)}
           </div>
         </section>
         <section id="technology" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
@@ -58,45 +58,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -left-24 w-20 h-20 bg-green-500 rounded-full" y={[0, 200]} end="bottom+=160 top" />
             <ParallaxObject className="absolute bottom-0 right-24 w-6 h-6 bg-green-500 rounded-full" y={[0, 50]} end="bottom+=200 top" />
-            {allTechData[0]?<Portrait
-              src={allTechData[0].thumbnail}
-              name= {allTechData[0].name}
-              position={allTechData[0].position}
-              desc={allTechData[0].quote}
-              socials={{
-                facebook: allTechData[0].facebookURL? allTechData[0].facebookURL : null,
-                twitter: allTechData[0].twitterURL? allTechData[0].twitterURL : null,
-                linkedin: allTechData[0].linkedinURL? allTechData[0].linkedinURL : null,
-                github: allTechData[0].githubURL? allTechData[0].githubURL : null
-              }}
-            />
-            : null}
-            {allTechData[1]?<Portrait
-              src={allTechData[1].thumbnail}
-              name= {allTechData[1].name}
-              position={allTechData[1].position}
-              desc={allTechData[1].quote}
-              socials={{
-                facebook: allTechData[1].facebookURL? allTechData[1].facebookURL : null,
-                twitter: allTechData[1].twitterURL? allTechData[1].twitterURL : null,
-                linkedin: allTechData[1].linkedinURL? allTechData[1].linkedinURL : null,
-                github: allTechData[1].githubURL? allTechData[1].githubURL : null
-              }}
-            />
-            : null}
-            {allTechData[2]?<Portrait
-              src={allTechData[2].thumbnail}
-              name= {allTechData[2].name}
-              position={allTechData[2].position}
-              desc={allTechData[2].quote}
-              socials={{
-                facebook: allTechData[2].facebookURL? allTechData[2].facebookURL : null,
-                twitter: allTechData[2].twitterURL? allTechData[2].twitterURL : null,
-                linkedin: allTechData[2].linkedinURL? allTechData[2].linkedinURL : null,
-                github: allTechData[2].githubURL? allTechData[2].githubURL : null
-              }}
-            />
-            : null}
+            {extractPortraits(allTechData)}
           </div>
         </section>
         <section id="operations" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
@@ -108,45 +70,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
           </div>
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -right-12 w-20 h-20 bg-red-400 rounded-full" y={[0, 200]} end="bottom+=160 top" />
-            {allOpsData[0]?<Portrait
-              src={allOpsData[0].thumbnail}
-              name= {allOpsData[0].name}
-              position={allOpsData[0].position}
-              desc={allOpsData[0].quote}
-              socials={{
-                facebook: allOpsData[0].facebookURL? allOpsData[0].facebookURL : null,
-                twitter: allOpsData[0].twitterURL? allOpsData[0].twitterURL : null,
-                linkedin: allOpsData[0].linkedinURL? allOpsData[0].linkedinURL : null,
-                github: allOpsData[0].githubURL? allOpsData[0].githubURL : null
-              }}
-            />
-            : null}
-            {allOpsData[1]?<Portrait
-              src={allOpsData[1].thumbnail}
-              name= {allOpsData[1].name}
-              position={allOpsData[1].position}
-              desc={allOpsData[1].quote}
-              socials={{
-                facebook: allOpsData[1].facebookURL? allOpsData[1].facebookURL : null,
-                twitter: allOpsData[1].twitterURL? allOpsData[1].twitterURL : null,
-                linkedin: allOpsData[1].linkedinURL? allOpsData[1].linkedinURL : null,
-                github: allOpsData[1].githubURL? allOpsData[1].githubURL : null
-              }}
-            />
-            : null}
-            {allOpsData[2]?<Portrait
-              src={allOpsData[2].thumbnail}
-              name= {allOpsData[2].name}
-              position={allOpsData[2].position}
-              desc={allOpsData[2].quote}
-              socials={{
-                facebook: allOpsData[2].facebookURL? allOpsData[2].facebookURL : null,
-                twitter: allOpsData[2].twitterURL? allOpsData[2].twitterURL : null,
-                linkedin: allOpsData[2].linkedinURL? allOpsData[2].linkedinURL : null,
-                github: allOpsData[2].githubURL? allOpsData[2].githubURL : null
-              }}
-            />
-            : null}
+            {extractPortraits(allOpsData)}
           </div>
         </section>
         <section id="communications" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
@@ -158,32 +82,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
           </div>
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -left-2 w-10 h-10 bg-blue-400 rounded-full" y={[-100, 200]} end="bottom+=160 top" />
-            {allCommsData[0]?<Portrait
-              src={allCommsData[0].thumbnail}
-              name= {allCommsData[0].name}
-              position={allCommsData[0].position}
-              desc={allCommsData[0].quote}
-              socials={{
-                facebook: allCommsData[0].facebookURL? allCommsData[0].facebookURL : null,
-                twitter: allCommsData[0].twitterURL? allCommsData[0].twitterURL : null,
-                linkedin: allCommsData[0].linkedinURL? allCommsData[0].linkedinURL : null,
-                github: allCommsData[0].githubURL? allCommsData[0].githubURL : null
-              }}
-            />
-            : null}
-            {allCommsData[1]?<Portrait
-              src={allCommsData[1].thumbnail}
-              name= {allCommsData[1].name}
-              position={allCommsData[1].position}
-              desc={allCommsData[1].quote}
-              socials={{
-                facebook: allCommsData[1].facebookURL? allCommsData[1].facebookURL : null,
-                twitter: allCommsData[1].twitterURL? allCommsData[1].twitterURL : null,
-                linkedin: allCommsData[1].linkedinURL? allCommsData[1].linkedinURL : null,
-                github: allCommsData[1].githubURL? allCommsData[1].githubURL : null
-              }}
-            />
-            : null}
+            {extractPortraits(allCommsData)}
           </div>
         </section>
         <section id="finance-and-externals" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
@@ -195,32 +94,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
           </div>
           <div className="relative w-full flex flex-wrap justify-evenly gap-4">
             <ParallaxObject className="absolute -right-6 w-20 h-20 bg-yellow-300 rounded-full" y={[-100, 200]} />
-            {allExteFinData[0]?<Portrait
-              src={allExteFinData[0].thumbnail}
-              name= {allExteFinData[0].name}
-              position={allExteFinData[0].position}
-              desc={allExteFinData[0].quote}
-              socials={{
-                facebook: allExteFinData[0].facebookURL? allExteFinData[0].facebookURL : null,
-                twitter: allExteFinData[0].twitterURL? allExteFinData[0].twitterURL : null,
-                linkedin: allExteFinData[0].linkedinURL? allExteFinData[0].linkedinURL : null,
-                github: allExteFinData[0].githubURL? allExteFinData[0].githubURL : null
-              }}
-            />
-            : null}
-            {allExteFinData[1]?<Portrait
-              src={allExteFinData[1].thumbnail}
-              name= {allExteFinData[1].name}
-              position={allExteFinData[1].position}
-              desc={allExteFinData[1].quote}
-              socials={{
-                facebook: allExteFinData[1].facebookURL? allExteFinData[1].facebookURL : null,
-                twitter: allExteFinData[1].twitterURL? allExteFinData[1].twitterURL : null,
-                linkedin: allExteFinData[1].linkedinURL? allExteFinData[1].linkedinURL : null,
-                github: allExteFinData[1].githubURL? allExteFinData[1].githubURL : null
-              }}
-            />
-            : null}
+            {extractPortraits(allExteFinData)}
           </div>
         </section>
       </div>
