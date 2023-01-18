@@ -11,7 +11,7 @@ import { getExteFinData } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
 // import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
-export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData}) {
+export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
   /* ScrollTrigger.defaults({
     markers: false
   }) */
@@ -105,78 +105,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
       <div className="space-y-14 md:space-y-20 px-4 md:px-10 overflow-x-hidden">
         <section id="website">
           <div className="flex flex-wrap justify-evenly gap-4 md:gap-x-7 md:gap-y-14 max-w-3xl mx-auto mt-8 mb-28">
-            <Portrait
-              src="/images/gerizim.jpg"
-              name="Gerizim Villarante"
-              position=""
-              desc=""
-              socials={{
-                facebook: "https://www.facebook.com/gerizim16",
-                twitter: "https://twitter.com/gerizim316",
-                linkedin: "https://www.linkedin.com/in/gerizim16/",
-                github:  "https://github.com/gerizim16"
-              }}
-            />
-            <Portrait
-              src="/images/allaine.jpg"
-              name="Allaine Tan"
-              position=""
-              desc="I am the one thing in life I can control. I am inimitable, I am an original. -Aaron Burr"
-              socials={{
-                facebook: "https://www.facebook.com/allaine.tan",
-                twitter: null,
-                linkedin: "https://www.linkedin.com/in/allaine-tan",
-                github:  null
-              }}
-            />
-            <Portrait
-              src="/images/gene.jpg"
-              name="Gene Tan"
-              position=""
-              desc=""
-              socials={{
-                facebook: "https://www.facebook.com/geneaudrey.tan",
-                twitter: null,
-                linkedin: null,
-                github:  null
-              }}
-            />
-            <Portrait
-              src="/images/edrick.jpg"
-              name="Edrick Gador"
-              position=""
-              desc="A lion does not concern himself with the opinions of a sheep - Tywin Lannister"
-              socials={{
-                facebook: "https://www.facebook.com/edrick.gador",
-                twitter: null,
-                linkedin: "https://www.linkedin.com/in/john-edrick-gador-199308221/",
-                github:  "https://github.com/JohnEdrickGador"
-              }}
-            />
-            <Portrait
-              src="/images/vitus.png"
-              name="Vitus Acabado"
-              position=""
-              desc=""
-              socials={{
-                facebook: null,
-                twitter: null,
-                linkedin: "https://www.linkedin.com/in/vitusmurdock16/",
-                github: "https://github.com/tusvi"
-              }}
-            />
-            <Portrait
-              src="/images/lagos.jpg"
-              name="Ivan Lagos"
-              position=""
-              desc=""
-              socials={{
-                facebook: "https://www.facebook.com/ivan.lagos.583",
-                twitter: null,
-                linkedin: "https://www.linkedin.com/in/ivan-lagos-021b4a217/",
-                github: null
-              }}
-            />
+						{extractPortraits(allWebDevData)}
           </div>
         </section>
       </div>
@@ -221,7 +150,70 @@ export async function getStaticProps() {
   })
   await Promise.all(allExteFinData)
 
+	const allWebDevData = [
+		{
+			thumbnail: "/images/gerizim.jpg",
+			name: "Gerizim Villarante",
+			position: "",
+			quote: "",
+			facebookURL: "https://www.facebook.com/gerizim16",
+			twitterURL: "https://twitter.com/gerizim316",
+			linkedinURL: "https://www.linkedin.com/in/gerizim16/",
+			githubURL: "https://github.com/gerizim16",
+		},
+		{
+			thumbnail: "/images/allaine.jpg",
+			name: "Allaine Tan",
+			position: "",
+			quote: "I am the one thing in life I can control. I am inimitable, I am an original. -Aaron Burr",
+			facebookURL: "https://www.facebook.com/allaine.tan",
+			twitterURL: null,
+			linkedinURL: "https://www.linkedin.com/in/allaine-tan",
+			githubURL: null,
+		},
+		{
+			thumbnail: "/images/gene.jpg",
+			name: "Gene Tan",
+			position: "",
+			quote: "",
+			facebookURL: "https://www.facebook.com/geneaudrey.tan",
+			twitterURL: null,
+			linkedinURL: null,
+			githubURL: null,
+		},
+		{
+			thumbnail: "/images/edrick.jpg",
+			name: "Edrick Gador",
+			position: "",
+			quote: "A lion does not concern himself with the opinions of a sheep - Tywin Lannister",
+			facebookURL: "https://www.facebook.com/edrick.gador",
+			twitterURL: null,
+			linkedinURL: "https://www.linkedin.com/in/john-edrick-gador-199308221/",
+			githubURL: "https://github.com/JohnEdrickGador",
+		},
+		{
+			thumbnail: "/images/vitus.png",
+			name: "Vitus Acabado",
+			position: "",
+			quote: "",
+			facebookURL: null,
+			twitterURL: null,
+			linkedinURL: "https://www.linkedin.com/in/vitusmurdock16/",
+			githubURL: "https://github.com/tusvi",
+		},
+		{
+			thumbnail: "/images/lagos.jpg",
+			name: "Ivan Lagos",
+			position: "",
+			quote: "",
+			facebookURL: "https://www.facebook.com/ivan.lagos.583",
+			twitterURL: null,
+			linkedinURL: "https://www.linkedin.com/in/ivan-lagos-021b4a217/",
+			githubURL: null,
+		},
+	]
+
   return {
-    props: { allExecData, allTechData, allOpsData, allCommsData, allExteFinData }
+    props: { allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData }
   }
 }
