@@ -11,8 +11,8 @@ export default function Footer({ children }) {
           width={327.46}
         />
       </div>
-      <p className="text-xs">2023 Google Developer Student Clubs UP Diliman.</p>
-      <p className="text-xs"> All Rights Reserved.</p>
+      <p className="text-xs">Ⓒ 2023 Google Developer Student Clubs UP Diliman.</p>
+      <p className="text-xs">All Rights Reserved.</p>
       {children}
     </footer>
   )

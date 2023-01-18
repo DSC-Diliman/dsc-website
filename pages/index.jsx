@@ -126,7 +126,7 @@ export default function Home({ eventsArray }) {
 
 Home.getLayout = page => (
   <Layout
-    footerChildren={<p className="text-xs">Ⓒ Oblation photo by Mila D. Aguilar</p>}
+    footerChildren={<p className="text-xs italic">Oblation photo by Mila D. Aguilar.</p>}
   >
     {page}
   </Layout>
