@@ -15,6 +15,26 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
   /* ScrollTrigger.defaults({
     markers: false
   }) */
+	
+	const allExecPortraits = allExecData
+		.filter(data => data)
+		.map(({thumbnail, name, position, quote, facebookURL, twitterURL, linkedinURL, githubURL}) => (
+			<Portrait
+				src={thumbnail}
+				name={name}
+				position={position}
+				desc={quote}
+				socials={{
+					facebook: facebookURL && facebookURL,
+					twitter: twitterURL && twitterURL,
+					linkedin: linkedinURL && linkedinURL,
+					github: githubURL && githubURL,
+				}}
+			/>
+		))
+
+	console.log(allExecPortraits)
+
   return (
     <>
       <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
@@ -25,71 +45,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <section id="executive">
           <h2 className="text-center"><Em emClassName="bg-blue-400 bottom-0">&nbsp;&nbsp;&nbsp;Exec</Em><Em emClassName="bg-red-400 bottom-0">utiv</Em><Em emClassName="bg-yellow-400 bottom-0">e Boa</Em><Em emClassName="bg-green-400 bottom-0">rd&nbsp;&nbsp;&nbsp;</Em></h2>
           <div className="flex flex-wrap justify-evenly gap-4 md:gap-x-7 md:gap-y-14 max-w-3xl mx-auto mt-8 mb-28">
-            {allExecData[0]?<Portrait
-              src={allExecData[0].thumbnail}
-              name= {allExecData[0].name}
-              position={allExecData[0].position}
-              desc={allExecData[0].quote}
-              socials={{
-                facebook: allExecData[0].facebookURL? allExecData[0].facebookURL : null,
-                twitter: allExecData[0].twitterURL? allExecData[0].twitterURL : null,
-                linkedin: allExecData[0].linkedinURL? allExecData[0].linkedinURL : null,
-                github: allExecData[0].githubURL? allExecData[0].githubURL : null
-              }}
-            />
-            : null}
-            {allExecData[1]?<Portrait
-              src={allExecData[1].thumbnail}
-              name= {allExecData[1].name}
-              position={allExecData[1].position}
-              desc={allExecData[1].quote}
-              socials={{
-                facebook: allExecData[1].facebookURL? allExecData[1].facebookURL : null,
-                twitter: allExecData[1].twitterURL? allExecData[1].twitterURL : null,
-                linkedin: allExecData[1].linkedinURL? allExecData[1].linkedinURL : null,
-                github: allExecData[1].githubURL? allExecData[1].githubURL : null
-              }}
-            />
-            : null}
-            {allExecData[2]?<Portrait
-              src={allExecData[2].thumbnail}
-              name= {allExecData[2].name}
-              position={allExecData[2].position}
-              desc={allExecData[2].quote}
-              socials={{
-                facebook: allExecData[2].facebookURL? allExecData[2].facebookURL : null,
-                twitter: allExecData[2].twitterURL? allExecData[2].twitterURL : null,
-                linkedin: allExecData[2].linkedinURL? allExecData[2].linkedinURL : null,
-                github: allExecData[2].githubURL? allExecData[2].githubURL : null
-              }}
-            />
-            : null}
-            {allExecData[3]?<Portrait
-              src={allExecData[3].thumbnail}
-              name= {allExecData[3].name}
-              position={allExecData[3].position}
-              desc={allExecData[3].quote}
-              socials={{
-                facebook: allExecData[3].facebookURL? allExecData[3].facebookURL : null,
-                twitter: allExecData[3].twitterURL? allExecData[3].twitterURL : null,
-                linkedin: allExecData[3].linkedinURL? allExecData[3].linkedinURL : null,
-                github: allExecData[3].githubURL? allExecData[3].githubURL : null
-              }}
-            />
-            : null}
-            {allExecData[4]?<Portrait
-              src={allExecData[4].thumbnail}
-              name= {allExecData[4].name}
-              position={allExecData[4].position}
-              desc={allExecData[4].quote}
-              socials={{
-                facebook: allExecData[4].facebookURL? allExecData[4].facebookURL : null,
-                twitter: allExecData[4].twitterURL? allExecData[4].twitterURL : null,
-                linkedin: allExecData[4].linkedinURL? allExecData[4].linkedinURL : null,
-                github: allExecData[4].githubURL? allExecData[4].githubURL : null
-              }}
-            />
-            : null}
+            {allExecPortraits}
           </div>
         </section>
         <section id="technology" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
