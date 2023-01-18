@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { useRouter } from "next/router"
 import Image from "next/image"
+import { useRouter } from "next/router"
 
 export default function Nav({ className }) {
   const router = useRouter();
@@ -9,17 +9,12 @@ export default function Nav({ className }) {
     <nav className={`fixed inset-x-0 top-0 md:mx-10 md:mt-6 h-12 md:h-14 px-3 md:px-10 py-2 md:py-3 flex md:rounded-2xl items-stretch frosted shadow-lg ${className}`}>
       <Link href="/">
         <button className="flex-shrink-0 py-0.5">
-          <img
-            className="h-full hidden sm:block"
-            src="/images/dsc-upd-logo-small.png"
-            alt="Developer Student Clubs Logo"
-            style={{ width: "220px", height: "auto" }}
-          />
-          <img
-            className="h-full block sm:hidden"
-            src="/images/dsc-logo-small.png"
-            alt="Home"
-          />
+					<Image
+						className="h-full hidden sm:block"
+						src="/images/dsc-upd-logo.png"
+						width={220}
+						height={33.6}
+					/>
         </button>
       </Link>
 
