@@ -107,7 +107,7 @@ export default function About() {
             <ParallaxObject className="absolute -left-6 w-20 h-20 bg-yellow-300 rounded-full" y={[-200, 200]} />
             <ParallaxObject className="absolute left-12 w-10 h-10 bg-blue-300 rounded-full" y={[-200, 450]} />
             <ParallaxObject className="absolute left-36 w-10 h-10 bg-red-300 rounded-full" y={[-100, 100]} />
-            <h1 className="relative">Reach Us</h1>
+            <h1 className="relative">Reach us</h1>
             <p className="relative text-sm">in our socials!</p>
           </div>
           {[
