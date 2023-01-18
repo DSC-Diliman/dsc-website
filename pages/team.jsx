@@ -9,13 +9,8 @@ import { getOpsData } from "/lib/posts"
 import { getCommsData } from "/lib/posts"
 import { getExteFinData } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
-// import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
-  /* ScrollTrigger.defaults({
-    markers: false
-  }) */
-	
 	function extractPortraits(allData) {
 		return allData
 			.filter(data => data)
