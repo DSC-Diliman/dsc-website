@@ -9,11 +9,11 @@ import EventListView from "../components/eventlistview"
 
 export default function Home({ eventsArray }) {
   function* getNextPrimaryColor() {
-    let color_names = ["bg-red-300", "bg-blue-300", "bg-green-300", "bg-yellow-300"]
+    const color_names = ["bg-red-300", "bg-blue-300", "bg-green-300", "bg-yellow-300"]
     let index = 0
     while (true) {
-      yield color_names[index++]
-      index = index < color_names.length ? index : 0
+      yield color_names[index]
+      index = (index + 1) % color_names.length
     }
   }
 
@@ -63,17 +63,15 @@ export default function Home({ eventsArray }) {
 
       <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-32 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
         <h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
-
-        <Link href="/team">
-          <button className="btn-style2-red mb-10">Check out our teams!</button>
-        </Link>
-
         {renderOffsetGrid([
           { heading: "Speaker Sessions", text: "Hear from esteemed speakers as they share their insights, experience, and wisdom" },
           { heading: "Internal", text: "Get a glimpse of how our organization operates" },
           { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
           { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
         ])}
+        <Link href="/team">
+          <button className="btn-style2-red mb-10">Check out our teams!</button>
+        </Link>
       </section>
 
       <section className="p-4 md:px-10 pt-10 pb-14 md:py-20">
