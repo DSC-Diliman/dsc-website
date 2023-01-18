@@ -15,7 +15,7 @@ export default function About() {
         <p className="max-w-3xl text-base mx-auto">
           Ever since its fruition in India, the Developer Student Clubs has grown globally and 
           currently has over 1500 chapters spread across over 150 countries, with the Philippines 
-          having 41 of those chapters. In other words, the GDSC UP Diliman Student Chapter is part of a <b>global community</b>.
+          having 41 of those chapters. In other words, the GDSC UP Diliman Chapter is part of a <b>global community</b>.
         </p>
       </section>
 
