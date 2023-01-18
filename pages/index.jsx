@@ -1,10 +1,8 @@
 import Link from "next/link"
 import Head from 'next/head'
-import Image from 'next/image'
 import { RiCopyrightLine } from "react-icons/ri"
 import Em from "../components/em"
 import AnimatedEm from "../components/animated-em"
-import EventViewer from "../components/eventviewer"
 import Layout from "../components/layout-default"
 import { getEvents } from "../lib/posts"
 import indexHeroStyle from "/components/IndexHero.module.scss"

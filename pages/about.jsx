@@ -1,18 +1,12 @@
-import Link from "next/link"
 import Image from 'next/image'
 import Layout from "../components/layout-default"
 import AnimatedText from "../components/animated-text"
 import ParallaxImage from "../components/parallax-image"
-// import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import AnimatedObject from "../components/animated-object"
 import AnimatedEm from "../components/animated-em"
 import ParallaxObject from "../components/parallax-object"
 
 export default function About() {
-  /* ScrollTrigger.defaults({
-    markers: true
-  }) */
-
   return (
     <>
       <section className="flex flex-col min-h-screen px-4 md:px-10 py-12 md:py-24 text-center justify-center">
