@@ -14,7 +14,6 @@ export default function WebDevTeam({allWebDevData}) {
 		</div>
 		<div className="space-y-14 md:space-y-20 px-4 md:px-10 overflow-x-hidden">
 			<section id="website">
-				<h2 className="text-center my-10">A.Y. 2021-2022</h2>
 				<div className="flex flex-wrap justify-evenly gap-4 md:gap-x-7 md:gap-y-14 max-w-3xl mx-auto mt-8 mb-28">
 					{extractPortraits(allWebDevData)}
 				</div>
