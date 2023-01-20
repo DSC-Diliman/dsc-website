@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Mission() {
 	return <section id="mission" className="p-4 md:p-10 text-center">
 		<h1 className="text-2xl text-red-700 font-black">MISSION</h1>
-		<p className="my-6">We, as an organization, aim to</p>
+		<p className="mt-2 mb-6">We, as an organization, aim to</p>
 		<div className="flex justify-center">
 			{[
 				{
