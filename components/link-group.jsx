@@ -4,7 +4,7 @@ export default function LinkGroup({head, links}) {
 	))
 	return (
 		<div className="text-left">
-			<p className="font-bold py-2.5">{head.text}</p>
+			<a className="font-bold block py-2.5" href={`${head.href}`}>{head.text}</a>
 			{linksJSX}
 		</div>
 	)
