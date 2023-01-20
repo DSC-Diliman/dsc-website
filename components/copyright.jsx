@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 export default function Copyright() {
-	return <>
+	return <div className="text-xs">
 		<div className="flex-initial flex flex-col items-center pb-3">
 			<Image
 				src="/images/dsc-upd-logo.png"
@@ -10,6 +10,6 @@ export default function Copyright() {
 				width={327.46}
 			/>
 		</div>
-		<p className="text-xs">Ⓒ 2023 Google Developer Student Clubs UP Diliman. All Rights Reserved.</p>
-	</>
+		<p>Ⓒ 2023 Google Developer Student Clubs UP Diliman. All Rights Reserved.</p>
+	</div>
 }
