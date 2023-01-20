@@ -1,7 +1,6 @@
 import Description from '../components/description'
 import Layout from "../components/layout-default"
 import Mission from '../components/mission'
-import Socials from '../components/socials'
 import Vision from '../components/vision'
 
 export default function About() {
@@ -10,7 +9,6 @@ export default function About() {
 			<Description />
 			<Vision />
 			<Mission />
-			<Socials />
     </>
   )
 }
