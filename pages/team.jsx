@@ -2,34 +2,15 @@ import AnimatedEm from "../components/animated-em"
 import Layout from "../components/layout-default"
 import Em from "../components/em"
 import ParallaxObject from "../components/parallax-object"
-import Portrait from "../components/portrait"
 import { getExecData } from "/lib/posts"
 import { getTechData } from "/lib/posts"
 import { getOpsData } from "/lib/posts"
 import { getCommsData } from "/lib/posts"
 import { getExteFinData } from "/lib/posts"
+import extractPortraits from "../lib/extractPortraits"
 import markdownToHtml from "/lib/markdownToHtml"
 
 export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
-	function extractPortraits(allData) {
-		return allData
-			.filter(data => data)
-			.map(({thumbnail, name, position, quote, facebookURL, twitterURL, linkedinURL, githubURL}) => (
-				<Portrait
-					src={thumbnail}
-					name={name}
-					position={position}
-					desc={quote}
-					socials={{
-						facebook: facebookURL && facebookURL,
-						twitter: twitterURL && twitterURL,
-						linkedin: linkedinURL && linkedinURL,
-						github: githubURL && githubURL,
-					}}
-				/>
-			))
-	}
-
   return (
     <>
       <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
