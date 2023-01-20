@@ -119,7 +119,8 @@ export async function getStaticProps() {
         "date",
         "dateEnd",
         "eventType",
-        "location"
+        "location",
+				"locationURL",
       ])
     }
   }
