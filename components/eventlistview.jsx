@@ -5,11 +5,11 @@ import TimeFormatter from './timeformatter'
 
 export default function EventListView({ eventsArray, className }) {
   return (
-    <div className={`overflow-y-auto overscroll-contain scroll-y ${className}`}>
+    <div className={`overflow-y-auto w-full overscroll-contain scroll-y ${className}`}>
       {
         eventsArray &&
 				eventsArray.map((currEvent, index) => (
-					<div key={index} className="py-6 scroll-start border-b-2 border-gray-100">
+					<div key={index} className="py-6 w-fullscroll-start border-b-2 border-gray-100">
 						<p className="sm:mb-2 text-sm">
 							<DateFormatter dateTime={currEvent.date} />
 						</p>
