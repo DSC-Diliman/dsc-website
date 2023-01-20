@@ -13,6 +13,7 @@ import ExecutiveTeam from "../components/executive-team"
 import TechnologyTeam from "../components/technology-team"
 import OperationsTeam from "../components/operations-team"
 import CommunicationsTeam from "../components/communications-team"
+import FinanceAndExternalsTeam from "../components/finance-and-externals-team"
 
 export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
   return (
@@ -26,19 +27,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
 				<TechnologyTeam allTechData={allTechData} />
 				<OperationsTeam allOpsData={allOpsData} />
 				<CommunicationsTeam allCommsData={allCommsData} />
-
-        <section id="finance-and-externals" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
-          <div>
-            <h2><AnimatedEm emClassName="bg-yellow-300 bottom-0 -left-4" trigger="90%">Finance and Externals</AnimatedEm></h2>
-            <p className="mt-4">
-              The Finance Externals Department manages the finances of the organization and maintains communication with external entities such as other organizations, companies, and clients.   
-            </p>
-          </div>
-          <div className="relative w-full flex flex-wrap justify-evenly gap-4">
-            <ParallaxObject className="absolute -right-6 w-20 h-20 bg-yellow-300 rounded-full" y={[-100, 200]} />
-            {extractPortraits(allExteFinData)}
-          </div>
-        </section>
+				<FinanceAndExternalsTeam allExteFinData={allExteFinData} />
       </div>
       <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
         <h1 className="text-center"><Em emClassName="bg-blue-400 bottom-0">&nbsp;&nbsp;&nbsp;Websit</Em><Em emClassName="bg-red-400 bottom-0">e Deve</Em><Em emClassName="bg-yellow-400 bottom-0">lopmen</Em><Em emClassName="bg-green-400 bottom-0">t Team&nbsp;&nbsp;&nbsp;</Em></h1>
