@@ -8,6 +8,7 @@ import Landing from "../components/landing"
 import { GiMicrophone, GiMagnifyingGlass } from "react-icons/gi"
 import { BsWrench } from "react-icons/bs"
 import { ImLab } from "react-icons/im"
+
 export default function Home({ eventsArray }) {
   function* getNextPrimaryColor() {
     const color_names = ["bg-red-300", "bg-blue-300", "bg-green-300", "bg-yellow-300"]
@@ -68,7 +69,6 @@ export default function Home({ eventsArray }) {
             />
           </div>
         </div>
-        {/* <EventViewer eventsArray={eventsArray} /> */}
       </section>
 
       {/*
