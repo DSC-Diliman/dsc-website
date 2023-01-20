@@ -82,7 +82,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/allaine.jpg",
 			name: "Allaine Tan",
-			position: "UI / UX",
+			position: "UI / UX Designer",
 			quote: "I am the one thing in life I can control. I am inimitable, I am an original. -Aaron Burr",
 			facebookURL: "https://www.facebook.com/allaine.tan",
 			twitterURL: null,
@@ -92,7 +92,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/gene.jpg",
 			name: "Gene Tan",
-			position: "UI / UX",
+			position: "UI / UX Designer",
 			quote: "",
 			facebookURL: "https://www.facebook.com/geneaudrey.tan",
 			twitterURL: null,
