@@ -70,35 +70,6 @@ export default function Home({ eventsArray }) {
           </div>
         </div>
       </section>
-
-      {/*
-      <section className="pt-12 bg-gray-200 w-full">
-        <h1 className="text-center mb-4">Other GDSC Chapters</h1>
-        <div className="max-w-min mx-auto py-6 md:py-10 flex overflow-x-auto flex-nowrap space-x-10 md:space-x-24">
-          <div />
-          {[
-            { school: "Ateneo de Manila University Loyola", location: "Manila" },
-            { school: "Ateneo de Manila University Loyola", location: "Manila" },
-            { school: "Ateneo de Manila University Loyola", location: "Manila" },
-            { school: "Ateneo de Manila University Loyola", location: "Manila" },
-            { school: "Ateneo de Manila University Loyola", location: "Manila" },
-            { school: "Ateneo de Manila University Loyola", location: "Manila" },
-          ].map(({ school, location, imgsrc }, index) => (
-            <div key={index} className="max-w-min text-center flex-grow-0">
-              <div className="rounded-full bg-white shadow-md w-28 h-28 md:w-36 md:h-36 mb-4">
-                <img
-                  className="object-cover"
-                  src={imgsrc ? imgsrc : ""}
-                />
-              </div>
-              <p className="font-medium">{school}</p>
-              <p className="text-sm">{location}</p>
-            </div>
-          ))}
-          <div>&nbsp;</div>
-        </div>
-      </section>
-      */}
     </>
   )
 }
