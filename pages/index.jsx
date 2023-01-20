@@ -64,10 +64,10 @@ export default function Home({ eventsArray }) {
       <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-16 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
         <h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
         {renderOffsetGrid([
-          { heading: "Speaker Sessions", text: "Hear from esteemed speakers as they share their insights, experience, and wisdom" },
-          { heading: "Internal", text: "Get a glimpse of how our organization operates" },
-          { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams" },
-          { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects" }
+          { heading: "Speaker Sessions", text: "Hear from esteemed speakers as they share their insights, experience, and wisdom." },
+          { heading: "Internal", text: "Get a glimpse of how our organization operates!" },
+          { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams." },
+          { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects!" }
         ])}
         <Link href="/team">
           <button className="btn-style2-red">Check out our teams!</button>
