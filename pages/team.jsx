@@ -10,7 +10,7 @@ import TechnologyTeam from "../components/technology-team"
 import OperationsTeam from "../components/operations-team"
 import CommunicationsTeam from "../components/communications-team"
 import FinanceAndExternalsTeam from "../components/finance-and-externals-team"
-import WebsiteDevelopmentTeam from "../components/website-development-team"
+import WebDevelopmentTeam from "../components/web-development-team"
 
 export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
   return (
@@ -26,7 +26,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
 				<CommunicationsTeam allCommsData={allCommsData} />
 				<FinanceAndExternalsTeam allExteFinData={allExteFinData} />
       </div>
-			<WebsiteDevelopmentTeam allWebDevData={allWebDevData} />
+			<WebDevelopmentTeam allWebDevData={allWebDevData} />
     </>
   )
 }
