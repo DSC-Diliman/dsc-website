@@ -9,7 +9,7 @@ import { getCommsData } from "/lib/posts"
 import { getExteFinData } from "/lib/posts"
 import extractPortraits from "../lib/extractPortraits"
 import markdownToHtml from "/lib/markdownToHtml"
-import Executive from "../components/executive"
+import ExecutiveList from "../components/executive-list"
 
 export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
   return (
@@ -19,7 +19,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <p>The lineup that empowers, enlightens, and nurtures student developers in UP Diliman!</p>
       </div>
       <div className="space-y-14 md:space-y-20 pb-20 px-4 md:px-10 overflow-x-hidden">
-				<Executive allExecData={allExecData} />
+				<ExecutiveList allExecData={allExecData} />
         <section id="technology" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
           <div className="md:order-2 pt-32">
             <h2><AnimatedEm emClassName="bg-green-500 bottom-0 left-4">Technology</AnimatedEm></h2>
