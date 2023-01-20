@@ -9,6 +9,7 @@ import { getCommsData } from "/lib/posts"
 import { getExteFinData } from "/lib/posts"
 import extractPortraits from "../lib/extractPortraits"
 import markdownToHtml from "/lib/markdownToHtml"
+import Executive from "../components/executive"
 
 export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
   return (
@@ -18,12 +19,7 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <p>The lineup that empowers, enlightens, and nurtures student developers in UP Diliman!</p>
       </div>
       <div className="space-y-14 md:space-y-20 pb-20 px-4 md:px-10 overflow-x-hidden">
-        <section id="executive">
-          <h2 className="text-center"><Em emClassName="bg-blue-400 bottom-0">&nbsp;&nbsp;&nbsp;Exec</Em><Em emClassName="bg-red-400 bottom-0">utiv</Em><Em emClassName="bg-yellow-400 bottom-0">e Boa</Em><Em emClassName="bg-green-400 bottom-0">rd&nbsp;&nbsp;&nbsp;</Em></h2>
-          <div className="flex flex-wrap justify-center gap-8 max-w-3xl mx-auto mt-8 mb-28">
-            {extractPortraits(allExecData)}
-          </div>
-        </section>
+				<Executive allExecData={allExecData} />
         <section id="technology" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
           <div className="md:order-2 pt-32">
             <h2><AnimatedEm emClassName="bg-green-500 bottom-0 left-4">Technology</AnimatedEm></h2>
