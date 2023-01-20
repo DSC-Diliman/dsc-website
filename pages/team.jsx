@@ -72,7 +72,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/gerizim.jpg",
 			name: "Gerizim Villarante",
-			position: "",
+			position: "Web Development Lead",
 			quote: "",
 			facebookURL: "https://www.facebook.com/gerizim16",
 			twitterURL: "https://twitter.com/gerizim316",
@@ -82,7 +82,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/allaine.jpg",
 			name: "Allaine Tan",
-			position: "",
+			position: "UI / UX",
 			quote: "I am the one thing in life I can control. I am inimitable, I am an original. -Aaron Burr",
 			facebookURL: "https://www.facebook.com/allaine.tan",
 			twitterURL: null,
@@ -92,7 +92,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/gene.jpg",
 			name: "Gene Tan",
-			position: "",
+			position: "UI / UX",
 			quote: "",
 			facebookURL: "https://www.facebook.com/geneaudrey.tan",
 			twitterURL: null,
@@ -102,7 +102,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/edrick.jpg",
 			name: "Edrick Gador",
-			position: "",
+			position: "Developer",
 			quote: "A lion does not concern himself with the opinions of a sheep - Tywin Lannister",
 			facebookURL: "https://www.facebook.com/edrick.gador",
 			twitterURL: null,
@@ -112,7 +112,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/vitus.png",
 			name: "Vitus Acabado",
-			position: "",
+			position: "Developer",
 			quote: "",
 			facebookURL: null,
 			twitterURL: null,
@@ -122,7 +122,7 @@ export async function getStaticProps() {
 		{
 			thumbnail: "/images/lagos.jpg",
 			name: "Ivan Lagos",
-			position: "",
+			position: "Developer",
 			quote: "",
 			facebookURL: "https://www.facebook.com/ivan.lagos.583",
 			twitterURL: null,
