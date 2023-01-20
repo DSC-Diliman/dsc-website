@@ -1,11 +1,10 @@
 import Link from "next/link"
 import Head from 'next/head'
-import Em from "../components/em"
 import AnimatedEm from "../components/animated-em"
 import Layout from "../components/layout-default"
 import { getEvents } from "../lib/posts"
-import indexHeroStyle from "/components/IndexHero.module.scss"
 import EventListView from "../components/eventlistview"
+import Landing from "../components/landing"
 
 export default function Home({ eventsArray }) {
   function* getNextPrimaryColor() {
@@ -38,28 +37,7 @@ export default function Home({ eventsArray }) {
       <Head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
-      <section className="relative flex flex-row items-center min-h-screen pt-10 sm:pt-0">
-        <div className={indexHeroStyle["mobile-hero"]}/>
-        <div className="backdrop-filter backdrop-blur-md bg-white bg-opacity-60 sm:backdrop-filter-none sm:bg-transparent p-8 md:pl-20 md:pr-10 md:pt-24 md:pb-10 w-full sm:w-1/2">
-          <div className="max-w-xl mx-auto">
-            <h1 className="mb-2 md:mb-10 text-2xl md:text-5xl">
-              <Em emClassName="bg-red-300 right-4 bottom-2">Grow. Learn. Connect.</Em>
-            </h1>
-
-            <p className="mb-4 md:mb-10">The <b>GDSC UP Diliman Chapter</b> is part of a global community of over 1500 universities.</p>
-
-            <Link href="/about">
-              <button className="btn-style2-red">Learn More</button>
-            </Link>
-          </div>
-        </div>
-        <div className={`hidden sm:block ${indexHeroStyle.hero}`}>
-          <div>
-            <div />
-          </div>
-          <div />
-        </div>
-      </section>
+			<Landing />
 
       <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-16 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
         <h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
