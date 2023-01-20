@@ -1,7 +1,7 @@
 import Em from "./em"
 import extractPortraits from "../lib/extractPortraits"
 
-export default function ExecutiveTeam({allExecData}) {
+export default function ExecTeam({allExecData}) {
 	return <section id="executive">
 		<h2 className="text-center">
 			<Em emClassName="bg-blue-400 bottom-0">&nbsp;&nbsp;&nbsp;Exec</Em>

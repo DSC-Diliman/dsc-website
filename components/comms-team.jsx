@@ -2,7 +2,7 @@ import AnimatedEm from "./animated-em"
 import ParallaxObject from "./parallax-object"
 import extractPortraits from "../lib/extractPortraits"
 
-export default function CommunicationsTeam({allCommsData}) {
+export default function CommsTeam({allCommsData}) {
 	return <section id="communications" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
 		<div className="md:order-2">
 			<h2><AnimatedEm emClassName="bg-blue-400 bottom-0 left-4">Communications</AnimatedEm></h2>

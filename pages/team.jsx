@@ -5,12 +5,12 @@ import { getOpsData } from "/lib/posts"
 import { getCommsData } from "/lib/posts"
 import { getExteFinData } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
-import ExecutiveTeam from "../components/executive-team"
-import TechnologyTeam from "../components/technology-team"
-import OperationsTeam from "../components/operations-team"
-import CommunicationsTeam from "../components/communications-team"
-import FinanceAndExternalsTeam from "../components/finance-and-externals-team"
-import WebDevelopmentTeam from "../components/web-development-team"
+import ExecTeam from "../components/exec-team"
+import TechTeam from "../components/tech-team"
+import OpsTeam from "../components/ops-team"
+import CommsTeam from "../components/comms-team"
+import FinExtTeam from "../components/finext-team"
+import WebDevTeam from "../components/web-dev-team"
 
 export default function Team({allExecData, allTechData, allOpsData, allCommsData, allExteFinData, allWebDevData}) {
   return (
@@ -20,13 +20,13 @@ export default function Team({allExecData, allTechData, allOpsData, allCommsData
         <p>The lineup that empowers, enlightens, and nurtures student developers in UP Diliman!</p>
       </div>
       <div className="space-y-14 md:space-y-20 pb-20 px-4 md:px-10 overflow-x-hidden">
-				<ExecutiveTeam allExecData={allExecData} />
-				<TechnologyTeam allTechData={allTechData} />
-				<OperationsTeam allOpsData={allOpsData} />
-				<CommunicationsTeam allCommsData={allCommsData} />
-				<FinanceAndExternalsTeam allExteFinData={allExteFinData} />
+				<ExecTeam allExecData={allExecData} />
+				<TechTeam allTechData={allTechData} />
+				<OpsTeam allOpsData={allOpsData} />
+				<CommsTeam allCommsData={allCommsData} />
+				<FinExtTeam allExteFinData={allExteFinData} />
       </div>
-			<WebDevelopmentTeam allWebDevData={allWebDevData} />
+			<WebDevTeam allWebDevData={allWebDevData} />
     </>
   )
 }

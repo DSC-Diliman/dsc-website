@@ -2,7 +2,7 @@ import AnimatedEm from "./animated-em"
 import ParallaxObject from "./parallax-object"
 import extractPortraits from "../lib/extractPortraits"
 
-export default function FinanceAndExternalsTeam({allExteFinData}) {
+export default function FinExtTeam({allExteFinData}) {
 	return <section id="finance-and-externals" className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8">
 		<div>
 			<h2><AnimatedEm emClassName="bg-yellow-300 bottom-0 -left-4" trigger="90%">Finance and Externals</AnimatedEm></h2>

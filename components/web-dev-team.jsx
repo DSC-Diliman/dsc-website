@@ -1,7 +1,7 @@
 import Em from "./em"
 import extractPortraits from "../lib/extractPortraits"
 
-export default function WebDevelopmentTeam({allWebDevData}) {
+export default function WebDevTeam({allWebDevData}) {
 	return <>
 		<div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
 			<h1 className="text-center">
