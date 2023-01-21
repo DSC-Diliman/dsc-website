@@ -5,7 +5,7 @@
 # Remember to switch `backend:name:` back to `git-gateway` before doing a git commit!
 
 backend:
-  name: git-gateway
+  name: test-repo
   branch: master
 
 media_folder: "public/uploads"
@@ -72,6 +72,13 @@ collections:
         field: team
     fields:
       - { name: "name", label: "Name", widget: "string", }
+      - { name: "year", label: "Year", widget: "number", 
+            default: 2022,
+            value_type: "int",
+            min: 2021,
+            max: 2022,
+            step: 1, }
+
       - { name: "team", label: "Team", widget: "select",
             options:
                     [
