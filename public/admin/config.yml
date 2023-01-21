@@ -22,56 +22,22 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["title", "date", dateEnd"]
     fields:
-      - {
-          name: "title",
-          label: "Title",
-          widget: "string",
-        }
-      - {
-          name: "date",
-          label: "Start",
-          widget: "datetime",
-        }
-      - {
-          name: "dateEnd",
-          label: "End",
-          widget: "datetime",
-        }
-      - {
-          name: "eventType",
-          label: "type",
-          widget: "select",
-          options: ["Speaker Sessions", "Internal", "Workshops", "Tech Solutions"],
-        }
-      - {
-          name: "location",
-          label: "Location",
-          widget: "string",
-        }
-      - {
-          name: "locationURL",
-          label: "URL",
-          widget: "string",
-        }
-      - {
-          name: "images",
-          label: "Images",
-          label_singular: "image",
-          widget: "list",
-          summary: "{{fields.image}}",
-          field: { name: "image", label: "Image", widget: "image", },
-        }
-      - {
-          name: "summary",
-          label: "Summary",
-          widget: "text",
-        }
-      - {
-          name: "body",
-          label: "Body",
-          widget: "markdown",
-          minimal: true,
-        }
+      - { name: "title", label: "Title", widget: "string", }
+      - { name: "date", label: "Start", widget: "datetime", }
+      - { name: "dateEnd", label: "End", widget: "datetime", }
+      - { name: "eventType", label: "type", widget: "select",
+            options: ["Speaker Sessions", "Internal", "Workshops", "Tech Solutions"], }
+
+      - { name: "location", label: "Location", widget: "string", }
+      - { name: "locationURL", label: "URL", widget: "string", }
+      - { name: "images", label: "Images", widget: "list",
+            label_singular: "image",
+            summary: "{{fields.image}}",
+            field: { name: "image", label: "Image", widget: "image", }, }
+
+      - { name: "summary", label: "Summary", widget: "text", }
+      - { name: "body", label: "Body", widget: "markdown",
+            minimal: true, }
 
   - name: "projects"
     label: "Projects"
@@ -81,30 +47,15 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["title"]
     fields:
-      - {
-          name: "title",
-          label: "Title",
-          widget: "string",
-        }
-      - {
-          name: "thumbnail",
-          label: "Thumbnail",
-          widget: "image",
-        }
-      - {
-          name: "images",
-          label: "Images",
-          label_singular: "image",
-          widget: "list",
-          summary: "{{fields.image}}",
-          field: { label: "Image", name: "image", widget: "image", },
-        }
-      - {
-          name: "body",
-          label: "Body",
-          widget: "markdown",
-          minimal: true,
-        }
+      - { name: "title", label: "Title", widget: "string", }
+      - { name: "thumbnail", label: "Thumbnail", widget: "image", }
+      - { name: "images", label: "Images", widget: "list",
+            label_singular: "image",
+            summary: "{{fields.image}}",
+            field: { name: "image", label: "Image", widget: "image", }, }
+
+      - { name: "body", label: "Body", widget: "markdown",
+            minimal: true, }
 
   - name: "members"
     label: "Members"
@@ -118,67 +69,24 @@ collections:
       - label: Team
         field: team
     fields:
-      - {
-          name: "name",
-          label: "Name",
-          widget: "string",
-        }
-      - {
-          name: "team",
-          label: "Team",
-          widget: "select",
-          options:
-                  [
-                    "Executive",
-                    "Technology",
-                    "Operations",
-                    "Communications",
-                    "Finance and Externals",
-                    "Web Development",
-                  ],
-        }
-      - {
-          name: "position",
-          label: "Position",
-          widget: "string",
-        }
-      - {
-          name: "thumbnail",
-          label: "Thumbnail",
-          widget: "image",
-        }
-      - {
-          name: "quote",
-          label: "Quote",
-          widget: "string",
-        }
-      - {
-          name: "facebookURL",
-          label: "Facebook URL",
-          widget: "string",
-          required: false,
-        }
-      - {
-          name: "twitterURL",
-          label: "Twitter URL",
-          widget: "string",
-          required: false,
-        }
-      - {
-          name: "linkedinURL",
-          label: "LinkedIn URL",
-          widget: "string",
-          required: false,
-        }
-      - {
-          name: "githubURL",
-          label: "GitHub URL",
-          widget: "string",
-          required: false,
-        }
-      - {
-          name: "body",
-          label: "Body",
-          widget: "markdown",
-          minimal: true,
-        }
+      - { name: "name", label: "Name", widget: "string", }
+      - { name: "team", label: "Team", widget: "select",
+            options:
+                    [
+                      "Executive",
+                      "Technology",
+                      "Operations",
+                      "Communications",
+                      "Finance and Externals",
+                      "Web Development",
+                    ], }
+
+      - { name: "position", label: "Position", widget: "string", }
+      - { name: "thumbnail", label: "Thumbnail", widget: "image", }
+      - { name: "quote", label: "Quote", widget: "string", }
+      - { name: "facebookURL", label: "Facebook URL", widget: "string", required: false, }
+      - { name: "twitterURL", label: "Twitter URL", widget: "string", required: false, }
+      - { name: "linkedinURL", label: "LinkedIn URL", widget: "string", required: false, }
+      - { name: "githubURL", label: "GitHub URL", widget: "string", required: false, }
+      - { name: "body", label: "Body", widget: "markdown",
+            minimal: true, }
