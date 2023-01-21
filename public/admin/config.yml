@@ -39,6 +39,7 @@ collections:
       - { name: "body", label: "Body", widget: "markdown",
             minimal: true, }
 
+
   - name: "projects"
     label: "Projects"
     label_singular: "Project"
@@ -56,6 +57,7 @@ collections:
 
       - { name: "body", label: "Body", widget: "markdown",
             minimal: true, }
+
 
   - name: "members"
     label: "Members"
