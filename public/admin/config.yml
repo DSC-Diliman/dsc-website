@@ -1,146 +1,184 @@
+# See https://www.netlifycms.org/docs/configuration-options for config details.
+#
+# Set `backend:name:` to `test-repo` to test the CMS UI. 
+#
+# Remember to switch `backend:name:` back to `git-gateway` before doing a git commit!
+
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
-# publish_mode: editorial_workflow
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
+site_url: "https://gdscupd.com"
+
 collections:
-  - name: "event" # Used in routes, e.g., /admin/collections/blog
-    label: "Event" # Used in the UI
-    folder: "posts/events" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Start Date Time", name: "date", widget: "datetime" }
-      - { label: "End Date Time", name: "dateEnd", widget: "datetime" }
+  - name: "events"
+    label: "Events"
+    label_singular: "Event"
+    folder: "posts/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["title", "date", dateEnd"]
+    fields:
       - {
-          label: "Event type",
+          name: "title",
+          label: "Title",
+          widget: "string",
+        }
+      - {
+          name: "date",
+          label: "Start",
+          widget: "datetime",
+        }
+      - {
+          name: "dateEnd",
+          label: "End",
+          widget: "datetime",
+        }
+      - {
           name: "eventType",
+          label: "type",
+          widget: "select",
+          options: ["Speaker Sessions", "Internal", "Workshops", "Tech Solutions"],
+        }
+      - {
+          name: "location",
+          label: "Location",
+          widget: "string",
+        }
+      - {
+          name: "locationURL",
+          label: "URL",
+          widget: "string",
+        }
+      - {
+          name: "images",
+          label: "Images",
+          label_singular: "image",
+          widget: "list",
+          summary: "{{fields.image}}",
+          field: { name: "image", label: "Image", widget: "image", },
+        }
+      - {
+          name: "summary",
+          label: "Summary",
+          widget: "text",
+        }
+      - {
+          name: "body",
+          label: "Body",
+          widget: "markdown",
+          minimal: true,
+        }
+
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "posts/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["title"]
+    fields:
+      - {
+          name: "title",
+          label: "Title",
+          widget: "string",
+        }
+      - {
+          name: "thumbnail",
+          label: "Thumbnail",
+          widget: "image",
+        }
+      - {
+          name: "images",
+          label: "Images",
+          label_singular: "image",
+          widget: "list",
+          summary: "{{fields.image}}",
+          field: { label: "Image", name: "image", widget: "image", },
+        }
+      - {
+          name: "body",
+          label: "Body",
+          widget: "markdown",
+          minimal: true,
+        }
+
+  - name: "members"
+    label: "Members"
+    label_singular: "Member"
+    folder: "posts/members"
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    sortable_fields: ["name"]
+    view_groups: 
+      - label: Team
+        field: team
+    fields:
+      - {
+          name: "name",
+          label: "Name",
+          widget: "string",
+        }
+      - {
+          name: "team",
+          label: "Team",
           widget: "select",
           options:
-            ["Speaker Sessions", "Internal", "Workshops", "Tech Solutions"],
-        }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Location URL", name: "locationURL", widget: "string" }
-      - {
-          label: "Images",
-          name: "images",
-          widget: "list",
-          summary: "{{fields.image}}",
-          field: { label: "Image", name: "image", widget: "image" },
+                  [
+                    "Executive",
+                    "Technology",
+                    "Operations",
+                    "Communications",
+                    "Finance and Externals",
+                    "Web Development",
+                  ],
         }
       - {
-          label: "Summary",
-          name: "summary",
-          widget: "text",
-          hint: "Recommended to use a maximum of 115 characters",
+          name: "position",
+          label: "Position",
+          widget: "string",
         }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-
-  - name: "project" # Used in routes, e.g., /admin/collections/blog
-    label: "Project" # Used in the UI
-    folder: "posts/projects" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - {
-          label: "Images",
-          name: "images",
-          widget: "list",
-          summary: "{{fields.image}}",
-          field: { label: "Image", name: "image", widget: "image" },
+          name: "thumbnail",
+          label: "Thumbnail",
+          widget: "image",
         }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-
-  - name: "exec"
-    label: "Executive Members"
-    folder: "posts/exec"
-    create: true
-    identifier_field: name
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Quote", name: "quote", widget: "string" }
-      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
-      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
-      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
-      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
-
-
-  - name: "tech"
-    label: "Technology Members"
-    folder: "posts/tech"
-    create: true
-    identifier_field: name
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Quote", name: "quote", widget: "string" }
-      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
-      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
-      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
-      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
-
-
-  - name: "ops"
-    label: "Operations Members"
-    folder: "posts/ops"
-    create: true
-    identifier_field: name
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Quote", name: "quote", widget: "string" }
-      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
-      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
-      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
-      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
-
-
-  - name: "comms"
-    label: "Communications Members"
-    folder: "posts/comms"
-    create: true
-    identifier_field: name
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Quote", name: "quote", widget: "string" }
-      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
-      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
-      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
-      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
-
-
-  - name: "extefin"
-    label: "Externals and Finance Members"
-    folder: "posts/extefin"
-    create: true
-    identifier_field: name
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Quote", name: "quote", widget: "string" }
-      - { label: "Facebook URL", name: "facebookURL", widget: "string", required: false }
-      - { label: "Twitter URL", name: "twitterURL", widget: "string", required: false }
-      - { label: "LinkedIn URL", name: "linkedinURL", widget: "string", required: false }
-      - { label: "GitHub URL", name: "githubURL", widget: "string", required: false }
-
-      
+      - {
+          name: "quote",
+          label: "Quote",
+          widget: "string",
+        }
+      - {
+          name: "facebookURL",
+          label: "Facebook URL",
+          widget: "string",
+          required: false,
+        }
+      - {
+          name: "twitterURL",
+          label: "Twitter URL",
+          widget: "string",
+          required: false,
+        }
+      - {
+          name: "linkedinURL",
+          label: "LinkedIn URL",
+          widget: "string",
+          required: false,
+        }
+      - {
+          name: "githubURL",
+          label: "GitHub URL",
+          widget: "string",
+          required: false,
+        }
+      - {
+          name: "body",
+          label: "Body",
+          widget: "markdown",
+          minimal: true,
+        }
