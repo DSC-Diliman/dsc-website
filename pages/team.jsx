@@ -29,7 +29,7 @@ export default function Team({ allMemberData }) {
 									`
 									border-2 border-black rounded-full
 									text-2xl
-									px-8 py-2
+									px-8 py-1
 									${year === yearToShow && "bg-black text-white cursor-default"}
 									${year !== yearToShow && "hover:underline"}
 									`
