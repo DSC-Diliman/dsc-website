@@ -7,22 +7,28 @@ export default function Nav() {
 
   return (
     <nav className="
-			fixed inset-x-0 top-0 h-12 px-3 pt-2 flex items-stretch frosted shadow-lg z-10
-			md:h-14 md:mx-10 md:mt-6 md:px-10 md:py-3 md:rounded-2xl
+			fixed inset-x-0 top-0 px-4 py-2 frosted shadow-lg z-10
+			md:h-14 md:mx-10 md:mt-6 md:px-10 md:py-3 md:flex md:justify-center md:rounded-2xl
 		">
-      <Link href="/">
-        <button className="flex-shrink-0">
-					<Image
-						src="/images/dsc-upd-logo.png"
-						width={220}
-						height={33.6}
-					/>
-        </button>
-      </Link>
+			<div className="
+				py-2 flex justify-center
+				md:flex-none md:mr-5 md:py-0
+			">
+				<Link href="/">
+					<button>
+						<Image
+							src="/images/dsc-upd-logo.png"
+							width={220}
+							height={33.6}
+						/>
+					</button>
+				</Link>
+			</div>
 
-      <div className="flex-grow" />
-
-      <div className="flex items-stretch justify-between sm:w-96">
+      <div className="
+				flex mb-2 items-stretch justify-evenly
+				md:ml-auto md:mb-0 md:w-96 md:justify-between
+			">
         {[
 					{
 						page: "Home",
