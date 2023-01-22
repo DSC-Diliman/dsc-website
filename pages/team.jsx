@@ -30,7 +30,7 @@ export default function Team({ allMemberData }) {
 									border-2 border-black rounded-full
 									text-2xl
 									px-8 py-1
-									${year === yearToShow && "bg-gradient-to-r from-blue-200 to-green-200 cursor-default"}
+									${year === yearToShow && "bg-gradient-to-r from-blue-200 to-green-200"}
 									${year !== yearToShow && "hover:underline"}
 									`
 								}
