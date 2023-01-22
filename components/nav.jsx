@@ -21,6 +21,11 @@ export default function Nav({ className }) {
 
       <div className="flex items-stretch sm:w-96 justify-between">
         {[
+					{
+						page: "Home",
+						style: "btn-style1-yellow",
+						selected: "btn-style1-yellow-selected"
+					},
           {
             page: "About",
             style: "btn-style1-blue",
@@ -42,7 +47,7 @@ export default function Nav({ className }) {
             selected: "btn-style1-yellow-selected"
           }
         ].map(({ page, style, selected }) => {
-          const href = '/' + page.toLowerCase()
+          const href = `/${page === "Home" ? '' : page.toLowerCase()}`
           return (
             <Link
               key={page.toLowerCase()}
