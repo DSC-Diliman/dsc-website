@@ -8,10 +8,11 @@ import Landing from "../components/landing"
 import { GiMicrophone, GiMagnifyingGlass } from "react-icons/gi"
 import { BsWrench } from "react-icons/bs"
 import { ImLab } from "react-icons/im"
+import { IconContext } from "react-icons"
 
 export default function Home({ eventsArray }) {
   function* getNextPrimaryColor() {
-    const color_names = ["bg-red-300", "bg-blue-300", "bg-green-300", "bg-yellow-300"]
+    const color_names = ["red", "blue", "green", "yellow"]
     let index = 0
     while (true) {
       yield color_names[index]
@@ -23,15 +24,26 @@ export default function Home({ eventsArray }) {
     const color_gen = getNextPrimaryColor()
     return (
       <div className="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 gap-8 md:gap-16 mt-6 mb-40">
-        {elements.map(({ heading, text, icon }, index) => (
-          <div key={index} className="relative w-64 div-style1 md:w-80 sm:even:top-1/2 p-4 md:p-11">
-            <div className="mb-1 sm:mb-4 font-semibold text-lg sm:text-xl flex gap-5 items-center">
-              <AnimatedEm emClassName={`right-4 bottom-0 ${color_gen.next().value}`} >{heading}</AnimatedEm>
-							{icon}
-            </div>
-            <p className="text-sm sm:text-base">{text}</p>
-          </div>
-        ))}
+        {elements.map(({ heading, text, icon }, index) => {
+					const color = color_gen.next().value
+					return (
+						<div key={index} className="relative w-64 div-style1 overflow-hidden md:w-80 sm:even:top-1/2 p-4 md:p-11">
+							<div className="mb-1 sm:mb-4 font-semibold text-lg sm:text-xl flex gap-5 items-center">
+								<AnimatedEm emClassName={`right-4 bottom-0 bg-${color}-300`} >{heading}</AnimatedEm>
+							</div>
+							<p className="text-sm sm:text-base">{text}</p>
+							<IconContext.Provider value={
+								{
+									size: 150,
+									color: color,
+									className: `absolute bottom-5 -right-5 z-0 opacity-${color === "yellow" ? 30 : 10}`,
+								}
+							}>
+								{icon}
+							</IconContext.Provider>
+						</div>
+          )
+				})}
       </div>
     )
   }
@@ -46,10 +58,10 @@ export default function Home({ eventsArray }) {
       <section className="px-4 md:px-10 pt-12 pb-6 sm:pb-16 bg-gray-200 flex flex-col items-center justify-center md:shadow-above">
         <h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
         {renderOffsetGrid([
-          { heading: "Speaker Sessions", text: "Hear from esteemed speakers as they share their insights, experience, and wisdom.", icon: <GiMicrophone size={30} /> },
-          { heading: "Internal", text: "Get a glimpse of how our organization operates!", icon: <GiMagnifyingGlass size={30} /> },
-          { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams.", icon: <BsWrench size={30} />  },
-          { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects!", icon: <ImLab size={30} /> }
+          { heading: "Speaker Sessions", text: "Hear from esteemed speakers as they share their insights, experience, and wisdom.", icon: <GiMicrophone /> },
+          { heading: "Internal", text: "Get a glimpse of how our organization operates!", icon: <GiMagnifyingGlass /> },
+          { heading: "Workshops", text: "Get a chance to learn new skills through hands-on workshops and study jams.", icon: <BsWrench />  },
+          { heading: "Tech Solutions", text: "Use the skills you learn in our events to solve community problems through projects!", icon: <ImLab /> }
         ])}
         <Link href="/team">
           <button className="btn-style2-red">Check out our teams!</button>
