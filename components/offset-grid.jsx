@@ -2,7 +2,7 @@ import AnimatedEm from "../components/animated-em"
 import { IconContext } from "react-icons"
 import getNextPrimaryColor from "../lib/getNextPrimaryColor"
 
-export default function OffsetGrid({elements}) {
+export default function OffsetGrid({ elements }) {
 	const colorGenerator = getNextPrimaryColor()
 	return (
 		<div className="
