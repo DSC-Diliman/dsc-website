@@ -1,5 +1,7 @@
 ---
 name: Ivan Lagos
+year: 2021
+team: Executive
 position: Chief Communications Officer
 thumbnail: /uploads/lagos.jpg
 quote:

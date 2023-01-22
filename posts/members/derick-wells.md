@@ -1,5 +1,7 @@
 ---
 name: Derick Wells
+year: 2021
+team: Executive
 position: Chief Technology Officer
 thumbnail: /uploads/wells.jpg
 quote: 

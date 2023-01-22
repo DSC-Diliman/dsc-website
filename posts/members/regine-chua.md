@@ -1,5 +1,7 @@
 ---
 name: Regine Chua
+year: 2021
+team: Communications
 position: Promotions Lead
 thumbnail: /uploads/regine.jpg
 quote:

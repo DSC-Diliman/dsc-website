@@ -1,5 +1,7 @@
 ---
 name: Joshua Bacud
+year: 2021
+team: Executive
 position: Chief FinExt Officer
 thumbnail: /uploads/joshua.jpg
 quote: 

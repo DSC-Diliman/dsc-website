@@ -1,5 +1,7 @@
 ---
 name: Paco Berba
+year: 2021
+team: Executive
 position: Chief Executive Officer
 thumbnail: /uploads/paco.png
 quote: Hakuna Matata--you'll get there
