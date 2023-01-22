@@ -26,15 +26,7 @@ export default function OffsetGrid({ elements }) {
 							<AnimatedEm emClassName={`right-4 bottom-0 bg-${color}-300`}>{heading}</AnimatedEm>
 						</div>
 						<p className="text-sm sm:text-base">{text}</p>
-						<IconContext.Provider value={
-							{
-								size: 150,
-								color: color,
-								className: `absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-${color === "yellow" ? 30 : 10}`,
-							}
-						}>
-							{icon}
-						</IconContext.Provider>
+						{icon}
 					</div>
 				)
 			})}

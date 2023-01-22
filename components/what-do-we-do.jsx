@@ -10,22 +10,38 @@ export default function WhatDoWeDo() {
 			{
 				heading: "Speaker Sessions",
 				text: "Hear from esteemed speakers as they share their insights, experience, and wisdom.",
-				icon: <GiMicrophone />,
+				icon: <GiMicrophone 
+					size={150}
+					color="red"
+					className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-10"
+				/>,
 			},
 			{
 				heading: "Internal",
 				text: "Get a glimpse of how our organization operates!",
-				icon: <GiMagnifyingGlass />,
+				icon: <GiMagnifyingGlass
+					size={150}
+					color="blue"
+					className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-10"
+				/>,
 			},
 			{
 				heading: "Workshops",
 				text: "Get a chance to learn new skills through hands-on workshops and study jams.",
-				icon: <BsWrench />,
+				icon: <BsWrench
+					size={150}
+					color="green"
+					className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-10"
+				/>,
 			},
 			{
 				heading: "Tech Solutions",
 				text: "Use the skills you learn in our events to solve community problems through projects!",
-				icon: <ImLab />,
+				icon: <ImLab
+					size={150}
+					color="yellow"
+					className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-30"
+				/>,
 			},
 		]
 
