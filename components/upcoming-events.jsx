@@ -4,7 +4,7 @@ import EventListView from "../components/eventlistview"
 export default function UpcomingEvents({ eventsArray }) {
 	return (
 		<section className="
-			py-4 pt-10 pb-14
+			pt-10 pb-14
 			md:px-10 md:py-20
 		">
 			<div className="
@@ -12,9 +12,9 @@ export default function UpcomingEvents({ eventsArray }) {
 				md:max-w-2xl
 			">
 				<h1 className="mb-4 text-center">Upcoming Events</h1>
-				<div className="div-style1 w-full overflow-hidden mt-10 mb-20">
+				<div className="div-style1 w-5/6 overflow-hidden mt-10 mb-20 md:w-full">
 					<EventListView
-						className="px-2 sm:px-8 max-h-80"
+						className="px-6 max-h-80 md:px-10"
 						eventsArray={eventsArray}
 					/>
 				</div>

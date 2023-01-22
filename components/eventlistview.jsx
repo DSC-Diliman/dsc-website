@@ -5,24 +5,24 @@ import TimeFormatter from './timeformatter'
 
 export default function EventListView({ eventsArray, className }) {
   return (
-    <div className={`overflow-y-auto w-full overscroll-contain scroll-y ${className}`}>
+    <div className={`overflow-y-auto mx-auto overscroll-contain scroll-y ${className}`}>
       {
         eventsArray &&
 				eventsArray.map((currEvent, index) => (
-					<div key={index} className="py-6 w-fullscroll-start border-b-2 border-gray-100">
-						<p className="sm:mb-2 text-sm">
+					<div key={index} className="py-4 w-fullscroll-start border-b-2 border-gray-100 md:py-6">
+						<p className="mb-2 text-base">
 							<DateFormatter dateTime={currEvent.date} />
 						</p>
 						<div className="flex items-center">
-							<div className="w-18 sm:w-20">
-								<p className="text-sm sm:text-base font-medium">
+							<div className="w-18">
+								<p className="text-sm font-medium sm:text-base">
 									<TimeFormatter dateTime={currEvent.date} />
 								</p>
 								<p className="text-xs sm:text-sm">
 									<TimeFormatter dateTime={currEvent.dateEnd} />
 								</p>
 							</div>
-							<div className={`w-1 h-12 mx-4 rounded-full ${getEventColor(currEvent.eventType)}`} />
+							<div className={`w-1 h-12 mx-4 rounded-full ${getEventColor(currEvent.eventType)} md:mx-6`} />
 							<div className="flex-auto">
 								<p className="text-xs sm:text-sm">{currEvent.eventType}</p>
 								<p className="text-base sm:text-lg font-bold">{currEvent.title}</p>
