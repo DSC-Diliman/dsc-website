@@ -6,7 +6,10 @@ export default function Nav() {
   const router = useRouter();
 
   return (
-    <nav className={`fixed inset-x-0 top-0 md:mx-10 md:mt-6 h-12 md:h-14 px-3 md:px-10 pt-2 md:py-3 flex md:rounded-2xl items-stretch frosted shadow-lg z-10`}>
+    <nav className="
+			fixed inset-x-0 top-0 h-12 px-3 pt-2 flex items-stretch frosted shadow-lg z-10
+			md:h-14 md:mx-10 md:mt-6 md:px-10 md:py-3 md:rounded-2xl
+		">
       <Link href="/">
         <button className="flex-shrink-0">
 					<Image
@@ -19,41 +22,46 @@ export default function Nav() {
 
       <div className="flex-grow" />
 
-      <div className="flex items-stretch sm:w-96 justify-between">
+      <div className="flex items-stretch justify-between sm:w-96">
         {[
 					{
 						page: "Home",
-						style: "btn-style1-yellow",
-						selected: "btn-style1-yellow-selected"
+						normalStyle: "btn-style1-yellow",
+						selectedStyle: "btn-style1-yellow-selected"
 					},
           {
             page: "About",
-            style: "btn-style1-blue",
-            selected: "btn-style1-blue-selected"
+            normalStyle: "btn-style1-blue",
+            selectedStyle: "btn-style1-blue-selected"
           },
           {
             page: "Team",
-            style: "btn-style1-red",
-            selected: "btn-style1-red-selected"
+            normalStyle: "btn-style1-red",
+            selectedStyle: "btn-style1-red-selected"
           },
           {
             page: "Events",
-            style: "btn-style1-green",
-            selected: "btn-style1-green-selected"
+            normalStyle: "btn-style1-green",
+            selectedStyle: "btn-style1-green-selected"
           },
           {
             page: "Projects",
-            style: "btn-style1-yellow",
-            selected: "btn-style1-yellow-selected"
+            normalStyle: "btn-style1-yellow",
+            selectedStyle: "btn-style1-yellow-selected"
           }
-        ].map(({ page, style, selected }) => {
-          const href = `/${page === "Home" ? '' : page.toLowerCase()}`
+        ].map(({ page, normalStyle, selectedStyle }) => {
+          const href = page === "Home" ? '/' : `/${page.toLowerCase()}`
           return (
             <Link
               key={page.toLowerCase()}
               href={href}
             >
-              <button className={`rounded-lg mx-0.5 px-2 md:px-3 ${style} ${router.pathname == href ? selected : null}`}>{page}</button>
+              <button className={`
+								rounded-lg mx-0.5 px-2 ${router.pathname === href ? selectedStyle : normalStyle}
+								md:px-3
+							`}>
+								{page}
+							</button>
             </Link>
           )
         })}
