@@ -12,7 +12,7 @@ import getNextPrimaryColor from "../lib/getNextPrimaryColor"
 
 export default function Home({ eventsArray }) {
   function renderOffsetGrid(elements) {
-    const color_gen = getNextPrimaryColor()
+    const colorGenerator = getNextPrimaryColor()
     return (
       <div className="
 				grid grid-cols-1 grid-rows-4 gap-8 mt-6 mb-40
@@ -20,7 +20,7 @@ export default function Home({ eventsArray }) {
 				md:gap-16
 			">
         {elements.map(({ heading, text, icon }, index) => {
-					const color = color_gen.next().value
+					const color = colorGenerator.next().value
 					return (
 						<div key={index} className="
 							relative w-64 div-style1 overflow-hidden p-4
