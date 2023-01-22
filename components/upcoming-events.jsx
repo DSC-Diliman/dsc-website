@@ -1,5 +1,5 @@
 import Link from "next/link"
-import EventListView from "../components/eventlistview"
+import EventListView from "./event-list-view"
 
 export default function UpcomingEvents({ eventsArray }) {
 	return (

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import getEventColor from '../lib/eventColor'
-import DateFormatter from './dateformatter'
-import TimeFormatter from './timeformatter'
+import DateFormatter from './formatted-date'
+import TimeFormatter from './formatted-time'
 
 export default function EventListView({ eventsArray, className }) {
   return (
