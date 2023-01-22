@@ -1,6 +1,6 @@
 import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi"
-import DateFormatter from "/components/dateformatter"
-import TimeFormatter from "/components/timeformatter"
+import DateFormatter from "./formatted-date"
+import TimeFormatter from "./formatted-time"
 import markdownStyle from "/components/Markdown.module.scss"
 
 export default function EventShowcase({ event }) {

@@ -1,7 +1,7 @@
 import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi"
 import Link from "next/link";
-import DateFormatter from "/components/dateformatter"
-import TimeFormatter from "/components/timeformatter"
+import DateFormatter from "./formatted-date"
+import TimeFormatter from "./formatted-time"
 
 export default function EventFeatured({ event }) {
   return (<>
