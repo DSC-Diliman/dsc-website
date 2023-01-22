@@ -2,7 +2,7 @@ import Em from "./em"
 import extractPortraits from "../lib/extractPortraits"
 
 export default function WebDevTeam({allWebDevData}) {
-	return <>
+	return <section id="web-dev">
 		<div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
 			<h1 className="text-center">
 				<Em emClassName="bg-blue-400 bottom-0">&nbsp;&nbsp;&nbsp;Websit</Em>
@@ -19,5 +19,5 @@ export default function WebDevTeam({allWebDevData}) {
 				</div>
 			</section>
 		</div>
-	</>
+	</section>
 }

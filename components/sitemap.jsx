@@ -42,7 +42,11 @@ export default function Sitemap() {
 				},
 				{
 					text: "Finance and Externals",
-					href: "finance-and-externals"
+					href: "finance-and-externals",
+				},
+				{
+					text: "Web Development",
+					href: "web-dev",
 				},
 			]
 		},
