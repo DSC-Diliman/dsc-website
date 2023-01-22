@@ -51,7 +51,7 @@ export default function Sitemap() {
 			]
 		},
 	]
-	const sitemapJSX = sections.map(({head, links}) => <LinkGroup head={head} links={links} />)
+	const sitemapJSX = sections.map(({head, links}, index) => <LinkGroup key={index} head={head} links={links} />)
 	return (
 		<section className="flex justify-center gap-x-16 mt-7 mb-11 text-base">
 			{sitemapJSX}
