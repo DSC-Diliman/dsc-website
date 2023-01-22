@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Head from 'next/head'
 import AnimatedEm from "../components/animated-em"
 import Layout from "../components/layout-default"
 import { getEvents } from "../lib/posts"
@@ -9,17 +8,9 @@ import { GiMicrophone, GiMagnifyingGlass } from "react-icons/gi"
 import { BsWrench } from "react-icons/bs"
 import { ImLab } from "react-icons/im"
 import { IconContext } from "react-icons"
+import getNextPrimaryColor from "../lib/getNextPrimaryColor"
 
 export default function Home({ eventsArray }) {
-  function* getNextPrimaryColor() {
-    const color_names = ["red", "blue", "green", "yellow"]
-    let index = 0
-    while (true) {
-      yield color_names[index]
-      index = (index + 1) % color_names.length
-    }
-  }
-
   function renderOffsetGrid(elements) {
     const color_gen = getNextPrimaryColor()
     return (
