@@ -66,11 +66,11 @@ export async function getStaticProps() {
 		"Operations",
 		"Communications",
 		"Finance and Externals",
-		"Web Development"
+		"Web Development",
 	]
 	
-	const allMemberData = []
-	for (const team in teams) {
+	let allMemberData = []
+	for (const team of teams) {
 		allMemberData.push(...getTeam(team))
 	}
 
