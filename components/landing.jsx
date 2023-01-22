@@ -15,7 +15,7 @@ export default function Landing() {
 					<p className="mb-4 md:mb-10">The <b>GDSC UP Diliman Chapter</b> is part of a global community of over 1500 universities.</p>
 
 					<Link href="/about">
-						<button className="btn-style2-red">Learn More</button>
+						<button className="btn-style2-red">About Us</button>
 					</Link>
 				</div>
 			</div>
