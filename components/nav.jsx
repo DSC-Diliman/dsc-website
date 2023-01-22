@@ -2,11 +2,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
 
-export default function Nav({ className }) {
+export default function Nav() {
   const router = useRouter();
 
   return (
-    <nav className={`fixed inset-x-0 top-0 md:mx-10 md:mt-6 h-12 md:h-14 px-3 md:px-10 pt-2 md:py-3 flex md:rounded-2xl items-stretch frosted shadow-lg ${className}`}>
+    <nav className={`fixed inset-x-0 top-0 md:mx-10 md:mt-6 h-12 md:h-14 px-3 md:px-10 pt-2 md:py-3 flex md:rounded-2xl items-stretch frosted shadow-lg z-10`}>
       <Link href="/">
         <button className="flex-shrink-0">
 					<Image
