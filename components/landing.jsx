@@ -16,7 +16,7 @@ export default function Landing() {
 			">
 				<div className="max-w-xl mx-auto">
 					<h1 className="mb-2 text-2xl md:mb-10 md:text-3xl lg:text-4xl xl:text-5xl">
-						<Em emClassName="bg-red-300 right-4 bottom-1 md:bottom-2">Grow. Learn. Connect.</Em>
+						<Em emClassName="bg-red-300 right-4 bottom-1 lg:bottom-2">Grow. Learn. Connect.</Em>
 					</h1>
 					<p className="mb-4 md:mb-10">
 						The <b>GDSC UP Diliman Chapter</b> is part of a global community of over 1500 universities.
