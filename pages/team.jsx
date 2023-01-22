@@ -18,7 +18,7 @@ export default function Team({ allMemberData }) {
   return (
     <>
       <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
-        <h1 className="my-4">Meet our Team</h1>
+        <h1 className="my-4">Meet our Team!</h1>
         <p>The lineup that empowers, enlightens, and nurtures student developers in UP Diliman!</p>
 				<div className="mt-12 mb-6 flex justify-center gap-x-10">
 					{
