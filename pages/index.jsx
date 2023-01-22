@@ -61,9 +61,6 @@ export default function Home({ eventsArray }) {
 
   return (
     <>
-      <Head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-      </Head>
 			<Landing />
 
       <section className="

@@ -9,6 +9,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
+				<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
       {getLayout(<Component {...pageProps}></Component>)}
     </>
