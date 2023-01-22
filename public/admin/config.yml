@@ -5,7 +5,7 @@
 # Remember to switch `backend:name:` back to `git-gateway` before doing a git commit!
 
 backend:
-  name: test-repo
+  name: git-gateway
   branch: master
 
 media_folder: "public/uploads"
