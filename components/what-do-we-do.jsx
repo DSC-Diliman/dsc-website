@@ -31,11 +31,11 @@ export default function WhatDoWeDo() {
 
 	return (
 		<section className="
-			px-4 pt-12 pb-6 bg-gray-200 flex flex-col items-center justify-center
+			px-4 pt-12 pb-10 bg-gray-200 flex flex-col items-center justify-center
 			sm:pb-16
 			md:px-10 md:shadow-above
 		">
-			<h1 className="text-center mb-4">What do we do in GDSC UP Diliman?</h1>
+			<h1 className="text-center mb-1 sm:mb-4">What do we do in GDSC UP Diliman?</h1>
 			<OffsetGrid elements={offsetGridContents} />
 			<Link href="/team">
 				<button className="btn-style2-red">Check out our teams!</button>

@@ -6,17 +6,18 @@ export default function OffsetGrid({ elements }) {
 	const colorGenerator = getNextPrimaryColor()
 	return (
 		<div className="
-			grid grid-cols-1 grid-rows-4 gap-8 mt-6 mb-40
-			sm:grid-cols-2 sm:grid-rows-2
-			md:gap-16
+			grid grid-cols-1 grid-rows-4 gap-8 mt-6 mb-14
+			sm:grid-cols-2 sm:grid-rows-2 sm:mb-32
+			md:gap-16 md:mb-40
 		">
 			{elements.map(({ heading, text, icon }, index) => {
 				const color = colorGenerator.next().value
 				return (
 					<div key={index} className="
-						relative w-64 div-style1 overflow-hidden p-4
-						sm:even:top-1/2
-						md:w-80 md:p-11
+						relative w-80 div-style1 overflow-hidden px-6 py-4
+						sm:even:top-1/2 sm:w-72
+						md:w-80 md:px-12 md:py-8
+						lg:w-96
 					">
 						<div className="
 							mb-1 font-semibold text-lg flex gap-5 items-center
@@ -29,7 +30,7 @@ export default function OffsetGrid({ elements }) {
 							{
 								size: 150,
 								color: color,
-								className: `absolute bottom-5 -right-5 z-0 opacity-${color === "yellow" ? 30 : 10}`,
+								className: `absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-${color === "yellow" ? 30 : 10}`,
 							}
 						}>
 							{icon}
