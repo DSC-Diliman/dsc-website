@@ -7,6 +7,7 @@ import FinExtTeam from "../components/finext-team"
 import WebDevTeam from "../components/web-dev-team"
 import { getTeam } from "../lib/posts"
 import { useState } from "react"
+import getNextPrimaryColor from "../lib/getNextPrimaryColor"
 
 export default function Team({ allMemberData }) {
 	const [yearToShow, setYearToShow] = useState(2022)
@@ -15,6 +16,8 @@ export default function Team({ allMemberData }) {
 		return allMemberData.filter(({ year, team }) => year === wantedYear && team === wantedTeam)
 	}
 
+	const colorGenerator = getNextPrimaryColor()
+
   return (
     <>
       <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
@@ -22,23 +25,26 @@ export default function Team({ allMemberData }) {
         <p>The lineup that empowers, enlightens, and nurtures student developers in UP Diliman!</p>
 				<div className="mt-12 mb-6 flex justify-center gap-x-10">
 					{
-						[2022, 2021].map(year => (
-							<button
-								onClick={() => setYearToShow(year)}
-								className={
-									`
-									border-2 border-black rounded-full
-									text-2xl
-									px-8 py-1
-									${year === yearToShow && "bg-gradient-to-r from-blue-200 to-green-200"}
-									${year !== yearToShow && "hover:underline"}
-									`
-								}
-							>
-								{year} - {year + 1}
-							</button>
-							))
-						}
+						[2022, 2021].map(year => {
+							const color = colorGenerator.next().value
+							return (
+								<button
+									onClick={() => setYearToShow(year)}
+									className={
+										`
+										border-2 border-${color}-500 rounded-full
+										text-3xl
+										px-8 py-1
+										${year === yearToShow && `bg-${color}-500 text-white`}
+										${year !== yearToShow && `text-${color}-500 hover:bg-${color}-500 hover:text-white`}
+										`
+									}
+								>
+									{year} - {year + 1}
+								</button>
+							)
+						})
+					}
 				</div>
       </div>
       <div className="space-y-14 md:space-y-20 pb-20 px-4 md:px-10 overflow-x-hidden">
