@@ -25,10 +25,11 @@ export default function Team({ allMemberData }) {
         <p>The lineup that empowers, enlightens, and nurtures student developers in UP Diliman!</p>
 				<div className="mt-12 mb-6 flex justify-center gap-x-10">
 					{
-						[2022, 2021].map(year => {
+						[2022, 2021].map((year, index) => {
 							const color = colorGenerator.next().value
 							return (
 								<button
+									key={index}
 									onClick={() => setYearToShow(year)}
 									className={
 										`
