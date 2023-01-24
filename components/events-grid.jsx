@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
-import DateFormatter from "./dateformatter";
+import DateFormatter from "./formatted-date";
 import getEventColor from '../lib/eventColor'
-import TimeFormatter from "./timeformatter";
+import TimeFormatter from "./formatted-time";
 import { BiTimeFive, BiLocationPlus } from 'react-icons/bi'
 import Link from "next/link";
 

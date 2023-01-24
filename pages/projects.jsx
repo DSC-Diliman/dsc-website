@@ -7,7 +7,6 @@ import markdownToHtml from "/lib/markdownToHtml"
 import Masonry from "react-masonry-css"
 import Link from "next/link";
 import masonryStyle from "/components/Masonry.module.scss"
-import markdownStyle from "/components/Markdown.module.scss"
 import ButtonClose from "../components/button-close"
 import ProjectShowcase from "../components/project-showcase"
 

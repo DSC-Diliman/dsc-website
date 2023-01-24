@@ -6,10 +6,10 @@ export default function Layout({ children, footerChildren, title }) {
   return (
     <>
       <Head>
-        <title>{title ? title + " | GDSC UPD" : "GDSC UP Diliman"}</title>
+        <title>{title ? `${title} | GDSC UPD` : "GDSC UP Diliman"}</title>
       </Head>
 
-      <Nav className="z-10" />
+      <Nav />
 
       <main className="flex flex-col flex-nowrap min-h-screen">
         {children}

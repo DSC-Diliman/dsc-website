@@ -1,7 +1,6 @@
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Modal from "react-modal"
-import { IoClose } from "react-icons/io5"
 import { getEvents } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
 import Layout from "/components/layout-default"

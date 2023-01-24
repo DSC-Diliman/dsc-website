@@ -4,7 +4,6 @@ import Modal from "react-modal"
 import Layout from "/components/layout-default"
 import { getProjectById, getProjectIds } from "/lib/posts"
 import markdownToHtml from "/lib/markdownToHtml"
-import markdownStyle from "/components/Markdown.module.scss"
 import ButtonClose from "../../components/button-close"
 import ProjectShowcase from "../../components/project-showcase"
 
