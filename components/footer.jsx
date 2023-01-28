@@ -2,7 +2,7 @@ import Copyright from "./copyright";
 import Socials from "./socials";
 import Sitemap from "./sitemap";
 
-export default function Footer({ children }) {
+export default function Footer() {
   return (
     <footer
       className="
@@ -20,7 +20,7 @@ export default function Footer({ children }) {
         <Sitemap />
       </div>
       <Copyright />
-      {children}
+      <p className="text-xs italic">Oblation photo by Mila D. Aguilar.</p>
     </footer>
   );
 }

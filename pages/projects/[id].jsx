@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Modal from "react-modal";
-import Layout from "/components/layout-default";
 import { getProjectById, getProjectIds } from "/lib/posts";
 import markdownToHtml from "/lib/markdownToHtml";
 import ButtonClose from "../../components/button-close";
@@ -22,6 +21,9 @@ export default function ProjectPage({ project }) {
 
   return (
     <>
+      <Head>
+        <title>Project | GDSC UPD</title>
+      </Head>
       <Modal
         isOpen={true}
         onRequestClose={closeModal}
@@ -37,8 +39,6 @@ export default function ProjectPage({ project }) {
     </>
   );
 }
-
-ProjectPage.getLayout = (page) => <Layout title="Project">{page}</Layout>;
 
 export async function getStaticProps({ params: { id } }) {
   const project = getProjectById(id);

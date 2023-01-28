@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import Layout from "/components/layout-default";
 import { getProjects } from "/lib/posts";
 import markdownToHtml from "/lib/markdownToHtml";
 import Masonry from "react-masonry-css";
@@ -10,6 +9,7 @@ import masonryStyle from "/components/Masonry.module.scss";
 import ButtonClose from "../components/button-close";
 import ProjectShowcase from "../components/project-showcase";
 import Image from "next/image";
+import Head from "next/head";
 
 Modal.setAppElement("#__next");
 
@@ -33,6 +33,9 @@ export default function Projects({ allProjectsData }) {
 
   return (
     <>
+      <Head>
+        <title>Projects | GDSC UPD</title>
+      </Head>
       <Modal
         isOpen={!!selectedProject}
         onRequestClose={closeModal}
@@ -78,8 +81,6 @@ export default function Projects({ allProjectsData }) {
     </>
   );
 }
-
-Projects.getLayout = (page) => <Layout title="Projects">{page}</Layout>;
 
 export async function getStaticProps() {
   const allProjectsData = getProjects();

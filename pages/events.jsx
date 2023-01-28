@@ -8,6 +8,7 @@ import EventsGrid from "/components/events-grid";
 import EventFeatured from "/components/event-featured";
 import EventShowcase from "/components/event-showcase";
 import ButtonClose from "../components/button-close";
+import Head from "next/head";
 
 Modal.setAppElement("#__next");
 
@@ -31,6 +32,9 @@ export default function Events({ allEventsData }) {
 
   return (
     <>
+      <Head>
+        <title>Events | GDSC UPD</title>
+      </Head>
       <Modal
         isOpen={!!selectedEvent}
         onRequestClose={closeModal}
@@ -62,8 +66,6 @@ export default function Events({ allEventsData }) {
     </>
   );
 }
-
-Events.getLayout = (page) => <Layout title="Events">{page}</Layout>;
 
 export async function getStaticProps() {
   const allEventsData = getEvents();

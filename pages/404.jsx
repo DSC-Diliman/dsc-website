@@ -1,9 +1,12 @@
-import Layout from "../components/layout-default";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Error404() {
   return (
     <>
+      <Head>
+        <title>404 | GDSC UPD</title>
+      </Head>
       <div className="mx-10 flex flex-col md:flex-row justify-center items-center pt-24">
         <div>
           <p className="text-9xl md:text-10xl lg:text-xxl font-bold text-white text-shadow-xl">
@@ -24,5 +27,3 @@ export default function Error404() {
     </>
   );
 }
-
-Error404.getLayout = (page) => <Layout title="404">{page}</Layout>;

@@ -1,4 +1,3 @@
-import Layout from "../components/layout-default";
 import ExecTeam from "../components/exec-team";
 import TechTeam from "../components/tech-team";
 import OpsTeam from "../components/ops-team";
@@ -8,6 +7,7 @@ import WebDevTeam from "../components/web-dev-team";
 import { getTeam } from "../lib/posts";
 import { useState } from "react";
 import getNextPrimaryColor from "../lib/getNextPrimaryColor";
+import Head from "next/head";
 
 export default function Team({ allMemberData }) {
   const [yearToShow, setYearToShow] = useState(2022);
@@ -22,6 +22,9 @@ export default function Team({ allMemberData }) {
 
   return (
     <>
+      <Head>
+        <title>Team | GDSC UPD</title>
+      </Head>
       <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
         <h1 className="my-4">Meet our Team!</h1>
         <p>
@@ -69,8 +72,6 @@ export default function Team({ allMemberData }) {
     </>
   );
 }
-
-Team.getLayout = (page) => <Layout title="Team">{page}</Layout>;
 
 export async function getStaticProps() {
   const teams = [
