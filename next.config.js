@@ -1,5 +1,4 @@
 module.exports = {
-    future: {
-    },
-    compress: true,
+	swcMinify: true,
+	compress: true,
 }
