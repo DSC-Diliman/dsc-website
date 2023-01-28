@@ -9,6 +9,7 @@ import Link from "next/link";
 import masonryStyle from "/components/Masonry.module.scss"
 import ButtonClose from "../components/button-close"
 import ProjectShowcase from "../components/project-showcase"
+import Image from "next/image"
 
 Modal.setAppElement("#__next")
 
@@ -66,7 +67,7 @@ export default function Projects({ allProjectsData }) {
                 >
                   <a>
                     <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">{projectData.title}</p>
-                    <img src={projectData.thumbnail} />
+										<Image src={projectData.thumbnail} alt="Project thumbnail" />
                   </a>
                 </Link>
               </div>
