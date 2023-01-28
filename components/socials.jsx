@@ -1,3 +1,4 @@
+import Image from "next/image"
 import ParallaxObject from "../components/parallax-object"
 
 export default function Socials() {
@@ -28,11 +29,7 @@ export default function Socials() {
 							hover:shadow-none
 							md:px-10 md:py-7
 						">
-							<img
-								src={e.icon}
-								alt="Event icon"
-								className="h-6 mx-auto mb-4 md:h-8"
-							/>
+							<Image src={e.icon} alt="Event icon" className="h-6 mx-auto mb-4 md:h-8" />
 							<p className="text-sm">{e.name}</p>
 						</button>
 					</a>

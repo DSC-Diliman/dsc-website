@@ -4,6 +4,7 @@ import getEventColor from '../lib/eventColor'
 import TimeFormatter from "./formatted-time";
 import { BiTimeFive, BiLocationPlus } from 'react-icons/bi'
 import Link from "next/link";
+import Image from "next/image";
 
 export default function EventsGrid({ eventsData }) {
   const router = useRouter()
@@ -40,7 +41,7 @@ export default function EventsGrid({ eventsData }) {
           <a>
             <div className="transition-all h-full flex flex-col shadow-2xl rounded-2xl bg-white overflow-hidden hover:shadow-none ring-inset ring-0 hover:ring-4 ring-red-700">
               <div className="flex-none img-frame h-32">
-                <img src={e.images[0]} alt="Event image" />
+								<Image src={e.images[0]} alt="Event image" />
               </div>
               <div className="flex flex-1 p-4 text-sm">
                 <div className="text-center self-center">
