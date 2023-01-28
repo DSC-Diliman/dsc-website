@@ -27,5 +27,8 @@
     "remark-html": "^13.0.1",
     "sass": "^1.32.11",
     "tailwindcss": "^2.2.15"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0"
   }
 }
