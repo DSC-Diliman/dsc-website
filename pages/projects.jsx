@@ -28,7 +28,7 @@ export default function Projects({ allProjectsData }) {
     } else {
       setSelectedProject(null)
     }
-  }, [router.query.id])
+  }, [router.query.id, allProjectsData])
 
   return (
     <>
