@@ -1,12 +1,11 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./lib/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       flex: {
@@ -51,14 +50,6 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Google Sans", "sans-serif"],
-    },
-  },
-  variants: {
-    extend: {
-      inset: ["even"],
-      ringColor: ["focus-visible"],
-      ringWidth: ["focus-visible", "hover"],
-      margin: ["group-hover"],
     },
   },
   plugins: [],

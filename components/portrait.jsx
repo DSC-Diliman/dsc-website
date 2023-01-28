@@ -20,7 +20,7 @@ export default function Portrait({
     >
       <Image src={src} alt="Member image" className="absolute" layout="fill" />
       <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black" />
-      <div className="relative transition-all mt-28 md:mt-40 group-hover:mt-0 h-full p-2 md:p-4 flex flex-col group-hover:bg-black group-hover:bg-opacity-70 text-white">
+      <div className="relative transition-all mt-28 md:mt-40 group-hover:mt-0 h-full p-2 md:p-4 flex flex-col group-hover:bg-black/70 text-white">
         <p className="md:text-base font-medium">{name}</p>
         <p className="text-xs">{position}</p>
         <div className="text-xs pt-3 md:text-sm flex flex-col flex-1">

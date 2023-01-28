@@ -13,7 +13,7 @@ export default function Landing() {
       <div className={indexHeroStyle["mobile-hero"]} />
       <div
         className="
-				backdrop-filter backdrop-blur-md bg-white bg-opacity-60 w-full p-8
+				backdrop-filter backdrop-blur-md bg-white/60 w-full p-8
 				md:backdrop-filter-none sm:bg-transparent sm:w-1/2
 				md:pl-20 md:pr-10 md:pt-24 md:pb-10
 			"
