@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function EventsGrid({ eventsData }) {
   const router = useRouter()
 
-  return (<>
+  return <>
     <h2 className="text-center mb-6 text-2xl font-medium">All Events</h2>
     <div className="flex flex-wrap place-content-center mb-10 space-x-8">
       <div className="flex items-center">
@@ -38,35 +38,35 @@ export default function EventsGrid({ eventsData }) {
           shallow={true}
           key={index}
         >
-          <a>
-            <div className="transition-all h-full flex flex-col shadow-2xl rounded-2xl bg-white overflow-hidden hover:shadow-none ring-inset ring-0 hover:ring-4 ring-red-700">
-              <div className="flex-none img-frame h-32">
-								<Image src={e.images[0]} alt="Event image" />
+
+          <div className="transition-all h-full flex flex-col shadow-2xl rounded-2xl bg-white overflow-hidden hover:shadow-none ring-inset ring-0 hover:ring-4 ring-red-700">
+            <div className="flex-none img-frame h-32">
+                              <Image src={e.images[0]} alt="Event image" />
+            </div>
+            <div className="flex flex-1 p-4 text-sm">
+              <div className="text-center self-center">
+                <DateFormatter dateTime={e.date} dateFormat="MMM" func={string => string.toUpperCase()} /><br />
+                <span className="font-bold text-3xl"><DateFormatter dateTime={e.date} dateFormat="dd" /></span><br />
+                <DateFormatter dateTime={e.date} dateFormat="yyyy" />
               </div>
-              <div className="flex flex-1 p-4 text-sm">
-                <div className="text-center self-center">
-                  <DateFormatter dateTime={e.date} dateFormat="MMM" func={string => string.toUpperCase()} /><br />
-                  <span className="font-bold text-3xl"><DateFormatter dateTime={e.date} dateFormat="dd" /></span><br />
-                  <DateFormatter dateTime={e.date} dateFormat="yyyy" />
-                </div>
-                <div className={"w-1 mx-3 rounded-full " + getEventColor(e.eventType)} />
-                <div className="w-full">
-                  <p className="text-xl font-bold">{e.title}</p>
-                  <div className="flex w-full">
-                    <p>
-                      <BiTimeFive /> <TimeFormatter dateTime={e.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={e.dateEnd} timeFormat="h:mm aaa" />
-                    </p>
-                    <BiLocationPlus className="ml-auto" /> {e.location}
-                  </div>
-                  <p className="mt-2 max-h-24 overflow-y-auto">
-                    {e.summary}
+              <div className={"w-1 mx-3 rounded-full " + getEventColor(e.eventType)} />
+              <div className="w-full">
+                <p className="text-xl font-bold">{e.title}</p>
+                <div className="flex w-full">
+                  <p>
+                    <BiTimeFive /> <TimeFormatter dateTime={e.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={e.dateEnd} timeFormat="h:mm aaa" />
                   </p>
+                  <BiLocationPlus className="ml-auto" /> {e.location}
                 </div>
+                <p className="mt-2 max-h-24 overflow-y-auto">
+                  {e.summary}
+                </p>
               </div>
             </div>
-          </a>
+          </div>
+
         </Link>
       ) : null}
     </div>
-  </>)
+  </>;
 }
