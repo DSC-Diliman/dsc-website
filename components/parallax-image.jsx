@@ -20,7 +20,7 @@ export default function ParallaxImage({ children, src, className }) {
         scrub: true
       }
     })
-  }, [])
+  })
 
   return <div className={`bg-center ${className}`} ref={ref}>{children}</div>
 }

@@ -18,7 +18,7 @@ export default function EventPage({ event }) {
 
   useEffect(() => {
     router.prefetch("/events")
-  }, [router])
+  })
 
   return (
     <Modal

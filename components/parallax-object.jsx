@@ -23,7 +23,7 @@ export default function ParallaxObject({ children, className, y = [0, 0], x = [0
         // markers: true,
       }
     })
-  }, [])
+  })
 
   return <div className={className} ref={ref}>
     {children}
