@@ -22,7 +22,7 @@ export default function Socials() {
 					{ name: "Facebook", icon: "/images/facebook-icon.svg", link: "https://www.facebook.com/GDSCupdiliman" },
 					{ name: "LinkedIn", icon: "/images/linkedin-icon.svg", link: "https://www.linkedin.com/company/gdscupdiliman/mycompany/" },
 				].map((e, index) => (
-					<a className="relative" key={index} href={e.link} target="_blank" >
+					<a className="relative" key={index} href={e.link} target="_blank" rel="noreferrer">
 						<button className="
 							w-full p-7 pb-6 text-center transition-shadow div-style1
 							hover:shadow-none

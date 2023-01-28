@@ -11,10 +11,10 @@ export default function Portrait({ className, src, name, position, desc, socials
         <p className="text-xs">{position}</p>
         <div className="text-xs pt-3 md:text-sm flex flex-col flex-1"><p className="my-auto">{desc}</p></div>
         <div className="text-2xl md:text-4xl">
-          {socials.facebook && <a href={socials.facebook} target="_blank"><TiSocialFacebookCircular /></a>}
-          {socials.twitter && <a href={socials.twitter} target="_blank"><TiSocialTwitterCircular /></a>}
-          {socials.linkedin && <a href={socials.linkedin} target="_blank"><TiSocialLinkedinCircular /></a>}
-          {socials.github && <a href={socials.github} target="_blank"><TiSocialGithubCircular /></a>}
+          {socials.facebook && <a href={socials.facebook} target="_blank" rel="noreferrer"><TiSocialFacebookCircular /></a>}
+          {socials.twitter && <a href={socials.twitter} target="_blank" rel="noreferrer"><TiSocialTwitterCircular /></a>}
+          {socials.linkedin && <a href={socials.linkedin} target="_blank" rel="noreferrer"><TiSocialLinkedinCircular /></a>}
+          {socials.github && <a href={socials.github} target="_blank" rel="noreferrer"><TiSocialGithubCircular /></a>}
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ export default function EventShowcase({ event }) {
       <h1>{event.title}</h1>
       <div className="my-4 grid grid-rows-3 md:grid-rows-2 md:grid-cols-2 gap-1">
         <div><BiCalendarEvent /> <DateFormatter dateTime={event.date} /></div>
-        <a href={event.locationURL} target="_blank"><div><BiLocationPlus /> {event.location}</div></a>
+        <a href={event.locationURL} target="_blank" rel="noreferrer"><div><BiLocationPlus /> {event.location}</div></a>
         <div><BiTimeFive /> <TimeFormatter dateTime={event.date} timeFormat="h:mm aaa" />-<TimeFormatter dateTime={event.dateEnd} timeFormat="h:mm aaa" /></div>
       </div>
       <div className={markdownStyle.markdown} dangerouslySetInnerHTML={{ __html: event.content }} />
