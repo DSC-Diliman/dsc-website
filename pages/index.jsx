@@ -1,4 +1,3 @@
-import Layout from "../components/layout-default";
 import { getEvents } from "../lib/posts";
 import Landing from "../components/landing";
 import WhatDoWeDo from "../components/what-do-we-do";
