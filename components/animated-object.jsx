@@ -1,11 +1,17 @@
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
-import { useEffect, useRef } from "react"
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
-export default function AnimatedObject({ children, className, fromVars, toVars, scrub = true }) {
-  const ref = useRef(null)
+export default function AnimatedObject({
+  children,
+  className,
+  fromVars,
+  toVars,
+  scrub = true,
+}) {
+  const ref = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(ref.current, fromVars, {
@@ -15,10 +21,14 @@ export default function AnimatedObject({ children, className, fromVars, toVars, 
         start: "bottom bottom",
         // start: "top 70%",
         end: "+=100",
-        scrub
-      }
-    })
-  })
+        scrub,
+      },
+    });
+  });
 
-  return <div className={className} ref={ref}>{children}</div>
+  return (
+    <div className={className} ref={ref}>
+      {children}
+    </div>
+  );
 }

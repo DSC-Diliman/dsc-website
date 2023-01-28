@@ -1,6 +1,6 @@
 # See https://www.netlifycms.org/docs/configuration-options for config details.
 #
-# Set `backend:name:` to `test-repo` to test the CMS UI. 
+# Set `backend:name:` to `test-repo` to test the CMS UI.
 #
 # Remember to switch `backend:name:` back to `git-gateway` before doing a git commit!
 
@@ -22,23 +22,30 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["title", "date", dateEnd"]
     fields:
-      - { name: "title", label: "Title", widget: "string", }
-      - { name: "date", label: "Start", widget: "datetime", }
-      - { name: "dateEnd", label: "End", widget: "datetime", }
-      - { name: "eventType", label: "type", widget: "select",
-            options: ["Speaker Sessions", "Internal", "Workshops", "Tech Solutions"], }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Start", widget: "datetime" }
+      - { name: "dateEnd", label: "End", widget: "datetime" }
+      - {
+          name: "eventType",
+          label: "type",
+          widget: "select",
+          options:
+            ["Speaker Sessions", "Internal", "Workshops", "Tech Solutions"],
+        }
 
-      - { name: "location", label: "Location", widget: "string", }
-      - { name: "locationURL", label: "URL", widget: "string", }
-      - { name: "images", label: "Images", widget: "list",
-            label_singular: "image",
-            summary: "{{fields.image}}",
-            field: { name: "image", label: "Image", widget: "image", }, }
+      - { name: "location", label: "Location", widget: "string" }
+      - { name: "locationURL", label: "URL", widget: "string" }
+      - {
+          name: "images",
+          label: "Images",
+          widget: "list",
+          label_singular: "image",
+          summary: "{{fields.image}}",
+          field: { name: "image", label: "Image", widget: "image" },
+        }
 
-      - { name: "summary", label: "Summary", widget: "text", }
-      - { name: "body", label: "Body", widget: "markdown",
-            minimal: true, }
-
+      - { name: "summary", label: "Summary", widget: "text" }
+      - { name: "body", label: "Body", widget: "markdown", minimal: true }
 
   - name: "projects"
     label: "Projects"
@@ -48,16 +55,18 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["title"]
     fields:
-      - { name: "title", label: "Title", widget: "string", }
-      - { name: "thumbnail", label: "Thumbnail", widget: "image", }
-      - { name: "images", label: "Images", widget: "list",
-            label_singular: "image",
-            summary: "{{fields.image}}",
-            field: { name: "image", label: "Image", widget: "image", }, }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "thumbnail", label: "Thumbnail", widget: "image" }
+      - {
+          name: "images",
+          label: "Images",
+          widget: "list",
+          label_singular: "image",
+          summary: "{{fields.image}}",
+          field: { name: "image", label: "Image", widget: "image" },
+        }
 
-      - { name: "body", label: "Body", widget: "markdown",
-            minimal: true, }
-
+      - { name: "body", label: "Body", widget: "markdown", minimal: true }
 
   - name: "members"
     label: "Members"
@@ -67,35 +76,62 @@ collections:
     identifier_field: name
     slug: "{{slug}}"
     sortable_fields: ["name"]
-    view_groups: 
+    view_groups:
       - label: Team
         field: team
     fields:
-      - { name: "name", label: "Name", widget: "string", }
-      - { name: "year", label: "Year", widget: "number", 
-            default: 2022,
-            value_type: "int",
-            min: 2021,
-            max: 2022,
-            step: 1, }
+      - { name: "name", label: "Name", widget: "string" }
+      - {
+          name: "year",
+          label: "Year",
+          widget: "number",
+          default: 2022,
+          value_type: "int",
+          min: 2021,
+          max: 2022,
+          step: 1,
+        }
 
-      - { name: "team", label: "Team", widget: "select",
-            options:
-                    [
-                      "Executive",
-                      "Technology",
-                      "Operations",
-                      "Communications",
-                      "Finance and Externals",
-                      "Web Development",
-                    ], }
+      - {
+          name: "team",
+          label: "Team",
+          widget: "select",
+          options:
+            [
+              "Executive",
+              "Technology",
+              "Operations",
+              "Communications",
+              "Finance and Externals",
+              "Web Development",
+            ],
+        }
 
-      - { name: "position", label: "Position", widget: "string", }
-      - { name: "thumbnail", label: "Thumbnail", widget: "image", }
-      - { name: "quote", label: "Quote", widget: "string", }
-      - { name: "facebookURL", label: "Facebook URL", widget: "string", required: false, }
-      - { name: "twitterURL", label: "Twitter URL", widget: "string", required: false, }
-      - { name: "linkedinURL", label: "LinkedIn URL", widget: "string", required: false, }
-      - { name: "githubURL", label: "GitHub URL", widget: "string", required: false, }
-      - { name: "body", label: "Body", widget: "markdown",
-            minimal: true, }
+      - { name: "position", label: "Position", widget: "string" }
+      - { name: "thumbnail", label: "Thumbnail", widget: "image" }
+      - { name: "quote", label: "Quote", widget: "string" }
+      - {
+          name: "facebookURL",
+          label: "Facebook URL",
+          widget: "string",
+          required: false,
+        }
+      - {
+          name: "twitterURL",
+          label: "Twitter URL",
+          widget: "string",
+          required: false,
+        }
+      - {
+          name: "linkedinURL",
+          label: "LinkedIn URL",
+          widget: "string",
+          required: false,
+        }
+      - {
+          name: "githubURL",
+          label: "GitHub URL",
+          widget: "string",
+          required: false,
+        }
+      - { name: "body", label: "Body", widget: "markdown", minimal: true }

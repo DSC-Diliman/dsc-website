@@ -1,26 +1,28 @@
-import Layout from "../components/layout-default"
-import { getEvents } from "../lib/posts"
-import Landing from "../components/landing"
-import WhatDoWeDo from "../components/what-do-we-do"
-import UpcomingEvents from "../components/upcoming-events"
+import Layout from "../components/layout-default";
+import { getEvents } from "../lib/posts";
+import Landing from "../components/landing";
+import WhatDoWeDo from "../components/what-do-we-do";
+import UpcomingEvents from "../components/upcoming-events";
 
 export default function Home({ eventsArray }) {
   return (
     <>
-			<Landing />
-			<WhatDoWeDo />
-			<UpcomingEvents eventsArray={eventsArray} />
+      <Landing />
+      <WhatDoWeDo />
+      <UpcomingEvents eventsArray={eventsArray} />
     </>
-  )
+  );
 }
 
-Home.getLayout = page => (
+Home.getLayout = (page) => (
   <Layout
-    footerChildren={<p className="text-xs italic">Oblation photo by Mila D. Aguilar.</p>}
+    footerChildren={
+      <p className="text-xs italic">Oblation photo by Mila D. Aguilar.</p>
+    }
   >
     {page}
   </Layout>
-)
+);
 
 export async function getStaticProps() {
   return {
@@ -31,8 +33,8 @@ export async function getStaticProps() {
         "dateEnd",
         "eventType",
         "location",
-				"locationURL",
-      ])
-    }
-  }
+        "locationURL",
+      ]),
+    },
+  };
 }

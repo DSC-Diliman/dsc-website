@@ -4,6 +4,6 @@ year: 2021
 team: Web Development
 position: UI / UX Designer
 thumbnail: /uploads/gene.jpg
-quote: 
+quote:
 facebookURL: https://www.facebook.com/geneaudrey.tan
 ---
