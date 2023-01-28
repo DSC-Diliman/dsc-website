@@ -27,7 +27,7 @@ export default function Events({ allEventsData }) {
     } else {
       setSelectedEvent(null)
     }
-  }, [router.query.id])
+  }, [router.query.id, allEventsData])
 
   return (<>
     <Modal
