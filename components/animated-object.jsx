@@ -18,7 +18,7 @@ export default function AnimatedObject({ children, className, fromVars, toVars, 
         scrub
       }
     })
-  }, [])
+  })
 
   return <div className={className} ref={ref}>{children}</div>
 }
