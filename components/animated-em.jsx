@@ -17,7 +17,7 @@ export default function AnimatedEm({ children, className, emClassName, trigger =
         scrub: 1
       }
     })
-  }, [])
+  })
 
   return <span className={`relative whitespace-nowrap z-0 ${className}`}><span className={`absolute -z-10 w-full h-3 ${emClassName}`} ref={ref} />{children}</span>
 }
