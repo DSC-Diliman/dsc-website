@@ -30,6 +30,7 @@ export default function Socials() {
 						">
 							<img
 								src={e.icon}
+								alt="Event icon"
 								className="h-6 mx-auto mb-4 md:h-8"
 							/>
 							<p className="text-sm">{e.name}</p>

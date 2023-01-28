@@ -19,10 +19,10 @@ export default function Vision() {
 					}}
 					scrub={2}
 				>
-					<Image src="/images/vision-1.png" layout="fill"/>
+					<Image src="/images/vision-1.png" alt="Vision image 1" layout="fill"/>
 				</AnimatedObject>
 				<div className="div-style1 img-frame w-64 h-52" style={{ position: "relative" }}>
-					<Image src="/images/vision-2.png" layout="fill"/>
+					<Image src="/images/vision-2.png" alt="Vision image 2" layout="fill"/>
 				</div>
 				<div className="mt-20 mr-20 ml-auto max-w-min text-5xl font-medium space-y-6">
 					<AnimatedText className="text-red-400">Empower.</AnimatedText>
@@ -46,7 +46,7 @@ export default function Vision() {
 					}}
 					scrub={2}
 				>
-					<Image src="/images/vision-3.png" layout="fill"/>
+					<Image src="/images/vision-3.png" alt="Vision image 3" layout="fill"/>
 				</AnimatedObject>
 			</div>
 		</div>

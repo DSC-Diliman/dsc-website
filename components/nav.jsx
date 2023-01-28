@@ -18,6 +18,7 @@ export default function Nav() {
 					<button>
 						<Image
 							src="/images/dsc-upd-logo.png"
+							alt="Organization logo"
 							width={220}
 							height={33.6}
 						/>

@@ -5,7 +5,7 @@ import markdownStyle from "/components/Markdown.module.scss"
 
 export default function EventShowcase({ event }) {
   return (<>
-    <div className="md:px-6 md:pt-6 img-frame h-80 md:rounded-3xl"><img src={event.images[0]} /></div>
+    <div className="md:px-6 md:pt-6 img-frame h-80 md:rounded-3xl"><img src={event.images[0]} alt="Event image" /></div>
     <div className="p-3 md:p-6">
       <p className="text-red-pr text-lg">{event.eventType}</p>
       <h1>{event.title}</h1>

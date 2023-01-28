@@ -27,7 +27,7 @@ export default function Mission() {
 						className="mx-auto img-frame rounded-full mb-10 w-20 h-20 sm:w-32 sm:h-32"
 						style={{ position: "relative" }}
 					>
-						<Image src={e.image} height={480} width={480} />
+						<Image src={e.image} alt="Mission image" height={480} width={480} />
 					</div>
 					<p className="text-lg md:text-2xl font-medium mb-2">{e.title}</p>
 					<p className="text-xs sm:text-base">{e.desc}</p>
