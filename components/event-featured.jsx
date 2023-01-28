@@ -2,13 +2,14 @@ import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi"
 import Link from "next/link";
 import DateFormatter from "./formatted-date"
 import TimeFormatter from "./formatted-time"
+import Image from "next/image";
 
 export default function EventFeatured({ event }) {
   return (<>
     <div className="flex flex-col sm:flex-row w-full max-w-6xl mx-auto div-style1">
       <div className="sm:flex-1 sm:order-2 h-40 sm:h-auto flex flex-col m-0 md:m-5 img-frame md:rounded-3xl">
         <div className="overflow-y-hidden flex-1">
-          <img src={event.images[0]} />
+					<Image src={event.images[0]} alt="Event image" />
         </div>
       </div>
       <div className="sm:flex-1 flex flex-col my-4 mx-4 md:my-10 md:ml-12 sm:max-w-sm">
