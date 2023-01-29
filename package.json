@@ -27,7 +27,8 @@
     "remark": "^14.0.2",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
-    "sass": "^1.32.11"
+    "sass": "^1.32.11",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.30.0",
