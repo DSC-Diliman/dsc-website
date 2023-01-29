@@ -36,7 +36,12 @@ export default function Team({ allMemberData }: Props) {
           The lineup that empowers, enlightens, and nurtures student developers
           in UP Diliman!
         </p>
-        <div className="mt-12 mb-6 flex justify-center gap-x-10">
+        <div
+          className="
+						mt-12 mb-6 flex flex-col flex-grow gap-y-4 items-center
+						sm:flex-row sm:gap-x-12 sm:justify-center
+					"
+        >
           {[2022, 2021].map((year, index) => {
             const color = colorGenerator.next().value;
             return (
@@ -44,15 +49,14 @@ export default function Team({ allMemberData }: Props) {
                 key={index}
                 onClick={() => setYearToShow(year)}
                 className={`
-										border-2 border-${color}-500 rounded-full
-										text-3xl
-										px-8 py-1
-										${year === yearToShow && `bg-${color}-500 text-white`}
+										border-2 border-${color}-500 text-2xl rounded-full px-8 py-1 mx-2 my-1
+										${year === yearToShow && `bg-${color}-500 text-white ease-in-out duration-200`}
 										${
                       year !== yearToShow &&
-                      `text-${color}-500 hover:bg-${color}-500 hover:text-white`
+                      `text-${color}-500 ease-in-out duration-200 hover:bg-${color}-500 hover:text-white `
                     }
-										`}
+										md:text-3xl
+									`}
               >
                 {year} - {year + 1}
               </button>
