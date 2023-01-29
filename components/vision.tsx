@@ -16,7 +16,7 @@ export default function Vision() {
           </h1>
           <p className="text-3xl font-medium mb-6">
             Uplifting communities through{" "}
-            <AnimatedEm emClassName="bg-yellow-300 bottom-0 left-4">
+            <AnimatedEm emClassName="bg-amber-300 bottom-0 left-4">
               technology
             </AnimatedEm>
           </p>
@@ -87,7 +87,7 @@ export default function Vision() {
           <div className="mt-20 mr-20 ml-auto max-w-min text-5xl font-medium space-y-6">
             <AnimatedText className="text-red-400">Empower.</AnimatedText>
             <AnimatedText className="text-blue-400">Enlighten.</AnimatedText>
-            <AnimatedText className="text-yellow-400">Create.</AnimatedText>
+            <AnimatedText className="text-amber-400">Create.</AnimatedText>
           </div>
         </div>
       </div>

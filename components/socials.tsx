@@ -16,7 +16,7 @@ export default function Socials() {
 				"
         >
           <ParallaxObject
-            className="absolute -left-6 w-20 h-20 bg-yellow-300 rounded-full -z-10"
+            className="absolute -left-6 w-20 h-20 bg-amber-300 rounded-full -z-10"
             y={[0, 200]}
           />
           <ParallaxObject

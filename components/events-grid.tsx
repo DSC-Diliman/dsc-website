@@ -28,11 +28,11 @@ export default function EventsGrid({ eventsData }: Props) {
           <p className="ml-4">Internal</p>
         </div>
         <div className="flex items-center">
-          <div className="bg-green-500 w-4 h-4 rounded-full" />
+          <div className="bg-emerald-500 w-4 h-4 rounded-full" />
           <p className="ml-4">Workshops</p>
         </div>
         <div className="flex items-center">
-          <div className="bg-yellow-500 w-4 h-4 rounded-full" />
+          <div className="bg-amber-500 w-4 h-4 rounded-full" />
           <p className="ml-4">Tech Solutions</p>
         </div>
       </div>

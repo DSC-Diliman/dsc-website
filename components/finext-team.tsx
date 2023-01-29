@@ -16,7 +16,7 @@ export default function FinExtTeam({ allExteFinData }: Props) {
       <div>
         <h2>
           <AnimatedEm
-            emClassName="bg-yellow-300 bottom-0 -left-4"
+            emClassName="bg-amber-300 bottom-0 -left-4"
             trigger="90%"
           >
             Finance and Externals
@@ -30,7 +30,7 @@ export default function FinExtTeam({ allExteFinData }: Props) {
       </div>
       <div className="relative w-full flex flex-wrap justify-evenly gap-4">
         <ParallaxObject
-          className="absolute -right-6 w-20 h-20 bg-yellow-300 rounded-full"
+          className="absolute -right-6 w-20 h-20 bg-amber-300 rounded-full"
           y={[-100, 200]}
         />
         {extractPortraits(allExteFinData)}
