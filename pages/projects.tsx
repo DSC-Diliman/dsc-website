@@ -81,7 +81,8 @@ export default function Projects({ allProjectsData }: Props) {
                   <Image
                     src={projectData.thumbnail}
                     alt="Project thumbnail"
-                    fill
+                    height={384}
+										width={384}
                   />
                 </Link>
               </div>
