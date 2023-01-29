@@ -48,7 +48,12 @@ export default function EventsGrid({ eventsData }: Props) {
               >
                 <div className="transition-all h-full flex flex-col shadow-2xl rounded-2xl bg-white overflow-hidden hover:shadow-none ring-inset ring-0 hover:ring-4 ring-red-700">
                   <div className="flex-none img-frame h-32">
-                    <Image src={e.images[0]} alt="Event image" height={128} width={(439 / 214) * 128} />
+                    <Image
+                      src={e.images[0]}
+                      alt="Event image"
+                      height={128}
+                      width={(439 / 214) * 128}
+                    />
                   </div>
                   <div className="flex flex-1 p-4 text-sm">
                     <div className="text-center self-center">

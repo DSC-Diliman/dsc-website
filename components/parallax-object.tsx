@@ -40,7 +40,6 @@ export default function ParallaxObject({
             scrub: true,
             start: start,
             end: end,
-            // markers: true,
           },
         }
       );

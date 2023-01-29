@@ -9,7 +9,7 @@ interface Props {
   className: string;
   fromVars: gsap.TweenVars;
   toVars: gsap.TweenVars;
-  scrub?: boolean;
+  scrub?: number | boolean;
 }
 
 export default function AnimatedObject({
@@ -28,7 +28,6 @@ export default function AnimatedObject({
         scrollTrigger: {
           trigger: ref.current,
           start: "bottom bottom",
-          // start: "top 70%",
           end: "+=100",
           scrub,
         },
