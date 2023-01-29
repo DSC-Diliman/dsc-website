@@ -13,7 +13,12 @@ export default function EventShowcase({ event }: Props) {
   return (
     <>
       <div className="md:px-6 md:pt-6 img-frame h-80 md:rounded-3xl">
-        <Image src={event.images[0]} alt="Event image" fill />
+        <Image
+          src={event.images[0]}
+          alt="Event image"
+          height={320}
+          width={(439 / 214) * 320}
+        />
       </div>
       <div className="p-3 md:p-6">
         <p className="text-red-pr text-lg">{event.eventType}</p>
