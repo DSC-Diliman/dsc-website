@@ -1,3 +1,3 @@
 export default function titleToId(title: string): string {
-  return title.toLowerCase().replace(" ", "-");
+  return title.toLowerCase().replaceAll(" ", "-");
 }
