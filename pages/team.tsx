@@ -49,11 +49,12 @@ export default function Team({ allMemberData }: Props) {
                 key={index}
                 onClick={() => setYearToShow(year)}
                 className={`
-										border-2 border-${color}-500 text-2xl rounded-full px-8 py-1 mx-2 my-1
-										${year === yearToShow && `bg-${color}-500 text-white ease-in-out duration-200`}
+										border-2 border-${color}-500 border-solid text-2xl rounded-full px-8 py-1 mx-2 my-1
 										${
-                      year !== yearToShow &&
-                      `text-${color}-500 ease-in-out duration-200 hover:bg-${color}-500 hover:text-white `
+                      year === yearToShow
+                        ? `bg-${color}-500 text-white ease-in-out duration-200`
+                        : `bg-transparent text-${color}-500 ease-in-out duration-200
+													hover:bg-${color}-500 hover:text-white`
                     }
 										md:text-3xl
 									`}
