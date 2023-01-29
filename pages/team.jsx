@@ -23,7 +23,7 @@ export default function Team({ allMemberData }) {
       <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
         <h1 className="my-4">Meet our Team!</h1>
         <p>The lineup that empowers, enlightens, and nurtures student developers in UP Diliman!</p>
-				<div className="mt-12 mb-6 flex justify-center gap-x-10">
+				<div className="lg: mt-12 mb-6 justify-center gap-x-10 sm:flex flex-column px-10">
 					{
 						[2022, 2021].map((year, index) => {
 							const color = colorGenerator.next().value
@@ -32,12 +32,11 @@ export default function Team({ allMemberData }) {
 									key={index}
 									onClick={() => setYearToShow(year)}
 									className={
-										`
-										border-2 border-${color}-500 rounded-full
-										text-3xl
-										px-8 py-1
+										`border-2 border-${color}-500 rounded-full px-8 py-1
 										${year === yearToShow && `bg-${color}-500 text-white`}
-										${year !== yearToShow && `text-${color}-500 hover:bg-${color}-500 hover:text-white`}
+										${year !== yearToShow && `text-${color}-500 hover:bg-${color}-500 hover:text-white ease-in-out duration-200`}
+										sm:text-2xl mx-2 my-1
+										lg:text-3xl
 										`
 									}
 								>
