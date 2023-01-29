@@ -9,13 +9,13 @@ export default function Nav() {
     <nav
       className="
 			fixed inset-x-0 top-0 px-4 py-2 frosted shadow-lg z-10
-			md:h-14 md:mx-10 md:mt-6 md:px-10 md:py-3 md:flex md:rounded-2xl
+			md:h-14 md:mx-10 md:mt-6 md:px-10 md:py-3 md:flex md:justify-center md:rounded-2xl
 			"
     >
       <div
         className="
 				py-2 flex justify-center
-				md:mr-5 md:py-0
+				md:flex-none md:mr-5 md:py-0
 			"
       >
         <Link href="/">
@@ -34,7 +34,7 @@ export default function Nav() {
         className="
 				flex mb-2 items-stretch justify-evenly
 				md:ml-auto md:mb-0 md:w-96 md:items-center md:justify-between
-			"
+				"
       >
         {[
           {
@@ -69,8 +69,8 @@ export default function Nav() {
               <button
                 className={`
 								rounded-lg mx-0.5 px-2 ${router.pathname === href ? selectedStyle : normalStyle}
-								md:px-3
-							`}
+								md:px-3 md:py-1
+								`}
               >
                 {page}
               </button>
