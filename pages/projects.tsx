@@ -78,7 +78,11 @@ export default function Projects({ allProjectsData }: Props) {
                   <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">
                     {projectData.title}
                   </p>
-                  <Image src={projectData.thumbnail} alt="Project thumbnail" fill />
+                  <Image
+                    src={projectData.thumbnail}
+                    alt="Project thumbnail"
+                    fill
+                  />
                 </Link>
               </div>
             ))}
