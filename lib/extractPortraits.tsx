@@ -1,25 +1,22 @@
 import Portrait from "../components/portrait";
-import { RecordInCMS } from "../types/event-in-cms";
+import { MemberInCMS } from "../types/member-in-cms";
 
-export default function extractPortraits(data: RecordInCMS[]) {
+export default function extractPortraits(data: MemberInCMS[]) {
   return data
     .filter((member) => member)
     .map(
-      (
-        {
-          thumbnail,
-          name,
-          position,
-          quote,
-          facebookURL,
-          twitterURL,
-          linkedinURL,
-          githubURL,
-        },
-        index
-      ) => (
+      ({
+        thumbnail,
+        name,
+        position,
+        quote,
+        facebookURL,
+        twitterURL,
+        linkedinURL,
+        githubURL,
+      }) => (
         <Portrait
-          key={index}
+          key={name}
           src={thumbnail}
           name={name}
           position={position}
