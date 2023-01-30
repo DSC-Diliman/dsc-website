@@ -1,4 +1,5 @@
 # (WIP!) Developer Student Clubs - UPD website
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e1ff313a-7e40-4c01-b334-b943c7279f4d/deploy-status)](https://app.netlify.com/sites/dscupd/deploys)
 
 Temporarily deployed at [https://dscupd.netlify.app/](https://dscupd.netlify.app/)
@@ -38,6 +39,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing any page found at the `pages` folder. The page auto-updates as you edit the file.
 
 ## Static HTML Export
+
 Export app to static HTML. This outputs to the `out` folder.
 
 ```bash
@@ -45,12 +47,15 @@ npm run export
 ```
 
 ## Wireframe
+
 The wireframe for this project can be found [here](https://www.figma.com/file/VLKIQqE9Vb1W9A3t3NWgAb/DSC-Website-UI-Final-Submission?node-id=0%3A1).
 
 ## React
+
 Learn [React](https://reactjs.org/) at [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html).
 
 ## Next.js
+
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
@@ -59,12 +64,15 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/).
 
 ## Styling
+
 This project uses [Tailwind](https://tailwindcss.com/). Checkout the [docs](https://tailwindcss.com/docs).
 
 For icons, use [React Icons](https://react-icons.github.io/react-icons/).
 
 ## Animation
-Use [GSAP 3](https://greensock.com/) for animation. 
+
+Use [GSAP 3](https://greensock.com/) for animation.
+
 - [cheat sheet](https://greensock.com/cheatsheet/)
 - [getting started](https://greensock.com/get-started/)
 - [docs](https://greensock.com/docs/)
