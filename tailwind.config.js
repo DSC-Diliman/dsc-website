@@ -15,7 +15,7 @@ module.exports = {
         blue: { pr: colors.blue[700] },
         red: { pr: colors.red[700] },
         green: { pr: colors.green[700] },
-        yellow: { pr: colors.yellow[600] },
+        yellow: { pr: colors.yellow[700] },
       },
       fontSize: {
         "10xl": "14rem",

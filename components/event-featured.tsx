@@ -49,7 +49,7 @@ export default function EventFeatured({ event }: Props) {
               as={`/events/${titleToId(event.title)}`}
               scroll={false}
             >
-              <button className="btn-style2-red">Learn More</button>
+              <button className="btn-style2-red">See Details</button>
             </Link>
           </div>
         </div>
