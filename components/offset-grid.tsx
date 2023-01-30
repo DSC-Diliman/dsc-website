@@ -6,7 +6,12 @@ interface Props {
 }
 
 export default function OffsetGrid({ elements }: Props) {
-	const bgColors = ["bg-red-300", "bg-blue-300", "bg-emerald-300", "bg-amber-300"];
+  const bgColors = [
+    "bg-red-300",
+    "bg-blue-300",
+    "bg-emerald-300",
+    "bg-amber-300",
+  ];
   return (
     <div
       className="
