@@ -23,7 +23,56 @@ export default function Team({ allMemberData }: Props) {
     );
   }
 
-  const colorGenerator = getNextPrimaryColor();
+  const colors = [
+    {
+      borderColor: "border-red-500",
+      textColor: "text-red-500",
+      bgColor: "bg-red-500",
+      bgColorWithHover: "hover:bg-red-500",
+    },
+    {
+      borderColor: "border-blue-500",
+      textColor: "text-blue-500",
+      bgColor: "bg-blue-500",
+      bgColorWithHover: "hover:bg-blue-500",
+    },
+    {
+      borderColor: "border-amber-500",
+      textColor: "text-amber-500",
+      bgColor: "bg-amber-500",
+      bgColorWithHover: "hover:bg-amber-500",
+    },
+    {
+      borderColor: "border-emerald-500",
+      textColor: "text-emerald-500",
+      bgColor: "bg-emerald-500",
+      bgColorWithHover: "hover:bg-emerald-500",
+    },
+  ];
+
+  const yearSelectionButtons = [2022, 2021].map((year, index) => {
+    const { borderColor, textColor, bgColor, bgColorWithHover } =
+      colors[index % 4];
+    const className = `
+										border-2 ${borderColor} border-solid text-2xl rounded-full px-8 py-1 mx-2 my-1
+										${
+                      year === yearToShow
+                        ? `${bgColor} text-white ease-in-out duration-200`
+                        : `bg-transparent ${textColor} ease-in-out duration-200
+													${bgColorWithHover} hover:text-white`
+                    }
+										md:text-3xl
+									`;
+    return (
+      <button
+        key={index}
+        onClick={() => setYearToShow(year)}
+        className={className}
+      >
+        {year} - {year + 1}
+      </button>
+    );
+  });
 
   return (
     <>
@@ -42,27 +91,7 @@ export default function Team({ allMemberData }: Props) {
 						sm:flex-row sm:gap-x-12 sm:justify-center
 					"
         >
-          {[2022, 2021].map((year, index) => {
-            const color = colorGenerator.next().value;
-            return (
-              <button
-                key={index}
-                onClick={() => setYearToShow(year)}
-                className={`
-										border-2 border-${color}-500 border-solid text-2xl rounded-full px-8 py-1 mx-2 my-1
-										${
-                      year === yearToShow
-                        ? `bg-${color}-500 text-white ease-in-out duration-200`
-                        : `bg-transparent text-${color}-500 ease-in-out duration-200
-													hover:bg-${color}-500 hover:text-white`
-                    }
-										md:text-3xl
-									`}
-              >
-                {year} - {year + 1}
-              </button>
-            );
-          })}
+          {yearSelectionButtons}
         </div>
       </div>
       <div className="space-y-14 md:space-y-20 pb-20 px-4 md:px-10 overflow-x-hidden">
