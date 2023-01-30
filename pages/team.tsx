@@ -6,7 +6,6 @@ import FinExtTeam from "../components/finext-team";
 import WebDevTeam from "../components/web-dev-team";
 import { getTeam } from "../lib/posts";
 import { useState } from "react";
-import getNextPrimaryColor from "../lib/getNextPrimaryColor";
 import Head from "next/head";
 import { isArrayOfMembersInCMS, MemberInCMS } from "../types/member-in-cms";
 

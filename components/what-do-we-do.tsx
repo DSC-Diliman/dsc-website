@@ -35,7 +35,7 @@ export default function WhatDoWeDo() {
       icon: (
         <BsWrench
           size={150}
-          color="emerald"
+          color="green"
           className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-10"
         />
       ),
@@ -46,7 +46,7 @@ export default function WhatDoWeDo() {
       icon: (
         <ImLab
           size={150}
-          color="amber"
+          color="yellow"
           className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-30"
         />
       ),

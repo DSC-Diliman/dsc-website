@@ -1,5 +1,4 @@
 import AnimatedEm from "./animated-em";
-import getNextPrimaryColor from "../lib/getNextPrimaryColor";
 import { OffsetGridElement } from "../types/offset-grid-element";
 
 interface Props {
@@ -7,7 +6,7 @@ interface Props {
 }
 
 export default function OffsetGrid({ elements }: Props) {
-  const colorGenerator = getNextPrimaryColor();
+	const bgColors = ["bg-red-300", "bg-blue-300", "bg-emerald-300", "bg-amber-300"];
   return (
     <div
       className="
@@ -17,7 +16,7 @@ export default function OffsetGrid({ elements }: Props) {
 		"
     >
       {elements.map(({ heading, text, icon }, index) => {
-        const color = colorGenerator.next().value;
+        const bgColor = bgColors[index % bgColors.length];
         return (
           <div
             key={index}
@@ -34,7 +33,7 @@ export default function OffsetGrid({ elements }: Props) {
 							sm:mb-4 sm:text-xl
 						"
             >
-              <AnimatedEm emClassName={`right-4 bottom-0 bg-${color}-300`}>
+              <AnimatedEm emClassName={`right-4 bottom-0 ${bgColor}`}>
                 {heading}
               </AnimatedEm>
             </div>
