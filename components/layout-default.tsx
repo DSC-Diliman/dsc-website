@@ -22,8 +22,10 @@ export default function Layout({ children }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Nav />
-      <main className="flex flex-col flex-nowrap min-h-screen">{children}</main>
-      <Footer />
+      <main className="flex flex-col flex-nowrap min-h-screen">
+        {children}
+        <Footer />
+      </main>
     </>
   );
 }
