@@ -49,7 +49,7 @@ export default function Projects({ allProjectsData }: Props) {
         isOpen={!!selectedProject}
         onRequestClose={closeModal}
         contentLabel="Project modal"
-        className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
+        className="div-style1 absolute inset-x-4 mx-auto my-4 max-w-3xl overflow-y-auto bg-white md:inset-x-10 md:my-10"
         style={{ content: { maxHeight: "calc(100% - 5rem)" } }}
         overlayClassName="fixed bg-black/50 inset-0"
         parentSelector={() => document.querySelector("#__next") as HTMLElement}
@@ -57,11 +57,11 @@ export default function Projects({ allProjectsData }: Props) {
         <ButtonClose onClick={closeModal} />
         {selectedProject ? <ProjectShowcase project={selectedProject} /> : null}
       </Modal>
-      <div className="px-4 md:px-10 pt-12 md:pt-24 pb-3 md:pb-6 w-full text-center">
+      <div className="w-full px-4 pt-12 pb-3 text-center md:px-10 md:pt-24 md:pb-6">
         <h1 className="my-4">Projects</h1>
         <p>Click on the images to view our completed projects!</p>
       </div>
-      <div className="flex-1 px-4 md:px-10 mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-6xl flex-1 px-4 md:px-10">
         {allProjectsData.length ? (
           <Masonry
             className={masonryStyle["projects-masonry"]}
@@ -75,7 +75,7 @@ export default function Projects({ allProjectsData }: Props) {
                   scroll={router.pathname != "/projects"}
                   shallow={true}
                 >
-                  <p className="absolute bottom-0 px-4 py-3 w-full bg-gradient-to-t from-black text-white">
+                  <p className="absolute bottom-0 w-full bg-gradient-to-t from-black px-4 py-3 text-white">
                     {projectData.title}
                   </p>
                   <Image
@@ -89,7 +89,7 @@ export default function Projects({ allProjectsData }: Props) {
             ))}
           </Masonry>
         ) : (
-          <p className="text-3xl text-center">Under construction</p>
+          <p className="text-center text-3xl">Under construction</p>
         )}
       </div>
     </>

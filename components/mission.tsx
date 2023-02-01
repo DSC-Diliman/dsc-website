@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Mission() {
   return (
-    <section id="mission" className="p-4 md:p-10 text-center">
-      <h1 className="text-2xl text-red-700 font-black">MISSION</h1>
+    <section id="mission" className="p-4 text-center md:p-10">
+      <h1 className="text-2xl font-black text-red-700">MISSION</h1>
       <p className="mt-2 mb-6">We, as an organization, aim to</p>
       <div className="flex justify-center">
         {[
@@ -23,9 +23,9 @@ export default function Mission() {
             image: "/images/dot_create.png",
           },
         ].map((e) => (
-          <div key={e.title} className="px-1 md:px-4 py-4 max-w-sm">
+          <div key={e.title} className="max-w-sm px-1 py-4 md:px-4">
             <div
-              className="mx-auto img-frame rounded-full mb-10 w-20 h-20 sm:w-32 sm:h-32"
+              className="img-frame mx-auto mb-10 h-20 w-20 rounded-full sm:h-32 sm:w-32"
               style={{ position: "relative" }}
             >
               <Image
@@ -35,7 +35,7 @@ export default function Mission() {
                 width={480}
               />
             </div>
-            <p className="text-lg md:text-2xl font-medium mb-2">{e.title}</p>
+            <p className="mb-2 text-lg font-medium md:text-2xl">{e.title}</p>
             <p className="text-xs sm:text-base">{e.desc}</p>
           </div>
         ))}

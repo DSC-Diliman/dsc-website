@@ -2,30 +2,30 @@
   $image-position: top left;
   $size: auto 100%;
   clip-path: inset(0);
-  @apply sm:w-1/2 self-stretch;
+  @apply self-stretch sm:w-1/2;
   > div:nth-child(1) {
     mask-image: url("/images/index-hero-mask.png");
     mask-mode: alpha;
     mask-repeat: no-repeat;
     mask-position: $image-position;
     mask-size: $size;
-    @apply w-full h-full;
+    @apply h-full w-full;
     > div {
       background-image: url("/images/index-hero.png");
       background-position: $image-position;
       background-size: $size;
-      @apply fixed w-1/2 h-full bg-no-repeat;
+      @apply fixed h-full w-1/2 bg-no-repeat;
     }
   }
   > div:nth-child(2) {
     background-image: url("/images/index-hero-main.png");
     background-position: $image-position;
     background-size: $size;
-    @apply top-0 fixed w-full sm:w-1/2 h-full bg-no-repeat;
+    @apply fixed top-0 h-full w-full bg-no-repeat sm:w-1/2;
   }
 }
 
 .mobile-hero {
-  @apply absolute block sm:hidden w-full h-full bg-cover bg-center bg-fixed;
+  @apply absolute block h-full w-full bg-cover bg-fixed bg-center sm:hidden;
   background-image: url("/images/index-hero.png");
 }

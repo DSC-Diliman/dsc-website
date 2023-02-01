@@ -15,9 +15,9 @@ export default function OffsetGrid({ elements }: Props) {
   return (
     <div
       className="
-			grid grid-cols-1 grid-rows-4 gap-8 mt-6 mb-14
-			sm:grid-cols-2 sm:grid-rows-2 sm:mb-32
-			md:gap-16 md:mb-40
+			mt-6 mb-14 grid grid-cols-1 grid-rows-4 gap-8
+			sm:mb-32 sm:grid-cols-2 sm:grid-rows-2
+			md:mb-40 md:gap-16
 		"
     >
       {elements.map(({ heading, text, icon }, index) => {
@@ -26,15 +26,15 @@ export default function OffsetGrid({ elements }: Props) {
           <div
             key={index}
             className="
-						relative w-80 div-style1 overflow-hidden px-6 py-4
-						sm:even:top-1/2 sm:w-72
+						div-style1 relative w-80 overflow-hidden px-6 py-4
+						sm:w-72 sm:even:top-1/2
 						md:w-80 md:px-12 md:py-8
 						lg:w-96
 					"
           >
             <div
               className="
-							mb-1 font-semibold text-lg flex gap-5 items-center
+							mb-1 flex items-center gap-5 text-lg font-semibold
 							sm:mb-4 sm:text-xl
 						"
             >

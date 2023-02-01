@@ -8,14 +8,14 @@ export default function Nav() {
   return (
     <nav
       className="
-			fixed inset-x-0 top-0 px-4 py-2 frosted shadow-lg z-10
-			md:h-14 md:mx-10 md:mt-6 md:px-10 md:py-3 md:flex md:justify-center md:rounded-2xl
+			frosted fixed inset-x-0 top-0 z-10 px-4 py-2 shadow-lg
+			md:mx-10 md:mt-6 md:flex md:h-14 md:justify-center md:rounded-2xl md:px-10 md:py-3
 			"
     >
       <div
         className="
-				py-2 flex justify-center
-				md:flex-none md:mr-5 md:py-0
+				flex justify-center py-2
+				md:mr-5 md:flex-none md:py-0
 			"
       >
         <Link href="/">
@@ -32,7 +32,7 @@ export default function Nav() {
 
       <div
         className="
-				flex mb-2 items-stretch justify-evenly
+				mb-2 flex items-stretch justify-evenly
 				md:ml-auto md:mb-0 md:w-96 md:items-center md:justify-between
 				"
       >
@@ -68,7 +68,7 @@ export default function Nav() {
             <Link key={page.toLowerCase()} href={href}>
               <button
                 className={`
-								rounded-lg mx-0.5 px-2 ${router.pathname === href ? selectedStyle : normalStyle}
+								mx-0.5 rounded-lg px-2 ${router.pathname === href ? selectedStyle : normalStyle}
 								md:px-3 md:py-1
 								`}
               >

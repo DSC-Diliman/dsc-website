@@ -34,8 +34,8 @@ export default function AnimatedEm({
   });
 
   return (
-    <span className={`relative whitespace-nowrap z-0 ${className}`}>
-      <span className={`absolute -z-10 w-full h-3 ${emClassName}`} ref={ref} />
+    <span className={`relative z-0 whitespace-nowrap ${className}`}>
+      <span className={`absolute -z-10 h-3 w-full ${emClassName}`} ref={ref} />
       {children}
     </span>
   );

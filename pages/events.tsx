@@ -45,7 +45,7 @@ export default function Events({ allEventsData }: Props) {
         isOpen={!!selectedEvent}
         onRequestClose={closeModal}
         contentLabel="Event modal"
-        className="absolute inset-x-4 md:inset-x-10 mx-auto my-4 md:my-10 max-w-3xl bg-white div-style1 overflow-y-auto"
+        className="div-style1 absolute inset-x-4 mx-auto my-4 max-w-3xl overflow-y-auto bg-white md:inset-x-10 md:my-10"
         style={{ content: { maxHeight: "calc(100% - 5rem)" } }}
         overlayClassName="fixed bg-black/50 inset-0"
         parentSelector={() => document.querySelector("#__next") as HTMLElement}
@@ -53,19 +53,19 @@ export default function Events({ allEventsData }: Props) {
         <ButtonClose onClick={closeModal} />
         {selectedEvent ? <EventShowcase event={selectedEvent} /> : null}
       </Modal>
-      <h1 className="text-center my-4 pt-12 md:pt-24">Events</h1>
+      <h1 className="my-4 pt-12 text-center md:pt-24">Events</h1>
       {allEventsData.length ? (
         <div>
           <section id="featured" className="px-4 md:px-10">
             <EventFeatured event={allEventsData[0]} />
           </section>
 
-          <section id="allEvents" className="my-6 md:my-10 px-4 md:px-10">
+          <section id="allEvents" className="my-6 px-4 md:my-10 md:px-10">
             <EventsGrid eventsData={allEventsData} />
           </section>
         </div>
       ) : (
-        <p className="flex-1 text-center text-3xl p-10">
+        <p className="flex-1 p-10 text-center text-3xl">
           No events at the moment...
         </p>
       )}

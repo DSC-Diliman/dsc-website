@@ -14,10 +14,10 @@
     @apply mt-2;
   }
   h1 {
-    @apply font-bold text-xl;
+    @apply text-xl font-bold;
   }
   h2 {
-    @apply font-medium text-lg;
+    @apply text-lg font-medium;
   }
   h3 {
     @apply font-medium;
@@ -42,6 +42,6 @@
     @apply my-2;
   }
   blockquote {
-    @apply p-2 text-gray-600 bg-gray-200;
+    @apply bg-gray-200 p-2 text-gray-600;
   }
 }

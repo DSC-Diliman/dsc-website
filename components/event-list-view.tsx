@@ -12,13 +12,13 @@ interface Props {
 export default function EventListView({ eventsArray, className }: Props) {
   return (
     <div
-      className={`overflow-y-auto mx-auto overscroll-contain scroll-y ${className}`}
+      className={`scroll-y mx-auto overflow-y-auto overscroll-contain ${className}`}
     >
       {eventsArray &&
         eventsArray.map((currEvent, index) => (
           <div
             key={index}
-            className="py-4 w-fullscroll-start border-b-2 border-gray-100 md:py-6"
+            className="w-fullscroll-start border-b-2 border-gray-100 py-4 md:py-6"
           >
             <p className="mb-2 text-base">
               <FormattedDate dateTime={currEvent.date} />
@@ -33,13 +33,13 @@ export default function EventListView({ eventsArray, className }: Props) {
                 </p>
               </div>
               <div
-                className={`w-1 h-12 mx-4 rounded-full ${getEventColor(
+                className={`mx-4 h-12 w-1 rounded-full ${getEventColor(
                   currEvent.eventType
                 )} md:mx-6`}
               />
               <div className="flex-auto">
                 <p className="text-xs sm:text-sm">{currEvent.eventType}</p>
-                <p className="text-base sm:text-lg font-bold">
+                <p className="text-base font-bold sm:text-lg">
                   {currEvent.title}
                 </p>
               </div>

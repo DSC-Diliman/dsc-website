@@ -32,7 +32,7 @@ export default function Portrait({
 }: Props) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-xl md:rounded-3xl w-36 h-44 md:w-48 md:h-60 shadow-2xl text-sm img-frame ${className}`}
+      className={`img-frame group relative h-44 w-36 overflow-hidden rounded-xl text-sm shadow-2xl md:h-60 md:w-48 md:rounded-3xl ${className}`}
     >
       <Image
         src={src}
@@ -41,11 +41,11 @@ export default function Portrait({
         height={176}
         width={144}
       />
-      <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black" />
-      <div className="relative transition-all mt-28 md:mt-40 group-hover:mt-0 h-full p-2 md:p-4 flex flex-col group-hover:bg-black group-hover:bg-opacity-70 text-white">
-        <p className="md:text-base font-medium">{name}</p>
+      <div className="absolute bottom-0 h-24 w-full bg-gradient-to-t from-black" />
+      <div className="relative mt-28 flex h-full flex-col p-2 text-white transition-all group-hover:mt-0 group-hover:bg-black group-hover:bg-opacity-70 md:mt-40 md:p-4">
+        <p className="font-medium md:text-base">{name}</p>
         <p className="text-xs">{position}</p>
-        <div className="text-xs pt-3 md:text-sm flex flex-col flex-1">
+        <div className="flex flex-1 flex-col pt-3 text-xs md:text-sm">
           <p className="my-auto">{desc}</p>
         </div>
         <div className="text-2xl md:text-4xl">

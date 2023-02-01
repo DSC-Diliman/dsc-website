@@ -13,9 +13,9 @@ interface Props {
 export default function EventFeatured({ event }: Props) {
   return (
     <>
-      <div className="flex flex-col sm:flex-row w-full max-w-6xl mx-auto div-style1">
-        <div className="sm:flex-1 sm:order-2 h-40 sm:h-auto flex flex-col m-0 md:m-5 img-frame md:rounded-3xl">
-          <div className="overflow-y-hidden flex-1">
+      <div className="div-style1 mx-auto flex w-full max-w-6xl flex-col sm:flex-row">
+        <div className="img-frame m-0 flex h-40 flex-col sm:order-2 sm:h-auto sm:flex-1 md:m-5 md:rounded-3xl">
+          <div className="flex-1 overflow-y-hidden">
             <Image
               src={event.images[0]}
               alt="Event image"
@@ -24,11 +24,11 @@ export default function EventFeatured({ event }: Props) {
             />
           </div>
         </div>
-        <div className="sm:flex-1 flex flex-col my-4 mx-4 md:my-10 md:ml-12 sm:max-w-sm">
+        <div className="my-4 mx-4 flex flex-col sm:max-w-sm sm:flex-1 md:my-10 md:ml-12">
           <div>
-            <p className="text-lg text-red-pr mb-4">FEATURED</p>
-            <p className="font-medium text-4xl mb-4">{event.title}</p>
-            <div className="mb-6 grid grid-rows-3 md:grid-rows-2 md:grid-cols-2 gap-1">
+            <p className="mb-4 text-lg text-red-pr">FEATURED</p>
+            <p className="mb-4 text-4xl font-medium">{event.title}</p>
+            <div className="mb-6 grid grid-rows-3 gap-1 md:grid-cols-2 md:grid-rows-2">
               <div>
                 <BiCalendarEvent /> <FormattedDate dateTime={event.date} />
               </div>
