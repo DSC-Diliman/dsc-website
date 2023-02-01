@@ -51,7 +51,7 @@ If you have any specific questions about the CMS, hit up Daryll on Discord!
 
 <br />
 
-## For developers
+## For site developers
 
 If you don't have access to the [Netlify dashboard](https://app.netlify.com/sites/dscupd) yet, ask for an invite from one of the developers on Discord.
 
