@@ -3,7 +3,7 @@
   > div {
     @apply mx-1.5 md:mx-3;
     > div {
-      @apply relative my-3 md:my-6 rounded-lg md:rounded-2xl transition-shadow shadow-3xl hover:shadow-none hover:ring-4 ring-red-700 overflow-hidden;
+      @apply relative my-3 overflow-hidden rounded-lg shadow-3xl ring-red-700 transition-shadow hover:shadow-none hover:ring-4 md:my-6 md:rounded-2xl;
     }
   }
 }

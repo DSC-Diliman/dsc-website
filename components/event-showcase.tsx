@@ -12,7 +12,7 @@ interface Props {
 export default function EventShowcase({ event }: Props) {
   return (
     <>
-      <div className="md:px-6 md:pt-6 img-frame h-80 md:rounded-3xl">
+      <div className="img-frame h-80 md:rounded-3xl md:px-6 md:pt-6">
         <Image
           src={event.images[0]}
           alt="Event image"
@@ -21,9 +21,9 @@ export default function EventShowcase({ event }: Props) {
         />
       </div>
       <div className="p-3 md:p-6">
-        <p className="text-red-pr text-lg">{event.eventType}</p>
+        <p className="text-lg text-red-pr">{event.eventType}</p>
         <h1>{event.title}</h1>
-        <div className="my-4 grid grid-rows-3 md:grid-rows-2 md:grid-cols-2 gap-1">
+        <div className="my-4 grid grid-rows-3 gap-1 md:grid-cols-2 md:grid-rows-2">
           <div>
             <BiCalendarEvent /> <FormattedDate dateTime={event.date} />
           </div>

@@ -9,7 +9,7 @@ interface Props {
 export default function ProjectShowcase({ project }: Props) {
   return (
     <>
-      <div className="md:mx-6 md:mt-6 img-frame h-80 md:rounded-3xl">
+      <div className="img-frame h-80 md:mx-6 md:mt-6 md:rounded-3xl">
         <Image
           src={project.images[0]}
           alt="Project image"

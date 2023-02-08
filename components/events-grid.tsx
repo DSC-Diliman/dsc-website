@@ -17,26 +17,26 @@ export default function EventsGrid({ eventsData }: Props) {
 
   return (
     <>
-      <h2 className="text-center mb-6 text-2xl font-medium">All Events</h2>
-      <div className="flex flex-wrap place-content-center mb-10 space-x-8">
+      <h2 className="mb-6 text-center text-2xl font-medium">All Events</h2>
+      <div className="mb-10 flex flex-wrap place-content-center space-x-8">
         <div className="flex items-center">
-          <div className="bg-red-500 w-4 h-4 rounded-full" />
+          <div className="h-4 w-4 rounded-full bg-red-500" />
           <p className="ml-4">Speaker Sessions</p>
         </div>
         <div className="flex items-center">
-          <div className="bg-blue-500 w-4 h-4 rounded-full" />
+          <div className="h-4 w-4 rounded-full bg-blue-500" />
           <p className="ml-4">Internal</p>
         </div>
         <div className="flex items-center">
-          <div className="bg-emerald-500 w-4 h-4 rounded-full" />
+          <div className="h-4 w-4 rounded-full bg-emerald-500" />
           <p className="ml-4">Workshops</p>
         </div>
         <div className="flex items-center">
-          <div className="bg-amber-500 w-4 h-4 rounded-full" />
+          <div className="h-4 w-4 rounded-full bg-amber-500" />
           <p className="ml-4">Tech Solutions</p>
         </div>
       </div>
-      <div className="grid auto-grid-base gap-x-8 gap-y-4 md:gap-y-12 auto-rows-fr max-w-6xl mx-auto">
+      <div className="auto-grid-base mx-auto grid max-w-6xl auto-rows-fr gap-x-8 gap-y-4 md:gap-y-12">
         {eventsData
           ? eventsData.map((e, index) => (
               <Link
@@ -46,8 +46,8 @@ export default function EventsGrid({ eventsData }: Props) {
                 shallow={true}
                 key={index}
               >
-                <div className="transition-all h-full flex flex-col shadow-2xl rounded-2xl bg-white overflow-hidden hover:shadow-none ring-inset ring-0 hover:ring-4 ring-red-700">
-                  <div className="flex-none img-frame h-32">
+                <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-0 ring-inset ring-red-700 transition-all hover:shadow-none hover:ring-4">
+                  <div className="img-frame h-32 flex-none">
                     <Image
                       src={e.images[0]}
                       alt="Event image"
@@ -56,14 +56,14 @@ export default function EventsGrid({ eventsData }: Props) {
                     />
                   </div>
                   <div className="flex flex-1 p-4 text-sm">
-                    <div className="text-center self-center">
+                    <div className="self-center text-center">
                       <FormattedDate
                         dateTime={e.date}
                         dateFormat="MMM"
                         func={(string) => string.toUpperCase()}
                       />
                       <br />
-                      <span className="font-bold text-3xl">
+                      <span className="text-3xl font-bold">
                         <FormattedDate dateTime={e.date} dateFormat="dd" />
                       </span>
                       <br />
@@ -71,7 +71,7 @@ export default function EventsGrid({ eventsData }: Props) {
                     </div>
                     <div
                       className={
-                        "w-1 mx-3 rounded-full " + getEventColor(e.eventType)
+                        "mx-3 w-1 rounded-full " + getEventColor(e.eventType)
                       }
                     />
                     <div className="w-full">

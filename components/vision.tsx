@@ -7,14 +7,14 @@ export default function Vision() {
   return (
     <section
       id="vision"
-      className="px-4 py-10 md:p-10 bg-gray-200 overflow-hidden"
+      className="overflow-hidden bg-gray-200 px-4 py-10 md:p-10"
     >
-      <div className="sm:grid grid-cols-1 lg:grid-cols-2 max-w-3xl mx-auto gap-4 md:gap-12">
+      <div className="mx-auto max-w-3xl grid-cols-1 gap-4 sm:grid md:gap-12 lg:grid-cols-2">
         <div>
-          <h1 className="mb-4 sm:mt-5 text-2xl text-red-700 font-black">
+          <h1 className="mb-4 text-2xl font-black text-red-700 sm:mt-5">
             VISION
           </h1>
-          <p className="text-3xl font-medium mb-6">
+          <p className="mb-6 text-3xl font-medium">
             Uplifting communities through{" "}
             <AnimatedEm emClassName="bg-amber-300 bottom-0 left-4">
               technology
@@ -26,7 +26,7 @@ export default function Vision() {
             and innovation.
           </p>
           <AnimatedObject
-            className="sm:block img-frame div-style1 h-96 w-85"
+            className="img-frame div-style1 w-85 h-96 sm:block"
             fromVars={{
               x: -100,
               opacity: 0,
@@ -47,7 +47,7 @@ export default function Vision() {
         </div>
         <div className="hidden lg:block">
           <AnimatedObject
-            className="img-frame div-style1 ml-auto w-56 h-64 mb-16"
+            className="img-frame div-style1 ml-auto mb-16 h-64 w-56"
             fromVars={{
               x: 100,
               opacity: 0,
@@ -66,7 +66,7 @@ export default function Vision() {
             />
           </AnimatedObject>
           <AnimatedObject
-            className="block img-frame div-style1 ml-10 w-80 h-64 mb-16"
+            className="img-frame div-style1 ml-10 mb-16 block h-64 w-80"
             fromVars={{
               x: 100,
               opacity: 0,
@@ -84,7 +84,7 @@ export default function Vision() {
               height={(413 / 717) * 320}
             />
           </AnimatedObject>
-          <div className="mt-20 mr-20 ml-auto max-w-min text-5xl font-medium space-y-6">
+          <div className="mt-20 mr-20 ml-auto max-w-min space-y-6 text-5xl font-medium">
             <AnimatedText className="text-red-400">Empower.</AnimatedText>
             <AnimatedText className="text-blue-400">Enlighten.</AnimatedText>
             <AnimatedText className="text-amber-400">Create.</AnimatedText>

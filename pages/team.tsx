@@ -78,7 +78,7 @@ export default function Team({ allMemberData }: Props) {
       <Head>
         <title>Team | GDSC UPD</title>
       </Head>
-      <div className="px-4 md:px-10 pt-12 md:pt-24 pb-8 w-full text-center">
+      <div className="w-full px-4 pt-12 pb-8 text-center md:px-10 md:pt-24">
         <h1 className="my-4">Meet our Team!</h1>
         <p>
           The lineup that empowers, enlightens, and nurtures student developers
@@ -86,14 +86,14 @@ export default function Team({ allMemberData }: Props) {
         </p>
         <div
           className="
-						mt-12 mb-6 flex flex-col flex-grow gap-y-4 items-center
-						sm:flex-row sm:gap-x-12 sm:justify-center
+						mt-12 mb-6 flex flex-grow flex-col items-center gap-y-4
+						sm:flex-row sm:justify-center sm:gap-x-12
 					"
         >
           {yearSelectionButtons}
         </div>
       </div>
-      <div className="space-y-14 md:space-y-20 pb-20 px-4 md:px-10">
+      <div className="space-y-14 px-4 pb-20 md:space-y-20 md:px-10">
         <ExecTeam allExecData={getFilteredData(yearToShow, "Executive")} />
         <TechTeam allTechData={getFilteredData(yearToShow, "Technology")} />
         <OpsTeam allOpsData={getFilteredData(yearToShow, "Operations")} />

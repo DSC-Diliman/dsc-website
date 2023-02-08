@@ -14,7 +14,7 @@ export default function WhatDoWeDo() {
         <GiMicrophone
           size={150}
           color="red"
-          className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-10"
+          className="absolute -bottom-2 -right-5 z-0 opacity-10 md:bottom-4"
         />
       ),
     },
@@ -25,7 +25,7 @@ export default function WhatDoWeDo() {
         <GiMagnifyingGlass
           size={150}
           color="blue"
-          className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-10"
+          className="absolute -bottom-2 -right-5 z-0 opacity-10 md:bottom-4"
         />
       ),
     },
@@ -36,7 +36,7 @@ export default function WhatDoWeDo() {
         <BsWrench
           size={150}
           color="green"
-          className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-10"
+          className="absolute -bottom-2 -right-5 z-0 opacity-10 md:bottom-4"
         />
       ),
     },
@@ -47,7 +47,7 @@ export default function WhatDoWeDo() {
         <ImLab
           size={150}
           color="yellow"
-          className="absolute -bottom-2 md:bottom-4 -right-5 z-0 opacity-30"
+          className="absolute -bottom-2 -right-5 z-0 opacity-30 md:bottom-4"
         />
       ),
     },
@@ -56,12 +56,12 @@ export default function WhatDoWeDo() {
   return (
     <section
       className="
-			px-4 pt-12 pb-10 bg-gray-200 flex flex-col items-center justify-center
+			flex flex-col items-center justify-center bg-gray-200 px-4 pt-12 pb-10
 			sm:pb-16
 			md:px-10 md:shadow-above
 		"
     >
-      <h1 className="text-center mb-1 sm:mb-4">
+      <h1 className="mb-1 text-center sm:mb-4">
         What do we do in GDSC UP Diliman?
       </h1>
       <OffsetGrid elements={offsetGridContents} />

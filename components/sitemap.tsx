@@ -57,7 +57,7 @@ export default function Sitemap() {
   return (
     <section
       className="
-			flex justify-center gap-x-12 mt-7 mb-11 text-base
+			mt-7 mb-11 flex justify-center gap-x-12 text-base
 			md:gap-x-16
 		"
     >

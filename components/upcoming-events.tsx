@@ -21,9 +21,9 @@ export default function UpcomingEvents({ eventsArray }: Props) {
 			"
       >
         <h1 className="mb-4 text-center">Upcoming Events</h1>
-        <div className="div-style1 w-5/6 overflow-hidden mt-10 mb-20 md:w-full">
+        <div className="div-style1 mt-10 mb-20 w-5/6 overflow-hidden md:w-full">
           <EventListView
-            className="px-6 max-h-80 md:px-10"
+            className="max-h-80 px-6 md:px-10"
             eventsArray={eventsArray}
           />
         </div>

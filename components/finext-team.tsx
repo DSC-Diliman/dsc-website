@@ -11,7 +11,7 @@ export default function FinExtTeam({ allExteFinData }: Props) {
   return (
     <section
       id="finance-and-externals"
-      className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 justify-items-center max-w-5xl mx-auto gap-8"
+      className="mx-auto grid max-w-5xl grid-rows-2 justify-items-center gap-8 md:grid-cols-2 md:grid-rows-1"
     >
       <div>
         <h2>
@@ -25,9 +25,9 @@ export default function FinExtTeam({ allExteFinData }: Props) {
           as other organizations, companies, and clients.
         </p>
       </div>
-      <div className="relative w-full flex flex-wrap justify-evenly gap-4">
+      <div className="relative flex w-full flex-wrap justify-evenly gap-4">
         <ParallaxObject
-          className="absolute -right-6 w-20 h-20 bg-amber-300 rounded-full"
+          className="absolute -right-6 h-20 w-20 rounded-full bg-amber-300"
           y={[-100, 200]}
         />
         {extractPortraits(allExteFinData)}

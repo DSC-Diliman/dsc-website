@@ -13,7 +13,7 @@ interface Props {
 export default function LinkGroup({ head, links }: Props) {
   const linksJSX = links.map(({ text, href }, index) => (
     <Link key={index} href={`${head.href}#${href}`}>
-      <p className="block py-2 cursor-pointer hover:underline md:py-2.5">
+      <p className="block cursor-pointer py-2 hover:underline md:py-2.5">
         {text}
       </p>
     </Link>
@@ -21,7 +21,7 @@ export default function LinkGroup({ head, links }: Props) {
   return (
     <div className="text-left">
       <Link href={`${head.href}`}>
-        <p className="font-bold block py-2.5 cursor-pointer hover:underline">
+        <p className="block cursor-pointer py-2.5 font-bold hover:underline">
           {head.text}
         </p>
       </Link>

@@ -1,78 +1,97 @@
-# (WIP!) Developer Student Clubs - UPD website
+<div align="center">
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e1ff313a-7e40-4c01-b334-b943c7279f4d/deploy-status)](https://app.netlify.com/sites/dscupd/deploys)
+  <img src="public/images/dsc-upd-logo.png" width="50%" alt="Logo">
+  <h1>Google Developer Student Clubs - UP Diliman website</h1>
 
-Temporarily deployed at [https://dscupd.netlify.app/](https://dscupd.netlify.app/)
+<a href="">[![Netlify Status](https://api.netlify.com/api/v1/badges/e1ff313a-7e40-4c01-b334-b943c7279f4d/deploy-status)](https://app.netlify.com/sites/dscupd/deploys)</a>
 
-Add an event or project post at [https://dscupd.netlify.app/admin/](https://dscupd.netlify.app/admin/), read more about contributing at the [contributors section](#for-contributors).
+[Site](https://gdscupd.com) | [Repo](https://github.com/DSC-Diliman/dsc-website)
 
-# For contributors
+</div>
 
-If you have an account, login [here](https://dscupd.netlify.app/admin/).
+<br />
 
-If you don't have one, ask for an invite from one of the developers or admins.
+<div align="center">
+  <h2>Project Members</h2>
+</div>
 
-# For developers
+<br />
 
-Dashboard: [https://app.netlify.com/sites/dscupd/](https://app.netlify.com/sites/dscupd/)
+<div align="center">
 
-1. Create a new branch
-2. After completing a feature or fix, create a pull request to the master branch. This will create a deploy preview on [netlify](https://app.netlify.com/sites/dscupd/deploys?filter=deploy+previews).
-3. Check the deploy preview on netlify. If it is working as intended, merge the pull request.
+| <br /> <img src="public/images/daryll-circle.png" width="125" alt="Daryll"> <p><b>Daryll Ko</b></p> | <br/> <img src="public/images/edrick-circle.png" width="125" alt="Edrick"> <p><b>Edrick Gador</b></p> | <br/> <img src="public/images/marc-circle.png" width="125" alt="Marc"> <p><b>Marc Viernes</b></p> |
+| :-------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
+|                                          _Lead Developer_                                           |                                              _Developer_                                              |                                            _Developer_                                            |
 
-> NOTE: contact [Geri Villarante](https://github.com/gerizim16) if you need to join the [netlify group](https://app.netlify.com/sites/dscupd/).
+</div>
 
-Install packages:
+<br />
+
+Welcome to the codebase for the GDSC-UPD website! This README file contains notes for data contributors and site developers in the sections to follow.
+
+<br />
+
+## For data contributors
+
+To add an event, project, or a member, go to [the site's `admin` page](https://gdscupd.com/admin):
+
+<br />
+
+<div align="center">
+  <img src="public/images/netlify-cms-landing.png" width="60%" alt="Netlify CMS landing page"/>
+</div>
+
+<br />
+
+If you don't have access to the content management system (CMS) yet, ask for an invite from one of the developers on Discord.
+
+Adding data is as simple as choosing a `Collection`, clicking the `New [Event/Project/Member]` button, filling up the necessary information, and clicking the `Publish` button.
+
+If you have any specific questions about the CMS, hit up Daryll on Discord!
+
+<br />
+
+## For site developers
+
+> **Note**
+>
+> There's an in-depth guide for site developers on [this site](https://gdscupdsitefordevs.super.site/). 
+> If you're looking for more specific details beyond what's covered in this README, check it out!
+
+If you don't have access to the [Netlify dashboard](https://app.netlify.com/sites/dscupd) yet, ask for an invite from one of the developers on Discord.
+
+Clone the repository to your local machine like so:
 
 ```bash
-npm install
+git clone git@github.com:DSC-Diliman/dsc-website.git
 ```
 
-Run the development server:
+Once a clone has been made, install packages using npm like so:
 
 ```bash
-npm run dev
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To generate the site's code, run `npm run build`. Afterwards, run `npm run dev` or `npm start` to see the site in development or production mode, respectively.
 
-You can start editing any page found at the `pages` folder. The page auto-updates as you edit the file.
+Contributions are carried out in 3 main steps:
 
-## Static HTML Export
+1. Create a new branch via `git checkout -b [branch name]`.
+2. Once you finish your work on the branch, create a pull request via the GitHub web interface. A deploy preview will pop up in the Netlify dashboard.
+3. If the deploy preview works as intended, ask one of the developers for a code review. Once your changes are approved, they can be merged into the `master` branch.
 
-Export app to static HTML. This outputs to the `out` folder.
+<div align="center">
 
-```bash
-npm run export
-```
+### Tech stack
 
-## Wireframe
+| Technology                                                                                                                | Purpose              | Notes                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://img.shields.io/static/v1?label=&logo=nextdotjs&message=Next.js&labelColor=000000&color=000000">         | React framework      | v13, [Documentation](https://nextjs.org/docs), [Tutorial](https://nextjs.org/learn)                                                               |
+| <img src="https://img.shields.io/static/v1?label=&logo=react&message=React&labelColor=272B33&color=272B33">               | JavaScript framework | v18, [Documentation](https://reactjs.org/docs/getting-started.html), [React Icons](https://react-icons.github.io/react-icons)                     |
+| <img src="https://img.shields.io/static/v1?label=&logo=typescript&message=TypeScript&labelColor=000000&color=000000">     | Type safety          | v4, [Documentation](https://www.typescriptlang.org/docs)                                                                                          |
+| <img src="https://img.shields.io/static/v1?label=&logo=tailwindcss&message=Tailwind CSS& labelColor=272B33&color=272B33"> | Styling              | v3, [Documentation](https://tailwindcss.com/docs)                                                                                                 |
+| <img src="https://img.shields.io/static/v1?label=&logo=playwright&message=Playwright&labelColor=000000&color=000000">     | End-to-end testing   | v1, [Documentation](https://playwright.dev/docs/intro)                                                                                            |
+| <img src="https://img.shields.io/static/v1?label=&logo=figma&message=Figma&labelColor=272B33&color=272B33">               | Design            | [Wireframe](https://www.figma.com/file/VLKIQqE9Vb1W9A3t3NWgAb/DSC-Website-UI-Final-Submission?node-id=0%3A1)                                      |
+| <img src="https://img.shields.io/static/v1?label=&logo=greensock&message=GSAP&labelColor=000000&color=000000">            | Animation            | [Documentation](https://greensock.com/docs), [Getting started](https://greensock.com/get-started), [Cheatsheet](https://greensock.com/cheatsheet) |
 
-The wireframe for this project can be found [here](https://www.figma.com/file/VLKIQqE9Vb1W9A3t3NWgAb/DSC-Website-UI-Final-Submission?node-id=0%3A1).
-
-## React
-
-Learn [React](https://reactjs.org/) at [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html).
-
-## Next.js
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/).
-
-## Styling
-
-This project uses [Tailwind](https://tailwindcss.com/). Checkout the [docs](https://tailwindcss.com/docs).
-
-For icons, use [React Icons](https://react-icons.github.io/react-icons/).
-
-## Animation
-
-Use [GSAP 3](https://greensock.com/) for animation.
-
-- [cheat sheet](https://greensock.com/cheatsheet/)
-- [getting started](https://greensock.com/get-started/)
-- [docs](https://greensock.com/docs/)
+</div>

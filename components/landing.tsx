@@ -6,19 +6,19 @@ export default function Landing() {
   return (
     <section
       className="
-			relative flex flex-row items-center min-h-screen pt-10
+			relative flex min-h-screen flex-row items-center pt-10
 			sm:pt-0
 		"
     >
       <div className={indexHeroStyle["mobile-hero"]} />
       <div
         className="
-				backdrop-filter backdrop-blur-md bg-white/60 w-full p-8
-				md:backdrop-filter-none sm:bg-transparent sm:w-1/2
-				md:pl-20 md:pr-10 md:pt-24 md:pb-10
+				w-full bg-white/60 p-8 backdrop-blur-md backdrop-filter
+				sm:w-1/2 sm:bg-transparent md:pl-20
+				md:pr-10 md:pt-24 md:pb-10 md:backdrop-filter-none
 			"
       >
-        <div className="max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl">
           <h1 className="mb-2 text-2xl md:mb-10 md:text-3xl lg:text-4xl xl:text-5xl">
             <Em emClassName="bg-red-300 right-4 bottom-1 lg:bottom-2">
               Grow. Learn. Connect.
