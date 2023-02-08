@@ -53,6 +53,11 @@ If you have any specific questions about the CMS, hit up Daryll on Discord!
 
 ## For site developers
 
+> **Note**
+>
+> There's an in-depth guide for site developers on [this site](https://gdscupdsitefordevs.super.site/). 
+> If you're looking for more specific details beyond what's covered in this README, check it out!
+
 If you don't have access to the [Netlify dashboard](https://app.netlify.com/sites/dscupd) yet, ask for an invite from one of the developers on Discord.
 
 Clone the repository to your local machine like so:
