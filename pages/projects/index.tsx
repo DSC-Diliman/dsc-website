@@ -1,17 +1,17 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import { getProjects } from "../lib/posts";
+import { getProjects } from "../../lib/posts";
 import Masonry from "react-masonry-css";
 import Link from "next/link";
 import masonryStyle from "/components/Masonry.module.scss";
-import ButtonClose from "../components/button-close";
-import ProjectShowcase from "../components/project-showcase";
+import ButtonClose from "../../components/button-close";
+import ProjectShowcase from "../../components/project-showcase";
 import Image from "next/image";
 import Head from "next/head";
-import { isArrayOfProjectsInCMS, ProjectInCMS } from "../types/project-in-cms";
-import markdownToHtml from "../lib/markdownToHtml";
-import titleToId from "../lib/titleToId";
+import { isArrayOfProjectsInCMS, ProjectInCMS } from "../../types/project-in-cms";
+import markdownToHtml from "../../lib/markdownToHtml";
+import titleToId from "../../lib/titleToId";
 
 Modal.setAppElement("#__next");
 
