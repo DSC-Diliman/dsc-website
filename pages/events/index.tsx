@@ -1,15 +1,15 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import { getEvents } from "../lib/posts";
-import markdownToHtml from "../lib/markdownToHtml";
-import EventsGrid from "../components/events-grid";
-import EventFeatured from "../components/event-featured";
-import EventShowcase from "../components/event-showcase";
-import ButtonClose from "../components/button-close";
+import { getEvents } from "../../lib/posts";
+import markdownToHtml from "../../lib/markdownToHtml";
+import EventsGrid from "../../components/events-grid";
+import EventFeatured from "../../components/event-featured";
+import EventShowcase from "../../components/event-showcase";
+import ButtonClose from "../../components/button-close";
 import Head from "next/head";
-import { EventInCMS, isArrayOfEventsInCMS } from "../types/event-in-cms";
-import titleToId from "../lib/titleToId";
+import { EventInCMS, isArrayOfEventsInCMS } from "../../types/event-in-cms";
+import titleToId from "../../lib/titleToId";
 
 Modal.setAppElement("#__next");
 
