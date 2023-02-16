@@ -55,11 +55,15 @@ export default function Events({ allEventsData }: Props) {
       </Modal>
       {allEventsData.length ? (
         <div>
-          <h1 id="featured" className="mt-12 text-center md:mt-32">Featured</h1>
+          <h1 id="featured" className="mt-12 text-center md:mt-32">
+            Featured
+          </h1>
           <section className="md:mt-10">
             <EventFeatured event={allEventsData[0]} />
           </section>
-          <h1 id="all-events" className="mt-12 text-center md:mt-28">All Events</h1>
+          <h1 id="all-events" className="mt-12 text-center md:mt-28">
+            All Events
+          </h1>
           <section className="md:mt-10">
             <EventsGrid eventsData={allEventsData} />
           </section>
