@@ -3,6 +3,7 @@ import Link from "next/link";
 interface SitemapElement {
   text: string;
   href: string;
+  show?: boolean;
 }
 
 interface Props {
@@ -20,11 +21,15 @@ export default function LinkGroup({ head, links }: Props) {
   ));
   return (
     <div className="text-left">
-      <Link href={`${head.href}`}>
-        <p className="block cursor-pointer py-2.5 font-bold hover:underline">
-          {head.text}
-        </p>
-      </Link>
+      {head.show ? (
+        <Link href={`${head.href}`}>
+          <p className="block cursor-pointer py-2.5 font-bold hover:underline">
+            {head.text}
+          </p>
+        </Link>
+      ) : (
+        <p className="block cursor-default py-2.5">&nbsp;</p>
+      )}
       {linksJSX}
     </div>
   );

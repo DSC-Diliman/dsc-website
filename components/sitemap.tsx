@@ -6,6 +6,7 @@ export default function Sitemap() {
       head: {
         text: "About",
         href: "about",
+        show: true,
       },
       links: [
         {
@@ -22,6 +23,7 @@ export default function Sitemap() {
       head: {
         text: "Team",
         href: "team",
+        show: true,
       },
       links: [
         {
@@ -36,6 +38,15 @@ export default function Sitemap() {
           text: "Operations",
           href: "operations",
         },
+      ],
+    },
+    {
+      head: {
+        text: "Team",
+        href: "team",
+        show: false,
+      },
+      links: [
         {
           text: "Communications",
           href: "communications",
@@ -50,17 +61,29 @@ export default function Sitemap() {
         },
       ],
     },
+    {
+      head: {
+        text: "Events",
+        href: "events",
+        show: true,
+      },
+      links: [
+        {
+          text: "Featured",
+          href: "featured",
+        },
+        {
+          text: "All Events",
+          href: "all-events",
+        },
+      ],
+    },
   ];
   const sitemapJSX = sections.map(({ head, links }, index) => (
     <LinkGroup key={index} head={head} links={links} />
   ));
   return (
-    <section
-      className="
-			mt-7 mb-11 flex justify-center gap-x-12 text-base
-			md:gap-x-16
-		"
-    >
+    <section className="mb-11 flex justify-center gap-x-14 text-base">
       {sitemapJSX}
     </section>
   );
