@@ -1,4 +1,5 @@
 export interface MemberInCMS {
+  id: string;
   name: string;
   year: number;
   team:

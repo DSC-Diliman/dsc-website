@@ -1,4 +1,5 @@
 export interface EventInCMS {
+  id: string;
   title: string;
   date: string;
   dateEnd: string;

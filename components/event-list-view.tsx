@@ -3,7 +3,6 @@ import { BiTimeFive } from "react-icons/bi";
 import { GrLocation } from "react-icons/gr";
 import { eventColors } from "../lib/eventColors";
 import sameDay from "../lib/sameDay";
-import titleToId from "../lib/titleToId";
 import { EventInCMS } from "../types/event-in-cms";
 import FormattedDate from "./formatted-date";
 import FormattedTime from "./formatted-time";
@@ -81,7 +80,7 @@ export default function EventList({ eventsArray }: Props) {
               </div>
             </div>
             <div className="ml-auto flex items-center">
-              <Link href={`/events/${titleToId(e.title)}`}>
+              <Link href={`/events/${e.id}`}>
                 <button className={`${eventColors["button"][e.eventType]}`}>
                   See Event
                 </button>

@@ -4,7 +4,6 @@ import FormattedDate from "./formatted-date";
 import FormattedTime from "./formatted-time";
 import Image from "next/image";
 import { EventInCMS } from "../types/event-in-cms";
-import titleToId from "../lib/titleToId";
 import sameDay from "../lib/sameDay";
 import { eventColors } from "../lib/eventColors";
 import { GrLocation } from "react-icons/gr";
@@ -69,8 +68,8 @@ export default function EventFeatured({ event }: Props) {
             <p>{event.summary}</p>
           </div>
           <Link
-            href={`/events?id=${titleToId(event.title)}`}
-            as={`/events/${titleToId(event.title)}`}
+            href={`/events?id=${event.id}`}
+            as={`/events/${event.id}`}
             scroll={false}
           >
             <button className={`${eventColors["button"][event.eventType]}`}>

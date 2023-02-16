@@ -14,7 +14,6 @@ import {
   ProjectInCMS,
 } from "../../types/project-in-cms";
 import markdownToHtml from "../../lib/markdownToHtml";
-import titleToId from "../../lib/titleToId";
 
 Modal.setAppElement("#__next");
 
@@ -35,7 +34,7 @@ export default function Projects({ allProjectsData }: Props) {
   useEffect(() => {
     if (router.query.id) {
       const result = allProjectsData.find(
-        (project) => titleToId(project.title) === router.query.id
+        (project) => project.id === router.query.id
       );
       setSelectedProject(result === undefined ? null : result);
     } else {
@@ -73,8 +72,8 @@ export default function Projects({ allProjectsData }: Props) {
             {allProjectsData.map((projectData, index) => (
               <div key={index}>
                 <Link
-                  href={`/projects?id=${titleToId(projectData.title)}`}
-                  as={`/projects/${titleToId(projectData.title)}`}
+                  href={`/projects?id=${projectData.id}`}
+                  as={`/projects/${projectData.id}`}
                   scroll={router.pathname != "/projects"}
                   shallow={true}
                 >

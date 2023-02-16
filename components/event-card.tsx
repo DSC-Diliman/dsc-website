@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { BiTimeFive } from "react-icons/bi";
 import sameDay from "../lib/sameDay";
-import titleToId from "../lib/titleToId";
 import { EventInCMS } from "../types/event-in-cms";
 import FormattedDate from "./formatted-date";
 import FormattedTime from "./formatted-time";
@@ -18,8 +17,8 @@ export default function EventCard({ e }: Props) {
 
   return (
     <Link
-      href={`/events?id=${titleToId(e.title)}`}
-      as={`/events/${titleToId(e.title)}`}
+      href={`/events?id=${e.id}`}
+      as={`/events/${e.id}`}
       scroll={router.pathname != "/events"}
       shallow={true}
     >

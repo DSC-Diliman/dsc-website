@@ -1,13 +1,17 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Modal from "react-modal";
-import { getEventIds, getEventById } from "../../lib/posts";
+import { getEventById, getEvents } from "../../lib/posts";
 import markdownToHtml from "../../lib/markdownToHtml";
 import EventShowcase from "../../components/event-showcase";
 import ButtonClose from "../../components/button-close";
 import Head from "next/head";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { EventInCMS, isEventInCMS } from "../../types/event-in-cms";
+import {
+  EventInCMS,
+  isArrayOfEventsInCMS,
+  isEventInCMS,
+} from "../../types/event-in-cms";
 import { ParsedUrlQuery } from "querystring";
 
 Modal.setAppElement("#__next");
@@ -70,10 +74,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: getEventIds().map((id) => ({
-      params: { id },
-    })),
-    fallback: false,
-  };
+  const allEvents = getEvents();
+  if (isArrayOfEventsInCMS(allEvents)) {
+    return {
+      paths: allEvents.map(({ id }) => ({
+        params: { id },
+      })),
+      fallback: false,
+    };
+  } else {
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
 };

@@ -1,4 +1,5 @@
 export interface ProjectInCMS {
+  id: string;
   title: string;
   thumbnail: string;
   images: string[];

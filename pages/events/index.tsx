@@ -9,7 +9,6 @@ import EventShowcase from "../../components/event-showcase";
 import ButtonClose from "../../components/button-close";
 import Head from "next/head";
 import { EventInCMS, isArrayOfEventsInCMS } from "../../types/event-in-cms";
-import titleToId from "../../lib/titleToId";
 
 Modal.setAppElement("#__next");
 
@@ -27,9 +26,7 @@ export default function Events({ allEventsData }: Props) {
 
   useEffect(() => {
     if (router.query.id) {
-      const result = allEventsData.find(
-        (event) => titleToId(event.title) == router.query.id
-      );
+      const result = allEventsData.find((event) => event.id == router.query.id);
       setSelectedEvent(result === undefined ? null : result);
     } else {
       setSelectedEvent(null);
