@@ -24,7 +24,11 @@ export default function EventShowcase({ event }: Props) {
           width={(439 / 214) * 320}
         />
       </div>
-      <div className="border-t-2 flex border-solid border-blue-700 px-7 py-5">
+      <div
+        className={`flex border-t-2 border-solid ${
+          eventColors["border"][event.eventType]
+        } px-7 py-5`}
+      >
         <div className="flex flex-col justify-center">
           <div className="flex items-center gap-3">
             <div
@@ -67,7 +71,11 @@ export default function EventShowcase({ event }: Props) {
             </div>
           </div>
         </div>
-				<div className={`mx-7 w-1 rounded-full ${eventColors["separator"][event.eventType]}`} />
+        <div
+          className={`mx-7 w-1 rounded-full ${
+            eventColors["separator"][event.eventType]
+          }`}
+        />
         <div
           className={`${markdownStyle.markdown}`}
           dangerouslySetInnerHTML={{ __html: event.body || "" }}

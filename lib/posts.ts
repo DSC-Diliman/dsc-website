@@ -47,7 +47,7 @@ function getRecordById(
 
   const { data, content } = matter(fileContents);
   data.id = id;
-	data.body = content;
+  data.body = content;
 
   if (isMemberInCMS(data) || isProjectInCMS(data) || isEventInCMS(data)) {
     return data;
