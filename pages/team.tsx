@@ -68,7 +68,7 @@ export default function Team({ allMemberData }: Props) {
         onClick={() => setYearToShow(year)}
         className={className}
       >
-        {year} - {year + 1}
+        {year} – {year + 1}
       </button>
     );
   });
