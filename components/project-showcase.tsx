@@ -20,7 +20,7 @@ export default function ProjectShowcase({ project }: Props) {
       <div className="m-3 md:m-6">
         <h1>{project.title}</h1>
         <div
-          className={markdownStyle.markdown}
+          className={`${markdownStyle.markdown}`}
           dangerouslySetInnerHTML={{ __html: project.body || "" }}
         />
       </div>

@@ -45,8 +45,9 @@ function getRecordById(
   const filepath = path.join(postsDirectory, collection, `${id}.md`);
   const fileContents = fs.readFileSync(filepath, "utf-8");
 
-  const { data } = matter(fileContents);
+  const { data, content } = matter(fileContents);
   data.id = id;
+	data.body = content;
 
   if (isMemberInCMS(data) || isProjectInCMS(data) || isEventInCMS(data)) {
     return data;
