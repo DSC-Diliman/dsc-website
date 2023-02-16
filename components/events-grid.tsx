@@ -74,7 +74,9 @@ export default function EventsGrid({ eventsData }: Props) {
           {eventsToShow}
         </div>
       ) : (
-        <div className="text-center">We have no events to show...</div>
+        <div className="flex h-56 items-center justify-center">
+          <p className="text-xl">We have no events to show...</p>
+        </div>
       )}
     </div>
   );
