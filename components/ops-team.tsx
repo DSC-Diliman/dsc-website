@@ -15,7 +15,7 @@ export default function OpsTeam({ allOpsData }: Props) {
     >
       <div className="pt-32">
         <h2>
-          <AnimatedEm emClassName="bg-red-400 bottom-0 -left-4">
+          <AnimatedEm emClassName="bg-red-400/50 bottom-0 -left-4">
             Operations
           </AnimatedEm>
         </h2>
@@ -26,7 +26,7 @@ export default function OpsTeam({ allOpsData }: Props) {
       </div>
       <div className="relative flex w-full flex-wrap justify-evenly gap-4">
         <ParallaxObject
-          className="absolute -right-12 h-20 w-20 rounded-full bg-red-400"
+          className="absolute -right-12 h-20 w-20 rounded-full bg-red-400/50"
           y={[0, 200]}
           end="bottom+=160 top"
         />

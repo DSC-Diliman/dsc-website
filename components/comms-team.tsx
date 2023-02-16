@@ -15,7 +15,7 @@ export default function CommsTeam({ allCommsData }: Props) {
     >
       <div className="md:order-2">
         <h2>
-          <AnimatedEm emClassName="bg-blue-400 bottom-0 left-4">
+          <AnimatedEm emClassName="bg-blue-400/50 bottom-0 left-4">
             Communications
           </AnimatedEm>
         </h2>
@@ -28,7 +28,7 @@ export default function CommsTeam({ allCommsData }: Props) {
       </div>
       <div className="relative flex w-full flex-wrap justify-evenly gap-4">
         <ParallaxObject
-          className="absolute -left-2 h-10 w-10 rounded-full bg-blue-400"
+          className="absolute -left-2 h-10 w-10 rounded-full bg-blue-400/50"
           y={[-100, 200]}
           end="bottom+=160 top"
         />

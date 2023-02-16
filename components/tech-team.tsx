@@ -15,7 +15,7 @@ export default function TechTeam({ allTechData }: Props) {
     >
       <div className="pt-32 md:order-2">
         <h2>
-          <AnimatedEm emClassName="bg-emerald-500 bottom-0 left-4">
+          <AnimatedEm emClassName="bg-emerald-500/50 bottom-0 left-4">
             Technology
           </AnimatedEm>
         </h2>
@@ -26,12 +26,12 @@ export default function TechTeam({ allTechData }: Props) {
       </div>
       <div className="relative flex w-full flex-wrap justify-evenly gap-4">
         <ParallaxObject
-          className="absolute -left-24 h-20 w-20 rounded-full bg-emerald-500"
+          className="absolute -left-24 h-20 w-20 rounded-full bg-emerald-500/50"
           y={[0, 200]}
           end="bottom+=160 top"
         />
         <ParallaxObject
-          className="absolute bottom-0 right-24 h-6 w-6 rounded-full bg-emerald-500"
+          className="absolute bottom-0 right-24 h-6 w-6 rounded-full bg-emerald-500/50"
           y={[0, 50]}
           end="bottom+=200 top"
         />
