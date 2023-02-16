@@ -57,7 +57,7 @@ export default function EventsGrid({ eventsData }: Props) {
         />
       ) : (
         <div
-          className={`h-4 w-4 rounded-full border-2 border-solid ${eventColors["light-bg"][category]}`}
+          className={`h-4 w-4 rounded-full border-2 border-solid ${eventColors["light-border"][category]}`}
         />
       )}
       <p>{category}</p>

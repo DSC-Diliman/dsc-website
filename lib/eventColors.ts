@@ -17,6 +17,12 @@ export const eventColors = {
     Workshops: "border-emerald-700",
     "Tech Solutions": "border-amber-700",
   },
+  "light-border": {
+    "Speaker Sessions": "border-red-500",
+    Internal: "border-blue-500",
+    Workshops: "border-emerald-500",
+    "Tech Solutions": "border-amber-500",
+  },
   separator: {
     "Speaker Sessions": "bg-red-700/20",
     Internal: "bg-blue-700/20",
