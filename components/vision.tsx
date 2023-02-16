@@ -11,12 +11,12 @@ export default function Vision() {
     >
       <div className="mx-auto max-w-3xl grid-cols-1 gap-4 sm:grid md:gap-12 lg:grid-cols-2">
         <div>
-          <h1 className="mb-4 text-2xl font-black text-red-700 sm:mt-5">
+          <h1 className="mb-4 text-2xl font-black text-[#7c100f] sm:mt-5">
             VISION
           </h1>
           <p className="mb-6 text-3xl font-medium">
             Uplifting communities through{" "}
-            <AnimatedEm emClassName="bg-amber-300 bottom-0 left-4">
+            <AnimatedEm emClassName="bg-amber-300/50 bottom-0 left-4">
               technology
             </AnimatedEm>
           </p>
@@ -85,9 +85,9 @@ export default function Vision() {
             />
           </AnimatedObject>
           <div className="mt-20 mr-20 ml-auto max-w-min space-y-6 text-5xl font-medium">
-            <AnimatedText className="text-red-400">Empower.</AnimatedText>
-            <AnimatedText className="text-blue-400">Enlighten.</AnimatedText>
-            <AnimatedText className="text-amber-400">Create.</AnimatedText>
+            <AnimatedText className="text-red-600">Empower.</AnimatedText>
+            <AnimatedText className="text-blue-600">Enlighten.</AnimatedText>
+            <AnimatedText className="text-amber-700">Create.</AnimatedText>
           </div>
         </div>
       </div>
