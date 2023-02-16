@@ -13,14 +13,17 @@ import {
   isEventInCMS,
 } from "../../types/event-in-cms";
 import { ParsedUrlQuery } from "querystring";
+import EventsGrid from "../../components/events-grid";
+import EventFeatured from "../../components/event-featured";
 
 Modal.setAppElement("#__next");
 
 interface Props {
   event: EventInCMS;
+  allEventsData: EventInCMS[];
 }
 
-export default function EventPage({ event }: Props) {
+export default function EventPage({ event, allEventsData }: Props) {
   const router = useRouter();
 
   function closeModal() {
@@ -34,7 +37,7 @@ export default function EventPage({ event }: Props) {
   return (
     <>
       <Head>
-        <title>Event | GDSC UPD</title>
+        <title>Events | GDSC UPD</title>
       </Head>
       <Modal
         isOpen={true}
@@ -48,6 +51,26 @@ export default function EventPage({ event }: Props) {
         <ButtonClose onClick={closeModal} />
         <EventShowcase event={event} />
       </Modal>
+      {allEventsData.length ? (
+        <div>
+          <h1 id="featured" className="mt-12 text-center md:mt-32">
+            Featured
+          </h1>
+          <section className="md:mt-10">
+            <EventFeatured event={allEventsData[0]} />
+          </section>
+          <h1 id="all-events" className="mt-12 text-center md:mt-28">
+            All Events
+          </h1>
+          <section className="md:mt-10">
+            <EventsGrid eventsData={allEventsData} />
+          </section>
+        </div>
+      ) : (
+        <p className="flex-1 p-10 text-center text-3xl">
+          No events at the moment...
+        </p>
+      )}
     </>
   );
 }
@@ -59,12 +82,23 @@ interface SafeParams extends ParsedUrlQuery {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params as SafeParams;
   const event = getEventById(id);
+  const allEventsData = getEvents();
+
+  if (isArrayOfEventsInCMS(allEventsData)) {
+    allEventsData.forEach(async (event, index, events) => {
+      events[index].body = await markdownToHtml(event.body || "");
+    });
+    await Promise.all(allEventsData);
+  }
 
   if (isEventInCMS(event)) {
     const body = await markdownToHtml(event.body || "");
     const eventInProps = JSON.parse(JSON.stringify({ ...event, body }));
     return {
-      props: { event: eventInProps },
+      props: {
+        allEventsData: JSON.parse(JSON.stringify(allEventsData)),
+        event: eventInProps,
+      },
     };
   } else {
     return {
