@@ -39,8 +39,8 @@ export default function Nav() {
         {[
           {
             page: "Home",
-            normalStyle: "btn-style1-yellow",
-            selectedStyle: "btn-style1-yellow-selected",
+            normalStyle: "btn-style1-default",
+            selectedStyle: "btn-style1-default-selected",
           },
           {
             page: "About",

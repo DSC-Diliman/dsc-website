@@ -57,6 +57,14 @@
   button {
     &.btn-style1 {
       @apply transition-colors;
+      &-default {
+        @extend .btn-style1;
+        @apply hover:bg-black/90 hover:text-white;
+        &-selected {
+          @extend .btn-style1;
+          @apply bg-black text-white;
+        }
+      }
       &-blue {
         @extend .btn-style1;
         @apply hover:bg-blue-pr hover:text-white;
