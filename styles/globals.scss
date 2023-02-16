@@ -113,7 +113,7 @@
   }
 
   .div-style1 {
-    @apply rounded-2xl bg-white shadow-3xl md:rounded-4xl;
+    @apply rounded-2xl bg-white shadow-2xl md:rounded-4xl;
   }
 
   .div-style2 {
@@ -122,6 +122,10 @@
 }
 
 @layer utilities {
+  .debug {
+    @apply border border-solid border-black;
+  }
+
   .frosted {
     @apply bg-white bg-opacity-50 backdrop-blur-xl backdrop-filter;
   }

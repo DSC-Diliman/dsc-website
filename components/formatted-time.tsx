@@ -7,7 +7,7 @@ interface Props {
 
 export default function FormattedTime({
   dateTime,
-  timeFormat = "h:mm a",
+  timeFormat = "h:mm aaaa",
 }: Props) {
   return (
     <time dateTime={dateTime}>{format(parseISO(dateTime), timeFormat)}</time>

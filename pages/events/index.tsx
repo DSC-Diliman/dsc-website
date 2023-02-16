@@ -53,14 +53,14 @@ export default function Events({ allEventsData }: Props) {
         <ButtonClose onClick={closeModal} />
         {selectedEvent ? <EventShowcase event={selectedEvent} /> : null}
       </Modal>
-      <h1 className="my-4 pt-12 text-center md:pt-24">Events</h1>
       {allEventsData.length ? (
         <div>
-          <section id="featured" className="px-4 md:px-10">
+          <h1 className="mt-12 text-center md:mt-32">Featured Event</h1>
+          <section id="featured" className="md:mt-10">
             <EventFeatured event={allEventsData[0]} />
           </section>
-
-          <section id="allEvents" className="my-6 px-4 md:my-10 md:px-10">
+          <h1 className="mt-12 text-center md:mt-28">All Events</h1>
+          <section id="allEvents" className="md:mt-10">
             <EventsGrid eventsData={allEventsData} />
           </section>
         </div>

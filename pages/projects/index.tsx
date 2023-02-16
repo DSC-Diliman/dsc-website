@@ -9,7 +9,10 @@ import ButtonClose from "../../components/button-close";
 import ProjectShowcase from "../../components/project-showcase";
 import Image from "next/image";
 import Head from "next/head";
-import { isArrayOfProjectsInCMS, ProjectInCMS } from "../../types/project-in-cms";
+import {
+  isArrayOfProjectsInCMS,
+  ProjectInCMS,
+} from "../../types/project-in-cms";
 import markdownToHtml from "../../lib/markdownToHtml";
 import titleToId from "../../lib/titleToId";
 
