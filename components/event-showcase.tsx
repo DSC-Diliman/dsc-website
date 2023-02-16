@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi";
+import { BiTimeFive, BiCalendarEvent } from "react-icons/bi";
+import { GrLocation } from "react-icons/gr";
 import { EventInCMS } from "../types/event-in-cms";
 import FormattedDate from "./formatted-date";
 import FormattedTime from "./formatted-time";
@@ -29,7 +30,7 @@ export default function EventShowcase({ event }: Props) {
           </div>
           <a href={event.locationURL} target="_blank" rel="noreferrer">
             <div>
-              <BiLocationPlus /> {event.location}
+              <GrLocation /> {event.location}
             </div>
           </a>
           <div>

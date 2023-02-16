@@ -11,7 +11,9 @@ export default function WebDevTeam({ allWebDevData }: Props) {
     <section id="web-dev">
       <div className="w-full px-4 pt-12 pb-8 text-center md:px-10 md:pt-24">
         <h1 className="text-center">
-          <Em emClassName="bg-blue-400/50 bottom-0">&nbsp;&nbsp;&nbsp;Websit</Em>
+          <Em emClassName="bg-blue-400/50 bottom-0">
+            &nbsp;&nbsp;&nbsp;Websit
+          </Em>
           <Em emClassName="bg-red-400/50 bottom-0">e Deve</Em>
           <Em emClassName="bg-amber-400/50 bottom-0">lopmen</Em>
           <Em emClassName="bg-emerald-400/50 bottom-0">

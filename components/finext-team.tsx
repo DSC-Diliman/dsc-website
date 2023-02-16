@@ -15,7 +15,10 @@ export default function FinExtTeam({ allExteFinData }: Props) {
     >
       <div>
         <h2>
-          <AnimatedEm emClassName="bg-amber-300/50 bottom-0 -left-4" trigger="90%">
+          <AnimatedEm
+            emClassName="bg-amber-300/50 bottom-0 -left-4"
+            trigger="90%"
+          >
             Finance and Externals
           </AnimatedEm>
         </h2>

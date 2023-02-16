@@ -1,4 +1,4 @@
-import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi";
+import { BiTimeFive, BiCalendarEvent } from "react-icons/bi";
 import Link from "next/link";
 import FormattedDate from "./formatted-date";
 import FormattedTime from "./formatted-time";
@@ -7,6 +7,7 @@ import { EventInCMS } from "../types/event-in-cms";
 import titleToId from "../lib/titleToId";
 import sameDay from "../lib/sameDay";
 import { eventColors } from "../lib/eventColors";
+import { GrLocation } from "react-icons/gr";
 
 interface Props {
   event: EventInCMS;
@@ -58,7 +59,7 @@ export default function EventFeatured({ event }: Props) {
               </div>
             )}
             <div className="flex items-center gap-2">
-              <BiLocationPlus size={20} />{" "}
+              <GrLocation size={20} />{" "}
               <Link href={event.locationURL}>
                 <span className="border-b border-black">{event.location}</span>
               </Link>

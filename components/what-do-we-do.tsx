@@ -14,7 +14,7 @@ export default function WhatDoWeDo() {
         <GiMicrophone
           size={150}
           color="red"
-          className="absolute -bottom-2 -right-5 z-0 opacity-10 md:bottom-4"
+          className="absolute -bottom-2 right-4 z-0 opacity-10 md:bottom-4"
         />
       ),
     },
@@ -25,7 +25,7 @@ export default function WhatDoWeDo() {
         <GiMagnifyingGlass
           size={150}
           color="blue"
-          className="absolute -bottom-2 -right-5 z-0 opacity-10 md:bottom-4"
+          className="absolute -bottom-2 right-4 z-0 opacity-10 md:bottom-4"
         />
       ),
     },
@@ -36,7 +36,7 @@ export default function WhatDoWeDo() {
         <BsWrench
           size={150}
           color="green"
-          className="absolute -bottom-2 -right-5 z-0 opacity-10 md:bottom-4"
+          className="absolute -bottom-2 right-4 z-0 opacity-10 md:bottom-4"
         />
       ),
     },
@@ -47,7 +47,7 @@ export default function WhatDoWeDo() {
         <ImLab
           size={150}
           color="yellow"
-          className="absolute -bottom-2 -right-5 z-0 opacity-30 md:bottom-4"
+          className="absolute -bottom-2 right-4 z-0 opacity-20 md:bottom-4"
         />
       ),
     },
@@ -66,7 +66,7 @@ export default function WhatDoWeDo() {
       </h1>
       <OffsetGrid elements={offsetGridContents} />
       <Link href="/team">
-        <button className="btn-style2-red">Check out our teams!</button>
+        <button className="btn-style2-default">Check out our teams!</button>
       </Link>
     </section>
   );
