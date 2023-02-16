@@ -17,7 +17,7 @@ export default function Copyright() {
         Ⓒ 2023 Google Developer Student Clubs UP Diliman. All Rights Reserved.
       </p>
       {pathname === "/" && (
-        <p className="text-xs italic">Oblation photo by Mila D. Aguilar.</p>
+        <p className="mt-1 italic">Oblation photo by Mila D. Aguilar.</p>
       )}
     </div>
   );
