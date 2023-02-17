@@ -5,6 +5,7 @@ import { eventColors } from "../lib/eventColors";
 
 interface Props {
   eventsData: EventInCMS[];
+  openModal: (e: EventInCMS) => void;
 }
 
 type EventType =
@@ -13,7 +14,7 @@ type EventType =
   | "Workshops"
   | "Tech Solutions";
 
-export default function EventsGrid({ eventsData }: Props) {
+export default function EventsGrid({ eventsData, openModal }: Props) {
   const [categoriesToShow, setCategoriesToShow] = useState([
     "Speaker Sessions",
     "Internal",
@@ -43,7 +44,7 @@ export default function EventsGrid({ eventsData }: Props) {
 
   const eventsToShow = eventsData
     .filter((e) => categoriesToShow.includes(e.eventType))
-    .map((e, index) => <EventCard e={e} key={index} />);
+    .map((e, index) => <EventCard e={e} key={index} openModal={openModal} />);
 
   const categorySelectionButtons = categories.map((category, index) => (
     <div

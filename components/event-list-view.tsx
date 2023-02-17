@@ -80,7 +80,7 @@ export default function EventList({ eventsArray }: Props) {
               </div>
             </div>
             <div className="ml-auto flex items-center">
-              <Link href={`/events/${e.id}`}>
+              <Link href={`/events#${e.id}`}>
                 <button className={`${eventColors["button"][e.eventType]}`}>
                   See Event
                 </button>

@@ -1,14 +1,13 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
-import { getEvents } from "../../lib/posts";
-import markdownToHtml from "../../lib/markdownToHtml";
-import EventsGrid from "../../components/events-grid";
-import EventFeatured from "../../components/event-featured";
-import EventShowcase from "../../components/event-showcase";
-import ButtonClose from "../../components/button-close";
+import { getEvents } from "../lib/posts";
+import markdownToHtml from "../lib/markdownToHtml";
+import EventsGrid from "../components/events-grid";
+import EventFeatured from "../components/event-featured";
+import EventShowcase from "../components/event-showcase";
+import ButtonClose from "../components/button-close";
 import Head from "next/head";
-import { EventInCMS, isArrayOfEventsInCMS } from "../../types/event-in-cms";
+import { EventInCMS, isArrayOfEventsInCMS } from "../types/event-in-cms";
 
 Modal.setAppElement("#__next");
 
@@ -17,21 +16,15 @@ interface Props {
 }
 
 export default function Events({ allEventsData }: Props) {
-  const router = useRouter();
   const [selectedEvent, setSelectedEvent] = useState<EventInCMS | null>(null);
 
-  function closeModal() {
-    router.push(router.pathname, undefined, { scroll: false });
+  function openModal(e: EventInCMS) {
+    setSelectedEvent(e);
   }
 
-  useEffect(() => {
-    if (router.query.id) {
-      const result = allEventsData.find((event) => event.id == router.query.id);
-      setSelectedEvent(result === undefined ? null : result);
-    } else {
-      setSelectedEvent(null);
-    }
-  }, [router.query.id, allEventsData]);
+  function closeModal() {
+    setSelectedEvent(null);
+  }
 
   return (
     <>
@@ -56,13 +49,13 @@ export default function Events({ allEventsData }: Props) {
             Featured
           </h1>
           <section className="md:mt-10">
-            <EventFeatured event={allEventsData[0]} />
+            <EventFeatured event={allEventsData[0]} openModal={openModal} />
           </section>
           <h1 id="all-events" className="mt-12 text-center md:mt-28">
             All Events
           </h1>
           <section className="md:mt-10">
-            <EventsGrid eventsData={allEventsData} />
+            <EventsGrid eventsData={allEventsData} openModal={openModal} />
           </section>
         </div>
       ) : (

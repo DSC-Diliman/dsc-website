@@ -10,9 +10,10 @@ import { GrLocation } from "react-icons/gr";
 
 interface Props {
   event: EventInCMS;
+  openModal: (e: EventInCMS) => void;
 }
 
-export default function EventFeatured({ event }: Props) {
+export default function EventFeatured({ event, openModal }: Props) {
   return (
     <div className="div-style1 mx-auto flex max-h-80 w-full max-w-6xl flex-col sm:flex-row">
       <div className="img-frame opacity-50 sm:order-2 sm:flex-1">
@@ -67,15 +68,14 @@ export default function EventFeatured({ event }: Props) {
           <div className="mb-6">
             <p>{event.summary}</p>
           </div>
-          <Link
-            href={`/events?id=${event.id}`}
-            as={`/events/${event.id}`}
-            scroll={false}
-          >
-            <button className={`${eventColors["button"][event.eventType]}`}>
+          <div>
+            <button
+              className={`${eventColors["button"][event.eventType]}`}
+              onClick={() => openModal(event)}
+            >
               See Details
             </button>
-          </Link>
+          </div>
         </div>
       </div>
     </div>
