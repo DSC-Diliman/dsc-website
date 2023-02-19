@@ -44,7 +44,7 @@ export default function Projects({ allProjectsData }: Props) {
           <h1 className="mt-20 text-center">All Projects</h1>
         </>
       )}
-      <div className="mx-auto mt-12 w-full max-w-6xl flex-1 px-4 md:px-10">
+      <div className="mx-auto mt-10 w-full max-w-6xl flex-1 px-4 md:px-10">
         {allProjectsData.length ? (
           <Masonry
             className={masonryStyle["projects-masonry"]}
