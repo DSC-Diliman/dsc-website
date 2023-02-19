@@ -46,7 +46,7 @@ export default function WhatDoWeDo() {
       icon: (
         <ImLab
           size={150}
-          color="yellow"
+          color="gold"
           className="absolute -bottom-2 right-4 z-0 opacity-20 md:bottom-4"
         />
       ),
