@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function Copyright() {
   const { pathname } = useRouter();
   return (
-    <div className="mt-10 text-sm">
+    <div className="mt-16 text-sm">
       <div className="mb-5 flex flex-initial flex-col items-center">
         <Image
           src="/images/dsc-upd-logo.png"
