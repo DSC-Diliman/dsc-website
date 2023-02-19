@@ -5,9 +5,9 @@ import markdownToHtml from "../lib/markdownToHtml";
 import EventsGrid from "../components/events-grid";
 import EventFeatured from "../components/event-featured";
 import EventShowcase from "../components/event-showcase";
-import ButtonClose from "../components/button-close";
 import Head from "next/head";
 import { EventInCMS, isArrayOfEventsInCMS } from "../types/event-in-cms";
+import { IoClose } from "react-icons/io5";
 
 Modal.setAppElement("#__next");
 
@@ -40,7 +40,12 @@ export default function Events({ allEventsData }: Props) {
         overlayClassName="fixed bg-black/50 inset-0"
         parentSelector={() => document.querySelector("#__next") as HTMLElement}
       >
-        <ButtonClose onClick={closeModal} />
+        <button
+          className="fixed right-7 top-7 h-12 w-12 rounded-full bg-gray-300/70 transition-all hover:rotate-90 md:right-4 md:top-4 md:h-14 md:w-14"
+          onClick={closeModal}
+        >
+          <IoClose className="h-8 w-8 align-middle" />
+        </button>
         {selectedEvent && <EventShowcase event={selectedEvent} />}
       </Modal>
       {allEventsData.length > 0 ? (
