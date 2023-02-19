@@ -16,7 +16,7 @@ interface Props {
 export default function EventFeatured({ event, openModal }: Props) {
   return (
     <div className="div-style1 mx-auto flex max-h-80 w-full max-w-6xl flex-col sm:flex-row">
-      <div className="img-frame opacity-50 sm:order-2 sm:flex-1">
+      <div className="img-frame sm:order-2 sm:flex-1">
         <Image
           src={event.images[0]}
           alt="Event image"
