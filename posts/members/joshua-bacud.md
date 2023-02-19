@@ -2,7 +2,7 @@
 name: Joshua Bacud
 year: 2021
 team: Executive
-position: Chief FinExt Officer
+position: Chief Finance and Externals Officer
 thumbnail: /uploads/joshua.jpg
 quote:
 facebookURL: "https://www.facebook.com/joshua.bacud.3/"
