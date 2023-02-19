@@ -30,9 +30,29 @@ export default function Portrait({
   desc,
   socials = {},
 }: Props) {
+  let hoverHeight: string;
+
+  if (
+    !(
+      desc ||
+      socials.facebook ||
+      socials.github ||
+      socials.linkedin ||
+      socials.twitter
+    )
+  ) {
+    hoverHeight = "";
+  } else if (!desc) {
+    hoverHeight = "group-hover:h-12";
+  } else if (!(socials.facebook || socials.github || socials.linkedin || socials.twitter)) {
+    hoverHeight = "group-hover:h-24";
+  } else {
+    hoverHeight = "group-hover:h-36";
+	}
+
   return (
     <div
-      className={`img-frame group relative h-44 w-36 overflow-hidden rounded-xl text-sm shadow-2xl md:h-60 md:w-48 md:rounded-3xl ${className}`}
+      className={`img-frame group relative flex h-44 w-36 flex-col justify-end overflow-hidden rounded-xl text-sm shadow-2xl md:h-60 md:w-48 md:rounded-3xl ${className}`}
     >
       <Image
         src={src}
@@ -41,13 +61,19 @@ export default function Portrait({
         height={176}
         width={144}
       />
-      <div className="absolute bottom-0 h-24 w-full bg-gradient-to-t from-black" />
-      <div className="relative mt-28 flex h-full flex-col p-2 text-white transition-all group-hover:mt-0 group-hover:bg-black group-hover:bg-opacity-70 md:mt-40 md:p-4">
-        <p className="font-medium md:text-base">{name}</p>
-        <p className="text-xs">{position}</p>
-        <div className="flex flex-1 flex-col pt-3 text-xs md:text-sm">
-          <p className="my-auto">{desc}</p>
-        </div>
+      <div className="z-50 h-4 w-full bg-gradient-to-t from-black/20" />
+      <div className="z-50 bg-gradient-to-t from-black/80 to-black/20 py-5 px-4 text-white">
+        {name && <p className="font-medium md:text-base">{name}</p>}
+        {position && <p className="text-xs">{position}</p>}
+      </div>
+      <div
+        className={`z-50 flex h-0 flex-col gap-3 bg-black/80 px-4 pb-1 text-xs text-white transition-all ${hoverHeight} md:text-sm`}
+      >
+        {desc && (
+          <div className="flex h-24 items-center">
+            <p>{desc}</p>
+          </div>
+        )}
         <div className="text-2xl md:text-4xl">
           {socials.facebook && (
             <a href={socials.facebook} target="_blank" rel="noreferrer">
