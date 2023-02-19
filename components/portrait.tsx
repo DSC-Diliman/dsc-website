@@ -44,11 +44,13 @@ export default function Portrait({
     hoverHeight = "";
   } else if (!desc) {
     hoverHeight = "group-hover:h-12";
-  } else if (!(socials.facebook || socials.github || socials.linkedin || socials.twitter)) {
+  } else if (
+    !(socials.facebook || socials.github || socials.linkedin || socials.twitter)
+  ) {
     hoverHeight = "group-hover:h-24";
   } else {
     hoverHeight = "group-hover:h-36";
-	}
+  }
 
   return (
     <div
@@ -77,22 +79,22 @@ export default function Portrait({
         <div className="text-2xl md:text-4xl">
           {socials.facebook && (
             <a href={socials.facebook} target="_blank" rel="noreferrer">
-              <TiSocialFacebookCircular />
+              <TiSocialFacebookCircular className="transition-all hover:scale-110" />
             </a>
           )}
           {socials.twitter && (
             <a href={socials.twitter} target="_blank" rel="noreferrer">
-              <TiSocialTwitterCircular />
+              <TiSocialTwitterCircular className="transition-all hover:scale-110" />
             </a>
           )}
           {socials.linkedin && (
             <a href={socials.linkedin} target="_blank" rel="noreferrer">
-              <TiSocialLinkedinCircular />
+              <TiSocialLinkedinCircular className="transition-all hover:scale-110" />
             </a>
           )}
           {socials.github && (
             <a href={socials.github} target="_blank" rel="noreferrer">
-              <TiSocialGithubCircular />
+              <TiSocialGithubCircular className="transition-all hover:scale-110" />
             </a>
           )}
         </div>
