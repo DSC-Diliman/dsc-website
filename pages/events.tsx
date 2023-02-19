@@ -41,7 +41,7 @@ export default function Events({ allEventsData }: Props) {
         parentSelector={() => document.querySelector("#__next") as HTMLElement}
       >
         <ButtonClose onClick={closeModal} />
-        {selectedEvent ? <EventShowcase event={selectedEvent} /> : null}
+        {selectedEvent && <EventShowcase event={selectedEvent} />}
       </Modal>
       {allEventsData.length ? (
         <div>

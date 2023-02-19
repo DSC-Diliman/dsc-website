@@ -20,7 +20,7 @@ export default function EventCard({ e, openModal }: Props) {
       <div
         className={`flex h-full flex-col overflow-hidden rounded-2xl border-2 border-solid bg-white ${
           eventColors["border"][e.eventType]
-        } h-56 transition-all hover:-translate-y-1.5`}
+        } h-56 transition-all hover:-translate-y-1.5 hover:cursor-pointer`}
         onClick={() => openModal(e)}
       >
         <div className="img-frame h-32 flex-none opacity-50">
