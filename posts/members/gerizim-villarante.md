@@ -2,7 +2,7 @@
 name: "Gerizim Villarante"
 year: 2021
 team: Web Development
-position: Web Development Lead
+position: Lead Developer
 thumbnail: /uploads/gerizim.jpg
 quote:
 facebookURL: https://www.facebook.com/gerizim16
