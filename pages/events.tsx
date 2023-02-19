@@ -43,7 +43,7 @@ export default function Events({ allEventsData }: Props) {
         <ButtonClose onClick={closeModal} />
         {selectedEvent && <EventShowcase event={selectedEvent} />}
       </Modal>
-      {allEventsData.length ? (
+      {allEventsData.length > 0 ? (
         <div>
           <h1 id="featured" className="mt-12 text-center md:mt-32">
             Featured
@@ -59,9 +59,11 @@ export default function Events({ allEventsData }: Props) {
           </section>
         </div>
       ) : (
-        <p className="flex-1 p-10 text-center text-3xl">
-          No events at the moment...
-        </p>
+				<div className="mt-12 md:mt-32">
+					<p className="flex-1 p-10 text-center text-3xl">
+						No events at the moment...
+					</p>
+				</div>
       )}
     </>
   );
