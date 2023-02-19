@@ -35,7 +35,7 @@ export default function Events({ allEventsData }: Props) {
         isOpen={!!selectedEvent}
         onRequestClose={closeModal}
         contentLabel="Event modal"
-        className="div-style1 absolute inset-x-4 mx-auto my-4 max-w-3xl overflow-y-auto bg-white md:inset-x-10 md:my-10"
+        className="div-style1 absolute inset-x-4 mx-auto my-4 max-w-3xl overflow-y-auto bg-white md:inset-x-10 md:my-32"
         style={{ content: { maxHeight: "calc(100% - 5rem)" } }}
         overlayClassName="fixed bg-black/50 inset-0"
         parentSelector={() => document.querySelector("#__next") as HTMLElement}
