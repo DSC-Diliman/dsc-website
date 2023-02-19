@@ -1,10 +1,5 @@
 import Link from "next/link";
-
-interface SitemapElement {
-  text: string;
-  href: string;
-  show?: boolean;
-}
+import { SitemapElement } from "../types/sitemap-element";
 
 interface Props {
   head: SitemapElement;
