@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <nav
       className="
-			frosted fixed inset-x-0 top-0 z-10 px-4 py-2 shadow-lg
+			frosted fixed inset-x-0 top-0 z-50 px-4 py-2 shadow-lg
 			md:mx-10 md:mt-6 md:flex md:h-14 md:justify-center md:rounded-2xl md:px-10 md:py-3
 			"
     >

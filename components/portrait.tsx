@@ -63,13 +63,13 @@ export default function Portrait({
         height={176}
         width={144}
       />
-      <div className="z-50 h-4 w-full bg-gradient-to-t from-black/20" />
-      <div className="z-50 bg-gradient-to-t from-black/80 to-black/20 py-5 px-4 text-white">
+      <div className="z-40 h-4 w-full bg-gradient-to-t from-black/20" />
+      <div className="z-40 bg-gradient-to-t from-black/80 to-black/20 py-5 px-4 text-white">
         {name && <p className="font-medium md:text-base">{name}</p>}
         {position && <p className="text-xs">{position}</p>}
       </div>
       <div
-        className={`z-50 flex h-0 flex-col gap-3 bg-black/80 px-4 pb-1 text-xs text-white transition-all ${hoverHeight} md:text-sm`}
+        className={`z-40 flex h-0 flex-col gap-3 bg-black/80 px-4 pb-1 text-xs text-white transition-all ${hoverHeight} md:text-sm`}
       >
         {desc && (
           <div className="flex h-24 items-center">
