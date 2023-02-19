@@ -38,15 +38,6 @@ export default function Sitemap() {
           text: "Operations",
           href: "operations",
         },
-      ],
-    },
-    {
-      head: {
-        text: "Team",
-        href: "team",
-        show: false,
-      },
-      links: [
         {
           text: "Communications",
           href: "communications",
@@ -83,7 +74,7 @@ export default function Sitemap() {
     <LinkGroup key={index} head={head} links={links} />
   ));
   return (
-    <section className="mb-11 flex justify-center gap-x-14 text-base">
+    <section className="mb-11 flex justify-center gap-x-14 text-base md:mb-0">
       {sitemapJSX}
     </section>
   );
