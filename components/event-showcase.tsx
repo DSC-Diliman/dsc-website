@@ -30,16 +30,15 @@ export default function EventShowcase({ event }: Props) {
         } px-7 py-5`}
       >
         <div className="flex flex-col justify-center">
-          <div className="flex items-center gap-3">
+          <div className="mb-1 flex items-center gap-4">
+            <h1 className="text-2xl">{event.title}</h1>
             <div
-              className={`h-5 w-5 rounded-full ${
+              className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
                 eventColors["light-bg"][event.eventType]
               }`}
-            />
-            <p className="text-lg">{event.eventType}</p>
-          </div>
-          <div>
-            <h1 className="my-3 text-2xl">{event.title}</h1>
+            >
+              {event.eventType}
+            </div>
           </div>
           <div className="flex flex-col gap-1 md:grid-cols-2 md:grid-rows-2">
             <div className="flex items-center gap-2">

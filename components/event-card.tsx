@@ -38,7 +38,7 @@ export default function EventCard({ e, openModal }: Props) {
         >
           <div className="flex min-w-fit flex-col self-center py-2 px-4 text-center">
             <div>
-              <span className="text-lg font-bold">
+              <span className="text-lg font-medium">
                 <FormattedDate
                   dateTime={e.date}
                   dateFormat="MMM dd"
@@ -55,7 +55,7 @@ export default function EventCard({ e, openModal }: Props) {
                   }`}
                 />
                 <div>
-                  <span className="text-lg font-bold">
+                  <span className="text-lg font-medium">
                     <FormattedDate
                       dateTime={e.dateEnd}
                       dateFormat="MMM dd"
@@ -72,7 +72,7 @@ export default function EventCard({ e, openModal }: Props) {
               eventColors["border"][e.eventType]
             } px-5 py-2`}
           >
-            <p className="text-xl font-bold">{e.title}</p>
+            <p className="text-xl font-medium">{e.title}</p>
             {sameDay(e.date, e.dateEnd) && (
               <div className="flex items-center gap-2">
                 <BiTimeFive size={17.5} />{" "}

@@ -28,12 +28,14 @@ export default function EventFeatured({ event, openModal }: Props) {
         <div className="m-4 flex flex-col sm:max-w-sm sm:flex-1 md:my-5 md:ml-10">
           <div>
             <div className="flex items-center gap-4">
+              <p className="text-3xl font-medium">{event.title}</p>
               <div
-                className={`h-7 w-7 rounded-full ${
+                className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
                   eventColors["light-bg"][event.eventType]
                 }`}
-              />
-              <p className="text-3xl font-medium">{event.title}</p>
+              >
+                {event.eventType}
+              </div>
             </div>
           </div>
           <div className="my-6 flex flex-col gap-1">

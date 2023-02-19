@@ -59,11 +59,11 @@ export default function Events({ allEventsData }: Props) {
           </section>
         </div>
       ) : (
-				<div className="mt-12 md:mt-32">
-					<p className="flex-1 p-10 text-center text-3xl">
-						No events at the moment...
-					</p>
-				</div>
+        <div className="mt-12 md:mt-32">
+          <p className="flex-1 p-10 text-center text-3xl">
+            No events at the moment...
+          </p>
+        </div>
       )}
     </>
   );

@@ -26,7 +26,7 @@ export default function EventList({ eventsArray }: Props) {
               <div
                 className={`flex h-10 w-10 items-center justify-center rounded-full ${
                   eventColors["light-bg"][e.eventType]
-                } text-2xl font-bold text-white`}
+                } text-2xl font-medium text-white`}
               >
                 <FormattedDate dateTime={e.date} dateFormat="dd" />
               </div>
@@ -48,7 +48,7 @@ export default function EventList({ eventsArray }: Props) {
                   <div
                     className={`flex h-10 w-10 items-center justify-center rounded-full ${
                       eventColors["light-bg"][e.eventType]
-                    } text-2xl font-bold text-white`}
+                    } text-2xl font-medium text-white`}
                   >
                     <FormattedDate dateTime={e.dateEnd} dateFormat="dd" />
                   </div>
@@ -61,8 +61,17 @@ export default function EventList({ eventsArray }: Props) {
                 eventColors["light-bg"][e.eventType]
               } md:mx-6`}
             />
-            <div className="flex flex-col justify-center gap-1">
-              <p className="text-base font-bold sm:text-lg">{e.title}</p>
+            <div className="flex flex-col items-start justify-center gap-1">
+              <div className="flex items-center gap-4">
+                <p className="text-base font-medium sm:text-lg">{e.title}</p>
+                <div
+                  className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
+                    eventColors["light-bg"][e.eventType]
+                  }`}
+                >
+                  {e.eventType}
+                </div>
+              </div>
               {sameDay(e.date, e.dateEnd) && (
                 <div className="flex items-center gap-2">
                   <BiTimeFive size={20} />{" "}
