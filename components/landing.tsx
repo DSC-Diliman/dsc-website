@@ -13,7 +13,7 @@ export default function Landing() {
               Grow. Learn. Connect.
             </Em>
           </h1>
-          <p className="text-base my-4 md:mb-10">
+          <p className="my-4 text-base md:mb-10">
             The <b>GDSC UP Diliman Chapter</b> is part of a global community of
             over 1500 universities.
           </p>

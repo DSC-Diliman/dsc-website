@@ -4,8 +4,10 @@ export default function Mission() {
   return (
     <section id="mission" className="pt-10 pb-12 text-center md:px-10 md:py-20">
       <h1 className="text-2xl font-black text-[#7c100f]">MISSION</h1>
-      <p className="text-base md:text-lg mt-2 mb-10">We, as an organization, aim to</p>
-      <div className="flex flex-col gap-10 xl:gap-20 items-center md:justify-center md:flex-row">
+      <p className="mt-2 mb-10 text-base md:text-lg">
+        We, as an organization, aim to
+      </p>
+      <div className="flex flex-col items-center gap-10 md:flex-row md:justify-center xl:gap-20">
         {[
           {
             title: "Empower",
@@ -23,9 +25,12 @@ export default function Mission() {
             image: "/images/dot_create.png",
           },
         ].map((e) => (
-          <div key={e.title} className="flex gap-10 items-center md:px-1 md:py-4 md:flex-col md:px-4">
+          <div
+            key={e.title}
+            className="flex items-center gap-10 md:flex-col md:px-1 md:py-4 md:px-4"
+          >
             <div
-              className="img-frame mx-auto md:mb-10 h-20 w-20 rounded-full sm:h-32 sm:w-32"
+              className="img-frame mx-auto h-20 w-20 rounded-full sm:h-32 sm:w-32 md:mb-10"
               style={{ position: "relative" }}
             >
               <Image
@@ -35,7 +40,7 @@ export default function Mission() {
                 width={480}
               />
             </div>
-            <div className="text-left w-56 md:text-center">
+            <div className="w-56 text-left md:text-center">
               <p className="mb-2 text-xl font-medium md:text-2xl">{e.title}</p>
               <p className="text-base">{e.desc}</p>
             </div>
