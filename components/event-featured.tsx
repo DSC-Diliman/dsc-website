@@ -25,7 +25,7 @@ export default function EventFeatured({ event, openModal }: Props) {
         />
       </div>
       <div className="flex items-center">
-        <div className="m-4 flex flex-col sm:max-w-sm sm:flex-1 md:my-5 md:ml-10">
+        <div className="m-4 flex flex-col sm:max-w-md sm:flex-1 md:my-5 md:ml-10">
           <div>
             <div className="flex items-center gap-4">
               <p className="text-3xl font-medium">{event.title}</p>
