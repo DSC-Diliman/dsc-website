@@ -21,7 +21,7 @@ export default function OffsetGrid({ elements }: Props) {
             key={index}
             className="div-style1 relative flex w-96 flex-col justify-center overflow-hidden px-9 py-6 md:w-80 md:px-12 md:py-8 md:even:top-1/2 lg:w-96"
           >
-            <div className="mb-1 gap-5 text-lg font-semibold md:mb-4 md:text-xl">
+            <div className="mb-2 gap-5 text-xl font-semibold md:mb-4 md:text-2xl">
               <AnimatedEm emClassName={`right-4 bottom-0 ${bgColor}`}>
                 {heading}
               </AnimatedEm>
