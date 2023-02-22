@@ -4,7 +4,7 @@ import indexHeroStyle from "/components/IndexHero.module.scss";
 
 export default function Landing() {
   return (
-    <section className="debug relative flex min-h-screen flex-row items-center md:pt-10">
+    <section className="relative flex min-h-screen flex-row items-center md:pt-10">
       <div className={indexHeroStyle["mobile-hero"]} />
       <div className="w-full bg-white/60 p-8 backdrop-blur-md backdrop-filter sm:w-1/2 sm:bg-transparent md:pl-20 md:pr-10 md:pt-24 md:pb-10 md:backdrop-filter-none">
         <div className="mx-auto max-w-xl">
