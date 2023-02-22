@@ -54,13 +54,7 @@ export default function WhatDoWeDo() {
   ];
 
   return (
-    <section
-      className="
-			flex flex-col items-center justify-center bg-gray-200 px-4 pt-12 pb-10
-			sm:pb-16
-			md:px-10 md:shadow-above
-		"
-    >
+    <section className="flex flex-col items-center justify-center bg-gray-200 px-4 pt-12 pb-10 sm:pb-16 md:px-10 md:shadow-above">
       <h1 className="mb-1 text-center sm:mb-4">
         What do we do in GDSC UP Diliman?
       </h1>
