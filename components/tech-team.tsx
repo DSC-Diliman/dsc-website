@@ -11,9 +11,9 @@ export default function TechTeam({ allTechData }: Props) {
   return (
     <section
       id="technology"
-      className="mx-auto grid max-w-5xl grid-rows-2 justify-items-center gap-8 md:grid-cols-2 md:grid-rows-1"
+      className="md:mx-auto md:max-w-5xl lg:flex lg:items-center lg:gap-12"
     >
-      <div className="pt-32 md:order-2">
+      <div className="max-w-sm px-10 lg:order-2 xl:max-w-md">
         <h2>
           <AnimatedEm emClassName="bg-emerald-500/50 bottom-0 left-4">
             Technology
@@ -24,7 +24,7 @@ export default function TechTeam({ allTechData }: Props) {
           that require specialized knowledge in programming and technology.
         </p>
       </div>
-      <div className="relative flex w-full flex-wrap justify-evenly gap-4">
+      <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
         <ParallaxObject
           className="absolute -left-24 h-20 w-20 rounded-full bg-emerald-500/50"
           y={[0, 200]}

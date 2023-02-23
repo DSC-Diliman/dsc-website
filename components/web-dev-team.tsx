@@ -20,17 +20,15 @@ export default function WebDevTeam({ allWebDevData }: Props) {
             t Team&nbsp;&nbsp;&nbsp;
           </Em>
         </h1>
-        <p className="mt-8 mb-0">
+        <p className="mx-auto mt-8 mb-0 max-w-sm text-center md:max-w-2xl">
           This website was brought to you by the following hardworking and
           awesome people!
         </p>
       </div>
-      <div className="space-y-14 overflow-x-hidden px-4 md:space-y-20 md:px-10">
-        <section id="website">
-          <div className="mx-auto mt-8 mb-28 flex max-w-3xl flex-wrap justify-evenly gap-4 md:gap-x-7 md:gap-y-14">
-            {extractPortraits(allWebDevData)}
-          </div>
-        </section>
+      <div className="space-y-14 overflow-x-hidden px-10 md:space-y-20">
+        <div className="mx-auto mt-8 mb-28 flex max-w-3xl flex-wrap justify-evenly gap-8 md:gap-x-7 md:gap-y-14">
+          {extractPortraits(allWebDevData)}
+        </div>
       </div>
     </section>
   );

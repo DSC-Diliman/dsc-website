@@ -11,9 +11,9 @@ export default function CommsTeam({ allCommsData }: Props) {
   return (
     <section
       id="communications"
-      className="mx-auto grid max-w-5xl grid-rows-2 justify-items-center gap-8 md:grid-cols-2 md:grid-rows-1"
+      className="md:mx-auto md:max-w-5xl lg:flex lg:items-center lg:gap-12"
     >
-      <div className="md:order-2">
+      <div className="max-w-sm px-10 lg:order-2 xl:max-w-md">
         <h2>
           <AnimatedEm emClassName="bg-blue-400/50 bottom-0 left-4">
             Communications
@@ -26,7 +26,7 @@ export default function CommsTeam({ allCommsData }: Props) {
           pages.
         </p>
       </div>
-      <div className="relative flex w-full flex-wrap justify-evenly gap-4">
+      <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
         <ParallaxObject
           className="absolute -left-2 h-10 w-10 rounded-full bg-blue-400/50"
           y={[-100, 200]}

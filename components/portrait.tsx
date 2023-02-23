@@ -30,31 +30,9 @@ export default function Portrait({
   desc,
   socials = {},
 }: Props) {
-  let hoverHeight: string;
-
-  if (
-    !(
-      desc ||
-      socials.facebook ||
-      socials.github ||
-      socials.linkedin ||
-      socials.twitter
-    )
-  ) {
-    hoverHeight = "";
-  } else if (!desc) {
-    hoverHeight = "group-hover:h-12";
-  } else if (
-    !(socials.facebook || socials.github || socials.linkedin || socials.twitter)
-  ) {
-    hoverHeight = "group-hover:h-24";
-  } else {
-    hoverHeight = "group-hover:h-36";
-  }
-
   return (
     <div
-      className={`img-frame group relative flex h-44 w-36 flex-col justify-end overflow-hidden rounded-xl text-sm shadow-2xl md:h-60 md:w-48 md:rounded-3xl ${className}`}
+      className={`img-frame group relative flex h-52 w-40 flex-col justify-end overflow-hidden rounded-3xl text-sm shadow-2xl md:h-60 md:w-48 ${className}`}
     >
       <Image
         src={src}
@@ -63,41 +41,52 @@ export default function Portrait({
         height={176}
         width={144}
       />
-      <div className="z-40 h-4 w-full bg-gradient-to-t from-black/20" />
-      <div className="z-40 bg-gradient-to-t from-black/80 to-black/20 py-5 px-4 text-white">
-        {name && <p className="font-medium md:text-base">{name}</p>}
+      <div className="z-40 h-4 w-full bg-gradient-to-t from-black/20 group-hover:hidden" />
+      <div className="z-40 bg-gradient-to-t from-black/80 to-black/20 py-4 px-4 text-white group-hover:hidden md:py-5">
+        {name && <p className="mb-1 font-medium md:text-base">{name}</p>}
         {position && <p className="text-xs">{position}</p>}
       </div>
       <div
-        className={`z-40 flex h-0 flex-col gap-3 bg-black/80 px-4 pb-1 text-xs text-white transition-all ${hoverHeight} md:text-sm`}
+        className={`absolute top-80 flex h-full w-full flex-col justify-center gap-2 bg-black/80 px-4 py-2 text-xs text-white transition-all group-hover:top-0 md:text-sm`}
       >
+        <div>
+          {name && (
+            <p className="mb-1 text-sm font-medium md:text-base">{name}</p>
+          )}
+          {position && <p className="text-xs">{position}</p>}
+        </div>
         {desc && (
-          <div className="flex h-24 items-center">
+          <div className="mt-2 text-xs md:mt-2 md:text-sm">
             <p>{desc}</p>
           </div>
         )}
-        <div className="text-2xl md:text-4xl">
-          {socials.facebook && (
-            <a href={socials.facebook} target="_blank" rel="noreferrer">
-              <TiSocialFacebookCircular className="transition-all hover:scale-110" />
-            </a>
-          )}
-          {socials.twitter && (
-            <a href={socials.twitter} target="_blank" rel="noreferrer">
-              <TiSocialTwitterCircular className="transition-all hover:scale-110" />
-            </a>
-          )}
-          {socials.linkedin && (
-            <a href={socials.linkedin} target="_blank" rel="noreferrer">
-              <TiSocialLinkedinCircular className="transition-all hover:scale-110" />
-            </a>
-          )}
-          {socials.github && (
-            <a href={socials.github} target="_blank" rel="noreferrer">
-              <TiSocialGithubCircular className="transition-all hover:scale-110" />
-            </a>
-          )}
-        </div>
+        {(socials.facebook ||
+          socials.twitter ||
+          socials.github ||
+          socials.linkedin) && (
+          <div className="mt-2 flex text-2xl md:text-4xl">
+            {socials.facebook && (
+              <a href={socials.facebook} target="_blank" rel="noreferrer">
+                <TiSocialFacebookCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+            {socials.twitter && (
+              <a href={socials.twitter} target="_blank" rel="noreferrer">
+                <TiSocialTwitterCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+            {socials.linkedin && (
+              <a href={socials.linkedin} target="_blank" rel="noreferrer">
+                <TiSocialLinkedinCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+            {socials.github && (
+              <a href={socials.github} target="_blank" rel="noreferrer">
+                <TiSocialGithubCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
