@@ -13,14 +13,14 @@ export default function ProjectShowcase({
   resetSelectedProject,
 }: Props) {
   return (
-    <div className="div-style1 relative mx-auto mt-12 max-w-2xl">
+    <div className="div-style1 relative mx-auto mt-12 max-w-sm sm:max-w-lg md:max-w-2xl">
       <button
-        className="absolute top-5 right-5 h-12 w-12 rounded-full bg-black/60 transition-all hover:rotate-90"
+        className="absolute top-5 right-5 h-12 z-10 w-12 rounded-full bg-black/60 transition-all hover:rotate-90"
         onClick={resetSelectedProject}
       >
         <IoClose color={"white"} className="h-8 w-8 align-middle" />
       </button>
-      <div className="img-frame h-80 md:m-6 md:rounded-2xl">
+      <div className="img-frame h-80 z-0 drop-shadow-lg md:m-6 md:mb-7 rounded-2xl">
         <Image
           src={project.images[0]}
           alt="Project image"
@@ -28,8 +28,8 @@ export default function ProjectShowcase({
           width={320}
         />
       </div>
-      <div className="m-3 md:m-6">
-        <h1 className="mb-6">{project.title}</h1>
+      <div className="m-6">
+        <h1 className="mb-4 md:mb-6">{project.title}</h1>
         <div
           className={`${markdownStyle.markdown}`}
           dangerouslySetInnerHTML={{ __html: project.body || "" }}
