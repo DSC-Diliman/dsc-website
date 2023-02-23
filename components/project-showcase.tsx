@@ -15,12 +15,12 @@ export default function ProjectShowcase({
   return (
     <div className="div-style1 relative mx-auto mt-12 max-w-sm sm:max-w-lg md:max-w-2xl">
       <button
-        className="absolute top-5 right-5 h-12 z-10 w-12 rounded-full bg-black/60 transition-all hover:rotate-90"
+        className="absolute top-5 right-5 z-10 h-12 w-12 rounded-full bg-black/60 transition-all hover:rotate-90"
         onClick={resetSelectedProject}
       >
         <IoClose color={"white"} className="h-8 w-8 align-middle" />
       </button>
-      <div className="img-frame h-80 z-0 drop-shadow-lg md:m-6 md:mb-7 rounded-2xl">
+      <div className="img-frame z-0 h-80 rounded-2xl drop-shadow-lg md:m-6 md:mb-7">
         <Image
           src={project.images[0]}
           alt="Project image"

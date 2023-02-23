@@ -29,7 +29,7 @@ export default function Projects({ allProjectsData }: Props) {
       <Head>
         <title>Projects | GDSC UPD</title>
       </Head>
-      <div className="w-full px-10 text-center pt-32">
+      <div className="w-full px-10 pt-32 text-center">
         <h1 className="text-2xl sm:text-3xl md:text-4xl">Projects</h1>
         <p className="mt-4 text-base">
           Click on the images to view our completed projects!
@@ -41,10 +41,12 @@ export default function Projects({ allProjectsData }: Props) {
             project={selectedProject}
             resetSelectedProject={resetSelectedProject}
           />
-          <h1 className="mt-16 text-center text-2xl sm:text-3xl md:mt-24 md:text-4xl">All Projects</h1>
+          <h1 className="mt-16 text-center text-2xl sm:text-3xl md:mt-24 md:text-4xl">
+            All Projects
+          </h1>
         </>
       )}
-      <div className="mx-auto mt-10 w-full sm:max-w-4xl md:max-w-5xl xl:max-w-6xl flex-1 px-10 pb-10">
+      <div className="mx-auto mt-10 w-full flex-1 px-10 pb-10 sm:max-w-4xl md:max-w-5xl xl:max-w-6xl">
         {allProjectsData.length ? (
           <Masonry
             className={masonryStyle["projects-masonry"]}
@@ -57,7 +59,7 @@ export default function Projects({ allProjectsData }: Props) {
                     Selected
                   </div>
                 )}
-                <div className="absolute w-full bottom-0">
+                <div className="absolute bottom-0 w-full">
                   <div className="h-4 bg-gradient-to-t from-black/30" />
                   <p className="bg-gradient-to-t from-black to-black/30 px-4 py-3 text-white">
                     {projectData.title}
