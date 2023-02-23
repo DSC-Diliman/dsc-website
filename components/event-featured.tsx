@@ -15,8 +15,8 @@ interface Props {
 
 export default function EventFeatured({ event, openModal }: Props) {
   return (
-    <div className="div-style1 mx-auto flex max-h-80 w-full max-w-6xl flex-col sm:flex-row">
-      <div className="img-frame sm:order-2 sm:flex-1">
+    <div className="div-style1 relative mx-auto flex w-full max-w-5xl flex-col sm:max-h-80 sm:flex-row">
+      <div className="img-frame absolute right-0 z-0 h-full opacity-10 sm:order-2 sm:flex-1 lg:opacity-30">
         <Image
           src={event.images[0]}
           alt="Event image"
@@ -24,20 +24,18 @@ export default function EventFeatured({ event, openModal }: Props) {
           width={(439 / 214) * 120}
         />
       </div>
-      <div className="flex items-center">
-        <div className="m-4 flex flex-col sm:max-w-md sm:flex-1 md:my-5 md:ml-10">
-          <div>
-            <div className="flex items-center gap-4">
-              <p className="text-3xl font-medium">{event.title}</p>
-              <div
-                className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
-                  eventColors["light-bg"][event.eventType]
-                }`}
-              >
-                {event.eventType}
-              </div>
-            </div>
-          </div>
+      <div className="z-10 flex items-center px-8 py-6 sm:p-0">
+        <div className="flex flex-col sm:my-8 sm:mx-8 sm:max-w-lg sm:flex-1 md:mx-10">
+					<div className="flex gap-2 flex-col items-start sm:items-center sm:flex-row sm:gap-6">
+						<p className="text-2xl font-medium md:text-3xl">{event.title}</p>
+						<div
+							className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
+								eventColors["light-bg"][event.eventType]
+							}`}
+						>
+							{event.eventType}
+						</div>
+					</div>
           <div className="my-6 flex flex-col gap-1">
             <div className="flex items-center gap-2">
               <BiCalendarEvent size={20} />{" "}

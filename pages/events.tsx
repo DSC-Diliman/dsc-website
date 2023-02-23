@@ -35,7 +35,7 @@ export default function Events({ allEventsData }: Props) {
         isOpen={!!selectedEvent}
         onRequestClose={closeModal}
         contentLabel="Event modal"
-        className="div-style1 absolute inset-x-4 mx-auto my-4 max-w-3xl overflow-y-auto bg-white md:inset-x-10 md:my-32"
+        className="div-style1 absolute inset-x-4 mx-auto my-32 max-w-3xl overflow-y-auto bg-white md:inset-x-10"
         style={{ content: { maxHeight: "calc(100% - 5rem)" } }}
         overlayClassName="fixed bg-black/50 inset-0"
         parentSelector={() => document.querySelector("#__next") as HTMLElement}
@@ -49,17 +49,23 @@ export default function Events({ allEventsData }: Props) {
         {selectedEvent && <EventShowcase event={selectedEvent} />}
       </Modal>
       {allEventsData.length > 0 ? (
-        <div>
-          <h1 id="featured" className="mt-12 text-center md:mt-32">
+        <div className="w-full px-10 pb-8 pt-32">
+          <h1
+            id="featured"
+            className="text-center text-2xl sm:text-3xl md:text-4xl"
+          >
             Featured
           </h1>
-          <section className="md:mt-10">
+          <section className="mt-10">
             <EventFeatured event={allEventsData[0]} openModal={openModal} />
           </section>
-          <h1 id="all-events" className="mt-12 text-center md:mt-28">
+          <h1
+            id="all-events"
+            className="mt-16 text-center text-2xl sm:text-3xl md:mt-24 md:text-4xl"
+          >
             All Events
           </h1>
-          <section className="md:mt-10">
+          <section className="mt-10">
             <EventsGrid eventsData={allEventsData} openModal={openModal} />
           </section>
         </div>

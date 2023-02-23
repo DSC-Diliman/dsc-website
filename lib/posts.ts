@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { compareAsc, parseISO, isWithinInterval } from "date-fns";
+import { parseISO, isWithinInterval, compareDesc } from "date-fns";
 import {
   EventInCMS,
   isArrayOfEventsInCMS,
@@ -49,8 +49,10 @@ function getRecordById(
   data.id = id;
   data.body = content;
 
-  if (isMemberInCMS(data) || isProjectInCMS(data) || isEventInCMS(data)) {
-    return data;
+	const result = JSON.parse(JSON.stringify(data));
+
+  if (isMemberInCMS(result) || isProjectInCMS(result) || isEventInCMS(result)) {
+    return result;
   } else {
     return {};
   }
@@ -101,7 +103,7 @@ export function getEvents(): EventInCMS[] | {}[] {
   const records = getRecords("events");
   if (isArrayOfEventsInCMS(records)) {
     return records.sort((a, b) =>
-      compareAsc(parseISO(a.date), parseISO(b.date))
+      compareDesc(parseISO(a.date), parseISO(b.date))
     );
   } else {
     return records;

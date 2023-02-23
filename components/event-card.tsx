@@ -15,7 +15,9 @@ export default function EventCard({ e, openModal }: Props) {
   return (
     <div
       id={e.id}
-      className={`h-56 rounded-2xl ${eventColors["bg"][e.eventType]}`}
+      className={`rounded-2xl h-56 md:h-64 xl:h-56 ${
+        eventColors["bg"][e.eventType]
+      }`}
     >
       <div
         className={`flex h-full flex-col overflow-hidden rounded-2xl border-2 border-solid bg-white ${
@@ -38,12 +40,8 @@ export default function EventCard({ e, openModal }: Props) {
         >
           <div className="flex min-w-fit flex-col self-center py-2 px-4 text-center">
             <div>
-              <span className="text-lg font-medium">
-                <FormattedDate
-                  dateTime={e.date}
-                  dateFormat="MMM dd"
-                  func={(string) => string.toUpperCase()}
-                />
+              <span className="text-base font-medium xl:text-lg">
+                <FormattedDate dateTime={e.date} dateFormat="MMM dd" />
               </span>{" "}
               <FormattedDate dateTime={e.date} dateFormat="yyyy" />
             </div>
@@ -55,12 +53,8 @@ export default function EventCard({ e, openModal }: Props) {
                   }`}
                 />
                 <div>
-                  <span className="text-lg font-medium">
-                    <FormattedDate
-                      dateTime={e.dateEnd}
-                      dateFormat="MMM dd"
-                      func={(string) => string.toUpperCase()}
-                    />
+                  <span className="text-base font-medium xl:text-lg">
+                    <FormattedDate dateTime={e.dateEnd} dateFormat="MMM dd" />
                   </span>{" "}
                   <FormattedDate dateTime={e.dateEnd} dateFormat="yyyy" />
                 </div>
@@ -72,7 +66,7 @@ export default function EventCard({ e, openModal }: Props) {
               eventColors["border"][e.eventType]
             } px-5 py-2`}
           >
-            <p className="text-xl font-medium">{e.title}</p>
+            <p className="text-lg font-medium xl:text-xl">{e.title}</p>
             {sameDay(e.date, e.dateEnd) && (
               <div className="flex items-center gap-2">
                 <BiTimeFive size={17.5} />{" "}

@@ -3,7 +3,7 @@ export const eventColors = {
     "Speaker Sessions": "bg-red-700",
     Internal: "bg-blue-700",
     Workshops: "bg-emerald-700",
-    "Tech Solutions": "bg-amber-700",
+    "Tech Solutions": "bg-amber-600",
   },
   "light-bg": {
     "Speaker Sessions": "bg-red-500",
@@ -15,7 +15,7 @@ export const eventColors = {
     "Speaker Sessions": "border-red-700",
     Internal: "border-blue-700",
     Workshops: "border-emerald-700",
-    "Tech Solutions": "border-amber-700",
+    "Tech Solutions": "border-amber-600",
   },
   "light-border": {
     "Speaker Sessions": "border-red-500",
@@ -32,7 +32,7 @@ export const eventColors = {
   button: {
     "Speaker Sessions": "btn-style2-red",
     Internal: "btn-style2-blue",
-    Workshops: "btn-style2-emerald",
-    "Tech Solutions": "btn-style2-amber",
+    Workshops: "btn-style2-green",
+    "Tech Solutions": "btn-style2-yellow",
   },
 };

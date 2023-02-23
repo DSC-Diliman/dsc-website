@@ -70,15 +70,19 @@ export default function EventShowcase({ event }: Props) {
             </div>
           </div>
         </div>
-        <div
-          className={`mx-7 w-1 rounded-full ${
-            eventColors["separator"][event.eventType]
-          }`}
-        />
-        <div
-          className={`${markdownStyle.markdown}`}
-          dangerouslySetInnerHTML={{ __html: event.body || "" }}
-        />
+        {event.body && (
+          <>
+            <div
+              className={`mx-7 w-1 rounded-full ${
+                eventColors["separator"][event.eventType]
+              }`}
+            />
+            <div
+              className={`${markdownStyle.markdown}`}
+              dangerouslySetInnerHTML={{ __html: event.body || "" }}
+            />
+          </>
+        )}
       </div>
     </>
   );
