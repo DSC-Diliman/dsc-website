@@ -43,7 +43,7 @@ export default function Socials() {
             target="_blank"
             rel="noreferrer"
           >
-            <button className="div-style1 md:pb-4.5 w-full rounded-3xl px-6 pb-3 pt-4 text-center shadow-none drop-shadow-lg transition-all hover:scale-110 md:px-9 md:pt-6">
+            <button className="div-style1 md:pb-4.5 w-full rounded-3xl px-6 pb-4 pt-5 text-center shadow-none drop-shadow-lg transition-all hover:scale-110 md:px-9 md:pt-6">
               <Image
                 src={e.icon}
                 alt="Event icon"
