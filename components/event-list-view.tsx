@@ -23,10 +23,7 @@ export default function EventList({ eventsArray }: Props) {
             <div className="flex flex-col items-center gap-2 md:flex-row">
               <div className="flex">
                 <div className="flex items-center justify-center gap-1 text-center md:flex-col md:gap-0">
-                  <FormattedDate
-                    dateTime={e.date}
-                    dateFormat="MMM"
-                  />
+                  <FormattedDate dateTime={e.date} dateFormat="MMM" />
                   <div
                     className={`flex h-10 w-10 items-center justify-center rounded-full ${
                       eventColors["light-bg"][e.eventType]
@@ -44,10 +41,7 @@ export default function EventList({ eventsArray }: Props) {
                       }`}
                     />
                     <div className="flex items-center justify-center gap-1 text-center md:flex-col md:gap-0">
-                      <FormattedDate
-                        dateTime={e.dateEnd}
-                        dateFormat="MMM"
-                      />
+                      <FormattedDate dateTime={e.dateEnd} dateFormat="MMM" />
                       <div
                         className={`flex h-10 w-10 items-center justify-center rounded-full ${
                           eventColors["light-bg"][e.eventType]

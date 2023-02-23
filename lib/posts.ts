@@ -49,7 +49,7 @@ function getRecordById(
   data.id = id;
   data.body = content;
 
-	const result = JSON.parse(JSON.stringify(data));
+  const result = JSON.parse(JSON.stringify(data));
 
   if (isMemberInCMS(result) || isProjectInCMS(result) || isEventInCMS(result)) {
     return result;

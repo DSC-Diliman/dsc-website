@@ -15,7 +15,7 @@ export default function EventCard({ e, openModal }: Props) {
   return (
     <div
       id={e.id}
-      className={`rounded-2xl h-56 md:h-64 xl:h-56 ${
+      className={`h-56 rounded-2xl md:h-64 xl:h-56 ${
         eventColors["bg"][e.eventType]
       }`}
     >

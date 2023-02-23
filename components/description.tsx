@@ -2,8 +2,8 @@ import ParallaxImage from "./parallax-image";
 
 export default function Description() {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center px-10 py-12 text-center md:px-10 md:py-32">
-      <h1 className="mt-20 text-2xl sm:text-3xl md:mt-0 md:text-4xl">
+    <section className="flex min-h-screen flex-col items-center justify-center px-10 py-32 text-center">
+      <h1 className="text-2xl sm:text-3xl md:mt-0 md:text-4xl">
         What is GDSC-UPD?
       </h1>
       <ParallaxImage
