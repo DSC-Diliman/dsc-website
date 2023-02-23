@@ -13,7 +13,7 @@ interface Props {
 
 export default function EventList({ eventsArray }: Props) {
   return (
-    <div className="mt-10 mb-20 flex w-5/6 max-w-md flex-col items-center gap-14 md:w-full md:max-w-full">
+    <div className="mt-10 mb-20 flex w-5/6 max-w-lg flex-col items-center gap-14 md:w-full md:max-w-full">
       {eventsArray &&
         eventsArray.map((e, index) => (
           <div
@@ -26,7 +26,6 @@ export default function EventList({ eventsArray }: Props) {
                   <FormattedDate
                     dateTime={e.date}
                     dateFormat="MMM"
-                    func={(string) => string.toUpperCase()}
                   />
                   <div
                     className={`flex h-10 w-10 items-center justify-center rounded-full ${
@@ -48,7 +47,6 @@ export default function EventList({ eventsArray }: Props) {
                       <FormattedDate
                         dateTime={e.dateEnd}
                         dateFormat="MMM"
-                        func={(string) => string.toUpperCase()}
                       />
                       <div
                         className={`flex h-10 w-10 items-center justify-center rounded-full ${

@@ -8,8 +8,8 @@ interface Props {
 
 export default function UpcomingEvents({ eventsArray }: Props) {
   return (
-    <section className="pt-10 pb-14 md:px-10 md:py-20">
-      <div className="mx-auto flex flex-col items-center md:max-w-2xl">
+    <section className="pt-10 pb-14 md:py-20">
+      <div className="mx-auto flex flex-col items-center">
         <h1 className="mb-4 text-center">Upcoming Events</h1>
         <EventList
           eventsArray={eventsArray.slice(0, Math.min(eventsArray.length, 3))}
