@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ParallaxObject from "./parallax-object";
 
 export default function Socials() {
@@ -13,11 +14,16 @@ export default function Socials() {
       icon: "/images/linkedin-icon.svg",
       link: "https://www.linkedin.com/company/gdscupdiliman/mycompany/",
     },
+    {
+      name: "Email",
+      icon: "/images/gmail-icon.svg",
+      link: "mailto:dscdiliman@gmail.com",
+    },
   ];
   return (
     <section className="relative">
       <div className="mx-auto grid max-w-max grid-cols-2 gap-y-3 gap-x-6 lg:grid-cols-3 lg:gap-8">
-        <div className="relative col-span-2 flex flex-col justify-center">
+        <div className="relative flex flex-col justify-center lg:col-span-2">
           <ParallaxObject
             className="absolute -left-6 -z-10 h-20 w-20 rounded-full bg-amber-300/50"
             y={[0, 200]}
@@ -33,10 +39,9 @@ export default function Socials() {
           <h1 className="relative text-3xl">Reach us</h1>
           <p className="relative text-base">in our socials!</p>
         </div>
-        <div></div>
-        <div></div>
+        <div className="hidden lg:block" />
         {socials.map((e, index) => (
-          <a
+          <Link
             className="relative"
             key={index}
             href={e.link}
@@ -53,7 +58,7 @@ export default function Socials() {
               />
               <p className="text-md">{e.name}</p>
             </button>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
