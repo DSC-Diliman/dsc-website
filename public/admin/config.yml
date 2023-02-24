@@ -45,7 +45,7 @@ collections:
         }
 
       - { name: "summary", label: "Summary", widget: "text" }
-      - { name: "body", label: "Body", widget: "markdown", minimal: true }
+      - { name: "body", label: "Body", widget: "markdown" }
 
   - name: "projects"
     label: "Projects"
@@ -66,7 +66,7 @@ collections:
           field: { name: "image", label: "Image", widget: "image" },
         }
 
-      - { name: "body", label: "Body", widget: "markdown", minimal: true }
+      - { name: "body", label: "Body", widget: "markdown" }
 
   - name: "members"
     label: "Members"
@@ -74,11 +74,13 @@ collections:
     folder: "posts/members"
     create: true
     identifier_field: name
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["name"]
     view_groups:
       - label: Team
         field: team
+      - label: Year
+        field: year
     fields:
       - { name: "name", label: "Name", widget: "string" }
       - {
@@ -104,12 +106,13 @@ collections:
               "Communications",
               "Finance and Externals",
               "Web Development",
+              "Human Resources",
             ],
         }
 
       - { name: "position", label: "Position", widget: "string" }
       - { name: "thumbnail", label: "Thumbnail", widget: "image" }
-      - { name: "quote", label: "Quote", widget: "string" }
+      - { name: "quote", label: "Quote", widget: "string", required: false }
       - {
           name: "facebookURL",
           label: "Facebook URL",
@@ -134,4 +137,10 @@ collections:
           widget: "string",
           required: false,
         }
-      - { name: "body", label: "Body", widget: "markdown", minimal: true }
+      - {
+          name: "body",
+          label: "Body",
+          widget: "markdown",
+          minimal: true,
+          required: false,
+        }
