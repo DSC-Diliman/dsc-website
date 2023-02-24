@@ -4,23 +4,12 @@ import Sitemap from "./sitemap";
 
 export default function Footer() {
   return (
-    <footer
-      className="
-			flex flex-col content-center space-y-2 py-8 text-center
-			md:py-10
-		"
-    >
-      <div
-        className="
-				md:flex md:justify-center md:gap-x-8
-				lg:gap-x-20
-			"
-      >
+    <footer className="flex flex-col gap-y-3 py-12 text-center">
+      <div className="flex flex-col justify-center gap-16 lg:flex-row lg:gap-20 xl:gap-28">
         <Socials />
         <Sitemap />
       </div>
       <Copyright />
-      <p className="text-xs italic">Oblation photo by Mila D. Aguilar.</p>
     </footer>
   );
 }

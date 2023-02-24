@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { EventInCMS } from "../types/event-in-cms";
-import EventListView from "./event-list-view";
+import EventList from "./event-list-view";
 
 interface Props {
   eventsArray: EventInCMS[];
@@ -8,27 +8,14 @@ interface Props {
 
 export default function UpcomingEvents({ eventsArray }: Props) {
   return (
-    <section
-      className="
-			pt-10 pb-14
-			md:px-10 md:py-20
-		"
-    >
-      <div
-        className="
-				mx-auto flex flex-col items-center
-				md:max-w-2xl
-			"
-      >
+    <section className="pt-10 pb-14 md:py-20">
+      <div className="mx-auto flex flex-col items-center">
         <h1 className="mb-4 text-center">Upcoming Events</h1>
-        <div className="div-style1 mt-10 mb-20 w-5/6 overflow-hidden md:w-full">
-          <EventListView
-            className="max-h-80 px-6 md:px-10"
-            eventsArray={eventsArray}
-          />
-        </div>
+        <EventList
+          eventsArray={eventsArray.slice(0, Math.min(eventsArray.length, 3))}
+        />
         <Link href="/events">
-          <button className="btn-style2-red">Check out our events!</button>
+          <button className="btn-style2-default">Check out our events!</button>
         </Link>
       </div>
     </section>

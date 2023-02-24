@@ -1,59 +1,83 @@
-import { BiTimeFive, BiLocationPlus, BiCalendarEvent } from "react-icons/bi";
+import { BiTimeFive, BiCalendarEvent } from "react-icons/bi";
 import Link from "next/link";
 import FormattedDate from "./formatted-date";
 import FormattedTime from "./formatted-time";
 import Image from "next/image";
 import { EventInCMS } from "../types/event-in-cms";
-import titleToId from "../lib/titleToId";
+import sameDay from "../lib/sameDay";
+import { eventColors } from "../lib/eventColors";
+import { GrLocation } from "react-icons/gr";
 
 interface Props {
   event: EventInCMS;
+  openModal: (e: EventInCMS) => void;
 }
 
-export default function EventFeatured({ event }: Props) {
+export default function EventFeatured({ event, openModal }: Props) {
   return (
-    <>
-      <div className="div-style1 mx-auto flex w-full max-w-6xl flex-col sm:flex-row">
-        <div className="img-frame m-0 flex h-40 flex-col sm:order-2 sm:h-auto sm:flex-1 md:m-5 md:rounded-3xl">
-          <div className="flex-1 overflow-y-hidden">
-            <Image
-              src={event.images[0]}
-              alt="Event image"
-              height={160}
-              width={(439 / 214) * 160}
-            />
-          </div>
-        </div>
-        <div className="my-4 mx-4 flex flex-col sm:max-w-sm sm:flex-1 md:my-10 md:ml-12">
-          <div>
-            <p className="mb-4 text-lg text-red-pr">FEATURED</p>
-            <p className="mb-4 text-4xl font-medium">{event.title}</p>
-            <div className="mb-6 grid grid-rows-3 gap-1 md:grid-cols-2 md:grid-rows-2">
-              <div>
-                <BiCalendarEvent /> <FormattedDate dateTime={event.date} />
-              </div>
-              <a href={event.locationURL} target="_blank" rel="noreferrer">
-                <div>
-                  <BiLocationPlus /> {event.location}
-                </div>
-              </a>
-              <div>
-                <BiTimeFive />{" "}
-                <FormattedTime dateTime={event.date} timeFormat="h:mm aaa" />-
-                <FormattedTime dateTime={event.dateEnd} timeFormat="h:mm aaa" />
-              </div>
-            </div>
-            <p className="mb-8">{event.summary}</p>
-            <Link
-              href={`/events?id=${titleToId(event.title)}`}
-              as={`/events/${titleToId(event.title)}`}
-              scroll={false}
+    <div className="div-style1 relative mx-auto flex w-full max-w-5xl flex-col sm:max-h-80 sm:flex-row">
+      <div className="img-frame absolute right-0 z-0 h-full opacity-10 sm:order-2 sm:flex-1 lg:opacity-30">
+        <Image
+          src={event.images[0]}
+          alt="Event image"
+          height={120}
+          width={(439 / 214) * 120}
+        />
+      </div>
+      <div className="z-10 flex items-center px-8 py-6 sm:p-0">
+        <div className="flex flex-col sm:my-8 sm:mx-8 sm:max-w-lg sm:flex-1 md:mx-10">
+          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-6">
+            <p className="text-2xl font-medium md:text-3xl">{event.title}</p>
+            <div
+              className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
+                eventColors["light-bg"][event.eventType]
+              }`}
             >
-              <button className="btn-style2-red">See Details</button>
-            </Link>
+              {event.eventType}
+            </div>
+          </div>
+          <div className="my-6 flex flex-col gap-1">
+            <div className="flex items-center gap-2">
+              <BiCalendarEvent size={20} />{" "}
+              <span>
+                <FormattedDate dateTime={event.date} />
+                {!sameDay(event.date, event.dateEnd) && (
+                  <>
+                    <span> – </span>
+                    <FormattedDate dateTime={event.dateEnd} />
+                  </>
+                )}
+              </span>
+            </div>
+            {sameDay(event.date, event.dateEnd) && (
+              <div className="flex items-center gap-2">
+                <BiTimeFive size={20} />{" "}
+                <span>
+                  <FormattedTime dateTime={event.date} /> –{" "}
+                  <FormattedTime dateTime={event.dateEnd} />
+                </span>
+              </div>
+            )}
+            <div className="flex items-center gap-2">
+              <GrLocation size={20} />{" "}
+              <Link href={event.locationURL}>
+                <span className="border-b border-black">{event.location}</span>
+              </Link>
+            </div>
+          </div>
+          <div className="mb-6">
+            <p>{event.summary}</p>
+          </div>
+          <div>
+            <button
+              className={`${eventColors["button"][event.eventType]}`}
+              onClick={() => openModal(event)}
+            >
+              See Details
+            </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

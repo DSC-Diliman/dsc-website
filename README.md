@@ -55,7 +55,7 @@ If you have any specific questions about the CMS, hit up Daryll on Discord!
 
 > **Note**
 >
-> There's an in-depth guide for site developers on [this site](https://gdscupdsitefordevs.super.site/). 
+> There's an in-depth guide for site developers on [this site](https://gdscupdsitefordevs.super.site/).
 > If you're looking for more specific details beyond what's covered in this README, check it out!
 
 If you don't have access to the [Netlify dashboard](https://app.netlify.com/sites/dscupd) yet, ask for an invite from one of the developers on Discord.
@@ -91,7 +91,7 @@ Contributions are carried out in 3 main steps:
 | <img src="https://img.shields.io/static/v1?label=&logo=typescript&message=TypeScript&labelColor=000000&color=000000">     | Type safety          | v4, [Documentation](https://www.typescriptlang.org/docs)                                                                                          |
 | <img src="https://img.shields.io/static/v1?label=&logo=tailwindcss&message=Tailwind CSS& labelColor=272B33&color=272B33"> | Styling              | v3, [Documentation](https://tailwindcss.com/docs)                                                                                                 |
 | <img src="https://img.shields.io/static/v1?label=&logo=playwright&message=Playwright&labelColor=000000&color=000000">     | End-to-end testing   | v1, [Documentation](https://playwright.dev/docs/intro)                                                                                            |
-| <img src="https://img.shields.io/static/v1?label=&logo=figma&message=Figma&labelColor=272B33&color=272B33">               | Design            | [Wireframe](https://www.figma.com/file/VLKIQqE9Vb1W9A3t3NWgAb/DSC-Website-UI-Final-Submission?node-id=0%3A1)                                      |
+| <img src="https://img.shields.io/static/v1?label=&logo=figma&message=Figma&labelColor=272B33&color=272B33">               | Design               | [Wireframe](https://www.figma.com/file/VLKIQqE9Vb1W9A3t3NWgAb/DSC-Website-UI-Final-Submission?node-id=0%3A1)                                      |
 | <img src="https://img.shields.io/static/v1?label=&logo=greensock&message=GSAP&labelColor=000000&color=000000">            | Animation            | [Documentation](https://greensock.com/docs), [Getting started](https://greensock.com/get-started), [Cheatsheet](https://greensock.com/cheatsheet) |
 
 </div>

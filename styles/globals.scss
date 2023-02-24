@@ -57,6 +57,14 @@
   button {
     &.btn-style1 {
       @apply transition-colors;
+      &-default {
+        @extend .btn-style1;
+        @apply hover:bg-[#7b1113] hover:text-white;
+        &-selected {
+          @extend .btn-style1;
+          @apply bg-[#7b1113] text-white;
+        }
+      }
       &-blue {
         @extend .btn-style1;
         @apply hover:bg-blue-pr hover:text-white;
@@ -93,6 +101,10 @@
 
     &.btn-style2 {
       @apply rounded-full border-2 py-2 px-6 transition-colors;
+      &-default {
+        @extend .btn-style2;
+        @apply border-[#7b1113] text-[#7b1113] hover:bg-[#7b1113] hover:text-gray-100;
+      }
       &-blue {
         @extend .btn-style2;
         @apply border-blue-pr text-blue-pr hover:bg-blue-pr hover:text-gray-100;
@@ -113,7 +125,7 @@
   }
 
   .div-style1 {
-    @apply rounded-2xl bg-white shadow-3xl md:rounded-4xl;
+    @apply rounded-2xl bg-white shadow-2xl md:rounded-4xl;
   }
 
   .div-style2 {
@@ -122,6 +134,10 @@
 }
 
 @layer utilities {
+  .debug {
+    @apply border border-solid border-black sm:border-red-400 md:border-orange-400 lg:border-green-400 xl:border-blue-400 2xl:border-violet-400;
+  }
+
   .frosted {
     @apply bg-white bg-opacity-50 backdrop-blur-xl backdrop-filter;
   }

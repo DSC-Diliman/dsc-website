@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { compareAsc, parseISO, isWithinInterval } from "date-fns";
+import { parseISO, isWithinInterval, compareDesc } from "date-fns";
 import {
   EventInCMS,
   isArrayOfEventsInCMS,
@@ -44,10 +44,15 @@ function getRecordById(
 ): MemberInCMS | ProjectInCMS | EventInCMS | {} {
   const filepath = path.join(postsDirectory, collection, `${id}.md`);
   const fileContents = fs.readFileSync(filepath, "utf-8");
-  const { data } = matter(fileContents);
 
-  if (isMemberInCMS(data) || isProjectInCMS(data) || isEventInCMS(data)) {
-    return data;
+  const { data, content } = matter(fileContents);
+  data.id = id;
+  data.body = content;
+
+  const result = JSON.parse(JSON.stringify(data));
+
+  if (isMemberInCMS(result) || isProjectInCMS(result) || isEventInCMS(result)) {
+    return result;
   } else {
     return {};
   }
@@ -98,7 +103,7 @@ export function getEvents(): EventInCMS[] | {}[] {
   const records = getRecords("events");
   if (isArrayOfEventsInCMS(records)) {
     return records.sort((a, b) =>
-      compareAsc(parseISO(a.date), parseISO(b.date))
+      compareDesc(parseISO(a.date), parseISO(b.date))
     );
   } else {
     return records;

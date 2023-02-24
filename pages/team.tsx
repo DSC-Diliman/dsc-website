@@ -52,23 +52,18 @@ export default function Team({ allMemberData }: Props) {
   const yearSelectionButtons = [2022, 2021].map((year, index) => {
     const { borderColor, textColor, bgColor, bgColorWithHover } =
       colors[index % 4];
-    const className = `
-										border-2 ${borderColor} border-solid text-2xl rounded-full px-8 py-1 mx-2 my-1
-										${
-                      year === yearToShow
-                        ? `${bgColor} text-white ease-in-out duration-200`
-                        : `bg-transparent ${textColor} ease-in-out duration-200
-													${bgColorWithHover} hover:text-white`
-                    }
-										md:text-3xl
-									`;
+    const className = `border-2 ${borderColor} border-solid text-2xl rounded-full px-8 py-1 mx-2 my-1 ${
+      year === yearToShow
+        ? `${bgColor} text-white ease-in-out duration-200`
+        : `bg-transparent ${textColor} ease-in-out duration-200 ${bgColorWithHover} hover:text-white`
+    } md:text-3xl`;
     return (
       <button
         key={index}
         onClick={() => setYearToShow(year)}
         className={className}
       >
-        {year} - {year + 1}
+        {year} – {year + 1}
       </button>
     );
   });
@@ -78,22 +73,17 @@ export default function Team({ allMemberData }: Props) {
       <Head>
         <title>Team | GDSC UPD</title>
       </Head>
-      <div className="w-full px-4 pt-12 pb-8 text-center md:px-10 md:pt-24">
-        <h1 className="my-4">Meet our Team!</h1>
-        <p>
+      <div className="w-full px-10 pt-32 pb-8 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl">Meet our Team</h1>
+        <p className="mt-4 text-base">
           The lineup that empowers, enlightens, and nurtures student developers
           in UP Diliman!
         </p>
-        <div
-          className="
-						mt-12 mb-6 flex flex-grow flex-col items-center gap-y-4
-						sm:flex-row sm:justify-center sm:gap-x-12
-					"
-        >
+        <div className="mt-12 mb-6 flex flex-grow flex-col items-center gap-y-4 sm:flex-row sm:justify-center sm:gap-x-12">
           {yearSelectionButtons}
         </div>
       </div>
-      <div className="space-y-14 px-4 pb-20 md:space-y-20 md:px-10">
+      <div className="space-y-14 px-10 pb-20 md:space-y-20">
         <ExecTeam allExecData={getFilteredData(yearToShow, "Executive")} />
         <TechTeam allTechData={getFilteredData(yearToShow, "Technology")} />
         <OpsTeam allOpsData={getFilteredData(yearToShow, "Operations")} />

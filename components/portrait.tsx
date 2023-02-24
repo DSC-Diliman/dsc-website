@@ -32,7 +32,7 @@ export default function Portrait({
 }: Props) {
   return (
     <div
-      className={`img-frame group relative h-44 w-36 overflow-hidden rounded-xl text-sm shadow-2xl md:h-60 md:w-48 md:rounded-3xl ${className}`}
+      className={`img-frame group relative flex h-52 w-40 flex-col justify-end overflow-hidden rounded-3xl text-sm shadow-2xl md:h-60 md:w-48 ${className}`}
     >
       <Image
         src={src}
@@ -41,35 +41,52 @@ export default function Portrait({
         height={176}
         width={144}
       />
-      <div className="absolute bottom-0 h-24 w-full bg-gradient-to-t from-black" />
-      <div className="relative mt-28 flex h-full flex-col p-2 text-white transition-all group-hover:mt-0 group-hover:bg-black group-hover:bg-opacity-70 md:mt-40 md:p-4">
-        <p className="font-medium md:text-base">{name}</p>
-        <p className="text-xs">{position}</p>
-        <div className="flex flex-1 flex-col pt-3 text-xs md:text-sm">
-          <p className="my-auto">{desc}</p>
+      <div className="z-40 h-4 w-full bg-gradient-to-t from-black/20 group-hover:hidden" />
+      <div className="z-40 bg-gradient-to-t from-black/80 to-black/20 py-4 px-4 text-white group-hover:hidden md:py-5">
+        {name && <p className="mb-1 font-medium md:text-base">{name}</p>}
+        {position && <p className="text-xs">{position}</p>}
+      </div>
+      <div
+        className={`absolute top-80 flex h-full w-full flex-col justify-center gap-2 bg-black/80 px-4 py-2 text-xs text-white transition-all group-hover:top-0 md:text-sm`}
+      >
+        <div>
+          {name && (
+            <p className="mb-1 text-sm font-medium md:text-base">{name}</p>
+          )}
+          {position && <p className="text-xs">{position}</p>}
         </div>
-        <div className="text-2xl md:text-4xl">
-          {socials.facebook && (
-            <a href={socials.facebook} target="_blank" rel="noreferrer">
-              <TiSocialFacebookCircular />
-            </a>
-          )}
-          {socials.twitter && (
-            <a href={socials.twitter} target="_blank" rel="noreferrer">
-              <TiSocialTwitterCircular />
-            </a>
-          )}
-          {socials.linkedin && (
-            <a href={socials.linkedin} target="_blank" rel="noreferrer">
-              <TiSocialLinkedinCircular />
-            </a>
-          )}
-          {socials.github && (
-            <a href={socials.github} target="_blank" rel="noreferrer">
-              <TiSocialGithubCircular />
-            </a>
-          )}
-        </div>
+        {desc && (
+          <div className="mt-2 text-xs md:mt-2 md:text-sm">
+            <p>{desc}</p>
+          </div>
+        )}
+        {(socials.facebook ||
+          socials.twitter ||
+          socials.github ||
+          socials.linkedin) && (
+          <div className="mt-2 flex text-2xl md:text-4xl">
+            {socials.facebook && (
+              <a href={socials.facebook} target="_blank" rel="noreferrer">
+                <TiSocialFacebookCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+            {socials.twitter && (
+              <a href={socials.twitter} target="_blank" rel="noreferrer">
+                <TiSocialTwitterCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+            {socials.linkedin && (
+              <a href={socials.linkedin} target="_blank" rel="noreferrer">
+                <TiSocialLinkedinCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+            {socials.github && (
+              <a href={socials.github} target="_blank" rel="noreferrer">
+                <TiSocialGithubCircular className="mt-auto block transition-all hover:scale-110" />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

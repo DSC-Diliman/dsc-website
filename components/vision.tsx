@@ -7,26 +7,26 @@ export default function Vision() {
   return (
     <section
       id="vision"
-      className="overflow-hidden bg-gray-200 px-4 py-10 md:p-10"
+      className="overflow-hidden bg-gray-200 px-10 py-10 md:p-10"
     >
-      <div className="mx-auto max-w-3xl grid-cols-1 gap-4 sm:grid md:gap-12 lg:grid-cols-2">
+      <div className="mx-auto max-w-3xl sm:grid md:gap-12 lg:grid-cols-2">
         <div>
-          <h1 className="mb-4 text-2xl font-black text-red-700 sm:mt-5">
+          <h1 className="mb-4 text-2xl font-black text-[#7c100f] sm:mt-5">
             VISION
           </h1>
           <p className="mb-6 text-3xl font-medium">
             Uplifting communities through{" "}
-            <AnimatedEm emClassName="bg-amber-300 bottom-0 left-4">
+            <AnimatedEm emClassName="bg-amber-300/50 bottom-0 left-4">
               technology
             </AnimatedEm>
           </p>
-          <p className="sm:mb-12">
+          <p className="mb-8 text-base">
             Our organization envisions itself as a community of tech enthusiasts
             who are passionate about uplifting communities through technology
             and innovation.
           </p>
           <AnimatedObject
-            className="img-frame div-style1 w-85 h-96 sm:block"
+            className="img-frame div-style1 mx-auto h-96 w-96"
             fromVars={{
               x: -100,
               opacity: 0,
@@ -66,7 +66,7 @@ export default function Vision() {
             />
           </AnimatedObject>
           <AnimatedObject
-            className="img-frame div-style1 ml-10 mb-16 block h-64 w-80"
+            className="img-frame div-style1 ml-6 mb-16 block h-64 w-80"
             fromVars={{
               x: 100,
               opacity: 0,
@@ -85,9 +85,9 @@ export default function Vision() {
             />
           </AnimatedObject>
           <div className="mt-20 mr-20 ml-auto max-w-min space-y-6 text-5xl font-medium">
-            <AnimatedText className="text-red-400">Empower.</AnimatedText>
-            <AnimatedText className="text-blue-400">Enlighten.</AnimatedText>
-            <AnimatedText className="text-amber-400">Create.</AnimatedText>
+            <AnimatedText className="text-red-600">Empower.</AnimatedText>
+            <AnimatedText className="text-blue-600">Enlighten.</AnimatedText>
+            <AnimatedText className="text-amber-700">Create.</AnimatedText>
           </div>
         </div>
       </div>
