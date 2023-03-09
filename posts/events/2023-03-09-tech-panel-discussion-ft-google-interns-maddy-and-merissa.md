@@ -4,7 +4,7 @@ date: 2020-10-03T05:00:33.963Z
 dateEnd: 2020-10-03T06:00:00.000Z
 eventType: Speaker Sessions
 location: See our page!
-locationURL: https://gdscupd.com/
+locationURL: https://www.facebook.com/GDSCupdiliman
 images:
   - /uploads/dsc-logo.png
 summary: We'll be having a panel discussion this Saturday (October 3) from 1pm
