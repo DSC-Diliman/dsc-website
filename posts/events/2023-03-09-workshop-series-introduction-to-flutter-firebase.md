@@ -4,7 +4,7 @@ date: 2020-10-02T09:00:33.363Z
 dateEnd: 2020-10-21T09:00:33.371Z
 eventType: Workshops
 location: See our page!
-locationURL: https://gdscupd.com/
+locationURL: https://www.facebook.com/GDSCupdiliman
 images:
   - /uploads/dsc-logo.png
 summary: We will be holding our first in a bi-monthly workshop series on mobile
