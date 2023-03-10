@@ -8,6 +8,7 @@ import { getTeam } from "../lib/posts";
 import { useState } from "react";
 import Head from "next/head";
 import { isArrayOfMembersInCMS, MemberInCMS } from "../types/member-in-cms";
+import HRTeam from "../components/human-resources-team";
 
 interface Props {
   allMemberData: MemberInCMS[];
@@ -93,6 +94,9 @@ export default function Team({ allMemberData }: Props) {
         <FinExtTeam
           allExteFinData={getFilteredData(yearToShow, "Finance and Externals")}
         />
+        {yearToShow >= 2022 && (
+          <HRTeam allHRData={getFilteredData(yearToShow, "Human Resources")} />
+        )}
       </div>
       <WebDevTeam
         allWebDevData={getFilteredData(yearToShow, "Web Development")}
@@ -108,6 +112,7 @@ export async function getStaticProps() {
     "Operations",
     "Communications",
     "Finance and Externals",
+    "Human Resources",
     "Web Development",
   ];
 

@@ -47,6 +47,10 @@ export default function Sitemap() {
           href: "finance-and-externals",
         },
         {
+          text: "Human Resources",
+          href: "human-resources",
+        },
+        {
           text: "Web Development",
           href: "web-dev",
         },
