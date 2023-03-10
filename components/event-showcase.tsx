@@ -29,8 +29,8 @@ export default function EventShowcase({ event }: Props) {
           eventColors["border"][event.eventType]
         } px-7 py-5`}
       >
-        <div className="flex flex-col justify-center">
-          <div className="mb-1 flex items-center gap-4">
+        <div className="flex min-w-[40%] flex-col justify-center">
+          <div className="mb-4 flex flex-col items-start gap-3">
             <h1 className="text-2xl">{event.title}</h1>
             <div
               className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
@@ -73,7 +73,7 @@ export default function EventShowcase({ event }: Props) {
         {event.body && (
           <>
             <div
-              className={`mx-7 w-1 rounded-full ${
+              className={`mx-7 w-1 rounded-full border border-solid ${
                 eventColors["separator"][event.eventType]
               }`}
             />
