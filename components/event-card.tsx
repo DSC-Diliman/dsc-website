@@ -66,7 +66,9 @@ export default function EventCard({ e, openModal }: Props) {
               eventColors["border"][e.eventType]
             } px-5 py-2`}
           >
-            <p className="text-lg font-medium xl:text-xl">{e.title}</p>
+            <p className="overflow-x-auto whitespace-nowrap text-lg font-medium xl:text-xl">
+              {e.title}
+            </p>
             {sameDay(e.date, e.dateEnd) && (
               <div className="flex items-center gap-2">
                 <BiTimeFive size={17.5} />{" "}

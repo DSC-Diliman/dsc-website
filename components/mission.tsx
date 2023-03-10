@@ -7,7 +7,7 @@ export default function Mission() {
       <p className="mt-2 mb-10 text-base md:text-lg">
         We, as an organization, aim to
       </p>
-      <div className="flex flex-col items-center gap-10 md:flex-row md:justify-center xl:gap-20">
+      <div className="flex flex-col items-center gap-5 md:flex-row md:justify-center xl:gap-20">
         {[
           {
             title: "Empower",

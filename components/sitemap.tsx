@@ -74,7 +74,7 @@ export default function Sitemap() {
     <LinkGroup key={index} head={head} links={links} />
   ));
   return (
-    <section className="mb-11 flex justify-center gap-x-14 text-base md:mb-0">
+    <section className="mb-11 flex flex-wrap justify-center gap-10 px-10 text-base md:mb-0">
       {sitemapJSX}
     </section>
   );
