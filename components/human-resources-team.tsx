@@ -20,7 +20,7 @@ export default function HRTeam({ allHRData }: Props) {
           </AnimatedEm>
         </h2>
         <p className="mt-4">
-          The Human Resources Division is in charge of the well being of the
+          The Human Resources Department is in charge of the well being of the
           members within the organization as well as the recruitment of aspiring
           members that are fit for the organization. This division fosters the
           relationships between members and ensures that all of the people
