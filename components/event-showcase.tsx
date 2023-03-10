@@ -15,8 +15,8 @@ interface Props {
 
 export default function EventShowcase({ event }: Props) {
   return (
-    <>
-      <div className="img-frame h-80 md:rounded-3xl">
+    <div className="max-h-[40rem]">
+      <div className="img-frame h-60 sm:h-80 md:rounded-3xl">
         <Image
           src={event.images[0]}
           alt="Event image"
@@ -27,7 +27,7 @@ export default function EventShowcase({ event }: Props) {
       <div
         className={`flex border-t-2 border-solid ${
           eventColors["border"][event.eventType]
-        } px-7 py-5`}
+        } flex h-fit max-h-80 flex-col gap-3 px-7 py-5 md:flex-row md:items-center`}
       >
         <div className="flex min-w-[40%] flex-col justify-center">
           <div className="mb-4 flex flex-col items-start gap-3">
@@ -71,19 +71,14 @@ export default function EventShowcase({ event }: Props) {
           </div>
         </div>
         {event.body && (
-          <>
+          <div className="max-h-60 overflow-auto">
             <div
-              className={`mx-7 w-1 rounded-full border border-solid ${
-                eventColors["separator"][event.eventType]
-              }`}
-            />
-            <div
-              className={`${markdownStyle.markdown}`}
+              className={`${markdownStyle.markdown} overflow-auto`}
               dangerouslySetInnerHTML={{ __html: event.body || "" }}
             />
-          </>
+          </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
