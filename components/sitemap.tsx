@@ -21,6 +21,23 @@ export default function Sitemap() {
     },
     {
       head: {
+        text: "Events",
+        href: "events",
+        show: true,
+      },
+      links: [
+        {
+          text: "Featured",
+          href: "featured",
+        },
+        {
+          text: "All Events",
+          href: "all-events",
+        },
+      ],
+    },
+    {
+      head: {
         text: "Team",
         href: "team",
         show: true,
@@ -42,6 +59,15 @@ export default function Sitemap() {
           text: "Communications",
           href: "communications",
         },
+      ],
+    },
+    {
+      head: {
+        text: "",
+        href: "",
+        show: false,
+      },
+      links: [
         {
           text: "Finance and Externals",
           href: "finance-and-externals",
@@ -56,29 +82,12 @@ export default function Sitemap() {
         },
       ],
     },
-    {
-      head: {
-        text: "Events",
-        href: "events",
-        show: true,
-      },
-      links: [
-        {
-          text: "Featured",
-          href: "featured",
-        },
-        {
-          text: "All Events",
-          href: "all-events",
-        },
-      ],
-    },
   ];
   const sitemapJSX = sections.map(({ head, links }, index) => (
     <LinkGroup key={index} head={head} links={links} />
   ));
   return (
-    <section className="mb-11 flex flex-wrap justify-center gap-10 px-10 text-base md:mb-0">
+    <section className="mb-11 grid grid-cols-2 justify-items-center gap-10 px-10 text-base md:mb-0 md:flex md:flex-wrap md:justify-center">
       {sitemapJSX}
     </section>
   );
