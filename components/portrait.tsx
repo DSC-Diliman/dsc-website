@@ -32,7 +32,7 @@ export default function Portrait({
 }: Props) {
   return (
     <div
-      className={`img-frame group relative flex h-52 w-40 flex-col justify-end overflow-hidden rounded-3xl text-sm shadow-2xl md:h-60 md:w-48 ${className}`}
+      className={`img-frame group relative flex h-44 w-36 flex-col justify-end overflow-hidden rounded-3xl text-sm shadow-2xl sm:h-52 sm:w-40 md:h-60 md:w-48 ${className}`}
     >
       <Image
         src={src}

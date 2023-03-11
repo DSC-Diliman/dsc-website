@@ -26,7 +26,7 @@ export default function Vision() {
             and innovation.
           </p>
           <AnimatedObject
-            className="img-frame div-style1 mx-auto h-96 w-96"
+            className="img-frame div-style1 mx-auto w-full sm:w-96"
             fromVars={{
               x: -100,
               opacity: 0,

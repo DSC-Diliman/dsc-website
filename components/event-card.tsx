@@ -5,6 +5,7 @@ import { EventInCMS } from "../types/event-in-cms";
 import FormattedDate from "./formatted-date";
 import FormattedTime from "./formatted-time";
 import { eventColors } from "../lib/eventColors";
+import shorten from "../lib/shorten";
 
 interface Props {
   e: EventInCMS;
@@ -66,7 +67,7 @@ export default function EventCard({ e, openModal }: Props) {
               eventColors["border"][e.eventType]
             } px-5 py-2`}
           >
-            <p className="text-lg font-medium xl:text-xl">{e.title}</p>
+            <p className="text-lg font-medium xl:text-xl">{shorten(e.title)}</p>
             {sameDay(e.date, e.dateEnd) && (
               <div className="flex items-center gap-2">
                 <BiTimeFive size={17.5} />{" "}

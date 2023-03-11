@@ -13,7 +13,7 @@ export default function ProjectShowcase({
   resetSelectedProject,
 }: Props) {
   return (
-    <div className="div-style1 relative mx-auto mt-12 max-w-sm sm:max-w-lg md:max-w-2xl">
+    <div className="div-style1 relative mx-auto mt-12 max-w-[90%] max-w-sm sm:max-w-lg md:max-w-2xl">
       <button
         className="absolute top-5 right-5 z-10 h-12 w-12 rounded-full bg-black/60 transition-all hover:rotate-90"
         onClick={resetSelectedProject}
