@@ -1,6 +1,6 @@
-import Em from "./em";
-import extractPortraits from "../lib/extractPortraits";
-import { MemberInCMS } from "../types/member-in-cms";
+import Em from "../em";
+import extractPortraits from "../../lib/extractPortraits";
+import { MemberInCMS } from "../../types/member-in-cms";
 
 interface Props {
   allExecData: MemberInCMS[];

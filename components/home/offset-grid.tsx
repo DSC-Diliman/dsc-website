@@ -1,5 +1,5 @@
-import AnimatedEm from "./animated-em";
-import { OffsetGridElement } from "../types/offset-grid-element";
+import AnimatedEm from "../animated-em";
+import { OffsetGridElement } from "../../types/offset-grid-element";
 
 interface Props {
   elements: OffsetGridElement[];

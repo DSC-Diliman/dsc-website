@@ -1,33 +1,37 @@
-import { BiTimeFive, BiCalendarEvent } from "react-icons/bi";
-import Link from "next/link";
-import FormattedDate from "./formatted-date";
-import FormattedTime from "./formatted-time";
 import Image from "next/image";
-import { EventInCMS } from "../types/event-in-cms";
-import sameDay from "../lib/sameDay";
-import { eventColors } from "../lib/eventColors";
+import Link from "next/link";
+import { BiTimeFive, BiCalendarEvent } from "react-icons/bi";
 import { GrLocation } from "react-icons/gr";
+import { eventColors } from "../../lib/eventColors";
+import sameDay from "../../lib/sameDay";
+import { EventInCMS } from "../../types/event-in-cms";
+import FormattedDate from "../formatted-date";
+import FormattedTime from "../formatted-time";
+import markdownStyle from "/components/Markdown.module.scss";
 
 interface Props {
   event: EventInCMS;
-  openModal: (e: EventInCMS) => void;
 }
 
-export default function EventFeatured({ event, openModal }: Props) {
+export default function EventShowcase({ event }: Props) {
   return (
-    <div className="div-style1 relative mx-auto flex w-full max-w-5xl flex-col sm:max-h-80 sm:flex-row">
-      <div className="img-frame absolute right-0 z-0 h-full opacity-10 sm:order-2 sm:flex-1 lg:opacity-30">
+    <div className="max-h-[40rem]">
+      <div className="img-frame h-60 sm:h-80 md:rounded-3xl">
         <Image
           src={event.images[0]}
           alt="Event image"
-          height={120}
-          width={(439 / 214) * 120}
+          height={320}
+          width={(439 / 214) * 320}
         />
       </div>
-      <div className="z-10 flex items-center px-8 py-6 sm:p-0">
-        <div className="flex flex-col sm:my-8 sm:mx-8 sm:max-w-lg sm:flex-1 md:mx-10">
-          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-6">
-            <p className="text-2xl font-medium md:text-3xl">{event.title}</p>
+      <div
+        className={`flex border-t-2 border-solid ${
+          eventColors["border"][event.eventType]
+        } flex h-fit max-h-80 flex-col gap-3 px-7 py-5 md:flex-row md:items-center`}
+      >
+        <div className="flex min-w-[40%] flex-col justify-center">
+          <div className="mb-4 flex flex-col items-start gap-3">
+            <h1 className="text-2xl">{event.title}</h1>
             <div
               className={`rounded-full px-2.5 py-0.5 text-sm font-medium text-white ${
                 eventColors["light-bg"][event.eventType]
@@ -36,7 +40,7 @@ export default function EventFeatured({ event, openModal }: Props) {
               {event.eventType}
             </div>
           </div>
-          <div className="my-6 flex flex-col gap-1">
+          <div className="flex flex-col gap-1 md:grid-cols-2 md:grid-rows-2">
             <div className="flex items-center gap-2">
               <BiCalendarEvent size={20} />{" "}
               <span>
@@ -65,18 +69,15 @@ export default function EventFeatured({ event, openModal }: Props) {
               </Link>
             </div>
           </div>
-          <div className="mb-6">
-            <p>{event.summary}</p>
-          </div>
-          <div>
-            <button
-              className={`${eventColors["button"][event.eventType]}`}
-              onClick={() => openModal(event)}
-            >
-              See Details
-            </button>
-          </div>
         </div>
+        {event.body && (
+          <div className="max-h-60 overflow-auto">
+            <div
+              className={`${markdownStyle.markdown} overflow-auto`}
+              dangerouslySetInnerHTML={{ __html: event.body || "" }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

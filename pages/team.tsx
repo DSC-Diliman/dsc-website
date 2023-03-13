@@ -1,14 +1,14 @@
-import ExecTeam from "../components/exec-team";
-import TechTeam from "../components/tech-team";
-import OpsTeam from "../components/ops-team";
-import CommsTeam from "../components/comms-team";
-import FinExtTeam from "../components/finext-team";
-import WebDevTeam from "../components/web-dev-team";
+import ExecTeam from "../components/team/exec-team";
+import TechTeam from "../components/team/tech-team";
+import OpsTeam from "../components/team/ops-team";
+import CommsTeam from "../components/team/comms-team";
+import FinExtTeam from "../components/team/finext-team";
+import WebDevTeam from "../components/team/web-dev-team";
 import { getTeam } from "../lib/posts";
 import { useState } from "react";
 import Head from "next/head";
 import { isArrayOfMembersInCMS, MemberInCMS } from "../types/member-in-cms";
-import HRTeam from "../components/human-resources-team";
+import HRTeam from "../components/team/human-resources-team";
 
 interface Props {
   allMemberData: MemberInCMS[];

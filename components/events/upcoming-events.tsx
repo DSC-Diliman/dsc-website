@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EventInCMS } from "../types/event-in-cms";
+import { EventInCMS } from "../../types/event-in-cms";
 import EventList from "./event-list-view";
 
 interface Props {

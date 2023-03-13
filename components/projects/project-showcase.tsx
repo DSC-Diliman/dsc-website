@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { IoClose } from "react-icons/io5";
-import { ProjectInCMS } from "../types/project-in-cms";
+import { ProjectInCMS } from "../../types/project-in-cms";
 import markdownStyle from "/components/Markdown.module.scss";
 
 interface Props {

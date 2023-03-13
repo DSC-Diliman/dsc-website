@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { BiTimeFive } from "react-icons/bi";
-import sameDay from "../lib/sameDay";
-import { EventInCMS } from "../types/event-in-cms";
-import FormattedDate from "./formatted-date";
-import FormattedTime from "./formatted-time";
-import { eventColors } from "../lib/eventColors";
-import shorten from "../lib/shorten";
+import sameDay from "../../lib/sameDay";
+import { EventInCMS } from "../../types/event-in-cms";
+import FormattedDate from "../formatted-date";
+import FormattedTime from "../formatted-time";
+import { eventColors } from "../../lib/eventColors";
+import shorten from "../../lib/shorten";
 
 interface Props {
   e: EventInCMS;

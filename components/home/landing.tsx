@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Em from "./em";
+import Em from "../em";
 import indexHeroStyle from "/components/IndexHero.module.scss";
 
 export default function Landing() {

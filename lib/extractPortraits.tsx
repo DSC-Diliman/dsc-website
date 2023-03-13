@@ -1,4 +1,4 @@
-import Portrait from "../components/portrait";
+import Portrait from "../components/team/portrait";
 import { MemberInCMS } from "../types/member-in-cms";
 
 export default function extractPortraits(data: MemberInCMS[]) {

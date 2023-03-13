@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Nav from "./nav";
-import Footer from "./footer";
+import Footer from "./footer/footer";
 
 interface Props {
   children: JSX.Element;

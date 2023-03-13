@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { getProjects } from "../lib/posts";
 import Masonry from "react-masonry-css";
 import masonryStyle from "/components/Masonry.module.scss";
-import ProjectShowcase from "../components/project-showcase";
+import ProjectShowcase from "../components/projects/project-showcase";
 import Image from "next/image";
 import Head from "next/head";
 import { isArrayOfProjectsInCMS, ProjectInCMS } from "../types/project-in-cms";

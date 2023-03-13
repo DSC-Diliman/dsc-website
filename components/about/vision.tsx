@@ -1,6 +1,6 @@
-import AnimatedText from "../components/animated-text";
-import AnimatedObject from "../components/animated-object";
-import AnimatedEm from "../components/animated-em";
+import AnimatedText from "../animated-text";
+import AnimatedObject from "../animated-object";
+import AnimatedEm from "../animated-em";
 import Image from "next/image";
 
 export default function Vision() {

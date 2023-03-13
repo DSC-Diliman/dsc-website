@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SitemapElement } from "../types/sitemap-element";
+import { SitemapElement } from "../../types/sitemap-element";
 
 interface Props {
   head: SitemapElement;

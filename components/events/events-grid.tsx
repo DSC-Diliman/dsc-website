@@ -1,7 +1,7 @@
-import { EventInCMS } from "../types/event-in-cms";
+import { EventInCMS } from "../../types/event-in-cms";
 import { useState } from "react";
 import EventCard from "./event-card";
-import { eventColors } from "../lib/eventColors";
+import { eventColors } from "../../lib/eventColors";
 
 interface Props {
   eventsData: EventInCMS[];

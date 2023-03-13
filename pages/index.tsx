@@ -1,7 +1,7 @@
 import { getEvents } from "../lib/posts";
-import Landing from "../components/landing";
-import WhatDoWeDo from "../components/what-do-we-do";
-import UpcomingEvents from "../components/upcoming-events";
+import Landing from "../components/home/landing";
+import WhatDoWeDo from "../components/home/what-do-we-do";
+import UpcomingEvents from "../components/events/upcoming-events";
 import Head from "next/head";
 import { EventInCMS } from "../types/event-in-cms";
 

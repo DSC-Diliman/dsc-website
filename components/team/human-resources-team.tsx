@@ -1,7 +1,7 @@
-import AnimatedEm from "./animated-em";
-import ParallaxObject from "./parallax-object";
-import extractPortraits from "../lib/extractPortraits";
-import { MemberInCMS } from "../types/member-in-cms";
+import AnimatedEm from "../animated-em";
+import ParallaxObject from "../parallax-object";
+import extractPortraits from "../../lib/extractPortraits";
+import { MemberInCMS } from "../../types/member-in-cms";
 
 interface Props {
   allHRData: MemberInCMS[];
