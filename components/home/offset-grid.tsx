@@ -1,4 +1,4 @@
-import AnimatedEm from "../animated-em";
+import { motion } from "framer-motion";
 import { OffsetGridElement } from "../../types/offset-grid-element";
 
 interface Props {
@@ -22,9 +22,14 @@ export default function OffsetGrid({ elements }: Props) {
             className="div-style1 relative flex w-full flex-col justify-center overflow-hidden px-9 py-6 sm:w-96 md:w-80 md:px-12 md:py-8 md:even:top-1/2 lg:w-96"
           >
             <div className="mb-2 gap-5 text-xl font-semibold md:mb-4 md:text-2xl">
-              <AnimatedEm emClassName={`right-4 bottom-0 ${bgColor}`}>
+              <span className="relative z-0">
                 {heading}
-              </AnimatedEm>
+                <motion.span
+                  whileInView={{ width: ["0%", "100%"] }}
+                  className={`absolute -left-4 bottom-0 -z-10 h-3 w-full origin-left ${bgColor}`}
+                  transition={{ duration: 1.5 }}
+                />
+              </span>
             </div>
             <div>
               <p className="text-sm md:text-base">{text}</p>
