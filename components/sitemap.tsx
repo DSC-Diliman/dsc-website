@@ -64,7 +64,7 @@ export default function Sitemap() {
     {
       head: {
         text: "",
-        href: "",
+        href: "team",
         show: false,
       },
       links: [
