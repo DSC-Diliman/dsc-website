@@ -1,6 +1,6 @@
 import AnimatedText from "../animated-text";
 import AnimatedObject from "../animated-object";
-import AnimatedEm from "../animated-em";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Vision() {
@@ -16,9 +16,14 @@ export default function Vision() {
           </h1>
           <p className="mb-6 text-3xl font-medium">
             Uplifting communities through{" "}
-            <AnimatedEm emClassName="bg-amber-300/50 bottom-0 left-4">
+            <span className="relative z-0">
+              <motion.span
+                whileInView={{ width: ["0%", "100%"] }}
+                className="absolute left-4 bottom-0 -z-10 h-3 origin-left bg-amber-300/50"
+                transition={{ duration: 1.5 }}
+              />
               technology
-            </AnimatedEm>
+            </span>
           </p>
           <p className="mb-8 text-base">
             Our organization envisions itself as a community of tech enthusiasts
