@@ -1,5 +1,10 @@
-import { OffsetGridElement } from "../../types/offset-grid-element";
 import AnimatedUnderline from "../animations/animated-underline";
+
+export interface OffsetGridElement {
+  heading: string;
+  text: string;
+  icon: JSX.Element;
+}
 
 interface Props {
   elements: OffsetGridElement[];
