@@ -1,6 +1,7 @@
 import AnimatedText from "../animations/animated-text";
-import AnimatedObject from "../animations/animated-object";
 import AnimatedUnderline from "../animations/animated-underline";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Vision() {
@@ -25,17 +26,11 @@ export default function Vision() {
             who are passionate about uplifting communities through technology
             and innovation.
           </p>
-          <AnimatedObject
+          <motion.div
+            animate={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             className="img-frame div-style1 mx-auto w-full sm:w-96"
-            fromVars={{
-              x: -100,
-              opacity: 0,
-            }}
-            toVars={{
-              x: 0,
-              opacity: 1,
-            }}
-            scrub={2}
+            transition={{ duration: 0.6 }}
           >
             <Image
               src="/images/vision-3.png"
@@ -43,20 +38,14 @@ export default function Vision() {
               height={384}
               width={384}
             />
-          </AnimatedObject>
+          </motion.div>
         </div>
         <div className="hidden lg:block">
-          <AnimatedObject
+          <motion.div
+            animate={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             className="img-frame div-style1 ml-auto mb-16 h-64 w-56"
-            fromVars={{
-              x: 100,
-              opacity: 0,
-            }}
-            toVars={{
-              x: 0,
-              opacity: 1,
-            }}
-            scrub={2}
+            transition={{ duration: 0.6 }}
           >
             <Image
               src="/images/vision-1.png"
@@ -64,18 +53,12 @@ export default function Vision() {
               height={256}
               width={256}
             />
-          </AnimatedObject>
-          <AnimatedObject
+          </motion.div>
+          <motion.div
             className="img-frame div-style1 ml-6 mb-16 block h-64 w-80"
-            fromVars={{
-              x: 100,
-              opacity: 0,
-            }}
-            toVars={{
-              x: 70,
-              opacity: 1,
-            }}
-            scrub={1}
+            animate={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 70, opacity: 1 }}
+            transition={{ duration: 0.6 }}
           >
             <Image
               src="/images/vision-2.png"
@@ -83,7 +66,7 @@ export default function Vision() {
               width={320}
               height={(413 / 717) * 320}
             />
-          </AnimatedObject>
+          </motion.div>
           <div className="mt-20 mr-20 ml-auto max-w-min space-y-6 text-5xl font-medium">
             <AnimatedText className="text-red-600">Empower.</AnimatedText>
             <AnimatedText className="text-blue-600">Enlighten.</AnimatedText>
