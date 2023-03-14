@@ -8,7 +8,7 @@ interface Props {
 
 export default function WebDevelopment({ allWebDevData }: Props) {
   return (
-    <section id="web-dev">
+    <section id="web-development">
       <div className="w-full px-4 pt-12 pb-8 text-center md:px-10 md:pt-24">
         <h1 className="text-center">
           <Em emClassName="bg-blue-400/50 bottom-0">

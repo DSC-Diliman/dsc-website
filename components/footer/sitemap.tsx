@@ -78,7 +78,7 @@ export default function Sitemap() {
         },
         {
           text: "Web Development",
-          href: "web-dev",
+          href: "web-development",
         },
       ],
     },

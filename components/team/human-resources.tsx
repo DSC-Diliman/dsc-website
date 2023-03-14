@@ -10,7 +10,7 @@ interface Props {
 export default function HumanResources({ allHRData }: Props) {
   return (
     <section
-      id="communications"
+      id="human-resources"
       className="md:mx-auto md:max-w-5xl lg:flex lg:items-center lg:gap-12"
     >
       <div className="max-w-sm px-10 lg:order-2 xl:max-w-md">
