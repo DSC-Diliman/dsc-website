@@ -1,11 +1,8 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Socials() {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, 75]);
-
   const socials = [
     {
       name: "Facebook",
