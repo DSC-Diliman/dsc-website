@@ -1,4 +1,4 @@
-import AnimatedEm from "../animated-em";
+import AnimatedUnderline from "../animated-underline";
 import ParallaxObject from "../parallax-object";
 import extractPortraits from "../../lib/extractPortraits";
 import { MemberInCMS } from "../../types/member-in-cms";
@@ -15,12 +15,9 @@ export default function FinExtTeam({ allExteFinData }: Props) {
     >
       <div className="max-w-sm px-10 xl:max-w-md">
         <h2>
-          <AnimatedEm
-            emClassName="bg-amber-300/50 bottom-0 -left-4"
-            trigger="90%"
-          >
+          <AnimatedUnderline className="bottom-0 -left-4 bg-amber-300/50">
             Finance and Externals
-          </AnimatedEm>
+          </AnimatedUnderline>
         </h2>
         <p className="mt-4">
           The Finance Externals Department manages the finances of the

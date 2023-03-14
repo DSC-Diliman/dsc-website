@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { OffsetGridElement } from "../../types/offset-grid-element";
+import AnimatedUnderline from "../animated-underline";
 
 interface Props {
   elements: OffsetGridElement[];
@@ -23,12 +23,9 @@ export default function OffsetGrid({ elements }: Props) {
           >
             <div className="mb-2 gap-5 text-xl font-semibold md:mb-4 md:text-2xl">
               <span className="relative z-0">
-                {heading}
-                <motion.span
-                  whileInView={{ width: ["0%", "100%"] }}
-                  className={`absolute -left-4 bottom-0 -z-10 h-3 w-full origin-left ${bgColor}`}
-                  transition={{ duration: 1.5 }}
-                />
+                <AnimatedUnderline className={`-left-4 bottom-0 ${bgColor}`}>
+                  {heading}
+                </AnimatedUnderline>
               </span>
             </div>
             <div>

@@ -1,4 +1,4 @@
-import AnimatedEm from "../animated-em";
+import AnimatedUnderline from "../animated-underline";
 import ParallaxObject from "../parallax-object";
 import extractPortraits from "../../lib/extractPortraits";
 import { MemberInCMS } from "../../types/member-in-cms";
@@ -15,9 +15,9 @@ export default function OpsTeam({ allOpsData }: Props) {
     >
       <div className="max-w-sm px-10 xl:max-w-md">
         <h2>
-          <AnimatedEm emClassName="bg-red-400/50 bottom-0 -left-4">
+          <AnimatedUnderline className="bottom-0 -left-4 bg-red-400/50">
             Operations
-          </AnimatedEm>
+          </AnimatedUnderline>
         </h2>
         <p className="mt-4">
           The Operations Department oversees the operations of the organization
