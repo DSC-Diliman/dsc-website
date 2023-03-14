@@ -10,4 +10,5 @@ images:
 summary: We’re excited to announce that we’ll be holding an org-wide design
   competition from October 26 to November 8.
 ---
+
 We’re excited to announce that we’ll be holding an org-wide design competition from October 26 to November 8. The goal is to create a design for the DSC website. Your submission may be in the form of wireframes, prototypes, or sketches. You can work individually or form teams with up to four members.
