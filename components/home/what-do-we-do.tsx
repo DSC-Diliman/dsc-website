@@ -3,7 +3,12 @@ import { BsWrench } from "react-icons/bs";
 import { ImLab } from "react-icons/im";
 import OffsetGrid from "./offset-grid";
 import Link from "next/link";
-import { OffsetGridElement } from "../../types/offset-grid-element";
+
+interface OffsetGridElement {
+  heading: string;
+  text: string;
+  icon: JSX.Element;
+}
 
 export default function WhatDoWeDo() {
   const offsetGridContents: OffsetGridElement[] = [

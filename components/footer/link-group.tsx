@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export interface SitemapElement {
+interface SitemapElement {
   text: string;
   href: string;
 }
