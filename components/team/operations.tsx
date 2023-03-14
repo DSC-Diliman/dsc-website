@@ -26,7 +26,7 @@ export default function Operations({ allOpsData }: Props) {
         </p>
       </div>
       <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
-        <AnimatedCircle className="-right-24 h-20 w-20 bg-red-400/50" />
+        <AnimatedCircle className="-right-12 h-20 w-20 bg-red-400/50 lg:-right-24" />
         {extractPortraits(allOpsData)}
       </div>
     </section>

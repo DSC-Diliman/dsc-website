@@ -26,7 +26,7 @@ export default function Technology({ allTechData }: Props) {
         </p>
       </div>
       <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
-        <AnimatedCircle className="-left-24 h-20 w-20 bg-emerald-500/50" />
+        <AnimatedCircle className="-left-12 h-20 w-20 bg-emerald-500/50 lg:-left-24" />
         <AnimatedCircle className="-bottom-12 right-24 h-6 w-6 bg-emerald-500/50" />
         {extractPortraits(allTechData)}
       </div>

@@ -28,7 +28,7 @@ export default function Communications({ allCommsData }: Props) {
         </p>
       </div>
       <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
-        <AnimatedCircle className="-left-20 h-10 w-10 bg-blue-400/50" />
+        <AnimatedCircle className="-left-10 h-10 w-10 bg-blue-400/50 lg:-left-20" />
         {extractPortraits(allCommsData)}
       </div>
     </section>
