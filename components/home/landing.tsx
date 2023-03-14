@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Underline from "../underline";
-import indexHeroStyle from "/components/IndexHero.module.scss";
 
 export default function Landing() {
   return (
@@ -31,11 +30,25 @@ export default function Landing() {
           </Link>
         </div>
       </div>
-      <div className={`hidden sm:block ${indexHeroStyle.hero}`}>
-        <div>
-          <div />
-        </div>
-        <div />
+      <div className="relative hidden sm:block sm:h-screen">
+        <Image
+          src="/images/index-hero.png"
+          alt="Oblation statue with background"
+          className="top-0 h-full w-full object-cover"
+          style={{
+            WebkitMaskImage: "url('/images/index-hero-mask.png')",
+            WebkitMaskSize: "cover",
+          }}
+          height={600}
+          width={600}
+        />
+        <Image
+          src="/images/index-hero-main.png"
+          alt="Oblation statue only"
+          className="absolute top-0 h-full w-full object-cover"
+          height={600}
+          width={600}
+        />
       </div>
     </section>
   );
