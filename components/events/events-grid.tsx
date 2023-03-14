@@ -71,7 +71,7 @@ export default function EventsGrid({ eventsData, openModal }: Props) {
         {categorySelectionButtons}
       </div>
       {eventsToShow.length > 0 ? (
-        <div className="auto-grid-base mx-auto grid max-w-6xl auto-rows-fr gap-12">
+        <div className="auto-grid-base mx-auto mb-10 grid max-w-6xl auto-rows-fr gap-12">
           {eventsToShow}
         </div>
       ) : (
