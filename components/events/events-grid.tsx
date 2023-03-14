@@ -2,6 +2,7 @@ import { Event } from "../../types/event";
 import { useState } from "react";
 import EventCard from "./event-card";
 import { eventColors } from "../../lib/event-colors";
+import { motion } from "framer-motion";
 
 interface Props {
   eventsData: Event[];
@@ -47,9 +48,12 @@ export default function EventsGrid({ eventsData, openModal }: Props) {
     .map((e, index) => <EventCard e={e} key={index} openModal={openModal} />);
 
   const categorySelectionButtons = categories.map((category, index) => (
-    <div
+    <motion.div
       key={index}
-      className="flex items-center gap-2 rounded-full bg-white px-4 py-2 drop-shadow-md transition-all hover:scale-110 hover:cursor-pointer"
+      className="flex items-center gap-2 rounded-full bg-white px-4 py-2 drop-shadow-md transition-all hover:cursor-pointer"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.05 }}
       onClick={() => toggleCategory(category)}
     >
       {categoriesToShow.includes(category) ? (
@@ -62,7 +66,7 @@ export default function EventsGrid({ eventsData, openModal }: Props) {
         />
       )}
       <p>{category}</p>
-    </div>
+    </motion.div>
   ));
 
   return (

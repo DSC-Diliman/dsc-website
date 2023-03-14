@@ -6,6 +6,7 @@ import FormattedDate from "../formatted-date";
 import FormattedTime from "../formatted-time";
 import { eventColors } from "../../lib/event-colors";
 import shorten from "../../lib/shorten";
+import { motion } from "framer-motion";
 
 interface Props {
   e: Event;
@@ -20,10 +21,13 @@ export default function EventCard({ e, openModal }: Props) {
         eventColors["bg"][e.eventType]
       }`}
     >
-      <div
+      <motion.div
         className={`flex h-full flex-col overflow-hidden rounded-2xl border-2 border-solid bg-white ${
           eventColors["border"][e.eventType]
-        } h-56 transition-all hover:-translate-y-1.5 hover:cursor-pointer`}
+        } h-56 transition-all hover:cursor-pointer`}
+        whileHover={{ y: -6 }}
+        whileTap={{ y: 0 }}
+        transition={{ duration: 0.05 }}
         onClick={() => openModal(e)}
       >
         <div className="img-frame h-32 flex-none opacity-50">
@@ -79,7 +83,7 @@ export default function EventCard({ e, openModal }: Props) {
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
