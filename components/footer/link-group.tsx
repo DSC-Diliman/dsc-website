@@ -19,7 +19,7 @@ export default function LinkGroup({ head, links }: Props) {
     </Link>
   ));
   return (
-    <div className="w-28 text-left">
+    <div className="w-32 text-left">
       <Link href={`${head.href}`}>
         {head.text ? (
           <p className="block cursor-pointer py-2.5 font-bold hover:underline">

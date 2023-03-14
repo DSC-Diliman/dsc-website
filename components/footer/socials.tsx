@@ -43,7 +43,7 @@ export default function Socials() {
   ));
 
   return (
-    <section className="relative mx-auto max-w-max">
+    <section className="relative mx-auto max-w-max xl:mx-0">
       <motion.div
         className="absolute -left-10 top-0 -z-10 h-20 w-20 rounded-full bg-amber-300/50"
         animate={{ scale: [1, 1.1, 1] }}
