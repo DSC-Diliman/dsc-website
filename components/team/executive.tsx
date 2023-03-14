@@ -1,4 +1,4 @@
-import Em from "../em";
+import Underline from "../underline";
 import extractPortraits from "../../lib/extractPortraits";
 import { Member } from "../../types/member";
 
@@ -10,10 +10,14 @@ export default function Executive({ allExecData }: Props) {
   return (
     <section id="executive">
       <h2 className="text-center">
-        <Em emClassName="bg-blue-400/50 bottom-0">&nbsp;&nbsp;&nbsp;Exec</Em>
-        <Em emClassName="bg-red-400/50 bottom-0">utiv</Em>
-        <Em emClassName="bg-amber-400/50 bottom-0">e Boa</Em>
-        <Em emClassName="bg-emerald-400/50 bottom-0">rd&nbsp;&nbsp;&nbsp;</Em>
+        <Underline className="bottom-0 bg-blue-400/50">
+          &nbsp;&nbsp;&nbsp;Exec
+        </Underline>
+        <Underline className="bottom-0 bg-red-400/50">utiv</Underline>
+        <Underline className="bottom-0 bg-amber-400/50">e Boa</Underline>
+        <Underline className="bottom-0 bg-emerald-400/50">
+          rd&nbsp;&nbsp;&nbsp;
+        </Underline>
       </h2>
       <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-evenly gap-8 sm:mb-32">
         {extractPortraits(allExecData)}

@@ -1,4 +1,4 @@
-import Em from "../em";
+import Underline from "../underline";
 import extractPortraits from "../../lib/extractPortraits";
 import { Member } from "../../types/member";
 
@@ -11,14 +11,14 @@ export default function WebDevelopment({ allWebDevData }: Props) {
     <section id="web-development">
       <div className="w-full px-4 pt-12 pb-8 text-center md:px-10 md:pt-24">
         <h1 className="text-center">
-          <Em emClassName="bg-blue-400/50 bottom-0">
+          <Underline className="bottom-0 bg-blue-400/50">
             &nbsp;&nbsp;&nbsp;Websit
-          </Em>
-          <Em emClassName="bg-red-400/50 bottom-0">e Deve</Em>
-          <Em emClassName="bg-amber-400/50 bottom-0">lopmen</Em>
-          <Em emClassName="bg-emerald-400/50 bottom-0">
+          </Underline>
+          <Underline className="bottom-0 bg-red-400/50">e Deve</Underline>
+          <Underline className="bottom-0 bg-amber-400/50">lopmen</Underline>
+          <Underline className="bottom-0 bg-emerald-400/50">
             t Team&nbsp;&nbsp;&nbsp;
-          </Em>
+          </Underline>
         </h1>
         <p className="mx-auto mt-8 mb-0 max-w-sm text-center md:max-w-2xl">
           This website was brought to you by the following hardworking and

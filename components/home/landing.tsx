@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Em from "../em";
+import Underline from "../underline";
 import indexHeroStyle from "/components/IndexHero.module.scss";
 
 export default function Landing() {
@@ -9,9 +9,9 @@ export default function Landing() {
       <div className="w-full bg-white/60 p-8 backdrop-blur-md backdrop-filter sm:w-1/2 sm:bg-transparent md:pl-20 md:pr-10 md:pt-24 md:pb-10 md:backdrop-filter-none">
         <div className="mx-auto max-w-xl">
           <h1 className="mb-2 text-2xl md:mb-10 md:text-3xl lg:text-4xl xl:text-5xl">
-            <Em emClassName="bg-[#7b1113]/20 right-4 bottom-1 lg:bottom-2">
+            <Underline className="right-4 bottom-1 bg-[#7b1113]/20 lg:bottom-2">
               Grow. Learn. Connect.
-            </Em>
+            </Underline>
           </h1>
           <p className="my-4 text-base md:mb-10">
             The <b>GDSC UP Diliman Chapter</b> is part of a global community of
