@@ -50,7 +50,7 @@ export default function Socials() {
         transition={{ repeat: Infinity, duration: 3 }}
       />
       <motion.div
-        className="absolute left-14 top-72 -z-10 h-12 w-12 rounded-full bg-blue-300/50"
+        className="absolute left-14 top-60 -z-10 h-12 w-12 rounded-full bg-blue-300/50"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ repeat: Infinity, duration: 3 }}
       />
