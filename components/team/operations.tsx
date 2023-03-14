@@ -1,6 +1,6 @@
 import AnimatedUnderline from "../animations/animated-underline";
 import ParallaxObject from "../animations/parallax-object";
-import extractPortraits from "../../lib/extractPortraits";
+import extractPortraits from "../../lib/extract-portraits";
 import { Member } from "../../types/member";
 
 interface Props {

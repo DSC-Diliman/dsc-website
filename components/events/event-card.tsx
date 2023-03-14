@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { BiTimeFive } from "react-icons/bi";
-import sameDay from "../../lib/sameDay";
+import sameDay from "../../lib/same-day";
 import { Event } from "../../types/event";
 import FormattedDate from "../formatted-date";
 import FormattedTime from "../formatted-time";
-import { eventColors } from "../../lib/eventColors";
+import { eventColors } from "../../lib/event-colors";
 import shorten from "../../lib/shorten";
 
 interface Props {

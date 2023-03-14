@@ -1,7 +1,7 @@
 import { Event } from "../../types/event";
 import { useState } from "react";
 import EventCard from "./event-card";
-import { eventColors } from "../../lib/eventColors";
+import { eventColors } from "../../lib/event-colors";
 
 interface Props {
   eventsData: Event[];

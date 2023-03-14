@@ -7,7 +7,7 @@ import ProjectShowcase from "../components/projects/project-showcase";
 import Image from "next/image";
 import Head from "next/head";
 import { isArrayOfProjects, Project } from "../types/project";
-import markdownToHtml from "../lib/markdownToHtml";
+import markdownToHtml from "../lib/markdown-to-html";
 
 Modal.setAppElement("#__next");
 

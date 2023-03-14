@@ -4,8 +4,8 @@ import FormattedDate from "../formatted-date";
 import FormattedTime from "../formatted-time";
 import Image from "next/image";
 import { Event } from "../../types/event";
-import sameDay from "../../lib/sameDay";
-import { eventColors } from "../../lib/eventColors";
+import sameDay from "../../lib/same-day";
+import { eventColors } from "../../lib/event-colors";
 import { GrLocation } from "react-icons/gr";
 
 interface Props {

@@ -1,5 +1,5 @@
 import Underline from "../underline";
-import extractPortraits from "../../lib/extractPortraits";
+import extractPortraits from "../../lib/extract-portraits";
 import { Member } from "../../types/member";
 
 interface Props {

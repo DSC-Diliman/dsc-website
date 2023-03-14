@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { BiTimeFive } from "react-icons/bi";
 import { GrLocation } from "react-icons/gr";
-import { eventColors } from "../../lib/eventColors";
-import sameDay from "../../lib/sameDay";
+import { eventColors } from "../../lib/event-colors";
+import sameDay from "../../lib/same-day";
 import { Event } from "../../types/event";
 import FormattedDate from "../formatted-date";
 import FormattedTime from "../formatted-time";

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import { getEvents } from "../lib/posts";
-import markdownToHtml from "../lib/markdownToHtml";
+import markdownToHtml from "../lib/markdown-to-html";
 import EventsGrid from "../components/events/events-grid";
 import EventFeatured from "../components/events/event-featured";
 import EventShowcase from "../components/events/event-showcase";
