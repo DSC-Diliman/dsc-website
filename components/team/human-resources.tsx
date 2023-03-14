@@ -29,7 +29,7 @@ export default function HumanResources({ allHRData }: Props) {
         </p>
       </div>
       <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
-        <AnimatedCircle className="top-6 -left-12 lg:-left-24 h-16 w-16 bg-emerald-400/50" />
+        <AnimatedCircle className="top-6 -left-12 h-16 w-16 bg-emerald-400/50 lg:-left-24" />
         <AnimatedCircle className="-bottom-20 left-20 h-10 w-10 bg-emerald-400/50" />
         {extractPortraits(allHRData)}
       </div>
