@@ -1,4 +1,4 @@
-import ParallaxImage from "../parallax-image";
+import ParallaxImage from "../animations/parallax-image";
 
 export default function Description() {
   return (

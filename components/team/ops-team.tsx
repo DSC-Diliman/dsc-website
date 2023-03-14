@@ -1,5 +1,5 @@
-import AnimatedUnderline from "../animated-underline";
-import ParallaxObject from "../parallax-object";
+import AnimatedUnderline from "../animations/animated-underline";
+import ParallaxObject from "../animations/parallax-object";
 import extractPortraits from "../../lib/extractPortraits";
 import { MemberInCMS } from "../../types/member-in-cms";
 
