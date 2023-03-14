@@ -7,7 +7,7 @@ interface Props {
   allOpsData: MemberInCMS[];
 }
 
-export default function OpsTeam({ allOpsData }: Props) {
+export default function Operations({ allOpsData }: Props) {
   return (
     <section
       id="operations"

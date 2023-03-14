@@ -7,7 +7,7 @@ interface Props {
   allExteFinData: MemberInCMS[];
 }
 
-export default function FinExtTeam({ allExteFinData }: Props) {
+export default function FinanceAndExternals({ allExteFinData }: Props) {
   return (
     <section
       id="finance-and-externals"

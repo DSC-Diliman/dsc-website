@@ -6,7 +6,7 @@ interface Props {
   allExecData: MemberInCMS[];
 }
 
-export default function ExecTeam({ allExecData }: Props) {
+export default function Executive({ allExecData }: Props) {
   return (
     <section id="executive">
       <h2 className="text-center">

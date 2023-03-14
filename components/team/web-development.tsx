@@ -6,7 +6,7 @@ interface Props {
   allWebDevData: MemberInCMS[];
 }
 
-export default function WebDevTeam({ allWebDevData }: Props) {
+export default function WebDevelopment({ allWebDevData }: Props) {
   return (
     <section id="web-dev">
       <div className="w-full px-4 pt-12 pb-8 text-center md:px-10 md:pt-24">

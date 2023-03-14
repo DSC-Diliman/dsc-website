@@ -7,7 +7,7 @@ interface Props {
   allCommsData: MemberInCMS[];
 }
 
-export default function CommsTeam({ allCommsData }: Props) {
+export default function Communications({ allCommsData }: Props) {
   return (
     <section
       id="communications"
