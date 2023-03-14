@@ -3,14 +3,14 @@ import Link from "next/link";
 import FormattedDate from "../formatted-date";
 import FormattedTime from "../formatted-time";
 import Image from "next/image";
-import { EventInCMS } from "../../types/event-in-cms";
+import { Event } from "../../types/event";
 import sameDay from "../../lib/sameDay";
 import { eventColors } from "../../lib/eventColors";
 import { GrLocation } from "react-icons/gr";
 
 interface Props {
-  event: EventInCMS;
-  openModal: (e: EventInCMS) => void;
+  event: Event;
+  openModal: (e: Event) => void;
 }
 
 export default function EventFeatured({ event, openModal }: Props) {

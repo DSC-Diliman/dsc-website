@@ -7,11 +7,11 @@ import WebDevelopment from "../components/team/web-development";
 import { getTeam } from "../lib/posts";
 import { useState } from "react";
 import Head from "next/head";
-import { isArrayOfMembersInCMS, MemberInCMS } from "../types/member-in-cms";
+import { isArrayOfMembers, Member } from "../types/member";
 import HumanResources from "../components/team/human-resources";
 
 interface Props {
-  allMemberData: MemberInCMS[];
+  allMemberData: Member[];
 }
 
 export default function Team({ allMemberData }: Props) {
@@ -118,10 +118,10 @@ export async function getStaticProps() {
     "Web Development",
   ];
 
-  let allMemberData: MemberInCMS[] = [];
+  let allMemberData: Member[] = [];
   for (const team of teams) {
     const teamData = getTeam(team);
-    if (isArrayOfMembersInCMS(teamData)) {
+    if (isArrayOfMembers(teamData)) {
       allMemberData.push(...teamData);
     }
   }

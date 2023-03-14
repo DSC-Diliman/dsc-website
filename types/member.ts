@@ -1,4 +1,4 @@
-export interface MemberInCMS {
+export interface Member {
   id: string;
   name: string;
   year: number;
@@ -19,10 +19,10 @@ export interface MemberInCMS {
   body?: string;
 }
 
-export function isMemberInCMS(object: any): object is MemberInCMS {
+export function isMember(object: any): object is Member {
   return object.hasOwnProperty("name");
 }
 
-export function isArrayOfMembersInCMS(array: any[]): array is MemberInCMS[] {
-  return array.length > 0 && isMemberInCMS(array[0]);
+export function isArrayOfMembers(array: any[]): array is Member[] {
+  return array.length > 0 && isMember(array[0]);
 }

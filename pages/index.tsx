@@ -3,10 +3,10 @@ import Landing from "../components/home/landing";
 import WhatDoWeDo from "../components/home/what-do-we-do";
 import UpcomingEvents from "../components/events/upcoming-events";
 import Head from "next/head";
-import { EventInCMS } from "../types/event-in-cms";
+import { Event } from "../types/event";
 
 interface Props {
-  eventsArray: EventInCMS[];
+  eventsArray: Event[];
 }
 
 export default function Home({ eventsArray }: Props) {

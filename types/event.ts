@@ -1,4 +1,4 @@
-export interface EventInCMS {
+export interface Event {
   id: string;
   title: string;
   date: string;
@@ -11,10 +11,10 @@ export interface EventInCMS {
   body?: string;
 }
 
-export function isEventInCMS(object: any): object is EventInCMS {
+export function isEvent(object: any): object is Event {
   return object.hasOwnProperty("date");
 }
 
-export function isArrayOfEventsInCMS(array: any[]): array is EventInCMS[] {
-  return array.length > 0 && isEventInCMS(array[0]);
+export function isArrayOfEvents(array: any[]): array is Event[] {
+  return array.length > 0 && isEvent(array[0]);
 }

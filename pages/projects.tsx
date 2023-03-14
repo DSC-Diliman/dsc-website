@@ -6,19 +6,17 @@ import masonryStyle from "/components/Masonry.module.scss";
 import ProjectShowcase from "../components/projects/project-showcase";
 import Image from "next/image";
 import Head from "next/head";
-import { isArrayOfProjectsInCMS, ProjectInCMS } from "../types/project-in-cms";
+import { isArrayOfProjects, Project } from "../types/project";
 import markdownToHtml from "../lib/markdownToHtml";
 
 Modal.setAppElement("#__next");
 
 interface Props {
-  allProjectsData: ProjectInCMS[];
+  allProjectsData: Project[];
 }
 
 export default function Projects({ allProjectsData }: Props) {
-  const [selectedProject, setSelectedProject] = useState<ProjectInCMS | null>(
-    null
-  );
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   function resetSelectedProject() {
     setSelectedProject(null);
@@ -87,7 +85,7 @@ export default function Projects({ allProjectsData }: Props) {
 export async function getStaticProps() {
   const allProjectsData = getProjects();
 
-  if (isArrayOfProjectsInCMS(allProjectsData)) {
+  if (isArrayOfProjects(allProjectsData)) {
     allProjectsData.forEach(async (event, index, events) => {
       events[index].body = await markdownToHtml(event.body || "");
     });

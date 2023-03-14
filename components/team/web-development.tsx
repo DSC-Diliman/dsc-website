@@ -1,9 +1,9 @@
 import Em from "../em";
 import extractPortraits from "../../lib/extractPortraits";
-import { MemberInCMS } from "../../types/member-in-cms";
+import { Member } from "../../types/member";
 
 interface Props {
-  allWebDevData: MemberInCMS[];
+  allWebDevData: Member[];
 }
 
 export default function WebDevelopment({ allWebDevData }: Props) {

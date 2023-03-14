@@ -2,17 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { parseISO, isWithinInterval, compareDesc } from "date-fns";
-import {
-  EventInCMS,
-  isArrayOfEventsInCMS,
-  isEventInCMS,
-} from "../types/event-in-cms";
-import {
-  isArrayOfMembersInCMS,
-  isMemberInCMS,
-  MemberInCMS,
-} from "../types/member-in-cms";
-import { isProjectInCMS, ProjectInCMS } from "../types/project-in-cms";
+import { Event, isArrayOfEvents, isEvent } from "../types/event";
+import { isArrayOfMembers, isMember, Member } from "../types/member";
+import { isProject, Project } from "../types/project";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -41,7 +33,7 @@ function getAllFilenames(collection: Collection): string[] {
 function getRecordById(
   collection: Collection,
   id: string
-): MemberInCMS | ProjectInCMS | EventInCMS | {} {
+): Member | Project | Event | {} {
   const filepath = path.join(postsDirectory, collection, `${id}.md`);
   const fileContents = fs.readFileSync(filepath, "utf-8");
 
@@ -51,7 +43,7 @@ function getRecordById(
 
   const result = JSON.parse(JSON.stringify(data));
 
-  if (isMemberInCMS(result) || isProjectInCMS(result) || isEventInCMS(result)) {
+  if (isMember(result) || isProject(result) || isEvent(result)) {
     return result;
   } else {
     return {};
@@ -64,7 +56,7 @@ function getRecordById(
 
 function getRecords(
   collection: Collection
-): MemberInCMS[] | ProjectInCMS[] | EventInCMS[] | {}[] {
+): Member[] | Project[] | Event[] | {}[] {
   return getAllFilenames(collection).map((filename) =>
     getRecordById(collection, filename)
   );
@@ -76,16 +68,16 @@ export function getProjectIds(): string[] {
   return getAllFilenames("projects");
 }
 
-export function getProjectById(id: string): ProjectInCMS | {} {
+export function getProjectById(id: string): Project | {} {
   const record = getRecordById("projects", id);
-  if (isProjectInCMS(record)) {
+  if (isProject(record)) {
     return record;
   } else {
     return {};
   }
 }
 
-export function getProjects(): ProjectInCMS[] | {}[] {
+export function getProjects(): Project[] | {}[] {
   return getRecords("projects");
 }
 
@@ -95,13 +87,13 @@ export function getEventIds() {
   return getAllFilenames("events");
 }
 
-export function getEventById(id: string): EventInCMS | {} {
+export function getEventById(id: string): Event | {} {
   return getRecordById("events", id);
 }
 
-export function getEvents(): EventInCMS[] | {}[] {
+export function getEvents(): Event[] | {}[] {
   const records = getRecords("events");
-  if (isArrayOfEventsInCMS(records)) {
+  if (isArrayOfEvents(records)) {
     return records.sort((a, b) =>
       compareDesc(parseISO(a.date), parseISO(b.date))
     );
@@ -113,9 +105,9 @@ export function getEvents(): EventInCMS[] | {}[] {
 export function getEventsInInterval({
   start,
   end,
-}: DateInterval): EventInCMS[] | {}[] {
+}: DateInterval): Event[] | {}[] {
   const events = getEvents();
-  if (isArrayOfEventsInCMS(events)) {
+  if (isArrayOfEvents(events)) {
     return events.filter(({ date }) =>
       isWithinInterval(parseISO(date), { start, end })
     );
@@ -126,9 +118,9 @@ export function getEventsInInterval({
 
 // CMS Member data getter
 
-export function getTeam(wantedTeam: string): MemberInCMS[] | {}[] {
+export function getTeam(wantedTeam: string): Member[] | {}[] {
   const records = getRecords("members");
-  if (isArrayOfMembersInCMS(records)) {
+  if (isArrayOfMembers(records)) {
     return records.filter(({ team }) => team === wantedTeam);
   } else {
     return records;

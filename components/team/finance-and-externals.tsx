@@ -1,10 +1,10 @@
 import AnimatedUnderline from "../animations/animated-underline";
 import ParallaxObject from "../animations/parallax-object";
 import extractPortraits from "../../lib/extractPortraits";
-import { MemberInCMS } from "../../types/member-in-cms";
+import { Member } from "../../types/member";
 
 interface Props {
-  allExteFinData: MemberInCMS[];
+  allExteFinData: Member[];
 }
 
 export default function FinanceAndExternals({ allExteFinData }: Props) {

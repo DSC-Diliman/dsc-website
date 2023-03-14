@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { EventInCMS } from "../../types/event-in-cms";
+import { Event } from "../../types/event";
 import EventList from "./event-list-view";
 
 interface Props {
-  eventsArray: EventInCMS[];
+  eventsArray: Event[];
 }
 
 export default function UpcomingEvents({ eventsArray }: Props) {

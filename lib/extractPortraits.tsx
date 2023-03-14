@@ -1,7 +1,7 @@
 import Portrait from "../components/team/portrait";
-import { MemberInCMS } from "../types/member-in-cms";
+import { Member } from "../types/member";
 
-export default function extractPortraits(data: MemberInCMS[]) {
+export default function extractPortraits(data: Member[]) {
   return data
     .filter((member) => member)
     .map(

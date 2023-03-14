@@ -4,13 +4,13 @@ import { BiTimeFive, BiCalendarEvent } from "react-icons/bi";
 import { GrLocation } from "react-icons/gr";
 import { eventColors } from "../../lib/eventColors";
 import sameDay from "../../lib/sameDay";
-import { EventInCMS } from "../../types/event-in-cms";
+import { Event } from "../../types/event";
 import FormattedDate from "../formatted-date";
 import FormattedTime from "../formatted-time";
 import markdownStyle from "/components/Markdown.module.scss";
 
 interface Props {
-  event: EventInCMS;
+  event: Event;
 }
 
 export default function EventShowcase({ event }: Props) {

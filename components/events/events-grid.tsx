@@ -1,11 +1,11 @@
-import { EventInCMS } from "../../types/event-in-cms";
+import { Event } from "../../types/event";
 import { useState } from "react";
 import EventCard from "./event-card";
 import { eventColors } from "../../lib/eventColors";
 
 interface Props {
-  eventsData: EventInCMS[];
-  openModal: (e: EventInCMS) => void;
+  eventsData: Event[];
+  openModal: (e: Event) => void;
 }
 
 type EventType =
