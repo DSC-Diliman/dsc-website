@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Underline from "../underline";
 import indexHeroStyle from "/components/IndexHero.module.scss";
@@ -5,7 +6,15 @@ import indexHeroStyle from "/components/IndexHero.module.scss";
 export default function Landing() {
   return (
     <section className="relative flex min-h-screen flex-row items-center">
-      <div className={indexHeroStyle["mobile-hero"]} />
+      <div className="absolute block h-full w-full sm:hidden">
+        <Image
+          className="h-full object-cover"
+          src="/images/index-hero.png"
+          alt="Oblation statue"
+          width={600}
+          height={600}
+        />
+      </div>
       <div className="w-full bg-white/60 p-8 backdrop-blur-md backdrop-filter sm:w-1/2 sm:bg-transparent md:pl-20 md:pr-10 md:pt-24 md:pb-10 md:backdrop-filter-none">
         <div className="mx-auto max-w-xl">
           <h1 className="mb-2 text-2xl md:mb-10 md:text-3xl lg:text-4xl xl:text-5xl">

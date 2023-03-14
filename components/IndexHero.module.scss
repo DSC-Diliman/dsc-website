@@ -24,8 +24,3 @@
     @apply fixed top-0 h-full w-full bg-no-repeat sm:w-1/2;
   }
 }
-
-.mobile-hero {
-  @apply absolute block h-full w-full bg-cover bg-fixed bg-center sm:hidden;
-  background-image: url("/images/index-hero.png");
-}
