@@ -1,7 +1,7 @@
 import AnimatedText from "../animations/animated-text";
 import AnimatedObject from "../animations/animated-object";
-import Image from "next/image";
 import AnimatedUnderline from "../animations/animated-underline";
+import Image from "next/image";
 
 export default function Vision() {
   return (

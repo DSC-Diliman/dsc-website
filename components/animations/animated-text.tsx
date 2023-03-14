@@ -1,8 +1,4 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from "framer-motion";
 
 interface Props {
   children: string;
@@ -10,33 +6,14 @@ interface Props {
 }
 
 export default function AnimatedText({ children, className }: Props) {
-  const ref = useRef<HTMLParagraphElement>(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      gsap.fromTo(
-        ref.current,
-        {
-          opacity: 0,
-          y: 40,
-        },
-        {
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "bottom bottom",
-            end: "+=100",
-            scrub: 1,
-          },
-          opacity: 1,
-          y: 0,
-        }
-      );
-    }
-  }, []);
-
   return (
-    <p className={className} ref={ref}>
+    <motion.p
+      className={className}
+      animate={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+    >
       {children}
-    </p>
+    </motion.p>
   );
 }
