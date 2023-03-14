@@ -1,6 +1,7 @@
 import AnimatedUnderline from "../animations/animated-underline";
-import ParallaxObject from "../animations/parallax-object";
+import AnimatedCircle from "../animations/animated-circle";
 import extractPortraits from "../../lib/extract-portraits";
+
 import { Member } from "../../types/member";
 
 interface Props {
@@ -15,7 +16,7 @@ export default function HumanResources({ allHRData }: Props) {
     >
       <div className="max-w-sm px-10 lg:order-2 xl:max-w-md">
         <h2>
-          <AnimatedUnderline className="bottom-0 left-4 bg-blue-400/50">
+          <AnimatedUnderline className="bottom-0 left-4 bg-emerald-400/50">
             Human Resources
           </AnimatedUnderline>
         </h2>
@@ -28,11 +29,8 @@ export default function HumanResources({ allHRData }: Props) {
         </p>
       </div>
       <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
-        <ParallaxObject
-          className="absolute -left-2 h-10 w-10 rounded-full bg-blue-400/50"
-          y={[-100, 200]}
-          end="bottom+=160 top"
-        />
+        <AnimatedCircle className="top-6 -left-24 h-16 w-16 bg-emerald-400/50" />
+        <AnimatedCircle className="-bottom-20 left-20 h-10 w-10 bg-emerald-400/50" />
         {extractPortraits(allHRData)}
       </div>
     </section>

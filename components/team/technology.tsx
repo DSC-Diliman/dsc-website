@@ -1,6 +1,7 @@
 import AnimatedUnderline from "../animations/animated-underline";
-import ParallaxObject from "../animations/parallax-object";
+import AnimatedCircle from "../animations/animated-circle";
 import extractPortraits from "../../lib/extract-portraits";
+
 import { Member } from "../../types/member";
 
 interface Props {
@@ -25,16 +26,8 @@ export default function Technology({ allTechData }: Props) {
         </p>
       </div>
       <div className="relative mx-auto mt-8 flex w-fit max-w-5xl flex-wrap justify-center gap-8 lg:mt-0">
-        <ParallaxObject
-          className="absolute -left-24 h-20 w-20 rounded-full bg-emerald-500/50"
-          y={[0, 200]}
-          end="bottom+=160 top"
-        />
-        <ParallaxObject
-          className="absolute bottom-0 right-24 h-6 w-6 rounded-full bg-emerald-500/50"
-          y={[0, 50]}
-          end="bottom+=200 top"
-        />
+        <AnimatedCircle className="-left-24 h-20 w-20 bg-emerald-500/50" />
+        <AnimatedCircle className="-bottom-12 right-24 h-6 w-6 bg-emerald-500/50" />
         {extractPortraits(allTechData)}
       </div>
     </section>

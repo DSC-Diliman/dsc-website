@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedCircle from "../animations/animated-circle";
 
 export default function Socials() {
   const socials = [
@@ -44,21 +44,9 @@ export default function Socials() {
 
   return (
     <section className="relative mx-auto max-w-max xl:mx-0">
-      <motion.div
-        className="absolute -left-10 top-0 -z-10 h-20 w-20 rounded-full bg-amber-300/50"
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ repeat: Infinity, duration: 3 }}
-      />
-      <motion.div
-        className="absolute left-14 top-60 -z-10 h-12 w-12 rounded-full bg-blue-300/50"
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ repeat: Infinity, duration: 3 }}
-      />
-      <motion.div
-        className="absolute left-36 top-20 -z-10 h-14 w-14 rounded-full bg-red-300/50"
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ repeat: Infinity, duration: 3 }}
-      />
+      <AnimatedCircle className="-left-10 top-0 h-20 w-20 bg-amber-300/50" />
+      <AnimatedCircle className="left-14 top-60 h-12 w-12 bg-blue-300/50" />
+      <AnimatedCircle className="top-20 left-36 h-14 w-14 bg-red-300/50" />
       <div className="grid grid-cols-2 gap-y-3 gap-x-6 lg:gap-8">
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl">Reach us</h1>
