@@ -5,7 +5,7 @@
 
 <a href="">[![Netlify Status](https://api.netlify.com/api/v1/badges/e1ff313a-7e40-4c01-b334-b943c7279f4d/deploy-status)](https://app.netlify.com/sites/dscupd/deploys)</a>
 
-[Site](https://gdscupd.com) | [Repo](https://github.com/DSC-Diliman/dsc-website)
+[Site](https://gdscupd.com) | [Repo](https://github.com/DSC-Diliman/dsc-website) | [Dev Docs](https://gdscupdsitefordevs.super.site/)
 
 </div>
 
