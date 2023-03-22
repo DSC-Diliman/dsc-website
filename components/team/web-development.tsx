@@ -1,4 +1,4 @@
-import Underline from "../underline";
+import Underline from "../utils/underline";
 import extractPortraits from "../../lib/extract-portraits";
 import { Member } from "../../types/member";
 

@@ -5,8 +5,8 @@ import { GrLocation } from "react-icons/gr";
 import { eventColors } from "../../lib/event-colors";
 import sameDay from "../../lib/same-day";
 import { Event } from "../../types/event";
-import FormattedDate from "../formatted-date";
-import FormattedTime from "../formatted-time";
+import FormattedDate from "../utils/formatted-date";
+import FormattedTime from "../utils/formatted-time";
 import markdownStyle from "/components/Markdown.module.scss";
 
 interface Props {

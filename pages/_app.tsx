@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-import Layout from "../components/layout";
+import Layout from "../components/utils/layout";
 
 import { AppProps } from "next/app";
 

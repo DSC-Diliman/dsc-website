@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Underline from "../underline";
+import Underline from "../utils/underline";
 
 export default function Landing() {
   return (

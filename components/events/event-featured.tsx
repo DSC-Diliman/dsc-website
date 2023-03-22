@@ -1,7 +1,7 @@
 import { BiTimeFive, BiCalendarEvent } from "react-icons/bi";
 import Link from "next/link";
-import FormattedDate from "../formatted-date";
-import FormattedTime from "../formatted-time";
+import FormattedDate from "../utils/formatted-date";
+import FormattedTime from "../utils/formatted-time";
 import Image from "next/image";
 import { Event } from "../../types/event";
 import sameDay from "../../lib/same-day";
