@@ -9,7 +9,6 @@
     "export": "next build && next export",
     "lint": "next lint",
     "test": "vitest",
-    "test:e2e": "playwright test"
   },
   "dependencies": {
     "date-fns": "^2.21.1",
@@ -32,7 +31,6 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.30.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/js-yaml": "^4.0.5",
     "@types/react": "^18.0.27",
