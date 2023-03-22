@@ -73,7 +73,7 @@ export default function EventShowcase({ event }: Props) {
         {event.body && (
           <div className="max-h-60 overflow-auto">
             <div
-              className={`${markdownStyle.markdown} overflow-auto`}
+              className="prose overflow-auto"
               dangerouslySetInnerHTML={{ __html: event.body || "" }}
             />
           </div>

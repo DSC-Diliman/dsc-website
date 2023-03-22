@@ -31,7 +31,7 @@ export default function ProjectShowcase({
       <div className="m-6">
         <h1 className="mb-4 md:mb-6">{project.title}</h1>
         <div
-          className={`${markdownStyle.markdown}`}
+          className="prose"
           dangerouslySetInnerHTML={{ __html: project.body || "" }}
         />
       </div>
