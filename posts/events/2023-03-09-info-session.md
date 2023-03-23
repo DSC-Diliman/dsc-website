@@ -10,4 +10,5 @@ images:
 summary: Get to know more about DSC-UPD and how you can be a part of our awesome
   community by attending our Info Sessions on September 4 and 5 at 5 PM.
 ---
+
 Get to know more about DSC-UPD and how you can be a part of our awesome community by attending our Info Sessions on September 4 and 5 at 5 PM.

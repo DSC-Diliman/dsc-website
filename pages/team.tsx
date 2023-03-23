@@ -1,17 +1,17 @@
-import ExecTeam from "../components/exec-team";
-import TechTeam from "../components/tech-team";
-import OpsTeam from "../components/ops-team";
-import CommsTeam from "../components/comms-team";
-import FinExtTeam from "../components/finext-team";
-import WebDevTeam from "../components/web-dev-team";
+import Executive from "../components/team/executive";
+import Technology from "../components/team/technology";
+import Operations from "../components/team/operations";
+import Communications from "../components/team/communications";
+import FinanceAndExternals from "../components/team/finance-and-externals";
+import WebDevelopment from "../components/team/web-development";
 import { getTeam } from "../lib/posts";
 import { useState } from "react";
 import Head from "next/head";
-import { isArrayOfMembersInCMS, MemberInCMS } from "../types/member-in-cms";
-import HRTeam from "../components/human-resources-team";
+import { isArrayOfMembers, Member } from "../types/member";
+import HumanResources from "../components/team/human-resources";
 
 interface Props {
-  allMemberData: MemberInCMS[];
+  allMemberData: Member[];
 }
 
 export default function Team({ allMemberData }: Props) {
@@ -85,20 +85,22 @@ export default function Team({ allMemberData }: Props) {
         </div>
       </div>
       <div className="space-y-14 px-10 pb-20 md:space-y-20">
-        <ExecTeam allExecData={getFilteredData(yearToShow, "Executive")} />
-        <TechTeam allTechData={getFilteredData(yearToShow, "Technology")} />
-        <OpsTeam allOpsData={getFilteredData(yearToShow, "Operations")} />
-        <CommsTeam
+        <Executive allExecData={getFilteredData(yearToShow, "Executive")} />
+        <Technology allTechData={getFilteredData(yearToShow, "Technology")} />
+        <Operations allOpsData={getFilteredData(yearToShow, "Operations")} />
+        <Communications
           allCommsData={getFilteredData(yearToShow, "Communications")}
         />
-        <FinExtTeam
+        <FinanceAndExternals
           allExteFinData={getFilteredData(yearToShow, "Finance and Externals")}
         />
         {yearToShow >= 2022 && (
-          <HRTeam allHRData={getFilteredData(yearToShow, "Human Resources")} />
+          <HumanResources
+            allHRData={getFilteredData(yearToShow, "Human Resources")}
+          />
         )}
       </div>
-      <WebDevTeam
+      <WebDevelopment
         allWebDevData={getFilteredData(yearToShow, "Web Development")}
       />
     </>
@@ -116,10 +118,10 @@ export async function getStaticProps() {
     "Web Development",
   ];
 
-  let allMemberData: MemberInCMS[] = [];
+  let allMemberData: Member[] = [];
   for (const team of teams) {
     const teamData = getTeam(team);
-    if (isArrayOfMembersInCMS(teamData)) {
+    if (isArrayOfMembers(teamData)) {
       allMemberData.push(...teamData);
     }
   }

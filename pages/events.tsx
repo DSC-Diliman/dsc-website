@@ -1,24 +1,24 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import { getEvents } from "../lib/posts";
-import markdownToHtml from "../lib/markdownToHtml";
-import EventsGrid from "../components/events-grid";
-import EventFeatured from "../components/event-featured";
-import EventShowcase from "../components/event-showcase";
+import markdownToHtml from "../lib/markdown-to-html";
+import EventsGrid from "../components/events/events-grid";
+import EventFeatured from "../components/events/event-featured";
+import EventShowcase from "../components/events/event-showcase";
 import Head from "next/head";
-import { EventInCMS, isArrayOfEventsInCMS } from "../types/event-in-cms";
+import { Event, isArrayOfEvents } from "../types/event";
 import { IoClose } from "react-icons/io5";
 
 Modal.setAppElement("#__next");
 
 interface Props {
-  allEventsData: EventInCMS[];
+  allEventsData: Event[];
 }
 
 export default function Events({ allEventsData }: Props) {
-  const [selectedEvent, setSelectedEvent] = useState<EventInCMS | null>(null);
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
-  function openModal(e: EventInCMS) {
+  function openModal(e: Event) {
     setSelectedEvent(e);
   }
 
@@ -83,7 +83,7 @@ export default function Events({ allEventsData }: Props) {
 export async function getStaticProps() {
   const allEventsData = getEvents();
 
-  if (isArrayOfEventsInCMS(allEventsData)) {
+  if (isArrayOfEvents(allEventsData)) {
     allEventsData.forEach(async (event, index, events) => {
       events[index].body = await markdownToHtml(event.body || "");
     });

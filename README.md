@@ -5,7 +5,7 @@
 
 <a href="">[![Netlify Status](https://api.netlify.com/api/v1/badges/e1ff313a-7e40-4c01-b334-b943c7279f4d/deploy-status)](https://app.netlify.com/sites/dscupd/deploys)</a>
 
-[Site](https://gdscupd.com) | [Repo](https://github.com/DSC-Diliman/dsc-website)
+[Site](https://gdscupd.com) | [Repo](https://github.com/DSC-Diliman/dsc-website) | [Dev Docs](https://gdscupdsitefordevs.super.site/)
 
 </div>
 
@@ -84,14 +84,14 @@ Contributions are carried out in 3 main steps:
 
 ### Tech stack
 
-| Technology                                                                                                                | Purpose              | Notes                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://img.shields.io/static/v1?label=&logo=nextdotjs&message=Next.js&labelColor=000000&color=000000">         | React framework      | v13, [Documentation](https://nextjs.org/docs), [Tutorial](https://nextjs.org/learn)                                                               |
-| <img src="https://img.shields.io/static/v1?label=&logo=react&message=React&labelColor=272B33&color=272B33">               | JavaScript framework | v18, [Documentation](https://reactjs.org/docs/getting-started.html), [React Icons](https://react-icons.github.io/react-icons)                     |
-| <img src="https://img.shields.io/static/v1?label=&logo=typescript&message=TypeScript&labelColor=000000&color=000000">     | Type safety          | v4, [Documentation](https://www.typescriptlang.org/docs)                                                                                          |
-| <img src="https://img.shields.io/static/v1?label=&logo=tailwindcss&message=Tailwind CSS& labelColor=272B33&color=272B33"> | Styling              | v3, [Documentation](https://tailwindcss.com/docs)                                                                                                 |
-| <img src="https://img.shields.io/static/v1?label=&logo=playwright&message=Playwright&labelColor=000000&color=000000">     | End-to-end testing   | v1, [Documentation](https://playwright.dev/docs/intro)                                                                                            |
-| <img src="https://img.shields.io/static/v1?label=&logo=figma&message=Figma&labelColor=272B33&color=272B33">               | Design               | [Wireframe](https://www.figma.com/file/VLKIQqE9Vb1W9A3t3NWgAb/DSC-Website-UI-Final-Submission?node-id=0%3A1)                                      |
-| <img src="https://img.shields.io/static/v1?label=&logo=greensock&message=GSAP&labelColor=000000&color=000000">            | Animation            | [Documentation](https://greensock.com/docs), [Getting started](https://greensock.com/get-started), [Cheatsheet](https://greensock.com/cheatsheet) |
+| Technology                                                                                                                | Purpose              | Notes                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://img.shields.io/static/v1?label=&logo=nextdotjs&message=Next.js&labelColor=000000&color=000000">         | React framework      | v13, [Documentation](https://nextjs.org/docs), [Tutorial](https://nextjs.org/learn)                                           |
+| <img src="https://img.shields.io/static/v1?label=&logo=react&message=React&labelColor=272B33&color=272B33">               | JavaScript framework | v18, [Documentation](https://reactjs.org/docs/getting-started.html), [React Icons](https://react-icons.github.io/react-icons) |
+| <img src="https://img.shields.io/static/v1?label=&logo=typescript&message=TypeScript&labelColor=000000&color=000000">     | Type safety          | v4, [Documentation](https://www.typescriptlang.org/docs)                                                                      |
+| <img src="https://img.shields.io/static/v1?label=&logo=tailwindcss&message=Tailwind CSS& labelColor=272B33&color=272B33"> | Styling              | v3, [Documentation](https://tailwindcss.com/docs)                                                                             |
+| <img src="https://img.shields.io/static/v1?label=&logo=vitest&message=Vitest&labelColor=000000&color=000000">             | Testing              | [Documentation](https://vitest.dev/guide/)                                                                                    |
+| <img src="https://img.shields.io/static/v1?label=&logo=figma&message=Figma&labelColor=272B33&color=272B33">               | Design               | [Wireframe](https://www.figma.com/file/VLKIQqE9Vb1W9A3t3NWgAb/DSC-Website-UI-Final-Submission?node-id=0%3A1)                  |
+| <img src="https://img.shields.io/static/v1?label=&logo=framer&message=Framer Motion&labelColor=000000&color=000000">      | Animation            | [Documentation](https://www.framer.com/motion/)                                                                               |
 
 </div>

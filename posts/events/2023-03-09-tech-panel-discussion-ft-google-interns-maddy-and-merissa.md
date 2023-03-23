@@ -12,4 +12,5 @@ summary: We'll be having a panel discussion this Saturday (October 3) from 1pm
   They'll be giving advice on how to grow as software engineers as students and
   they'll also go over their journey in Google!
 ---
+
 We'll be having a panel discussion this Saturday (October 3) from 1pm to 2pm with Ms. Merissa Tan and Ms. Maddie Louis, two 3-time Google interns. They'll be giving advice on how to grow as software engineers as students and they'll also go over their journey in Google!

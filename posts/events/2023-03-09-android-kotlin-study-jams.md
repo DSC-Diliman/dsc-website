@@ -9,6 +9,7 @@ images:
   - /uploads/dsc-logo.png
 summary: Want to learn about the basics of Kotlin and how you can use it afterwards?
 ---
+
 Want to learn about the basics of Kotlin and how you can use it afterwards? That's what Study Jams are for -- they aren't just workshops where you can learn new technical skills, they're also active discussions on ways you can apply the skill in a real life setting!
 
 Join us on Saturday (Oct 31), 2-5pm for DSC-UPD's first Study Jam on Kotlin, hosted by Sir Marco Valmores, the former Lead of the Philippine Android Developers Community, and current Lead Developer for Teravibe.com, Inc.
